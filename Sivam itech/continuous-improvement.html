@@ -1,0 +1,819 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="public, max-age=31536000">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Continuous Improvement Systems | SIVAM ITECH</title>
+    <meta name="description"
+        content="Sivam iTech's Continuous Improvement programs leverage PDCA, Six Sigma, and DMAIC frameworks to systematically force upward quality trends and cost reduction for OEMs.">
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://unpkg.com">
+
+    <!-- Defer non-critical scripts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.min.css">
+
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="uploads/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body class="bg-white text-gray-600 font-sans antialiased overflow-x-hidden selection:bg-brand-orange pb-10 md:pb-0">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "Service",
+      "name": "Continuous Improvement & Value Engineering",
+      "provider": {
+        "@type": "Organization",
+        "name": "Sivam iTech Metal Forming Industries"
+      },
+      "serviceType": "Quality Service",
+      "description": "Systematic process refinement utilizing PDCA cycles and DMAIC methodologies to deliver ongoing cost optimizations, yield increases, and defect reduction.",
+      "areaServed": "Global"
+    }
+    </script>
+    <style>
+        .scroll-indicator {
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateY(0);
+            }
+
+            40% {
+                transform: translateY(-10px);
+            }
+
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .timeline-scroll-container::-webkit-scrollbar {
+            display: none;
+        }
+
+        .timeline-scroll-container {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+
+
+
+    <!-- Navbar -->
+    <nav class="sticky top-0 w-full z-50 glass-nav shadow-md">
+        <div class="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3">
+                <img width="343" height="96" loading="eager" src="uploads/logo.png" alt="Sivam Itech Metal Forming Industries Official Logo"
+                    class="h-28 md:h-36 lg:h-40 w-auto object-contain relative z-10">
+            </a>
+
+            <div class="hidden lg:flex space-x-8 font-bold text-xs uppercase tracking-widest text-gray-700">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="infrastructure.html" class="nav-link">Infrastructure</a>
+                <a href="products.html" class="nav-link">Products</a>
+                <a href="careers.html" class="nav-link">Careers</a>
+                <a href="contact.html" class="nav-link">Contact Us</a>
+            </div>
+
+            <a href="inquire.html"
+                class="hidden md:block btn-orange px-6 py-2.5 text-xs font-bold uppercase tracking-widest rounded-full shadow-md hover:shadow-lg">
+                Inquire Now
+            </a>
+
+            <!-- Changed onclick to use JS event listener via ID if possible, but keeping simplistic onclick for now as per extraction, 
+                 removed inline onclick to rely on main.js event binding -->
+            <button type="button" class="lg:hidden" onclick="toggleMenu()" title="Toggle mobile menu">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+        <div id="mobile-menu" class="lg:hidden bg-white shadow-lg">
+            <div class="px-6 py-4 flex flex-col space-y-4 font-bold text-xs uppercase">
+                <a href="index.html" class=" transition-colors">Home</a>
+                <a href="about.html" class=" transition-colors">About Us</a>
+                <a href="infrastructure.html" class=" transition-colors">Infrastructure</a>
+                <a href="products.html" class=" transition-colors">Products</a>
+                <a href="careers.html" class=" transition-colors">Careers</a>
+                <a href="contact.html" class=" transition-colors">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Floating Inquiry Button -->
+    <a href="contact.html"
+        class="fixed bottom-6 right-6 z-50 bg-brand-orange text-white p-4 rounded-full shadow-2xl hover:bg-orange-600 hover:scale-105 transition-all flex items-center justify-center group">
+        <i data-lucide="message-square" class="w-6 h-6"></i>
+        <span
+            class="max-w-0 overflow-hidden whitespace-nowrap group-hover:max-w-xs group-hover:ml-3 transition-all duration-300 ease-in-out font-bold text-sm uppercase tracking-wider">Quick
+            Inquiry</span>
+    </a>
+
+    <!-- 1. HERO SECTION -->
+    <section
+        class="py-[60px] md:py-[80px] lg:py-[100px] relative min-h-[85vh] flex flex-col justify-center bg-white pb-16 pt-24 border-b-8 border-brand-orange">
+        <div class="absolute inset-0 z-0">
+            <!-- Dark industrial texture -->
+            <div class="w-full h-full bg-[url('uploads/tech-tool_converted.avif')] bg-cover bg-center opacity-25">
+            </div>
+            <!-- Subtle Grid Overlay Texture -->
+            <div class="absolute inset-0 z-0 opacity-20"
+                style="background-image: linear-gradient(#ffffff20 1px, transparent 1px), linear-gradient(90deg, #ffffff20 1px, transparent 1px); background-size: 40px 40px;">
+            </div>
+            <div class="absolute inset-0 bg-white/80 backdrop-blur-[2px]"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-6 w-full mt-10">
+            <h1
+                class="text-[28px] sm:text-[32px] md:text-[40px] lg:text-[52px] font-black text-gray-900 uppercase tracking-tight leading-[1.05] mb-6 max-w-5xl">
+                Relentless Continuous <br> Improvement (CI) Strategy
+            </h1>
+            <p
+                class="text-[15px] md:text-[17px] leading-[1.8] text-gray-600 font-medium max-w-3xl leading-relaxed mb-10 border-l-4 border-brand-orange pl-4">
+                Embedding Six Sigma logic, PDCA execution, and statistical variance control into daily production
+                systems.
+            </p>
+
+            <!-- CI Metrics Strip -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12 max-w-5xl border-t border-b border-gray-200 py-6">
+                <div class="flex items-center gap-3">
+                    <i data-lucide="trending-up" class="text-brand-orange w-5 h-5 shrink-0"></i>
+                    <span class="text-sm font-bold text-gray-900 uppercase tracking-widest">12% YoY Throughput
+                        Gain</span>
+                </div>
+                <div class="flex items-center gap-3">
+                    <i data-lucide="zap-off" class="text-brand-orange w-5 h-5 shrink-0"></i>
+                    <span class="text-sm font-bold text-gray-900 uppercase tracking-widest">-15% Energy Waste
+                        Red.</span>
+                </div>
+                <div class="flex items-center gap-3">
+                    <i data-lucide="shield-check" class="text-brand-orange w-5 h-5 shrink-0"></i>
+                    <span class="text-sm font-bold text-gray-900 uppercase tracking-widest">0 Recurring Failures</span>
+                </div>
+                <div class="flex items-center gap-3">
+                    <i data-lucide="timer" class="text-brand-orange w-5 h-5 shrink-0"></i>
+                    <span class="text-sm font-bold text-gray-900 uppercase tracking-widest">-20% Machine Setup</span>
+                </div>
+            </div>
+
+            <!-- CTAs -->
+            <div class="flex flex-wrap items-center gap-4">
+                <a href="contact.html"
+                    class="inline-flex items-center gap-2 bg-brand-orange hover:bg-orange-600 text-white font-black tracking-widest uppercase text-sm px-8 py-4 rounded-sm transition-colors shadow-none">
+                    Request CI Consultation <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                </a>
+                <a href="#overview"
+                    class="inline-flex items-center gap-2 bg-transparent border-2 border-slate-700 hover:border-slate-500 text-gray-900 font-bold tracking-widest uppercase text-sm px-8 py-4 rounded-sm transition-colors shadow-none">
+                    Download Optimization Framework <i data-lucide="download" class="w-5 h-5"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. DATA-DRIVEN EVOLUTION SECTION -->
+    <section id="overview" class="py-[60px] md:py-[80px] lg:py-[100px] px-6 bg-white relative overflow-hidden">
+        <!-- Subtle engineering Grid Background -->
+        <div class="absolute inset-0 opacity-5"
+            style="background-image: linear-gradient(#e5e7eb 1px, transparent 1px), linear-gradient(to right, #e5e7eb 1px, transparent 1px); background-size: 40px 40px;">
+        </div>
+
+        <div class="max-w-7xl mx-auto relative z-10 px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+
+                <!-- Left: PDCA Model -->
+                <div class="bg-slate-50 border border-slate-200 p-10 rounded-sm">
+                    <h3
+                        class="text-[20px] md:text-[24px] font-bold text-gray-900 font-black text-slate-900 uppercase tracking-widest mb-8 border-b border-slate-200 pb-4">
+                        PDCA Execution Model</h3>
+                    <div class="flex flex-col space-y-2 mb-8 border-l-4 border-slate-900 pl-6">
+                        <div
+                            class="font-black text-lg text-slate-900 uppercase tracking-widest flex items-center gap-3">
+                            <span class="text-brand-orange">�</span> PLAN
+                        </div>
+                        <div class="w-1 h-4 bg-slate-200 ml-1.5"></div>
+                        <div
+                            class="font-black text-lg text-slate-900 uppercase tracking-widest flex items-center gap-3">
+                            <span class="text-brand-orange">�</span> DO
+                        </div>
+                        <div class="w-1 h-4 bg-slate-200 ml-1.5"></div>
+                        <div
+                            class="font-black text-lg text-slate-900 uppercase tracking-widest flex items-center gap-3">
+                            <span class="text-brand-orange">�</span> CHECK
+                        </div>
+                        <div class="w-1 h-4 bg-slate-200 ml-1.5"></div>
+                        <div
+                            class="font-black text-lg text-slate-900 uppercase tracking-widest flex items-center gap-3">
+                            <span class="text-brand-orange">�</span> ACT
+                        </div>
+                    </div>
+                    <p
+                        class="text-[15px] md:text-[17px] leading-[1.8] font-semibold text-gray-600 uppercase tracking-wider leading-relaxed border-t border-slate-200 pt-6">
+                        Rigorous feedback loop enforcement guaranteeing corrective actions become permanent Standard
+                        Operating Procedures (SOPs).
+                    </p>
+                </div>
+
+                <!-- Right: Systematic Explanation -->
+                <div class="space-y-8">
+                    <div>
+                        <span class="text-brand-orange font-black text-xs uppercase tracking-[0.2em]">Methodology</span>
+                        <h2
+                            class="text-[22px] md:text-[30px] lg:text-[36px] font-black text-gray-900 uppercase tracking-tight text-slate-950 mt-2 mb-6">
+                            Data-Driven
+                            Evolution</h2>
+                        <div class="w-16 h-1.5 bg-brand-orange mb-8 rounded-none"></div>
+                    </div>
+
+                    <ul class="space-y-6">
+                        <li class="flex items-start gap-4">
+                            <i data-lucide="bar-chart-2" class="w-6 h-6 text-brand-orange shrink-0"></i>
+                            <div>
+                                <h4 class="font-bold text-slate-900 uppercase tracking-wider text-sm mb-1">Statistical
+                                    Baselines</h4>
+                                <p class="text-[15px] md:text-[17px] leading-[1.8] text-gray-600 font-medium">Empirical
+                                    limits establishing exact
+                                    benchmark performance thresholds.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <i data-lucide="activity" class="w-6 h-6 text-brand-orange shrink-0"></i>
+                            <div>
+                                <h4 class="font-bold text-slate-900 uppercase tracking-wider text-sm mb-1">Shift-Level
+                                    SPC Tracking</h4>
+                                <p class="text-[15px] md:text-[17px] leading-[1.8] text-gray-600 font-medium">Live
+                                    statistical process control detecting
+                                    deviation instantly across run batches.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <i data-lucide="shield-alert" class="w-6 h-6 text-brand-orange shrink-0"></i>
+                            <div>
+                                <h4 class="font-bold text-slate-900 uppercase tracking-wider text-sm mb-1">CAPA
+                                    Deployment</h4>
+                                <p class="text-[15px] md:text-[17px] leading-[1.8] text-gray-600 font-medium">Corrective
+                                    and Preventive Action models
+                                    explicitly mapping anomaly containment.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <i data-lucide="hammer" class="w-6 h-6 text-brand-orange shrink-0"></i>
+                            <div>
+                                <h4 class="font-bold text-slate-900 uppercase tracking-wider text-sm mb-1">Root-Cause
+                                    Elimination</h4>
+                                <p class="text-[15px] md:text-[17px] leading-[1.8] text-gray-600 font-medium">Stripping
+                                    out symptoms to permanently
+                                    isolate and fix originating failures.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <i data-lucide="pie-chart" class="w-6 h-6 text-brand-orange shrink-0"></i>
+                            <div>
+                                <h4 class="font-bold text-slate-900 uppercase tracking-wider text-sm mb-1">Control Chart
+                                    Monitoring</h4>
+                                <p class="text-[15px] md:text-[17px] leading-[1.8] text-gray-600 font-medium">Visual
+                                    metrics enforcing upper and lower
+                                    specification limit boundaries.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. SIX SIGMA EXECUTION PIPELINE -->
+    <section class="py-[60px] md:py-[80px] lg:py-[100px] px-6 bg-slate-50 border-t border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-16">
+                <span class="text-brand-orange font-black text-xs uppercase tracking-[0.2em]">Process Integration</span>
+                <h2
+                    class="text-[22px] md:text-[30px] lg:text-[36px] font-black text-gray-900 uppercase tracking-tight text-slate-900 mt-2">
+                    Six Sigma Execution
+                    Pipeline</h2>
+            </div>
+
+            <!-- Industrial Horizontal Timeline -->
+            <div class="relative">
+                <!-- Connecting Line -->
+                <div class="hidden md:block absolute top-[2rem] left-0 w-full h-[2px] bg-slate-300 z-0"></div>
+
+                <div class="grid grid-cols-1 md:grid-cols-6 gap-y-10 md:gap-x-4 relative z-10">
+
+                    <!-- Step 1 -->
+                    <div class="flex flex-col items-start md:items-center relative group">
+                        <div
+                            class="w-16 h-16 bg-[#F8FAFC] text-brand-orange font-black text-xl flex items-center justify-center rounded-sm shrink-0 border-4 border-slate-50 mb-4 z-10 shadow-none">
+                            01</div>
+                        <div class="md:text-center text-left">
+                            <h4 class="font-bold text-slate-900 text-xs uppercase tracking-wider mb-2">Define Variance
+                            </h4>
+                            <p class="text-[11px] text-gray-600 font-medium px-2 uppercase">Isolate exact problem
+                                statements.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="flex flex-col items-start md:items-center relative group">
+                        <div
+                            class="w-16 h-16 bg-[#F8FAFC] text-brand-orange font-black text-xl flex items-center justify-center rounded-sm shrink-0 border-4 border-slate-50 mb-4 z-10 shadow-none">
+                            02</div>
+                        <div class="md:text-center text-left">
+                            <h4 class="font-bold text-slate-900 text-xs uppercase tracking-wider mb-2">Measure Data</h4>
+                            <p class="text-[11px] text-gray-600 font-medium px-2 uppercase">Collect core operational
+                                metrics.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="flex flex-col items-start md:items-center relative group">
+                        <div
+                            class="w-16 h-16 bg-[#F8FAFC] text-brand-orange font-black text-xl flex items-center justify-center rounded-sm shrink-0 border-4 border-slate-50 mb-4 z-10 shadow-none">
+                            03</div>
+                        <div class="md:text-center text-left">
+                            <h4 class="font-bold text-slate-900 text-xs uppercase tracking-wider mb-2">Root Analysis
+                            </h4>
+                            <p class="text-[11px] text-gray-600 font-medium px-2 uppercase">Pinpoint origin
+                                inefficiencies.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="flex flex-col items-start md:items-center relative group">
+                        <div
+                            class="w-16 h-16 bg-[#F8FAFC] text-brand-orange font-black text-xl flex items-center justify-center rounded-sm shrink-0 border-4 border-slate-50 mb-4 z-10 shadow-none">
+                            04</div>
+                        <div class="md:text-center text-left">
+                            <h4 class="font-bold text-slate-900 text-xs uppercase tracking-wider mb-2">Implement Fix
+                            </h4>
+                            <p class="text-[11px] text-gray-600 font-medium px-2 uppercase">Deploy direct
+                                countermeasure.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 5 -->
+                    <div class="flex flex-col items-start md:items-center relative group">
+                        <div
+                            class="w-16 h-16 bg-[#F8FAFC] text-brand-orange font-black text-xl flex items-center justify-center rounded-sm shrink-0 border-4 border-slate-50 mb-4 z-10 shadow-none">
+                            05</div>
+                        <div class="md:text-center text-left">
+                            <h4 class="font-bold text-slate-900 text-xs uppercase tracking-wider mb-2">Verify Stability
+                            </h4>
+                            <p class="text-[11px] text-gray-600 font-medium px-2 uppercase">Validate correction via
+                                tracking.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 6 -->
+                    <div class="flex flex-col items-start md:items-center relative group">
+                        <div
+                            class="w-16 h-16 bg-brand-orange text-slate-900 font-black text-xl flex items-center justify-center rounded-sm shrink-0 border-4 border-slate-50 mb-4 z-10 shadow-none">
+                            06</div>
+                        <div class="md:text-center text-left">
+                            <h4 class="font-bold text-slate-900 text-xs uppercase tracking-wider mb-2">Scale &amp; Sync
+                            </h4>
+                            <p class="text-[11px] text-gray-600 font-medium px-2 uppercase">Standardize procedural
+                                roll-out.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. METRICS SECTION -->
+    <section class="py-[60px] md:py-[80px] lg:py-[100px] px-6 bg-[#F8FAFC] border-b-4 border-brand-orange">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <!-- Metric 1 -->
+                <div class="border-l-4 border-brand-orange pl-6">
+                    <h4 class="text-4xl lg:text-5xl font-black text-gray-900 leading-none mb-3 tracking-tighter">12%
+                    </h4>
+                    <span class="block text-sm font-bold text-gray-600 uppercase tracking-widest mb-2">Throughput
+                        Gain</span>
+                    <p
+                        class="text-[15px] md:text-[17px] leading-[1.8] text-gray-600 text-xs font-semibold uppercase tracking-wider border-t border-gray-200 pt-2">
+                        Algorithmic line balancing.</p>
+                </div>
+                <!-- Metric 2 -->
+                <div class="border-l-4 border-brand-orange pl-6">
+                    <h4 class="text-4xl lg:text-5xl font-black text-gray-900 leading-none mb-3 tracking-tighter">15%
+                    </h4>
+                    <span class="block text-sm font-bold text-gray-600 uppercase tracking-widest mb-2">Energy Waste
+                        Repressed</span>
+                    <p
+                        class="text-[15px] md:text-[17px] leading-[1.8] text-gray-600 text-xs font-semibold uppercase tracking-wider border-t border-gray-200 pt-2">
+                        Idle cycle elimination algorithms.</p>
+                </div>
+                <!-- Metric 3 -->
+                <div class="border-l-4 border-brand-orange pl-6">
+                    <h4 class="text-4xl lg:text-5xl font-black text-gray-900 leading-none mb-3 tracking-tighter">0</h4>
+                    <span class="block text-sm font-bold text-gray-600 uppercase tracking-widest mb-2">Recurring
+                        Failures</span>
+                    <p
+                        class="text-[15px] md:text-[17px] leading-[1.8] text-gray-600 text-xs font-semibold uppercase tracking-wider border-t border-gray-200 pt-2">
+                        Poka-yoke error isolation loops.</p>
+                </div>
+                <!-- Metric 4 -->
+                <div class="border-l-4 border-brand-orange pl-6">
+                    <h4 class="text-4xl lg:text-5xl font-black text-gray-900 leading-none mb-3 tracking-tighter">20%
+                    </h4>
+                    <span class="block text-sm font-bold text-gray-600 uppercase tracking-widest mb-2">Setup Time
+                        Reduced</span>
+                    <p
+                        class="text-[15px] md:text-[17px] leading-[1.8] text-gray-600 text-xs font-semibold uppercase tracking-wider border-t border-gray-200 pt-2">
+                        Direct SMED parallel processing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. ADVANCED ANALYTIC FRAMEWORKS -->
+    <section class="py-[60px] md:py-[80px] lg:py-[100px] px-6 bg-white border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-12 border-b border-slate-200 pb-4">
+                <span class="text-brand-orange font-black text-xs uppercase tracking-[0.2em]">Data Analysis</span>
+                <h3
+                    class="text-[20px] md:text-[24px] font-bold text-gray-900 font-black text-slate-900 uppercase tracking-tight mt-2">
+                    Advanced Analytic
+                    Frameworks</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Framework 1 -->
+                <div
+                    class="p-8 bg-slate-50 border border-slate-200 rounded-[6px] shadow-none hover:border-slate-400 hover:bg-white transition-colors">
+                    <h4
+                        class="font-black text-slate-900 text-lg uppercase tracking-wider mb-5 border-l-4 border-brand-orange pl-3">
+                        Fishbone (Ishikawa)</h4>
+                    <div class="space-y-4">
+                        <div>
+                            <span
+                                class="text-[10px] font-bold text-gray-600 uppercase tracking-widest block mb-1">Functional
+                                Application</span>
+                            <p
+                                class="text-[15px] md:text-[17px] leading-[1.8] text-xs text-slate-800 font-bold leading-relaxed">
+                                Cause-and-effect visualization
+                                mapping materials, men, machine, and method anomalies.</p>
+                        </div>
+                        <div>
+                            <span
+                                class="text-[10px] font-bold text-gray-600 uppercase tracking-widest block mb-1">Outcome
+                                Objective</span>
+                            <p
+                                class="text-[15px] md:text-[17px] leading-[1.8] text-xs text-slate-800 font-bold leading-relaxed">
+                                Preventing tunnel-vision by
+                                categorizing entire process ecosystems.</p>
+                        </div>
+                        <div>
+                            <span
+                                class="text-[10px] font-bold text-gray-600 uppercase tracking-widest block mb-1">Deployment
+                                Scenario</span>
+                            <p
+                                class="text-[15px] md:text-[17px] leading-[1.8] text-xs text-slate-800 font-bold leading-relaxed">
+                                System-wide unexpected defect
+                                rate spikes requiring immediate containment.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Framework 2 -->
+                <div
+                    class="p-8 bg-slate-50 border border-slate-200 rounded-[6px] shadow-none hover:border-slate-400 hover:bg-white transition-colors">
+                    <h4
+                        class="font-black text-slate-900 text-lg uppercase tracking-wider mb-5 border-l-4 border-brand-orange pl-3">
+                        Pareto Analysis (80/20)</h4>
+                    <div class="space-y-4">
+                        <div>
+                            <span
+                                class="text-[10px] font-bold text-gray-600 uppercase tracking-widest block mb-1">Functional
+                                Application</span>
+                            <p
+                                class="text-[15px] md:text-[17px] leading-[1.8] text-xs text-slate-800 font-bold leading-relaxed">
+                                Statistical algorithm isolating
+                                the critical 20% of causes responsible for 80% of waste.</p>
+                        </div>
+                        <div>
+                            <span
+                                class="text-[10px] font-bold text-gray-600 uppercase tracking-widest block mb-1">Outcome
+                                Objective</span>
+                            <p
+                                class="text-[15px] md:text-[17px] leading-[1.8] text-xs text-slate-800 font-bold leading-relaxed">
+                                Prioritizing high-leverage
+                                engineering resources toward maximum impact targets.</p>
+                        </div>
+                        <div>
+                            <span
+                                class="text-[10px] font-bold text-gray-600 uppercase tracking-widest block mb-1">Deployment
+                                Scenario</span>
+                            <p
+                                class="text-[15px] md:text-[17px] leading-[1.8] text-xs text-slate-800 font-bold leading-relaxed">
+                                Scrap allowance optimization
+                                across multiple stamping lines simultaneously.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Framework 3 -->
+                <div
+                    class="p-8 bg-slate-50 border border-slate-200 rounded-[6px] shadow-none hover:border-slate-400 hover:bg-white transition-colors">
+                    <h4
+                        class="font-black text-slate-900 text-lg uppercase tracking-wider mb-5 border-l-4 border-brand-orange pl-3">
+                        5-Why Root Logic</h4>
+                    <div class="space-y-4">
+                        <div>
+                            <span
+                                class="text-[10px] font-bold text-gray-600 uppercase tracking-widest block mb-1">Functional
+                                Application</span>
+                            <p
+                                class="text-[15px] md:text-[17px] leading-[1.8] text-xs text-slate-800 font-bold leading-relaxed">
+                                Recursive questioning algorithm
+                                bypassing immediate mechanical symptoms.</p>
+                        </div>
+                        <div>
+                            <span
+                                class="text-[10px] font-bold text-gray-600 uppercase tracking-widest block mb-1">Outcome
+                                Objective</span>
+                            <p
+                                class="text-[15px] md:text-[17px] leading-[1.8] text-xs text-slate-800 font-bold leading-relaxed">
+                                Isolating deep-tier procedural
+                                ignorance or sub-tier system failures.</p>
+                        </div>
+                        <div>
+                            <span
+                                class="text-[10px] font-bold text-gray-600 uppercase tracking-widest block mb-1">Deployment
+                                Scenario</span>
+                            <p
+                                class="text-[15px] md:text-[17px] leading-[1.8] text-xs text-slate-800 font-bold leading-relaxed">
+                                Single, high-severity
+                                non-conformance occurrences (NCMRs).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. NEW: ONGOING MONITORING & GOVERNANCE -->
+    <section class="py-[60px] md:py-[80px] lg:py-[100px] px-6 bg-slate-50 border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col lg:flex-row gap-16 items-start">
+                <div class="lg:w-1/3">
+                    <span class="text-brand-orange font-black text-xs uppercase tracking-[0.2em]">Administrative
+                        Rigor</span>
+                    <h2
+                        class="text-[22px] md:text-[30px] lg:text-[36px] font-black text-gray-900 uppercase tracking-tight text-slate-900 mt-2 mb-6">
+                        Ongoing Monitoring
+                        <br>&amp; Governance
+                    </h2>
+                    <p
+                        class="text-[15px] md:text-[17px] leading-[1.8] text-gray-600 font-bold leading-relaxed border-l-4 border-slate-300 pl-4">
+                        Optimization degrades into chaos without relentless tracking. We enforce strict administrative
+                        oversight loops.
+                    </p>
+                </div>
+
+                <div class="lg:w-2/3 w-full">
+                    <ul class="space-y-0 border border-slate-200 bg-white">
+                        <li class="flex items-center gap-6 p-6 border-b border-slate-200">
+                            <i data-lucide="clipboard-list" class="w-6 h-6 text-brand-orange shrink-0"></i>
+                            <span class="font-bold text-slate-900 uppercase tracking-wider text-sm">Daily KPI Review
+                                Boards</span>
+                        </li>
+                        <li class="flex items-center gap-6 p-6 border-b border-slate-200">
+                            <i data-lucide="crosshair" class="w-6 h-6 text-brand-orange shrink-0"></i>
+                            <span class="font-bold text-slate-900 uppercase tracking-wider text-sm">Weekly CAPA
+                                Cross-Functional Reviews</span>
+                        </li>
+                        <li class="flex items-center gap-6 p-6 border-b border-slate-200">
+                            <i data-lucide="file-search" class="w-6 h-6 text-brand-orange shrink-0"></i>
+                            <span class="font-bold text-slate-900 uppercase tracking-wider text-sm">Monthly Operational
+                                Variance Audits</span>
+                        </li>
+                        <li class="flex items-center gap-6 p-6 border-b border-slate-200">
+                            <i data-lucide="folder-check" class="w-6 h-6 text-brand-orange shrink-0"></i>
+                            <span class="font-bold text-slate-900 uppercase tracking-wider text-sm">Control Plan
+                                Live-Documentation</span>
+                        </li>
+                        <li class="flex items-center gap-6 p-6">
+                            <i data-lucide="alert-triangle" class="w-6 h-6 text-brand-orange shrink-0"></i>
+                            <span class="font-bold text-slate-900 uppercase tracking-wider text-sm">Immediate Leadership
+                                Escalation Triggers</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. NEW: CI IMPACT FOR OEM CLIENTS -->
+    <section class="py-[60px] md:py-[80px] lg:py-[100px] px-6 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-16 text-center">
+                <h2
+                    class="text-[22px] md:text-[30px] lg:text-[36px] font-black text-gray-900 uppercase tracking-tight text-slate-900 mt-2">
+                    Continuous Improvement
+                    Advantage for OEM Programs</h2>
+                <div class="w-16 h-1 bg-brand-orange mt-6 mx-auto rounded-none"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="border border-slate-200 p-8 rounded-[4px] bg-slate-50 border-t-4 border-t-slate-900">
+                    <h3
+                        class="text-[20px] md:text-[24px] font-bold text-gray-900 font-black text-lg uppercase tracking-wider mb-3 text-slate-900">
+                        Reduced Lifecycle Cost
+                    </h3>
+                    <p class="text-[15px] md:text-[17px] leading-[1.8] text-gray-600 font-bold leading-relaxed">
+                        Efficiency gains compounded
+                        year-over-year absorb inflationary impacts, stabilizing unit costs throughout the component
+                        lifecycle.</p>
+                </div>
+                <div class="border border-slate-200 p-8 rounded-[4px] bg-slate-50 border-t-4 border-t-brand-orange">
+                    <h3
+                        class="text-[20px] md:text-[24px] font-bold text-gray-900 font-black text-lg uppercase tracking-wider mb-3 text-slate-900">
+                        Stable Quality Baselines
+                    </h3>
+                    <p class="text-[15px] md:text-[17px] leading-[1.8] text-gray-600 font-bold leading-relaxed">Variance
+                        extraction results in
+                        exceptionally tight Cp/Cpk ratings across massive production volumes without deviation.</p>
+                </div>
+                <div class="border border-slate-200 p-8 rounded-[4px] bg-slate-50 border-t-4 border-t-slate-900">
+                    <h3
+                        class="text-[20px] md:text-[24px] font-bold text-gray-900 font-black text-lg uppercase tracking-wider mb-3 text-slate-900">
+                        Faster Production
+                        Ramp-Up</h3>
+                    <p class="text-[15px] md:text-[17px] leading-[1.8] text-gray-600 font-bold leading-relaxed">Rigid
+                        frameworks immediately correct
+                        initial run friction, allowing us to hit target TAKT times aggressively early.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. FINAL CTA -->
+    <section
+        class="py-[60px] md:py-[80px] lg:py-[100px] px-6 bg-white border-t-4 border-brand-orange relative overflow-hidden">
+        <div class="max-w-5xl mx-auto text-center relative z-10 px-6">
+            <h2
+                class="text-[22px] md:text-[30px] lg:text-[36px] font-black text-gray-900 uppercase tracking-tight mb-8">
+                Engineer Optimization Into Every Production Cycle
+            </h2>
+            <p
+                class="text-[15px] md:text-[17px] leading-[1.8] text-gray-600 font-bold lg:text-base uppercase tracking-wider mb-12 max-w-3xl mx-auto border-l-4 border-r-4 border-brand-orange px-6 py-2">
+                Deploy disciplined CI frameworks that transform variance into measurable performance gains.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-6 mt-8">
+                <a href="contact.html"
+                    class="inline-flex items-center justify-center gap-3 bg-brand-orange hover:bg-orange-600 text-white px-10 py-5 rounded-sm font-black uppercase tracking-widest text-sm transition-colors w-full sm:w-auto">
+                    Submit Engineering Inquiry <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                </a>
+                <a href="contact.html"
+                    class="inline-flex items-center justify-center gap-3 bg-transparent border-2 border-slate-700 hover:border-slate-500 text-gray-900 px-10 py-5 rounded-sm font-black uppercase tracking-widest text-sm transition-colors w-full sm:w-auto">
+                    Connect With Optimization Team
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- Original Footer Details -->
+
+    <!-- Bottom Footer -->
+    
+    <footer class="bg-white pt-24 pb-12 px-6 border-t border-gray-100 relative overflow-hidden">
+        <!-- Decorative subtle element -->
+        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-brand-orange/20 to-transparent"></div>
+        
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-16 mb-20">
+                
+                <!-- Column 1: Logo & Branding -->
+                <div class="lg:col-span-4 space-y-8">
+                    <a href="index.html" class="inline-block transition-transform hover:scale-105 duration-300">
+                        <img width="343" height="96" src="uploads/logo.png" alt="Sivam Itech Logo"
+                            class="h-20 md:h-28 w-auto object-contain">
+                    </a>
+                    <p class="text-zinc-700 text-[16px] leading-[1.8] font-medium max-w-sm">
+                        Redefining precision and synergy in the industrial sector. From concept to complex component
+                        manufacturing with unmatched excellence and technical leadership.
+                    </p>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="lg:col-span-2">
+                    <h5 class="text-[12px] font-black uppercase tracking-[0.3em] mb-8 text-brand-orange">Company</h5>
+                    <ul class="space-y-4">
+                        <li><a href="about.html" class="text-gray-600 hover:text-brand-orange text-[15px] font-semibold transition-colors">About Us</a></li>
+                        <li><a href="infrastructure.html" class="text-gray-600 hover:text-brand-orange text-[15px] font-semibold transition-colors">Infrastructure</a></li>
+                        <li><a href="products.html" class="text-gray-600 hover:text-brand-orange text-[15px] font-semibold transition-colors">Products</a></li>
+                        <li><a href="careers.html" class="text-gray-600 hover:text-brand-orange text-[15px] font-semibold transition-colors">Careers</a></li>
+                        <li><a href="contact.html" class="text-gray-600 hover:text-brand-orange text-[15px] font-semibold transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Connect -->
+                <div class="lg:col-span-3">
+                    <h5 class="text-[12px] font-black uppercase tracking-[0.3em] mb-8 text-brand-orange">Connect</h5>
+                    <ul class="space-y-6">
+                        <li class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-orange-50 flex items-center justify-center shrink-0 border border-orange-100">
+                                <i data-lucide="map-pin" class="w-5 h-5 text-brand-orange"></i>
+                            </div>
+                            <span class="text-gray-600 font-medium text-[14px] leading-relaxed">
+                                No. 115 / 2A, Mahalakshmi Nagar Extension, Noombal, Chennai – 600 077, India.
+                            </span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-orange-50 flex items-center justify-center shrink-0 border border-orange-100">
+                                <i data-lucide="phone" class="w-5 h-5 text-brand-orange"></i>
+                            </div>
+                            <div class="flex flex-col text-[14px] font-bold">
+                                <a href="tel:+919884426111" class="text-gray-700 hover:text-brand-orange transition-colors">+91 98844 26111</a>
+                                <a href="tel:+918428283013" class="text-gray-700 hover:text-brand-orange transition-colors">+91 84282 83013</a>
+                            </div>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-orange-50 flex items-center justify-center shrink-0 border border-orange-100">
+                                <i data-lucide="mail" class="w-5 h-5 text-brand-orange"></i>
+                            </div>
+                            <div class="flex flex-col text-[14px] font-bold overflow-hidden">
+                                <a href="mailto:Vijayakumar.k@sivamitech.com" class="text-gray-700 hover:text-brand-orange transition-colors truncate">Vijayakumar.k@sivamitech.com</a>
+                                <a href="mailto:Nagendran.P@sivamitech.com" class="text-gray-700 hover:text-brand-orange transition-colors truncate">Nagendran.P@sivamitech.com</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Stay Updated & Social -->
+                <div class="lg:col-span-3 space-y-12">
+                    <div>
+                        <h5 class="text-[12px] font-black uppercase tracking-[0.3em] mb-6 text-brand-orange">Follow Us</h5>
+                        <div class="flex flex-col gap-3">
+                            <a href="https://www.linkedin.com/company/sivam-itech-metal-forming-industries/" target="_blank" rel="noopener noreferrer" 
+                               class="flex items-center gap-3 group bg-gray-50 p-2 rounded-2xl border border-gray-100 hover:border-[#0077b5]/30 hover:bg-white transition-all duration-300 hover:-translate-y-1">
+                                <div class="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-[#0077b5] shadow-sm group-hover:bg-[#0077b5] group-hover:text-white transition-all duration-300">
+                                    <i class="fa-brands fa-linkedin text-[18px]"></i>
+                                </div>
+                                <span class="text-[14px] font-bold text-gray-700 group-hover:text-brand-orange transition-colors px-1">LinkedIn</span>
+                            </a>
+                            <a href="https://wa.me/919884426111?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20your%20products%20and%20services%20at%20Sivam%20Itech%20Metal%20Forming%20Industries." target="_blank" rel="noopener noreferrer" 
+                               class="flex items-center gap-3 group bg-gray-50 p-2 rounded-2xl border border-gray-100 hover:border-[#25d366]/30 hover:bg-white transition-all duration-300">
+                                <div class="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-[#25d366] shadow-sm group-hover:bg-[#25d366] group-hover:text-white transition-all duration-300">
+                                    <i class="fa-brands fa-whatsapp text-[20px]"></i>
+                                </div>
+                                <span class="text-[14px] font-bold text-gray-700 group-hover:text-brand-orange transition-colors px-1">WhatsApp</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div>
+                        <h5 class="text-[12px] font-black uppercase tracking-[0.3em] mb-6 text-brand-orange">Newsletter</h5>
+                        <div class="relative group">
+                            <input type="email" placeholder="Corporate email" 
+                                   class="w-full bg-gray-50 border border-gray-200 rounded-2xl px-5 py-4 text-[14px] font-medium outline-none focus:border-brand-orange focus:bg-white transition-all pr-14">
+                            <button class="absolute right-2 top-2 bottom-2 w-10 bg-brand-orange text-white rounded-xl flex items-center justify-center hover:brightness-110 transition-all shadow-lg shadow-brand-orange/20" title="Subscribe">
+                                <i data-lucide="send" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Copyright Bar -->
+            <div class="pt-12 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-8">
+                <p class="text-[11px] font-black text-gray-400 uppercase tracking-[0.2em]">
+                    © 2024 SIVAM ITECH Limited. Precision Engineering Redefined.
+                </p>
+                <div class="flex gap-8 items-center">
+                    <a href="#" class="text-gray-400 hover:text-brand-orange text-[11px] font-black uppercase tracking-widest transition-colors">Privacy</a>
+                    <a href="#" class="text-gray-400 hover:text-brand-orange text-[11px] font-black uppercase tracking-widest transition-colors">Terms</a>
+                    </div>
+        </div>
+        </div>
+    </footer>
+
+    <!-- Custom JS and Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest" defer></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      lucide.createIcons();
+    });
+  </script>
+    <script src="assets/js/main.min.js" defer></script>
+</body>
+
+
+

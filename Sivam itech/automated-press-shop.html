@@ -1,0 +1,549 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="public, max-age=31536000">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automated Press Shop | SIVAM ITECH</title>
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://unpkg.com">
+
+    <!-- Defer non-critical scripts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.min.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="uploads/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body class="bg-white text-gray-600 font-sans antialiased overflow-x-hidden selection:bg-brand-orange pb-10 md:pb-0">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-orange': '#EB690A',
+                        'charcoal': '#111827',
+                        'soft-bg': '#F8FAFC',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .industrial-shadow {
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05);
+        }
+
+        .hover-lift {
+            transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .hover-lift:hover {
+            transform: translateY(-8px);
+        }
+
+        .grid-pattern {
+            background-image: radial-gradient(#e5e7eb 1px, transparent 1px);
+            background-size: 32px 32px;
+        }
+    </style>
+
+
+
+
+    
+
+    <!-- Navigation (Consistent with Homepage) -->
+    <nav class="sticky top-0 w-full z-50 glass-nav shadow-md">
+        <div class="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3">
+                <img width="343" height="96" loading="eager" src="uploads/logo.png" alt="Sivam Itech Metal Forming Industries Official Logo"
+                    class="h-28 md:h-36 lg:h-40 w-auto object-contain relative z-10">
+            </a>
+
+            <div class="hidden lg:flex space-x-8 font-bold text-xs uppercase tracking-widest text-gray-700">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="infrastructure.html" class="nav-link">Infrastructure</a>
+                <a href="products.html" class="nav-link text-brand-orange">Products</a>
+                <a href="careers.html" class="nav-link">Careers</a>
+                <a href="contact.html" class="nav-link">Contact Us</a>
+            </div>
+
+            <a href="inquire.html"
+                class="hidden md:block btn-orange px-6 py-2.5 text-xs font-bold uppercase tracking-widest rounded-full shadow-md hover:shadow-lg">
+                Inquire Now
+            </a>
+
+            <!-- Changed onclick to use JS event listener via ID if possible, but keeping simplistic onclick for now as per extraction, 
+                 removed inline onclick to rely on main.js event binding -->
+            <button type="button" class="lg:hidden" onclick="toggleMenu()" title="Toggle mobile menu">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+        <div id="mobile-menu" class="lg:hidden bg-white shadow-lg">
+            <div class="px-6 py-4 flex flex-col space-y-4 font-bold text-xs uppercase">
+                <a href="index.html" class=" transition-colors">Home</a>
+                <a href="about.html" class=" transition-colors">About Us</a>
+                <a href="infrastructure.html" class=" transition-colors">Infrastructure</a>
+                <a href="products.html" class=" transition-colors text-brand-orange">Products</a>
+                <a href="careers.html" class=" transition-colors">Careers</a>
+                <a href="contact.html" class=" transition-colors">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="relative bg-charcoal text-white py-[120px]">
+        <div class="absolute inset-0 bg-[url('uploads/automate.avif')] bg-cover bg-center opacity-20"></div>
+
+        <div class="relative max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-20 items-center">
+
+            <div class="space-y-8">
+                <span class="text-brand-orange uppercase tracking-[0.4em] text-xs font-bold">
+                    Automotive Manufacturing Division
+                </span>
+
+                <h1 class="text-5xl lg:text-6xl font-black uppercase leading-tight">
+                    Automated Press Shop
+                </h1>
+
+                <p class="text-slate-300 text-lg max-w-xl leading-relaxed">
+                    High-tonnage synchronized press lines engineered for structural automotive
+                    components with 24/7 production capability and zero-defect quality benchmarks.
+                </p>
+
+                <div class="flex gap-6 pt-6">
+                    <a href="contact.html"
+                        class="bg-brand-orange px-10 py-4 rounded-full text-xs uppercase tracking-widest font-bold">
+                        Request Technical Discussion
+                    </a>
+
+                    <a href="assets/SIVAM_ITECH_Profile.pdf" target="_blank"
+                        class="border border-white/30 px-10 py-4 rounded-full text-xs uppercase tracking-widest">
+                        Download Capability Deck
+                    </a>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-10 text-center">
+                <div>
+                    <p class="text-5xl font-black text-brand-orange">400T</p>
+                    <p class="text-xs uppercase tracking-widest text-slate-400 mt-2">Max Press Capacity</p>
+                </div>
+                <div>
+                    <p class="text-5xl font-black text-brand-orange">0 PPM</p>
+                    <p class="text-xs uppercase tracking-widest text-slate-400 mt-2">Quality Target</p>
+                </div>
+                <div>
+                    <p class="text-5xl font-black text-brand-orange">45s</p>
+                    <p class="text-xs uppercase tracking-widest text-slate-400 mt-2">Cycle Time</p>
+                </div>
+                <div>
+                    <p class="text-5xl font-black text-brand-orange">24/7</p>
+                    <p class="text-xs uppercase tracking-widest text-slate-400 mt-2">Operational Uptime</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Facility Core Overview -->
+    <section class="py-[80px] lg:py-[120px] bg-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-24 items-center">
+                <div class="space-y-10">
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-4 text-brand-orange">
+                            <div class="w-12 h-[2px] bg-brand-orange"></div>
+                            <span class="text-xs font-black uppercase tracking-[0.3em]">Facility Profile</span>
+                        </div>
+                        <h2 class="text-4xl lg:text-5xl font-black text-gray-900 uppercase leading-[1.1]">
+                            Automated Press Shop <br><span class="text-brand-orange">Infrastructure</span>
+                        </h2>
+                    </div>
+
+                    <div class="space-y-6 text-gray-600 text-lg leading-relaxed font-medium">
+                        <p>
+                            The Automated Press Shop at Sivam Itech is a high-performance manufacturing unit dedicated to delivering precision-formed components at scale. Engineered for structural integrity and high-speed series production, this facility supports diverse automotive and industrial requirements.
+                        </p>
+                        <p class="text-gray-500">
+                            Our facility utilizes a comprehensive range of stamping technology, spanning from 50T to 200T high-precision presses. This infrastructure is fully integrated with automated feeding and handling systems, ensuring optimized material utilization and continuous output efficiency.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-12 pt-6">
+                        <div>
+                            <p class="text-4xl font-black text-gray-900 mb-2">50T-200T</p>
+                            <p class="text-[10px] font-black text-gray-400 uppercase tracking-widest">Master Press Range</p>
+                        </div>
+                        <div>
+                            <p class="text-4xl font-black text-gray-900 mb-2">High</p>
+                            <p class="text-[10px] font-black text-gray-400 uppercase tracking-widest">Volume Production</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <div class="absolute -inset-4 bg-brand-orange/5 rounded-[3rem] blur-3xl"></div>
+                    <div class="relative rounded-[3rem] overflow-hidden shadow-2xl border border-gray-100 bg-gray-50 aspect-[4/5] md:aspect-square">
+                        <img loading="lazy" src="uploads/collection-1.avif" alt="Automated Press Shop Floor" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                        <div class="absolute bottom-10 left-10 right-10">
+                            <div class="bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-2xl">
+                                <p class="text-white font-bold leading-relaxed">
+                                    "Precision-driven automation for consistency and scale in automotive stamping."
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Features & Capabilities -->
+    <section class="py-[80px] lg:py-[120px] bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6 text-center mb-20">
+            <h2 class="text-xs font-black text-brand-orange uppercase tracking-[.4em] mb-4">Features</h2>
+            <h3 class="text-3xl md:text-4xl lg:text-5xl font-black text-gray-900 uppercase">Core Capabilities</h3>
+            <p class="text-gray-600 mt-6 max-w-2xl mx-auto font-medium">Engineering depth and infrastructure tailored for high-volume precision manufacturing.</p>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Feature Card 1 -->
+            <div class="bg-white p-10 rounded-[2.5rem] border border-gray-100 shadow-sm hover:shadow-2xl transition-all duration-500 group">
+                <div class="w-14 h-14 bg-brand-orange/10 text-brand-orange rounded-2xl flex items-center justify-center mb-8 group-hover:bg-brand-orange group-hover:text-white transition-all">
+                    <i data-lucide="layers" class="w-7 h-7"></i>
+                </div>
+                <h4 class="text-xl font-bold text-gray-900 uppercase tracking-tight mb-4">Machine Capacity</h4>
+                <p class="text-gray-500 leading-relaxed font-medium mb-8">
+                    Versatile press fleet with a capacity range from 50T to 200T, optimized for diverse structural components and series production.
+                </p>
+                <div class="flex items-center gap-3 text-[10px] font-black text-brand-orange uppercase tracking-widest border-t border-gray-50 pt-6">
+                    <i data-lucide="check-circle" class="w-4 h-4"></i>
+                    High Versatility Fleet
+                </div>
+            </div>
+
+            <!-- Feature Card 2 -->
+            <div class="bg-white p-10 rounded-[2.5rem] border border-gray-100 shadow-sm hover:shadow-2xl transition-all duration-500 group">
+                <div class="w-14 h-14 bg-brand-orange/10 text-brand-orange rounded-2xl flex items-center justify-center mb-8 group-hover:bg-brand-orange group-hover:text-white transition-all">
+                    <i data-lucide="target" class="w-7 h-7"></i>
+                </div>
+                <h4 class="text-xl font-bold text-gray-900 uppercase tracking-tight mb-4">Precision Levels</h4>
+                <p class="text-gray-500 leading-relaxed font-medium mb-8">
+                    Micron-level accuracy achieved through synchronized ram movement and real-time tonnage monitoring across all press lines.
+                </p>
+                <div class="flex items-center gap-3 text-[10px] font-black text-brand-orange uppercase tracking-widest border-t border-gray-50 pt-6">
+                    <i data-lucide="shield-check" class="w-4 h-4"></i>
+                    Micron-Level Tolerance
+                </div>
+            </div>
+
+            <!-- Feature Card 3 -->
+            <div class="bg-white p-10 rounded-[2.5rem] border border-gray-100 shadow-sm hover:shadow-2xl transition-all duration-500 group">
+                <div class="w-14 h-14 bg-brand-orange/10 text-brand-orange rounded-2xl flex items-center justify-center mb-8 group-hover:bg-brand-orange group-hover:text-white transition-all">
+                    <i data-lucide="zap" class="w-7 h-7"></i>
+                </div>
+                <h4 class="text-xl font-bold text-gray-900 uppercase tracking-tight mb-4">Production Efficiency</h4>
+                <p class="text-gray-500 leading-relaxed font-medium mb-8">
+                    24/7 autonomous production capability with integrated SMED changeover protocols for maximum unit cost efficiency.
+                </p>
+                <div class="flex items-center gap-3 text-[10px] font-black text-brand-orange uppercase tracking-widest border-t border-gray-50 pt-6">
+                    <i data-lucide="trending-up" class="w-4 h-4"></i>
+                    Optimized Cycle Times
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Production Workflow Section -->
+    <section class="py-[80px] lg:py-[120px] bg-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-24 items-center">
+            <div class="order-2 lg:order-1 relative">
+                <div class="grid grid-cols-2 gap-6">
+                    <div class="space-y-6 pt-12">
+                        <div class="aspect-square rounded-[2rem] overflow-hidden shadow-lg">
+                            <img loading="lazy" src="uploads/automate.avif" alt="Material Loading" class="w-full h-full object-cover">
+                        </div>
+                        <div class="aspect-[3/4] rounded-[2rem] overflow-hidden shadow-lg">
+                            <img loading="lazy" src="uploads/collection-4.avif" alt="Output Handling" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="aspect-[3/4] rounded-[2rem] overflow-hidden shadow-lg">
+                            <img loading="lazy" src="uploads/collection-2.avif" alt="Stamping" class="w-full h-full object-cover">
+                        </div>
+                        <div class="aspect-square rounded-[2rem] overflow-hidden shadow-lg">
+                            <img loading="lazy" src="uploads/collection-3.avif" alt="Inspection" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="order-1 lg:order-2 space-y-12">
+                <div class="space-y-4">
+                    <h2 class="text-xs font-black text-brand-orange uppercase tracking-[.4em]">Stamping Logic</h2>
+                    <h3 class="text-3xl md:text-5xl font-black text-gray-900 uppercase leading-tight">Production <br>Workflow</h3>
+                </div>
+
+                <div class="space-y-10">
+                    <!-- Step 1 -->
+                    <div class="flex gap-8 group">
+                        <div class="w-12 h-12 rounded-full border-2 border-brand-orange flex items-center justify-center shrink-0 text-brand-orange font-black group-hover:bg-brand-orange group-hover:text-white transition-all">01</div>
+                        <div class="space-y-2">
+                            <h4 class="text-xl font-bold text-gray-900 uppercase">Material Loading</h4>
+                            <p class="text-gray-500 font-medium">Coil loading onto NC straighten feeders for continuous material supply and precise thickness management.</p>
+                        </div>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="flex gap-8 group">
+                        <div class="w-12 h-12 rounded-full border-2 border-brand-orange flex items-center justify-center shrink-0 text-brand-orange font-black group-hover:bg-brand-orange group-hover:text-white transition-all">02</div>
+                        <div class="space-y-2">
+                            <h4 class="text-xl font-bold text-gray-900 uppercase">Stamping</h4>
+                            <p class="text-gray-500 font-medium">Synchronized hit execution using high-tonnage progressive or transfer dies to achieve final geometry.</p>
+                        </div>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="flex gap-8 group">
+                        <div class="w-12 h-12 rounded-full border-2 border-brand-orange flex items-center justify-center shrink-0 text-brand-orange font-black group-hover:bg-brand-orange group-hover:text-white transition-all">03</div>
+                        <div class="space-y-2">
+                            <h4 class="text-xl font-bold text-gray-900 uppercase">Inspection</h4>
+                            <p class="text-gray-500 font-medium">100% inline sensor-based quality checks and secondary offline validation for zero-defect assurance.</p>
+                        </div>
+                    </div>
+                    <!-- Step 4 -->
+                    <div class="flex gap-8 group">
+                        <div class="w-12 h-12 rounded-full border-2 border-brand-orange flex items-center justify-center shrink-0 text-brand-orange font-black group-hover:bg-brand-orange group-hover:text-white transition-all">04</div>
+                        <div class="space-y-2">
+                            <h4 class="text-xl font-bold text-gray-900 uppercase">Output Handling</h4>
+                            <p class="text-gray-500 font-medium">Automated component evacuation, logistical staging, and final batch preparation for dispatch.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quality Benchmark Strip -->
+    <section class="py-[60px] bg-charcoal text-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-brand-orange/5 opacity-50"></div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-12 text-center items-center">
+                <div class="space-y-2">
+                    <p class="text-4xl font-black text-brand-orange">0 PPM</p>
+                    <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Quality Objective</p>
+                </div>
+                <div class="space-y-2">
+                    <p class="text-4xl font-black text-brand-orange">200T</p>
+                    <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Max Press Force</p>
+                </div>
+                <div class="space-y-2">
+                    <p class="text-4xl font-black text-brand-orange">IATF</p>
+                    <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Standard Compliance</p>
+                </div>
+                <div class="space-y-2">
+                    <p class="text-4xl font-black text-brand-orange">24/7</p>
+                    <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Facility Uptime</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Secondary Navigation -->
+    <section class="py-[80px] lg:py-[100px] bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6 mb-16 text-center">
+            <h3 class="text-2xl font-black text-gray-900 uppercase">Explore Secondary Facilities</h3>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10">
+            <a href="tooling-npd.html" class="flex items-center gap-8 bg-white p-8 rounded-[2rem] border border-gray-100 hover:shadow-2xl transition-all duration-500 group">
+                <div class="w-32 h-24 rounded-2xl overflow-hidden shrink-0 shadow-inner">
+                    <img loading="lazy" src="uploads/collection-2.avif" alt="Tool Room" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold text-gray-900 uppercase transition-colors group-hover:text-brand-orange">Tooling & NPD</h4>
+                    <p class="text-sm text-gray-500 mt-2 font-medium">Precision die engineering and rapid prototyping.</p>
+                </div>
+            </a>
+            <a href="infrastructure.html" class="flex items-center gap-8 bg-white p-8 rounded-[2rem] border border-gray-100 hover:shadow-2xl transition-all duration-500 group">
+                <div class="w-32 h-24 rounded-2xl overflow-hidden shrink-0 shadow-inner">
+                    <img loading="lazy" src="uploads/hero-factory.avif" alt="Infrastructure" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold text-gray-900 uppercase transition-colors group-hover:text-brand-orange">Total Hub</h4>
+                    <p class="text-sm text-gray-500 mt-2 font-medium">Complete manufacturing ecosystem overview.</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="py-[100px] px-6 bg-white">
+        <div class="max-w-7xl mx-auto bg-charcoal p-12 lg:p-24 rounded-[4rem] text-center shadow-2xl relative overflow-hidden">
+            <div class="absolute -top-32 -left-32 w-96 h-96 bg-brand-orange/20 rounded-full blur-[120px]"></div>
+            <div class="relative z-10 space-y-12 text-white">
+                <div class="space-y-6">
+                    <h2 class="text-4xl md:text-6xl font-black uppercase leading-tight tracking-tighter">
+                        Synchronize Your <br><span class="text-brand-orange">Production Fleet</span>
+                    </h2>
+                    <p class="text-lg text-slate-400 max-w-2xl mx-auto font-medium">
+                        Partner with our automated stamping division to deploy high-volume automotive projects with unmatched precision.
+                    </p>
+                </div>
+                <div class="flex flex-col sm:flex-row justify-center gap-8 pt-4">
+                    <a href="contact.html" class="btn-orange px-14 py-6 font-black uppercase tracking-widest text-[11px] rounded-full shadow-2xl shadow-brand-orange/30 hover:scale-105 active:scale-95 transition-all">Request Consultation</a>
+                    <a href="infrastructure.html" class="border border-white/10 hover:border-brand-orange hover:text-brand-orange px-14 py-6 font-black uppercase tracking-widest text-[11px] rounded-full transition-all backdrop-blur-sm bg-white/5 active:scale-95">Browse Network</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bottom Footer -->
+    
+    <footer class="bg-white pt-24 pb-12 px-6 border-t border-gray-100 relative overflow-hidden">
+        <!-- Decorative subtle element -->
+        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-brand-orange/20 to-transparent"></div>
+        
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-16 mb-20">
+                
+                <!-- Column 1: Logo & Branding -->
+                <div class="lg:col-span-4 space-y-8">
+                    <a href="index.html" class="inline-block transition-transform hover:scale-105 duration-300">
+                        <img width="343" height="96" src="uploads/logo.png" alt="Sivam Itech Logo"
+                            class="h-20 md:h-28 w-auto object-contain">
+                    </a>
+                    <p class="text-zinc-700 text-[16px] leading-[1.8] font-medium max-w-sm">
+                        Redefining precision and synergy in the industrial sector. From concept to complex component
+                        manufacturing with unmatched excellence and technical leadership.
+                    </p>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="lg:col-span-2">
+                    <h5 class="text-[12px] font-black uppercase tracking-[0.3em] mb-8 text-brand-orange">Company</h5>
+                    <ul class="space-y-4">
+                        <li><a href="about.html" class="text-gray-600 hover:text-brand-orange text-[15px] font-semibold transition-colors">About Us</a></li>
+                        <li><a href="infrastructure.html" class="text-gray-600 hover:text-brand-orange text-[15px] font-semibold transition-colors">Infrastructure</a></li>
+                        <li><a href="products.html" class="text-gray-600 hover:text-brand-orange text-[15px] font-semibold transition-colors">Products</a></li>
+                        <li><a href="careers.html" class="text-gray-600 hover:text-brand-orange text-[15px] font-semibold transition-colors">Careers</a></li>
+                        <li><a href="contact.html" class="text-gray-600 hover:text-brand-orange text-[15px] font-semibold transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Connect -->
+                <div class="lg:col-span-3">
+                    <h5 class="text-[12px] font-black uppercase tracking-[0.3em] mb-8 text-brand-orange">Connect</h5>
+                    <ul class="space-y-6">
+                        <li class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-orange-50 flex items-center justify-center shrink-0 border border-orange-100">
+                                <i data-lucide="map-pin" class="w-5 h-5 text-brand-orange"></i>
+                            </div>
+                            <span class="text-gray-600 font-medium text-[14px] leading-relaxed">
+                                No. 115 / 2A, Mahalakshmi Nagar Extension, Noombal, Chennai – 600 077, India.
+                            </span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-orange-50 flex items-center justify-center shrink-0 border border-orange-100">
+                                <i data-lucide="phone" class="w-5 h-5 text-brand-orange"></i>
+                            </div>
+                            <div class="flex flex-col text-[14px] font-bold">
+                                <a href="tel:+919884426111" class="text-gray-700 hover:text-brand-orange transition-colors">+91 98844 26111</a>
+                                <a href="tel:+918428283013" class="text-gray-700 hover:text-brand-orange transition-colors">+91 84282 83013</a>
+                            </div>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-orange-50 flex items-center justify-center shrink-0 border border-orange-100">
+                                <i data-lucide="mail" class="w-5 h-5 text-brand-orange"></i>
+                            </div>
+                            <div class="flex flex-col text-[14px] font-bold overflow-hidden">
+                                <a href="mailto:Vijayakumar.k@sivamitech.com" class="text-gray-700 hover:text-brand-orange transition-colors truncate">Vijayakumar.k@sivamitech.com</a>
+                                <a href="mailto:Nagendran.P@sivamitech.com" class="text-gray-700 hover:text-brand-orange transition-colors truncate">Nagendran.P@sivamitech.com</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Stay Updated & Social -->
+                <div class="lg:col-span-3 space-y-12">
+                    <div>
+                        <h5 class="text-[12px] font-black uppercase tracking-[0.3em] mb-6 text-brand-orange">Follow Us</h5>
+                        <div class="flex flex-col gap-3">
+                            <a href="https://www.linkedin.com/company/sivam-itech-metal-forming-industries/" target="_blank" rel="noopener noreferrer" 
+                               class="flex items-center gap-3 group bg-gray-50 p-2 rounded-2xl border border-gray-100 hover:border-[#0077b5]/30 hover:bg-white transition-all duration-300 hover:-translate-y-1">
+                                <div class="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-[#0077b5] shadow-sm group-hover:bg-[#0077b5] group-hover:text-white transition-all duration-300">
+                                    <i class="fa-brands fa-linkedin text-[18px]"></i>
+                                </div>
+                                <span class="text-[14px] font-bold text-gray-700 group-hover:text-brand-orange transition-colors px-1">LinkedIn</span>
+                            </a>
+                            <a href="https://wa.me/919884426111?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20your%20products%20and%20services%20at%20Sivam%20Itech%20Metal%20Forming%20Industries." target="_blank" rel="noopener noreferrer" 
+                               class="flex items-center gap-3 group bg-gray-50 p-2 rounded-2xl border border-gray-100 hover:border-[#25d366]/30 hover:bg-white transition-all duration-300">
+                                <div class="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-[#25d366] shadow-sm group-hover:bg-[#25d366] group-hover:text-white transition-all duration-300">
+                                    <i class="fa-brands fa-whatsapp text-[20px]"></i>
+                                </div>
+                                <span class="text-[14px] font-bold text-gray-700 group-hover:text-brand-orange transition-colors px-1">WhatsApp</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div>
+                        <h5 class="text-[12px] font-black uppercase tracking-[0.3em] mb-6 text-brand-orange">Newsletter</h5>
+                        <div class="relative group">
+                            <input type="email" placeholder="Corporate email" 
+                                   class="w-full bg-gray-50 border border-gray-200 rounded-2xl px-5 py-4 text-[14px] font-medium outline-none focus:border-brand-orange focus:bg-white transition-all pr-14">
+                            <button class="absolute right-2 top-2 bottom-2 w-10 bg-brand-orange text-white rounded-xl flex items-center justify-center hover:brightness-110 transition-all shadow-lg shadow-brand-orange/20" title="Subscribe">
+                                <i data-lucide="send" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Copyright Bar -->
+            <div class="pt-12 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-8">
+                <p class="text-[11px] font-black text-gray-400 uppercase tracking-[0.2em]">
+                    © 2024 SIVAM ITECH Limited. Precision Engineering Redefined.
+                </p>
+                <div class="flex gap-8 items-center">
+                    <a href="#" class="text-gray-400 hover:text-brand-orange text-[11px] font-black uppercase tracking-widest transition-colors">Privacy</a>
+                    <a href="#" class="text-gray-400 hover:text-brand-orange text-[11px] font-black uppercase tracking-widest transition-colors">Terms</a>
+                    </div>
+        </div>
+        </div>
+    </footer>
+
+
+    <!-- Custom JS and Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest" defer></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      lucide.createIcons();
+    });
+  </script>
+    <script src="assets/js/main.min.js" defer></script>
+</body>
+
+</html>
+
+
+

@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="public, max-age=31536000">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products | SIVAM ITECH</title>
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://unpkg.com">
+
+    <!-- Defer non-critical scripts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.min.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="uploads/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body class="bg-white text-gray-600 font-sans antialiased overflow-x-hidden selection:bg-brand-orange pb-10 md:pb-0">
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/919884426111?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20your%20products%20and%20services%20at%20Sivam%20Itech%20Metal%20Forming%20Industries." target="_blank" rel="noopener noreferrer" title="Contact us on WhatsApp"
+        class="whatsapp-float flex items-center justify-center w-14 h-14 bg-[#25D366] rounded-full shadow-2xl">
+        <div class="whatsapp-pulse"></div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="white" stroke="none">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.414 0 .006 5.408 0 12.045c0 2.121.554 4.189 1.605 6.006L0 24l6.115-1.605a11.83 11.83 0 005.932 1.577h.005c6.635 0 12.041-5.408 12.046-12.047a11.82 11.82 0 00-3.483-8.43">
+            </path>
+        </svg>
+    </a>
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 w-full z-50 glass-nav shadow-md">
+        <div class="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3">
+                <img width="343" height="96" loading="eager" src="uploads/logo.png" alt="Sivam Itech Metal Forming Industries Official Logo"
+                    class="h-28 md:h-36 lg:h-40 w-auto object-contain relative z-10">
+            </a>
+
+            <div class="hidden lg:flex space-x-8 font-bold text-xs uppercase tracking-widest text-gray-700">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="infrastructure.html" class="nav-link">Infrastructure</a>
+                <a href="products.html" class="nav-link text-brand-orange">Products</a>
+                <a href="careers.html" class="nav-link">Careers</a>
+                <a href="contact.html" class="nav-link">Contact Us</a>
+            </div>
+
+            <a href="inquire.html"
+                class="hidden md:block btn-orange px-6 py-2.5 text-xs font-bold uppercase tracking-widest rounded-full shadow-md hover:shadow-lg">
+                Inquire Now
+            </a>
+
+            <button type="button" class="lg:hidden" onclick="toggleMenu()" title="Toggle mobile menu" id="mobile-menu-btn">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+        <div id="mobile-menu" class="lg:hidden bg-white shadow-lg">
+            <div class="px-6 py-4 flex flex-col space-y-4 font-bold text-xs uppercase">
+                <a href="index.html" class=" transition-colors">Home</a>
+                <a href="about.html" class=" transition-colors">About Us</a>
+                <a href="infrastructure.html" class=" transition-colors">Infrastructure</a>
+                <a href="products.html" class=" transition-colors text-brand-orange">Products</a>
+                <a href="careers.html" class=" transition-colors">Careers</a>
+                <a href="contact.html" class=" transition-colors">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section
+        class="py-[60px] md:py-[80px] lg:py-[100px] relative pt-32 pb-20 md:pt-40 md:pb-28 flex flex-col items-center justify-center overflow-hidden bg-white text-center border-b border-gray-100">
+        <div class="absolute inset-0 z-0 bg-gray-50/50"></div>
+        <div class="relative z-10 max-w-7xl mx-auto px-6 w-full flex flex-col items-center">
+            <h2 class="text-[12px] font-bold text-brand-orange tracking-[0.3em] uppercase mb-4">Product Catalog</h2>
+            <h1
+                class="text-[28px] sm:text-[32px] md:text-[40px] lg:text-[52px] font-black text-gray-900 uppercase tracking-tight mb-6">
+                Precision Metal<br>Components</h1>
+            <p
+                class="text-[15px] md:text-[17px] leading-[1.8] text-gray-600 font-medium max-w-3xl mx-auto leading-relaxed">
+                Explore our comprehensive range of high-performance components, specifically engineered for the global
+                automotive and industrial supply chains.
+            </p>
+        </div>
+    </section>
+
+    <!-- Product Grid Section -->
+    <section class="py-[60px] md:py-[80px] lg:py-[100px] px-6 bg-white relative z-10" id="product-grid">
+        <div class="max-w-7xl mx-auto px-6">
+            <!-- Filter Controls -->
+            <div class="flex flex-wrap justify-center gap-4 mb-16">
+                <button class="portfolio-filter-btn active px-8 py-3 rounded-full text-[10px] font-bold uppercase tracking-widest border transition-all duration-300 bg-brand-orange text-white border-brand-orange shadow-[0_4px_15px_rgba(238,111,36,0.5)]" data-filter="all">All Products</button>
+                <button class="portfolio-filter-btn px-8 py-3 rounded-full text-[10px] font-bold uppercase tracking-widest border transition-all duration-300 bg-gray-50 text-gray-600 border-gray-200" data-filter=".filter-2w">Two Wheeler</button>
+                <button class="portfolio-filter-btn px-8 py-3 rounded-full text-[10px] font-bold uppercase tracking-widest border transition-all duration-300 bg-gray-50 text-gray-600 border-gray-200" data-filter=".filter-4w">Four Wheeler</button>
+                <button class="portfolio-filter-btn px-8 py-3 rounded-full text-[10px] font-bold uppercase tracking-widest border transition-all duration-300 bg-gray-50 text-gray-600 border-gray-200" data-filter=".filter-back-plates">Back Plates</button>
+            </div>
+
+            <!-- Grid Container -->
+                        <div class="flex flex-wrap gap-8 justify-center items-stretch" id="portfolio-container">
+
+                <!-- Product 1 -->
+                <div class="portfolio-item filter-2w filter-back-plates lg:w-[calc(33.333%-1.5rem)] md:w-[calc(50%-1rem)] w-full flex flex-col bg-white rounded-2xl border border-gray-200 transition-all duration-300 relative group hover:border-brand-orange shadow-sm hover:shadow-xl hover:-translate-y-1 overflow-hidden">
+                    <div class="w-full h-[250px] md:h-[280px] relative bg-gray-50 border-b border-gray-100 overflow-hidden">
+                        <img width="400" height="300" src="uploads/2W-Apache-Front-OB-and-IB-Back Plate.avif" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 relative z-10" alt="2W Apache Front Back Plate" loading="lazy">
+                    </div>
+                    <div class="p-6 md:p-8 flex flex-col flex-grow">
+                        <div class="flex gap-2 mb-4 flex-wrap">
+                            <span class="bg-brand-orange/10 text-brand-orange px-3 py-1 rounded-full text-[10px] tracking-widest font-bold uppercase">2W</span>
+                            <span class="bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-[10px] tracking-widest font-bold uppercase">Back Plate</span>
+                        </div>
+                        <h4 class="text-[20px] font-bold uppercase tracking-wide text-gray-900 mb-4">2W Apache Front Back Plate</h4>
+                        <p class="text-[14px] leading-relaxed text-gray-600 mb-6 flex-grow">
+                            <strong class="block text-gray-900 font-medium mb-3 text-[16px]">High-precision front braking component designed for optimal friction heat dissipation.</strong> Engineered to withstand extreme mechanical stress during high-speed deceleration cycles.
+                        </p>
+                        <div class="grid grid-cols-2 gap-4 border-t border-gray-100 pt-5 mb-6">
+                            <div>
+                                <span class="block text-[10px] text-gray-400 uppercase tracking-wider mb-1">Material</span>
+                                <span class="block text-xs font-semibold text-gray-800">SAPH 440 Steel</span>
+                            </div>
+                            <div>
+                                <span class="block text-[10px] text-gray-400 uppercase tracking-wider mb-1">Surface Finish</span>
+                                <span class="block text-xs font-semibold text-gray-800">CED Coated</span>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <a href="inquire.html" class="flex items-center gap-2 text-[12px] font-bold uppercase tracking-widest text-brand-orange group- transition-colors">
+                                View Technical Details <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="portfolio-item filter-2w filter-back-plates lg:w-[calc(33.333%-1.5rem)] md:w-[calc(50%-1rem)] w-full flex flex-col bg-white rounded-2xl border border-gray-200 transition-all duration-300 relative group hover:border-brand-orange shadow-sm hover:shadow-xl hover:-translate-y-1 overflow-hidden">
+                    <div class="w-full h-[250px] md:h-[280px] relative bg-gray-50 border-b border-gray-100 overflow-hidden">
+                        <img width="400" height="300" src="uploads/2W-KTM-Rear-Back-Plate.avif" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 relative z-10" alt="2W KTM Rear Back Plate" loading="lazy">
+                    </div>
+                    <div class="p-6 md:p-8 flex flex-col flex-grow">
+                        <div class="flex gap-2 mb-4 flex-wrap">
+                            <span class="bg-brand-orange/10 text-brand-orange px-3 py-1 rounded-full text-[10px] tracking-widest font-bold uppercase">2W</span>
+                            <span class="bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-[10px] tracking-widest font-bold uppercase">Back Plate</span>
+                        </div>
+                        <h4 class="text-[20px] font-bold uppercase tracking-wide text-gray-900 mb-4">2W KTM Rear Back Plate</h4>
+                        <p class="text-[14px] leading-relaxed text-gray-600 mb-6 flex-grow">
+                            <strong class="block text-gray-900 font-medium mb-3 text-[16px]">Performance-grade rear backing plate engineered for high-torque KTM braking systems.</strong> Carbon-rich steel construction ensures zero-flex performance under extreme racing conditions.
+                        </p>
+                        <div class="grid grid-cols-2 gap-4 border-t border-gray-100 pt-5 mb-6">
+                            <div>
+                                <span class="block text-[10px] text-gray-400 uppercase tracking-wider mb-1">Material</span>
+                                <span class="block text-xs font-semibold text-gray-800">IS 2062 Grade</span>
+                            </div>
+                            <div>
+                                <span class="block text-[10px] text-gray-400 uppercase tracking-wider mb-1">Surface Finish</span>
+                                <span class="block text-xs font-semibold text-gray-800">Zinc Plated</span>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <a href="inquire.html" class="flex items-center gap-2 text-[12px] font-bold uppercase tracking-widest text-brand-orange group- transition-colors">
+                                View Technical Details <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="portfolio-item filter-2w filter-back-plates lg:w-[calc(33.333%-1.5rem)] md:w-[calc(50%-1rem)] w-full flex flex-col bg-white rounded-2xl border border-gray-200 transition-all duration-300 relative group hover:border-brand-orange shadow-sm hover:shadow-xl hover:-translate-y-1 overflow-hidden">
+                    <div class="w-full h-[250px] md:h-[280px] relative bg-gray-50 border-b border-gray-100 overflow-hidden">
+                        <img width="400" height="300" src="uploads/2W-Suzuki-LHRH-Back-Plate.avif" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 relative z-10" alt="2W Suzuki LHRH Back Plate" loading="lazy">
+                    </div>
+                    <div class="p-6 md:p-8 flex flex-col flex-grow">
+                        <div class="flex gap-2 mb-4 flex-wrap">
+                            <span class="bg-brand-orange/10 text-brand-orange px-3 py-1 rounded-full text-[10px] tracking-widest font-bold uppercase">2W</span>
+                            <span class="bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-[10px] tracking-widest font-bold uppercase">Back Plate</span>
+                        </div>
+                        <h4 class="text-[20px] font-bold uppercase tracking-wide text-gray-900 mb-4">2W Suzuki LHRH Back Plate</h4>
+                        <p class="text-[14px] leading-relaxed text-gray-600 mb-6 flex-grow">
+                            <strong class="block text-gray-900 font-medium mb-3 text-[16px]">Symmetrical LH/RH backing plate set for reliable commuter braking performance.</strong> Precision stamped for 100% interoperability across the mid-range Suzuki platform.
+                        </p>
+                        <div class="grid grid-cols-2 gap-4 border-t border-gray-100 pt-5 mb-6">
+                            <div>
+                                <span class="block text-[10px] text-gray-400 uppercase tracking-wider mb-1">Material</span>
+                                <span class="block text-xs font-semibold text-gray-800">Carbon Steel</span>
+                            </div>
+                            <div>
+                                <span class="block text-[10px] text-gray-400 uppercase tracking-wider mb-1">Surface Finish</span>
+                                <span class="block text-xs font-semibold text-gray-800">Zinc Plated</span>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <a href="inquire.html" class="flex items-center gap-2 text-[12px] font-bold uppercase tracking-widest text-brand-orange group- transition-colors">
+                                View Technical Details <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="portfolio-item filter-4w filter-back-plates lg:w-[calc(33.333%-1.5rem)] md:w-[calc(50%-1rem)] w-full flex flex-col bg-white rounded-2xl border border-gray-200 transition-all duration-300 relative group hover:border-brand-orange shadow-sm hover:shadow-xl hover:-translate-y-1 overflow-hidden">
+                    <div class="w-full h-[250px] md:h-[280px] relative bg-gray-50 border-b border-gray-100 overflow-hidden">
+                        <img width="400" height="300" src="uploads/K10-Back-Plate.avif" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 relative z-10" alt="K10 Back Plate" loading="lazy">
+                    </div>
+                    <div class="p-6 md:p-8 flex flex-col flex-grow">
+                        <div class="flex gap-2 mb-4 flex-wrap">
+                            <span class="bg-brand-orange/10 text-brand-orange px-3 py-1 rounded-full text-[10px] tracking-widest font-bold uppercase">4W</span>
+                            <span class="bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-[10px] tracking-widest font-bold uppercase">Back Plate</span>
+                        </div>
+                        <h4 class="text-[20px] font-bold uppercase tracking-wide text-gray-900 mb-4">K10 Back Plate</h4>
+                        <p class="text-[14px] leading-relaxed text-gray-600 mb-6 flex-grow">
+                            <strong class="block text-gray-900 font-medium mb-3 text-[16px]">Compact four-wheeler braking plate designed for urban traffic durability.</strong> High-tensile steel core prevents structural warping during repetitive emergency braking cycles.
+                        </p>
+                        <div class="grid grid-cols-2 gap-4 border-t border-gray-100 pt-5 mb-6">
+                            <div>
+                                <span class="block text-[10px] text-gray-400 uppercase tracking-wider mb-1">Material</span>
+                                <span class="block text-xs font-semibold text-gray-800">High-Tensile Steel</span>
+                            </div>
+                            <div>
+                                <span class="block text-[10px] text-gray-400 uppercase tracking-wider mb-1">Surface Finish</span>
+                                <span class="block text-xs font-semibold text-gray-800">CED / Zinc Plated</span>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <a href="inquire.html" class="flex items-center gap-2 text-[12px] font-bold uppercase tracking-widest text-brand-orange group- transition-colors">
+                                View Technical Details <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="portfolio-item filter-2w filter-back-plates lg:w-[calc(33.333%-1.5rem)] md:w-[calc(50%-1rem)] w-full flex flex-col bg-white rounded-2xl border border-gray-200 transition-all duration-300 relative group hover:border-brand-orange shadow-sm hover:shadow-xl hover:-translate-y-1 overflow-hidden">
+                    <div class="w-full h-[250px] md:h-[280px] relative bg-gray-50 border-b border-gray-100 overflow-hidden">
+                        <img width="400" height="300" src="uploads/Piaggio-3W-Vespa-Back-Plate.avif" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 relative z-10" alt="Piaggio 3W Vespa Back Plate" loading="lazy">
+                    </div>
+                    <div class="p-6 md:p-8 flex flex-col flex-grow">
+                        <div class="flex gap-2 mb-4 flex-wrap">
+                            <span class="bg-brand-orange/10 text-brand-orange px-3 py-1 rounded-full text-[10px] tracking-widest font-bold uppercase">3W</span>
+                            <span class="bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-[10px] tracking-widest font-bold uppercase">Back Plate</span>
+                        </div>
+                        <h4 class="text-[20px] font-bold uppercase tracking-wide text-gray-900 mb-4">Piaggio 3W Vespa Back Plate</h4>
+                        <p class="text-[14px] leading-relaxed text-gray-600 mb-6 flex-grow">
+                            <strong class="block text-gray-900 font-medium mb-3 text-[16px]">Specialized three-wheeler backing plate with enhanced thermal resistance.</strong> Optimized mechanical geometry for high-frequency stop-and-go commercial load profiles.
+                        </p>
+                        <div class="grid grid-cols-2 gap-4 border-t border-gray-100 pt-5 mb-6">
+                            <div>
+                                <span class="block text-[10px] text-gray-400 uppercase tracking-wider mb-1">Material</span>
+                                <span class="block text-xs font-semibold text-gray-800">SAPH 440</span>
+                            </div>
+                            <div>
+                                <span class="block text-[10px] text-gray-400 uppercase tracking-wider mb-1">Surface Finish</span>
+                                <span class="block text-xs font-semibold text-gray-800">Zinc Plated</span>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <a href="inquire.html" class="flex items-center gap-2 text-[12px] font-bold uppercase tracking-widest text-brand-orange group- transition-colors">
+                                View Technical Details <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="portfolio-item filter-4w lg:w-[calc(33.333%-1.5rem)] md:w-[calc(50%-1rem)] w-full flex flex-col bg-white rounded-2xl border border-gray-200 transition-all duration-300 relative group hover:border-brand-orange shadow-sm hover:shadow-xl hover:-translate-y-1 overflow-hidden">
+                    <div class="w-full h-[250px] md:h-[280px] relative bg-gray-50 border-b border-gray-100 overflow-hidden">
+                        <img width="400" height="300" src="uploads/4W-Molde-C-Pin-and-Plain.avif" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 relative z-10" alt="4W Molde C Pin and Plain" loading="lazy">
+                    </div>
+                    <div class="p-6 md:p-8 flex flex-col flex-grow">
+                        <div class="flex gap-2 mb-4 flex-wrap">
+                            <span class="bg-brand-orange/10 text-brand-orange px-3 py-1 rounded-full text-[10px] tracking-widest font-bold uppercase">4W</span>
+                            <span class="bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-[10px] tracking-widest font-bold uppercase">Custom</span>
+                        </div>
+                        <h4 class="text-[20px] font-bold uppercase tracking-wide text-gray-900 mb-4">4W Molde C Pin and Plain</h4>
+                        <p class="text-[14px] leading-relaxed text-gray-600 mb-6 flex-grow">
+                            <strong class="block text-gray-900 font-medium mb-3 text-[16px]">High-precision custom pins for complex four-wheeler mold assemblies.</strong> Hardened surface treatment ensures longevity and minimal friction in continuous production cycles.
+                        </p>
+                        <div class="grid grid-cols-2 gap-4 border-t border-gray-100 pt-5 mb-6">
+                            <div>
+                                <span class="block text-[10px] text-gray-400 uppercase tracking-wider mb-1">Material</span>
+                                <span class="block text-xs font-semibold text-gray-800">Hardened Steel</span>
+                            </div>
+                            <div>
+                                <span class="block text-[10px] text-gray-400 uppercase tracking-wider mb-1">Surface Finish</span>
+                                <span class="block text-xs font-semibold text-gray-800">Heat Treated</span>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <a href="inquire.html" class="flex items-center gap-2 text-[12px] font-bold uppercase tracking-widest text-brand-orange group- transition-colors">
+                                View Technical Details <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 7 -->
+                <div class="portfolio-item filter-2w lg:w-[calc(33.333%-1.5rem)] md:w-[calc(50%-1rem)] w-full flex flex-col bg-white rounded-2xl border border-gray-200 transition-all duration-300 relative group hover:border-brand-orange shadow-sm hover:shadow-xl hover:-translate-y-1 overflow-hidden">
+                    <div class="w-full h-[250px] md:h-[280px] relative bg-gray-50 border-b border-gray-100 overflow-hidden">
+                        <img width="400" height="300" src="uploads/yra-rod-v2.avif" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 relative z-10" alt="Accelerator Pedal Rod" loading="lazy">
+                    </div>
+                    <div class="p-6 md:p-8 flex flex-col flex-grow">
+                        <div class="flex gap-2 mb-4 flex-wrap">
+                            <span class="bg-brand-orange/10 text-brand-orange px-3 py-1 rounded-full text-[10px] tracking-widest font-bold uppercase">2W</span>
+                            <span class="bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-[10px] tracking-widest font-bold uppercase">Rod</span>
+                        </div>
+                        <h4 class="text-[20px] font-bold uppercase tracking-wide text-gray-900 mb-4">Accelerator Pedal Rod</h4>
+                        <p class="text-[14px] leading-relaxed text-gray-600 mb-6 flex-grow">
+                            <strong class="block text-gray-900 font-medium mb-3 text-[16px]">Structural transmission and control linkage rod crafted from ultra-rigid carbon steel.</strong> Precision machined and surface treated to prevent oxidative degradation in open chassis environments.
+                        </p>
+                        <div class="grid grid-cols-2 gap-4 border-t border-gray-100 pt-5 mb-6">
+                            <div>
+                                <span class="block text-[10px] text-gray-400 uppercase tracking-wider mb-1">Material</span>
+                                <span class="block text-xs font-semibold text-gray-800">High-Grade Steel</span>
+                            </div>
+                            <div>
+                                <span class="block text-[10px] text-gray-400 uppercase tracking-wider mb-1">Surface Finish</span>
+                                <span class="block text-xs font-semibold text-gray-800">CED / Zinc Plated</span>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <a href="inquire.html" class="flex items-center gap-2 text-[12px] font-bold uppercase tracking-widest text-brand-orange group- transition-colors">
+                                View Technical Details <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 8 -->
+                <div class="portfolio-item filter-2w filter-back-plates lg:w-[calc(33.333%-1.5rem)] md:w-[calc(50%-1rem)] w-full flex flex-col bg-white rounded-2xl border border-gray-200 transition-all duration-300 relative group hover:border-brand-orange shadow-sm hover:shadow-xl hover:-translate-y-1 overflow-hidden">
+                    <div class="w-full h-[250px] md:h-[280px] relative bg-gray-50 border-b border-gray-100 overflow-hidden">
+                        <img width="400" height="300" src="uploads/2W-Apache-Rear-Back-Plate.avif" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 relative z-10" alt="2W Apache Rear Back Plate" loading="lazy">
+                    </div>
+                    <div class="p-6 md:p-8 flex flex-col flex-grow">
+                        <div class="flex gap-2 mb-4 flex-wrap">
+                            <span class="bg-brand-orange/10 text-brand-orange px-3 py-1 rounded-full text-[10px] tracking-widest font-bold uppercase">2W</span>
+                            <span class="bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-[10px] tracking-widest font-bold uppercase">Back Plate</span>
+                        </div>
+                        <h4 class="text-[20px] font-bold uppercase tracking-wide text-gray-900 mb-4">2W Apache Rear Back Plate</h4>
+                        <p class="text-[14px] leading-relaxed text-gray-600 mb-6 flex-grow">
+                            <strong class="block text-gray-900 font-medium mb-3 text-[16px]">High-durability rear braking plate designed for consistent friction surface alignment.</strong> Precision-stamped to ensure structural stability under thermal expansion and intensive regenerative loads.
+                        </p>
+                        <div class="grid grid-cols-2 gap-4 border-t border-gray-100 pt-5 mb-6">
+                            <div>
+                                <span class="block text-[10px] text-gray-400 uppercase tracking-wider mb-1">Material</span>
+                                <span class="block text-xs font-semibold text-gray-800">High-Grade Steel</span>
+                            </div>
+                            <div>
+                                <span class="block text-[10px] text-gray-400 uppercase tracking-wider mb-1">Surface Finish</span>
+                                <span class="block text-xs font-semibold text-gray-800">CED / Zinc Plated</span>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <a href="inquire.html" class="flex items-center gap-2 text-[12px] font-bold uppercase tracking-widest text-brand-orange group- transition-colors">
+                                View Technical Details <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 9: Ertiga Brake Pad -->
+                <div class="portfolio-item filter-4w filter-back-plates lg:w-[calc(33.333%-1.5rem)] md:w-[calc(50%-1rem)] w-full flex flex-col bg-white rounded-2xl border border-gray-200 transition-all duration-300 relative group hover:border-brand-orange shadow-sm hover:shadow-xl hover:-translate-y-1 overflow-hidden">
+                    <div class="w-full h-[250px] md:h-[280px] relative bg-gray-50 border-b border-gray-100 overflow-hidden">
+                        <img width="400" height="300" src="uploads/ertiga-brake-pad.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 relative z-10" alt="Ertiga Brake Pad" loading="lazy">
+                    </div>
+                    <div class="p-6 md:p-8 flex flex-col flex-grow">
+                        <div class="flex gap-2 mb-4 flex-wrap">
+                            <span class="bg-brand-orange/10 text-brand-orange px-3 py-1 rounded-full text-[10px] tracking-widest font-bold uppercase">4W</span>
+                            <span class="bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-[10px] tracking-widest font-bold uppercase">Brake Pad</span>
+                        </div>
+                        <h4 class="text-[20px] font-bold uppercase tracking-wide text-gray-900 mb-4">Ertiga Brake Pad</h4>
+                        <p class="text-[14px] leading-relaxed text-gray-600 mb-6 flex-grow">
+                            <strong class="block text-gray-900 font-medium mb-3 text-[16px]">Precision-engineered front brake pad for high-occupancy 4W platforms.</strong> Optimized for smooth deceleration and noise reduction across all urban driving conditions.
+                        </p>
+                        <div class="grid grid-cols-2 gap-4 border-t border-gray-100 pt-5 mb-6">
+                            <div>
+                                <span class="block text-[10px] text-gray-400 uppercase tracking-wider mb-1">Material</span>
+                                <span class="block text-xs font-semibold text-gray-800">SAPH 440 Steel</span>
+                            </div>
+                            <div>
+                                <span class="block text-[10px] text-gray-400 uppercase tracking-wider mb-1">Surface Finish</span>
+                                <span class="block text-xs font-semibold text-gray-800">CED Coated</span>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <a href="inquire.html" class="flex items-center gap-2 text-[12px] font-bold uppercase tracking-widest text-brand-orange group- transition-colors">
+                                View Technical Details <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 10: Shift Brake Pad -->
+                <div class="portfolio-item filter-4w filter-back-plates lg:w-[calc(33.333%-1.5rem)] md:w-[calc(50%-1rem)] w-full flex flex-col bg-white rounded-2xl border border-gray-200 transition-all duration-300 relative group hover:border-brand-orange shadow-sm hover:shadow-xl hover:-translate-y-1 overflow-hidden">
+                    <div class="w-full h-[250px] md:h-[280px] relative bg-gray-50 border-b border-gray-100 overflow-hidden">
+                        <img width="400" height="300" src="uploads/shift-brake-pad.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 relative z-10" alt="Shift Brake Pad" loading="lazy">
+                    </div>
+                    <div class="p-6 md:p-8 flex flex-col flex-grow">
+                        <div class="flex gap-2 mb-4 flex-wrap">
+                            <span class="bg-brand-orange/10 text-brand-orange px-3 py-1 rounded-full text-[10px] tracking-widest font-bold uppercase">4W</span>
+                            <span class="bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-[10px] tracking-widest font-bold uppercase">Brake Pad</span>
+                        </div>
+                        <h4 class="text-[20px] font-bold uppercase tracking-wide text-gray-900 mb-4">Shift Brake Pad</h4>
+                        <p class="text-[14px] leading-relaxed text-gray-600 mb-6 flex-grow">
+                            <strong class="block text-gray-900 font-medium mb-3 text-[16px]">Performance-grade braking component with high thermal stability.</strong> Designed for responsive feedback and minimal wear during intensive 4W operation.
+                        </p>
+                        <div class="grid grid-cols-2 gap-4 border-t border-gray-100 pt-5 mb-6">
+                            <div>
+                                <span class="block text-[10px] text-gray-400 uppercase tracking-wider mb-1">Material</span>
+                                <span class="block text-xs font-semibold text-gray-800">High-Tensile Steel</span>
+                            </div>
+                            <div>
+                                <span class="block text-[10px] text-gray-400 uppercase tracking-wider mb-1">Surface Finish</span>
+                                <span class="block text-xs font-semibold text-gray-800">Zinc Plated</span>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <a href="inquire.html" class="flex items-center gap-2 text-[12px] font-bold uppercase tracking-widest text-brand-orange group- transition-colors">
+                                View Technical Details <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 11: Bolero Brake Pad -->
+                <div class="portfolio-item filter-4w filter-back-plates lg:w-[calc(33.333%-1.5rem)] md:w-[calc(50%-1rem)] w-full flex flex-col bg-white rounded-2xl border border-gray-200 transition-all duration-300 relative group hover:border-brand-orange shadow-sm hover:shadow-xl hover:-translate-y-1 overflow-hidden">
+                    <div class="w-full h-[250px] md:h-[280px] relative bg-gray-50 border-b border-gray-100 overflow-hidden">
+                        <img width="400" height="300" src="uploads/bolero-brake-pad.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 relative z-10" alt="Bolero Brake Pad" loading="lazy">
+                    </div>
+                    <div class="p-6 md:p-8 flex flex-col flex-grow">
+                        <div class="flex gap-2 mb-4 flex-wrap">
+                            <span class="bg-brand-orange/10 text-brand-orange px-3 py-1 rounded-full text-[10px] tracking-widest font-bold uppercase">4W</span>
+                            <span class="bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-[10px] tracking-widest font-bold uppercase">Heavy Duty</span>
+                        </div>
+                        <h4 class="text-[20px] font-bold uppercase tracking-wide text-gray-900 mb-4">Bolero Brake Pad</h4>
+                        <p class="text-[14px] leading-relaxed text-gray-600 mb-6 flex-grow">
+                            <strong class="block text-gray-900 font-medium mb-3 text-[16px]">Heavy-duty backing plate engineered for rugged utility vehicles.</strong> Reinforced structural design provides superior strength under heavy load profiles.
+                        </p>
+                        <div class="grid grid-cols-2 gap-4 border-t border-gray-100 pt-5 mb-6">
+                            <div>
+                                <span class="block text-[10px] text-gray-400 uppercase tracking-wider mb-1">Material</span>
+                                <span class="block text-xs font-semibold text-gray-800">IS 2062 Grade</span>
+                            </div>
+                            <div>
+                                <span class="block text-[10px] text-gray-400 uppercase tracking-wider mb-1">Surface Finish</span>
+                                <span class="block text-xs font-semibold text-gray-800">CED Coated</span>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <a href="inquire.html" class="flex items-center gap-2 text-[12px] font-bold uppercase tracking-widest text-brand-orange group- transition-colors">
+                                View Technical Details <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 12: Telco Brake Pad -->
+                <div class="portfolio-item filter-4w filter-back-plates lg:w-[calc(33.333%-1.5rem)] md:w-[calc(50%-1rem)] w-full flex flex-col bg-white rounded-2xl border border-gray-200 transition-all duration-300 relative group hover:border-brand-orange shadow-sm hover:shadow-xl hover:-translate-y-1 overflow-hidden">
+                    <div class="w-full h-[250px] md:h-[280px] relative bg-gray-50 border-b border-gray-100 overflow-hidden">
+                        <img width="400" height="300" src="uploads/telco-brake-pad.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 relative z-10" alt="Telco Brake Pad" loading="lazy">
+                    </div>
+                    <div class="p-6 md:p-8 flex flex-col flex-grow">
+                        <div class="flex gap-2 mb-4 flex-wrap">
+                            <span class="bg-brand-orange/10 text-brand-orange px-3 py-1 rounded-full text-[10px] tracking-widest font-bold uppercase">4W</span>
+                            <span class="bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-[10px] tracking-widest font-bold uppercase">Industrial</span>
+                        </div>
+                        <h4 class="text-[20px] font-bold uppercase tracking-wide text-gray-900 mb-4">Telco Brake Pad</h4>
+                        <p class="text-[14px] leading-relaxed text-gray-600 mb-6 flex-grow">
+                            <strong class="block text-gray-900 font-medium mb-3 text-[16px]">Industrial-grade braking component for commercial transportation systems.</strong> Precision stamping ensures 100% interoperability with Telco platforms.
+                        </p>
+                        <div class="grid grid-cols-2 gap-4 border-t border-gray-100 pt-5 mb-6">
+                            <div>
+                                <span class="block text-[10px] text-gray-400 uppercase tracking-wider mb-1">Material</span>
+                                <span class="block text-xs font-semibold text-gray-800">Carbon Steel</span>
+                            </div>
+                            <div>
+                                <span class="block text-[10px] text-gray-400 uppercase tracking-wider mb-1">Surface Finish</span>
+                                <span class="block text-xs font-semibold text-gray-800">Zinc Plated</span>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <a href="inquire.html" class="flex items-center gap-2 text-[12px] font-bold uppercase tracking-widest text-brand-orange group- transition-colors">
+                                View Technical Details <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+    <!-- Custom inline script for filtering animation -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterBtns = document.querySelectorAll('.portfolio-filter-btn');
+            const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const filterValue = btn.getAttribute('data-filter');
+
+                    // Update button states
+                    filterBtns.forEach(b => {
+                        b.classList.remove('active', 'bg-brand-orange', 'text-white', 'border-brand-orange', 'shadow-[0_4px_15px_rgba(238,111,36,0.5)]');
+                        b.classList.add('bg-gray-50', 'text-gray-600', 'border-gray-200');
+                    });
+                    btn.classList.add('active', 'bg-brand-orange', 'text-white', 'border-brand-orange', 'shadow-[0_4px_15px_rgba(238,111,36,0.5)]');
+                    btn.classList.remove('bg-gray-50', 'text-gray-600', 'border-gray-200');
+
+                    portfolioItems.forEach(item => {
+                        // Reset transition
+                        item.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+                        
+                        const isMatch = filterValue === 'all' || item.classList.contains(filterValue.replace('.', ''));
+                        
+                        if (isMatch) {
+                            item.style.display = 'flex'; item.style.flexDirection = 'column';
+                            // Trigger reflow
+                            item.offsetHeight;
+                            item.style.opacity = '1';
+                            item.style.transform = 'translateY(0) scale(1)';
+                        } else {
+                            item.style.opacity = '0';
+                            item.style.transform = 'translateY(20px) scale(0.95)';
+                            
+                            // Use one-time event listener to hide after transition
+                            const hideAfterTransition = (e) => {
+                                if (e.propertyName === 'opacity' && item.style.opacity === '0') {
+                                    item.style.display = 'none';
+                                    item.removeEventListener('transitionend', hideAfterTransition);
+                                }
+                            };
+                            item.addEventListener('transitionend', hideAfterTransition);
+                        }
+                    });
+                });
+            });
+
+            // Initial state
+            portfolioItems.forEach(item => {
+                item.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+                item.style.opacity = '1';
+                item.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+    </script>
+    <section
+        class="py-[60px] md:py-[80px] lg:py-[100px] px-6 bg-gradient-to-b from-gray-50 to-white border-y border-gray-200/50">
+        <div class="max-w-[1280px] mx-auto flex flex-col lg:flex-row gap-16 items-center px-6">
+            <div class="lg:w-1/2 space-y-8">
+                <h2 class="font-bold uppercase tracking-tight text-xs text-brand-orange tracking-[0.4em]">Hardware
+                    Infrastructure</h2>
+                <h3 class="text-[36px] font-black text-gray-900 leading-tight uppercase">Advanced Manufacturing
+                    <br>Capabilities
+                </h3>
+
+                <div class="w-16 h-1 bg-brand-orange rounded-full"></div>
+                <p class="text-[15px] md:text-[17px] leading-[1.8] text-gray-600 font-medium leading-relaxed">
+                    Our machine shop is configured to execute complex geometric profiles under continuous extreme-duty
+                    cycles. By heavily investing in localized automation and high-tonnage force generation, we maintain
+                    unyielding output predictability.
+                </p>
+
+                <ul class="space-y-6 pt-4">
+                    <li class="flex gap-4">
+                        <div
+                            class="w-12 h-12 bg-gray-50 border border-gray-200 rounded-xl flex items-center justify-center shrink-0">
+                            <i data-lucide="gauge" class="w-5 h-5 text-brand-orange"></i>
+                        </div>
+                        <div>
+                            <h5 class="text-lg font-bold text-gray-900 mb-1">Heavy Press Capacity</h5>
+                            <p class="text-[15px] md:text-[17px] leading-[1.8] text-gray-600">Pneumatic and mechanical
+                                presses ranging from 50T to 400T
+                                equipped with automatic coil feeders.</p>
+                        </div>
+                    </li>
+                    <li class="flex gap-4">
+                        <div
+                            class="w-12 h-12 bg-gray-50 border border-gray-200 rounded-xl flex items-center justify-center shrink-0">
+                            <i data-lucide="cpu" class="w-5 h-5 text-brand-orange"></i>
+                        </div>
+                        <div>
+                            <h5 class="text-lg font-bold text-gray-900 mb-1">Precision CNC Machining</h5>
+                            <p class="text-[15px] md:text-[17px] leading-[1.8] text-gray-600">High-speed VMC milling
+                                modules operating within
+                                micron-level tolerances for tooling execution.</p>
+                        </div>
+                    </li>
+                    <li class="flex gap-4">
+                        <div
+                            class="w-12 h-12 bg-gray-50 border border-gray-200 rounded-xl flex items-center justify-center shrink-0">
+                            <i data-lucide="flask-conical" class="w-5 h-5 text-brand-orange"></i>
+                        </div>
+                        <div>
+                            <h5 class="text-lg font-bold text-gray-900 mb-1">Surface Treatment Ecosystem</h5>
+                            <p class="text-[15px] md:text-[17px] leading-[1.8] text-gray-600">Partnered pipelines
+                                delivering Zinc plating, CED coating,
+                                Heat treatment, and custom powder coating.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="lg:w-1/2 relative">
+                <div class="absolute -top-4 -left-4 w-32 h-32 bg-brand-orange/10 rounded-full blur-2xl z-0"></div>
+                <img loading="lazy" decoding="async" src="uploads/automate.avif"
+                    alt="Advanced High Tonnage Press Setup"
+                    class="w-full h-[600px] object-cover rounded-[2rem] shadow-2xl relative z-10 border border-gray-100"
+                    width="600" height="600">
+            </div>
+        </div>
+    </section>
+        <!-- 6\. HORIZONTAL PROCESS FLOW -->
+    <section class="py-[60px] md:py-[80px] lg:py-[100px] px-6 bg-[#fcfcfc] border-b border-gray-100 overflow-x-hidden">
+        <div class="max-w-[1280px] mx-auto px-6">
+            <div class="text-center mb-16">
+                <h3 class="text-[32px] font-black text-gray-900 uppercase tracking-tight">Standardized Production
+                    Pipeline</h3>
+            </div>
+
+            <div class="flex flex-col md:flex-row justify-between relative max-w-5xl mx-auto px-4 lg:px-10">
+                <!-- Line connecting nodes -->
+                <div class="hidden md:block absolute top-[44px] left-[6%] right-[6%] h-[2px] bg-gray-200 z-0"></div>
+                <div
+                    class="hidden md:block absolute top-[44px] left-[6%] w-[20%] h-[2px] bg-brand-orange z-0 relative overflow-hidden group">
+                    <div
+                        class="absolute inset-0 bg-white w-full h-full skew-x-12 translate-x-[-100%] animate-[slide_3s_infinite]">
+                    </div>
+                </div>
+
+                <style>
+                    @keyframes slide {
+                        0% {
+                            transform: translateX(-100%) skewX(12deg);
+                        }
+                        100% {
+                            transform: translateX(300%) skewX(12deg);
+                        }
+                    }
+                </style>
+
+                <!-- Node 1 -->
+                <div class="relative z-10 flex flex-col items-center text-center w-full md:w-36 mb-10 md:mb-0 group cursor-default">
+                    <div class="w-24 h-24 bg-white border-2 border-gray-200 rounded-full flex items-center justify-center mb-4 shadow-sm group-hover:border-brand-orange group-hover:bg-brand-orange transition-all duration-300">
+                        <i data-lucide="package-search" class="w-8 h-8 text-gray-400 group-hover:text-white transition-colors duration-300"></i>
+                    </div>
+                    <h5 class="font-bold text-xs uppercase tracking-widest text-gray-900 group-hover:text-brand-orange transition-colors duration-300">Raw Material<br>Validation</h5>
+                </div>
+                <!-- Node 2 -->
+                <div class="relative z-10 flex flex-col items-center text-center w-full md:w-36 mb-10 md:mb-0 group cursor-default">
+                    <div class="w-24 h-24 bg-white border-2 border-gray-200 rounded-full flex items-center justify-center mb-4 shadow-sm group-hover:border-brand-orange group-hover:bg-brand-orange transition-all duration-300">
+                        <i data-lucide="drafting-compass" class="w-8 h-8 text-gray-400 group-hover:text-white transition-colors duration-300"></i>
+                    </div>
+                    <h5 class="font-bold text-xs uppercase tracking-widest text-gray-900 group-hover:text-brand-orange transition-colors duration-300">Tool Design<br>&amp; Milling</h5>
+                </div>
+                <!-- Node 3 -->
+                <div class="relative z-10 flex flex-col items-center text-center w-full md:w-36 mb-10 md:mb-0 group cursor-default">
+                    <div class="w-24 h-24 bg-brand-orange border-2 border-brand-orange rounded-full flex items-center justify-center mb-4 shadow-[0_0_20px_rgba(238,111,36,0.3)] text-white group-hover:scale-110 group-hover:shadow-[0_0_30px_rgba(238,111,36,0.5)] transition-all duration-300">
+                        <i data-lucide="anvil" class="w-8 h-8"></i>
+                    </div>
+                    <h5 class="font-bold text-xs uppercase tracking-widest text-brand-orange group-hover:brightness-110 transition-all">Precision<br>Stamping</h5>
+                </div>
+                <!-- Node 4 -->
+                <div class="relative z-10 flex flex-col items-center text-center w-full md:w-36 mb-10 md:mb-0 group cursor-default">
+                    <div class="w-24 h-24 bg-white border-2 border-gray-200 rounded-full flex items-center justify-center mb-4 shadow-sm group-hover:border-brand-orange group-hover:bg-brand-orange transition-all duration-300">
+                        <i data-lucide="merge" class="w-8 h-8 text-gray-400 group-hover:text-white transition-colors duration-300"></i>
+                    </div>
+                    <h5 class="font-bold text-xs uppercase tracking-widest text-gray-900 group-hover:text-brand-orange transition-colors duration-300">Robotic<br>Sub-Assembly</h5>
+                </div>
+                <!-- Node 5 -->
+                <div class="relative z-10 flex flex-col items-center text-center w-full md:w-36 group cursor-default">
+                    <div class="w-24 h-24 bg-white border-2 border-gray-200 rounded-full flex items-center justify-center mb-4 shadow-sm group-hover:border-brand-orange group-hover:bg-brand-orange transition-all duration-300">
+                        <i data-lucide="clipboard-check" class="w-8 h-8 text-gray-400 group-hover:text-white transition-colors duration-300"></i>
+                    </div>
+                    <h5 class="font-bold text-xs uppercase tracking-widest text-gray-900 group-hover:text-brand-orange transition-colors duration-300">Final CMM<br>Inspection</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. QUALITY ASSURANCE & 5. INDUSTRIES WE SERVE GRID -->
+    <section class="py-[60px] md:py-[80px] lg:py-[100px] flex flex-col lg:flex-row min-h-[600px] shadow-sm relative z-20">
+        <!-- Left: Quality Block (Dark Theme) -->
+        <div class="lg:w-1/2 bg-[#F8FAFC] p-12 md:p-20 flex flex-col justify-center relative overflow-hidden">
+            <div class="absolute inset-0 opacity-10 mix-blend-multiply"></div>
+            <div class="absolute top-0 right-0 w-96 h-96 bg-brand-orange/5 rounded-full blur-3xl"></div>
+
+            <div class="relative z-10 space-y-8 max-w-xl mx-auto lg:mr-0 lg:ml-auto w-full">
+                <h2 class="font-bold uppercase tracking-tight text-xs text-brand-orange tracking-[0.4em]">Rigid Control</h2>
+                <h3 class="text-[36px] font-black text-gray-900 leading-tight uppercase">Quality That Meets Global Standards</h3>
+                <p class="text-[15px] md:text-[17px] leading-[1.8] text-gray-600 leading-relaxed">Implementing strict Statistical Process Control (SPC) across the shop floor. Every batch is subjected to destructive metallurgical validation, tensile pull-tests, and profile accuracy verifications using advanced optical comparators.</p>
+
+                <div class="bg-white border border-gray-100 p-6 rounded-xl flex items-start gap-4 shadow-lg hover:border-brand-orange transition-all duration-300 group">
+                    <div class="w-16 h-16 bg-gray-50 rounded-lg shrink-0 flex items-center justify-center group-hover:bg-brand-orange transition-colors">
+                        <i data-lucide="shield-check" class="w-8 h-8 text-brand-orange group-hover:text-white transition-colors"></i>
+                    </div>
+                    <div>
+                        <h5 class="font-bold text-gray-900 mb-1 uppercase tracking-wider text-sm group-hover:text-brand-orange transition-colors">Full Batch Traceability</h5>
+                        <p class="text-[15px] md:text-[17px] leading-[1.8] text-xs text-gray-600 leading-relaxed">Laser-etched identification linking exact operator, timestamp, and raw-steel mill certificate to the final shipped part.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right: Industries Serve Grid (Light Theme) -->
+        <div class="lg:w-1/2 bg-[#F8FAFC] p-12 md:p-20 flex flex-col justify-center border-l border-gray-200">
+            <div class="max-w-xl mx-auto lg:ml-0 lg:mr-auto w-full">
+                <h3 class="text-[20px] md:text-[24px] font-bold text-gray-900 font-black uppercase mb-10 pb-4 border-b border-gray-200">Sectors We Empower</h3>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div class="bg-white p-6 rounded-xl border border-gray-200/50 hover:bg-gray-50 transition-colors cursor-default group shadow-sm">
+                        <i data-lucide="car" class="w-6 h-6 text-brand-orange mb-4 group-hover:scale-110 transition-transform"></i>
+                        <h5 class="text-sm font-bold text-gray-900 uppercase tracking-widest mb-2">Automotive OEMs</h5>
+                        <p class="text-xs text-gray-600 leading-relaxed">Tier-2 brake systems and structural body-in-white reinforcements.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl border border-gray-200/50 hover:bg-gray-50 transition-colors cursor-default group shadow-sm">
+                        <i data-lucide="bike" class="w-6 h-6 text-brand-orange mb-4 group-hover:scale-110 transition-transform"></i>
+                        <h5 class="text-sm font-bold text-gray-900 uppercase tracking-widest mb-2">Two-Wheeler</h5>
+                        <p class="text-xs text-gray-600 leading-relaxed">Lightweight clutch plates and high-volume bracketry.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl border border-gray-200/50 hover:bg-gray-50 transition-colors cursor-default group shadow-sm">
+                        <i data-lucide="truck" class="w-6 h-6 text-brand-orange mb-4 group-hover:scale-110 transition-transform"></i>
+                        <h5 class="text-sm font-bold text-gray-900 uppercase tracking-widest mb-2">Commercial CVs</h5>
+                        <p class="text-xs text-gray-600 leading-relaxed">Heavy-gauge suspension mounts processing thick IS-2062 plates.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl border border-gray-200/50 hover:bg-gray-50 transition-colors cursor-default group shadow-sm">
+                        <i data-lucide="building-2" class="w-6 h-6 text-brand-orange mb-4 group-hover:scale-110 transition-transform"></i>
+                        <h5 class="text-sm font-bold text-gray-900 uppercase tracking-widest mb-2">Heavy Engineering</h5>
+                        <p class="text-xs text-gray-600 leading-relaxed">Bespoke industrial wire bending and rugged material handling parts.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. WHY CHOOSE US SECTIONS (Data Driven) -->
+    <section class="py-[60px] md:py-[80px] lg:py-[100px] px-6 bg-white overflow-hidden relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col lg:flex-row gap-16 items-center">
+                <div class="lg:w-1/2 space-y-8">
+                    <h2 class="text-[12px] font-bold text-brand-orange tracking-[0.3em] uppercase">Built for Excellence</h2>
+                    <h3 class="text-[28px] md:text-[36px] font-black text-gray-900 leading-tight uppercase">Advancing Industry<br>Through Innovation</h3>
+                    <p class="text-[15px] md:text-[17px] leading-[1.8] text-gray-600 leading-relaxed font-medium">Over 25 years of specialized expertise in metal forming, providing Tier-1 and Tier-2 automotive manufacturers with zero-defect components.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex gap-4 p-5 bg-gray-50 rounded-2xl border border-gray-100 items-start">
+                            <div class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center shrink-0">
+                                <i data-lucide="target" class="w-6 h-6 text-brand-orange"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-gray-900 uppercase tracking-wide text-sm mb-1">Precision Engineering</h5>
+                                <p class="text-xs text-gray-500">Micron-level accuracy across all stamping and tooling processes.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 p-5 bg-gray-50 rounded-2xl border border-gray-100 items-start">
+                            <div class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center shrink-0">
+                                <i data-lucide="trending-up" class="w-6 h-6 text-brand-orange"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-gray-900 uppercase tracking-wide text-sm mb-1">Scalable Capacities</h5>
+                                <p class="text-xs text-gray-500">From low-volume prototypes to high-volume multi-million part runs.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 relative">
+                    <div class="absolute -inset-4 bg-brand-orange/5 rounded-[2.5rem] -rotate-3 blur-2xl"></div>
+                    <div class="grid grid-cols-2 gap-4 relative z-10">
+                        <div class="space-y-4 pt-12">
+                            <img width="400" height="300" loading="lazy" src="uploads/tech-tool_converted.avif" alt="Precision Tooling" class="rounded-2xl shadow-lg w-full h-64 object-cover border border-gray-100 hover:-translate-y-2 transition-transform duration-500">
+                            <div class="bg-brand-orange p-8 rounded-2xl text-white shadow-xl">
+                                <span class="text-4xl font-black block mb-2">99.8%</span>
+                                <span class="text-[10px] font-bold uppercase tracking-widest opacity-80">OTIF delivery performance rating</span>
+                            </div>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="bg-gray-900 p-8 rounded-2xl text-white shadow-xl">
+                                <span class="text-4xl font-black block mb-2">IATF</span>
+                                <span class="text-[10px] font-bold uppercase tracking-widest opacity-80">Certified Quality Management Systems</span>
+                            </div>
+                            <img width="400" height="300" loading="lazy" src="uploads/collection-2.avif" alt="Manufacturing Floor" class="rounded-2xl shadow-lg w-full h-72 object-cover border border-gray-100 hover:-translate-y-2 transition-transform duration-500">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. FAQ SECTIONS -->
+    <section class="py-[60px] md:py-[80px] lg:py-[100px] px-6 bg-gray-50 relative">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-[12px] font-bold text-brand-orange tracking-[0.3em] uppercase mb-4">Support & Logistics</h2>
+                <h3 class="text-[28px] md:text-[36px] font-black text-gray-900 leading-tight uppercase">Technical FAQ</h3>
+                <p class="text-[15px] md:text-[17px] leading-[1.8] text-gray-600 mt-4 leading-[1.7]">Common queries from procurement and engineering teams.</p>
+            </div>
+
+            <div class="flex flex-col gap-6">
+                <!-- FAQ 1 -->
+                <div class="rounded-[16px] shadow-[0_4px_24px_rgba(0,0,0,0.02)] hover:shadow-[0_12px_40px_rgba(0,0,0,0.06)] border border-gray-100 bg-white hover:-translate-y-1 transition-all duration-300 p-6 lg:p-8 group">
+                    <h5 class="text-lg font-bold text-gray-900 flex items-center gap-3 transition-colors duration-300">
+                        <i data-lucide="help-circle" class="w-5 h-5 text-brand-orange"></i> What materials are routinely stamped for brake backing plates?
+                    </h5>
+                    <p class="text-gray-600 text-[15px] mt-3 pl-8 leading-[1.7]">We primarily process high-grade carbon steels, IS 2062, SAPH 440, and C-45 parameters strictly matched against mill test certificates.</p>
+                </div>
+                <!-- FAQ 2 -->
+                <div class="rounded-[16px] shadow-[0_4px_24px_rgba(0,0,0,0.02)] hover:shadow-[0_12px_40px_rgba(0,0,0,0.06)] border border-gray-100 bg-white hover:-translate-y-1 transition-all duration-300 p-6 lg:p-8 group">
+                    <h5 class="text-lg font-bold text-gray-900 flex items-center gap-3 transition-colors duration-300">
+                        <i data-lucide="help-circle" class="w-5 h-5 text-brand-orange"></i> What precise geometric tolerances can the press shop hold?
+                    </h5>
+                    <p class="text-gray-600 text-[15px] mt-3 pl-8 leading-[1.7]">Our progressive tooling structures routinely hold surface flatness down to 0.05 mm and linear positional tolerances capable of satisfying Cpk > 1.33 expectations.</p>
+                </div>
+                <!-- FAQ 3 -->
+                <div class="rounded-[16px] shadow-[0_4px_24px_rgba(0,0,0,0.02)] hover:shadow-[0_12px_40px_rgba(0,0,0,0.06)] border border-gray-100 bg-white hover:-translate-y-1 transition-all duration-300 p-6 lg:p-8 group">
+                    <h5 class="text-lg font-bold text-gray-900 flex items-center gap-3 transition-colors duration-300">
+                        <i data-lucide="help-circle" class="w-5 h-5 text-brand-orange"></i> Do you undertake custom stamping solutions and die development?
+                    </h5>
+                    <p class="text-gray-600 text-[15px] mt-3 pl-8 leading-[1.7]">Yes. Our Tooling & NPD division develops 100% bespoke compound and progressive dies internally from client 3D CAD data.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white pt-24 pb-12 px-6 border-t border-gray-100 relative overflow-hidden">
+        <!-- Decorative subtle element -->
+        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-brand-orange/20 to-transparent"></div>
+        
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-16 mb-20">
+                
+                <!-- Column 1: Logo & Branding -->
+                <div class="lg:col-span-4 space-y-8">
+                    <a href="index.html" class="inline-block transition-transform hover:scale-105 duration-300">
+                        <img width="343" height="96" src="uploads/logo.png" alt="Sivam Itech Logo"
+                            class="h-20 md:h-28 w-auto object-contain">
+                    </a>
+                    <p class="text-zinc-700 text-[16px] leading-[1.8] font-medium max-w-sm">
+                        Redefining precision and synergy in the industrial sector. From concept to complex component
+                        manufacturing with unmatched excellence and technical leadership.
+                    </p>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="lg:col-span-2">
+                    <h5 class="text-[12px] font-black uppercase tracking-[0.3em] mb-8 text-brand-orange">Company</h5>
+                    <ul class="space-y-4">
+                        <li><a href="about.html" class="text-gray-600 hover:text-brand-orange text-[15px] font-semibold transition-colors">About Us</a></li>
+                        <li><a href="infrastructure.html" class="text-gray-600 hover:text-brand-orange text-[15px] font-semibold transition-colors">Infrastructure</a></li>
+                        <li><a href="products.html" class="text-gray-600 hover:text-brand-orange text-[15px] font-semibold transition-colors">Products</a></li>
+                        <li><a href="careers.html" class="text-gray-600 hover:text-brand-orange text-[15px] font-semibold transition-colors">Careers</a></li>
+                        <li><a href="contact.html" class="text-gray-600 hover:text-brand-orange text-[15px] font-semibold transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Connect -->
+                <div class="lg:col-span-3">
+                    <h5 class="text-[12px] font-black uppercase tracking-[0.3em] mb-8 text-brand-orange">Connect</h5>
+                    <ul class="space-y-6">
+                        <li class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-orange-50 flex items-center justify-center shrink-0 border border-orange-100">
+                                <i data-lucide="map-pin" class="w-5 h-5 text-brand-orange"></i>
+                            </div>
+                            <span class="text-gray-600 font-medium text-[14px] leading-relaxed">
+                                No. 115 / 2A, Mahalakshmi Nagar Extension, Noombal, Chennai – 600 077, India.
+                            </span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-orange-50 flex items-center justify-center shrink-0 border border-orange-100">
+                                <i data-lucide="phone" class="w-5 h-5 text-brand-orange"></i>
+                            </div>
+                            <div class="flex flex-col text-[14px] font-bold">
+                                <a href="tel:+919884426111" class="text-gray-700 hover:text-brand-orange transition-colors">+91 98844 26111</a>
+                                <a href="tel:+918428283013" class="text-gray-700 hover:text-brand-orange transition-colors">+91 84282 83013</a>
+                            </div>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-orange-50 flex items-center justify-center shrink-0 border border-orange-100">
+                                <i data-lucide="mail" class="w-5 h-5 text-brand-orange"></i>
+                            </div>
+                            <div class="flex flex-col text-[14px] font-bold overflow-hidden">
+                                <a href="mailto:Vijayakumar.k@sivamitech.com" class="text-gray-700 hover:text-brand-orange transition-colors truncate">Vijayakumar.k@sivamitech.com</a>
+                                <a href="mailto:Nagendran.P@sivamitech.com" class="text-gray-700 hover:text-brand-orange transition-colors truncate">Nagendran.P@sivamitech.com</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Stay Updated & Social -->
+                <div class="lg:col-span-3 space-y-12">
+                    <div>
+                        <h5 class="text-[12px] font-black uppercase tracking-[0.3em] mb-6 text-brand-orange">Follow Us</h5>
+                        <div class="flex flex-col gap-3">
+                            <a href="https://www.linkedin.com/company/sivam-itech-metal-forming-industries/" target="_blank" rel="noopener noreferrer" 
+                               class="flex items-center gap-3 group bg-gray-50 p-2 rounded-2xl border border-gray-100 hover:border-[#0077b5]/30 hover:bg-white transition-all duration-300 hover:-translate-y-1">
+                                <div class="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-[#0077b5] shadow-sm group-hover:bg-[#0077b5] group-hover:text-white transition-all duration-300">
+                                    <i class="fa-brands fa-linkedin text-[18px]"></i>
+                                </div>
+                                <span class="text-[14px] font-bold text-gray-700 group-hover:text-brand-orange transition-colors px-1">LinkedIn</span>
+                            </a>
+                            <a href="https://wa.me/919884426111?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20your%20products%20and%20services%20at%20Sivam%20Itech%20Metal%20Forming%20Industries." target="_blank" rel="noopener noreferrer" 
+                               class="flex items-center gap-3 group bg-gray-50 p-2 rounded-2xl border border-gray-100 hover:border-[#25d366]/30 hover:bg-white transition-all duration-300">
+                                <div class="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-[#25d366] shadow-sm group-hover:bg-[#25d366] group-hover:text-white transition-all duration-300">
+                                    <i class="fa-brands fa-whatsapp text-[20px]"></i>
+                                </div>
+                                <span class="text-[14px] font-bold text-gray-700 group-hover:text-brand-orange transition-colors px-1">WhatsApp</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div>
+                        <h5 class="text-[12px] font-black uppercase tracking-[0.3em] mb-6 text-brand-orange">Newsletter</h5>
+                        <div class="relative group">
+                            <input type="email" placeholder="Corporate email" 
+                                   class="w-full bg-gray-50 border border-gray-200 rounded-2xl px-5 py-4 text-[14px] font-medium outline-none focus:border-brand-orange focus:bg-white transition-all pr-14">
+                            <button class="absolute right-2 top-2 bottom-2 w-10 bg-brand-orange text-white rounded-xl flex items-center justify-center hover:brightness-110 transition-all shadow-lg shadow-brand-orange/20" title="Subscribe">
+                                <i data-lucide="send" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Copyright Bar -->
+            <div class="pt-12 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-8">
+                <p class="text-[11px] font-black text-gray-400 uppercase tracking-[0.2em]">
+                    © 2024 SIVAM ITECH Limited. Precision Engineering Redefined.
+                </p>
+                <div class="flex gap-8 items-center">
+                    <a href="#" class="text-gray-400 hover:text-brand-orange text-[11px] font-black uppercase tracking-widest transition-colors">Privacy</a>
+                    <a href="#" class="text-gray-400 hover:text-brand-orange text-[11px] font-black uppercase tracking-widest transition-colors">Terms</a>
+                    </div>
+        </div>
+        </div>
+    </footer>
+
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/lucide@latest" defer></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            lucide.createIcons();
+        });
+    </script>
+    <script src="assets/js/main.min.js" defer></script>
+</body>
+</html>
+
+
+
+

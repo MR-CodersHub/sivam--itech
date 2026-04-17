@@ -1,0 +1,628 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="public, max-age=31536000">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced R&D Engineering | SIVAM ITECH</title>
+    <meta name="description"
+        content="Sivam iTech's Advanced R&D and Engineering division executes complex structural analysis, computational material modeling, and generative lightweighting for future automotive chassis systems.">
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://unpkg.com">
+
+    <!-- Defer non-critical scripts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.min.css">
+
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="uploads/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body class="bg-white text-gray-600 font-sans antialiased overflow-x-hidden selection:bg-brand-orange pb-10 md:pb-0">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "Service",
+      "name": "Advanced R&D Engineering & Topology Optimization",
+      "provider": {
+        "@type": "Organization",
+        "name": "Sivam iTech Metal Forming Industries"
+      },
+      "serviceType": "Engineering and Research Service",
+      "description": "Computational material modeling, FEA verification, kinematic motion analysis, and generative lightweighting for structural automotive component development.",
+      "areaServed": "Global"
+    }
+    </script>
+    <style>
+        .scroll-indicator {
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateY(0);
+            }
+
+            40% {
+                transform: translateY(-10px);
+            }
+
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .timeline-scroll-container::-webkit-scrollbar {
+            display: none;
+        }
+
+        .timeline-scroll-container {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+
+
+
+    <!-- Navbar -->
+    <nav class="sticky top-0 w-full z-50 glass-nav shadow-md">
+        <div class="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3">
+                <img width="343" height="96" loading="eager" src="uploads/logo.png" alt="Sivam Itech Metal Forming Industries Official Logo"
+                    class="h-28 md:h-36 lg:h-40 w-auto object-contain relative z-10">
+            </a>
+
+            <div class="hidden lg:flex space-x-8 font-bold text-xs uppercase tracking-widest text-gray-700">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="infrastructure.html" class="nav-link">Infrastructure</a>
+                <a href="products.html" class="nav-link">Products</a>
+                <a href="careers.html" class="nav-link">Careers</a>
+                <a href="contact.html" class="nav-link">Contact Us</a>
+            </div>
+
+            <a href="inquire.html"
+                class="hidden md:block btn-orange px-6 py-2.5 text-xs font-bold uppercase tracking-widest rounded-full shadow-md hover:shadow-lg">
+                Inquire Now
+            </a>
+
+            <!-- Changed onclick to use JS event listener via ID if possible, but keeping simplistic onclick for now as per extraction, 
+                 removed inline onclick to rely on main.js event binding -->
+            <button type="button" class="lg:hidden" onclick="toggleMenu()" title="Toggle mobile menu">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+        <div id="mobile-menu" class="lg:hidden bg-white shadow-lg">
+            <div class="px-6 py-4 flex flex-col space-y-4 font-bold text-xs uppercase">
+                <a href="index.html" class=" transition-colors">Home</a>
+                <a href="about.html" class=" transition-colors">About Us</a>
+                <a href="infrastructure.html" class=" transition-colors">Infrastructure</a>
+                <a href="products.html" class=" transition-colors">Products</a>
+                <a href="careers.html" class=" transition-colors">Careers</a>
+                <a href="contact.html" class=" transition-colors">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Floating Inquiry Button -->
+    <a href="contact.html"
+        class="fixed bottom-6 right-6 z-50 bg-brand-orange text-white p-4 rounded-full shadow-2xl hover:bg-orange-600 hover:scale-105 transition-all flex items-center justify-center group">
+        <i data-lucide="message-square" class="w-6 h-6"></i>
+        <span
+            class="max-w-0 overflow-hidden whitespace-nowrap group-hover:max-w-xs group-hover:ml-3 transition-all duration-300 ease-in-out font-bold text-sm uppercase tracking-wider">Quick
+            Inquiry</span>
+    </a>
+
+    <!-- 1. Hero Section Enhancement -->
+    <section class="py-[60px] md:py-[80px] lg:py-[100px] relative h-[75vh] flex items-center overflow-hidden bg-white">
+        <!-- Digital mesh network background pattern -->
+        <div class="absolute inset-0 z-0 bg-[#F8FAFC] mix-blend-multiply opacity-90"></div>
+        <div class="absolute inset-0 z-0 opacity-20" style="background-image: 
+            linear-gradient(45deg, transparent 48%, rgba(255,100,0,0.2) 49%, rgba(255,100,0,0.5) 50%, rgba(255,100,0,0.2) 51%, transparent 52%), 
+            linear-gradient(-45deg, transparent 48%, rgba(255,100,0,0.2) 49%, rgba(255,100,0,0.5) 50%, rgba(255,100,0,0.2) 51%, transparent 52%); 
+            background-size: 80px 80px;"></div>
+        <div class="absolute inset-0 bg-white/80 backdrop-blur-[2px]"></div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-6 w-full pt-10">
+            <!-- Breadcrumbs -->
+
+            <span
+                class="text-brand-orange uppercase tracking-[0.3em] text-sm font-bold block mb-4 border-l-2 border-brand-orange pl-3">Design
+                Driven Innovation</span>
+            <h1
+                class="text-[28px] sm:text-[32px] md:text-[40px] lg:text-[52px] font-black text-gray-900 uppercase tracking-tight md:text-[56px] font-bold mb-6 leading-[1.1] max-w-4xl">
+                Computational Analysis &amp; <br> Generative Engineering
+            </h1>
+            <p class="text-[18px] text-gray-600 font-medium max-w-2xl leading-relaxed mb-10">
+                Pushing structural limits before metal is ever cut. We deploy advanced Finite Element Analysis (FEA) and
+                topology optimization to engineer maximum yield strength into minimal mass configurations.
+            </p>
+            <div class="flex flex-wrap items-center gap-4">
+                <a href="contact.html"
+                    class="inline-flex items-center gap-2 bg-brand-orange hover:bg-orange-600 text-white font-bold tracking-widest uppercase text-xs px-8 py-4 rounded transition-all shadow-lg hover:shadow-brand-orange/40">
+                    Request Consultation <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+                <a href="#overview"
+                    class="inline-flex items-center gap-2 bg-transparent border border-white/30 hover:bg-white/5 text-white font-bold tracking-widest uppercase text-xs px-8 py-4 rounded transition-all">
+                    Explore Capabilities <i data-lucide="microscope" class="w-4 h-4"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 scroll-indicator">
+            <a href="#overview" class="text-white/60  transition-colors flex flex-col items-center">
+                <span class="text-[10px] uppercase tracking-widest font-bold mb-2">Explore Lab</span>
+                <i data-lucide="chevron-down" class="w-5 h-5"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- 2. Section Layout Improvements (Alternating text left/image right) -->
+    <section id="overview" class="py-[60px] md:py-[80px] lg:py-[100px] px-6 bg-white relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="order-2 lg:order-1 relative">
+                    <div class="absolute -top-4 -left-4 w-24 h-24 bg-gray-100 rounded-lg -z-10"></div>
+                    <div class="absolute -bottom-4 -right-4 w-32 h-32 bg-orange-50 rounded-full -z-10"></div>
+                    <!-- Wireframe visual style block -->
+                    <div
+                        class="w-full h-auto rounded-xl shadow-2xl border border-gray-100 bg-white aspect-[4/3] flex items-center justify-center relative overflow-hidden group">
+                        <!-- Simulated heat map or mesh -->
+                        <div class="absolute inset-0 opacity-[0.08] group-hover:opacity-70 transition-opacity duration-1000"
+                            style="background: linear-gradient(135deg, #001f3f 0%, #0074D9 50%, #FF4136 100%); mix-blend-mode: screen;">
+                        </div>
+                        <i data-lucide="cpu"
+                            class="w-24 h-24 text-gray-900/20 absolute z-0 group-hover:scale-125 transition-transform duration-1000"></i>
+                        <div class="text-center z-10 px-8 relative">
+                            <i data-lucide="network"
+                                class="w-12 h-12 text-brand-orange mx-auto mb-4 drop-shadow-2xl shadow-brand-orange border border-white/10 rounded-lg p-2 bg-black/50"></i>
+                            <h4
+                                class="text-gray-900 group- font-bold text-xl uppercase tracking-widest drop-shadow-lg transition-colors duration-500">
+                                Simulation &amp; FEA Nodes</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-1 lg:order-2 space-y-6">
+                    <h2 class="font-bold uppercase tracking-tight text-xs font-bold text-gray-600 tracking-[0.3em]">
+                        Computational modeling</h2>
+                    <h3 class="text-[36px] font-bold text-gray-900 leading-tight">Virtual Validation Ecosystem</h3>
+                    <div class="w-12 h-1 bg-brand-orange rounded-full"></div>
+                    <p class="text-[16px] text-gray-600 leading-relaxed pt-2">
+                        Physical prototyping is cost-intensive and slow. The modern development curve demands that 90%
+                        of structural failure modes are identified and mathematically resolved in the virtual sandbox
+                        before issuing a tool order.
+                    </p>
+                    <p class="text-[16px] text-gray-600 leading-relaxed">
+                        Our R&amp;D division simulates highly specific material deformation behaviors�from ultra-high
+                        strength steel (UHSS) spring-back kinematics to complex drawing friction gradients. We deliver
+                        aggressive lightweighting solutions without compromising dynamic safety tolerances for critical
+                        OEM sub-assemblies.
+                    </p>
+                    <ul class="space-y-3 pt-2">
+                        <li class="flex items-start gap-3 text-gray-600 font-medium text-[16px]">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-brand-orange shrink-0 mt-0.5"></i>
+                            Parametric generative dimensioning.
+                        </li>
+                        <li class="flex items-start gap-3 text-gray-600 font-medium text-[16px]">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-brand-orange shrink-0 mt-0.5"></i>
+                            Predicting sheer limits and micro-fractures.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Subtle divider -->
+    <div class="max-w-7xl mx-auto px-6">
+        <hr class="border-gray-100">
+    </div>
+
+    <!-- 5. Technology Section (Grid Layout) -->
+    <section class="py-[60px] md:py-[80px] lg:py-[100px] px-6 bg-slate-50 border-y border-gray-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2
+                    class="font-bold uppercase tracking-tight text-xs font-bold text-brand-orange tracking-[0.3em] mb-4">
+                    Engineering Capabilities
+                </h2>
+                <h3 class="text-[36px] font-bold text-gray-900 leading-tight">Digital Simulation Disciplines</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Tech 1 -->
+                <div
+                    class="rounded-[16px] shadow-[0_4px_24px_rgba(0,0,0,0.02)] hover:shadow-[0_12px_40px_rgba(0,0,0,0.06)] border border-gray-100 bg-white hover:-translate-y-1 transition-all duration-300 p-8 hover:border-brand-orange/50 hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)] group">
+                    <div
+                        class="w-12 h-12 rounded-lg bg-white flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="layers" class="w-6 h-6 text-brand-orange"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-2">Finite Element Analysis</h4>
+                    <p class="text-[15px] md:text-[17px] leading-[1.8] text-gray-600 leading-relaxed">Stress tensor
+                        mapping identifying critical fracture
+                        points under variable dynamic and static high-impact loading scenarios.</p>
+                </div>
+                <!-- Tech 2 -->
+                <div
+                    class="rounded-[16px] shadow-[0_4px_24px_rgba(0,0,0,0.02)] hover:shadow-[0_12px_40px_rgba(0,0,0,0.06)] border border-gray-100 bg-white hover:-translate-y-1 transition-all duration-300 p-8 hover:border-brand-orange/50 hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)] group">
+                    <div
+                        class="w-12 h-12 rounded-lg bg-orange-50 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="minimize" class="w-6 h-6 text-brand-orange"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-2">Topology Optimization</h4>
+                    <p class="text-[15px] md:text-[17px] leading-[1.8] text-gray-600 leading-relaxed">Algorithmic
+                        material removal strategies that strip
+                        away redundant mass while rigidly maintaining required stiffness parameters.</p>
+                </div>
+                <!-- Tech 3 -->
+                <div
+                    class="rounded-[16px] shadow-[0_4px_24px_rgba(0,0,0,0.02)] hover:shadow-[0_12px_40px_rgba(0,0,0,0.06)] border border-gray-100 bg-white hover:-translate-y-1 transition-all duration-300 p-8 hover:border-brand-orange/50 hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)] group">
+                    <div
+                        class="w-12 h-12 rounded-lg bg-white flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="move-diagonal" class="w-6 h-6 text-brand-orange"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-2">Formability Simulation</h4>
+                    <p class="text-[15px] md:text-[17px] leading-[1.8] text-gray-600 leading-relaxed">Predicting
+                        thinning rates, wrinkling tendencies,
+                        and metallurgical cracking before the expensive physical die steel is initiated.</p>
+                </div>
+                <!-- Tech 4 -->
+                <div
+                    class="rounded-[16px] shadow-[0_4px_24px_rgba(0,0,0,0.02)] hover:shadow-[0_12px_40px_rgba(0,0,0,0.06)] border border-gray-100 bg-white hover:-translate-y-1 transition-all duration-300 p-8 hover:border-brand-orange/50 hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)] group">
+                    <div
+                        class="w-12 h-12 rounded-lg bg-orange-50 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="microscope" class="w-6 h-6 text-brand-orange"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-2">Kinematic Motion Analysis</h4>
+                    <p class="text-[15px] md:text-[17px] leading-[1.8] text-gray-600 leading-relaxed">Modeling complex
+                        multi-component interaction
+                        sequences simulating lifetime cycle fatigue curves.</p>
+                </div>
+                <!-- Tech 5 -->
+                <div
+                    class="rounded-[16px] shadow-[0_4px_24px_rgba(0,0,0,0.02)] hover:shadow-[0_12px_40px_rgba(0,0,0,0.06)] border border-gray-100 bg-white hover:-translate-y-1 transition-all duration-300 p-8 hover:border-brand-orange/50 hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)] group">
+                    <div
+                        class="w-12 h-12 rounded-lg bg-white flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="scan" class="w-6 h-6 text-brand-orange"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-2">Reverse Engineering</h4>
+                    <p class="text-[15px] md:text-[17px] leading-[1.8] text-gray-600 leading-relaxed">Blue-light 3D
+                        scanning legacy components directly
+                        translating physical mesh data into parameterized actionable CAD geometry.</p>
+                </div>
+                <!-- Tech 6 -->
+                <div
+                    class="rounded-[16px] shadow-[0_4px_24px_rgba(0,0,0,0.02)] hover:shadow-[0_12px_40px_rgba(0,0,0,0.06)] border border-gray-100 bg-white hover:-translate-y-1 transition-all duration-300 p-8 hover:border-brand-orange/50 hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)] group">
+                    <div
+                        class="w-12 h-12 rounded-lg bg-orange-50 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="shield-check" class="w-6 h-6 text-brand-orange"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-2">Value Engineering (VA/VE)</h4>
+                    <p class="text-[15px] md:text-[17px] leading-[1.8] text-gray-600 leading-relaxed">Aggressive
+                        commercial teardown of client parts to
+                        recommend multi-part consolidation and simplified forming paths.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. KPI & Metrics Section -->
+    <section class="py-[60px] md:py-[80px] lg:py-[100px] px-6 bg-white border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2
+                    class="font-bold uppercase tracking-tight text-xs font-bold text-brand-orange tracking-[0.3em] mb-4">
+                    Innovation Metrics</h2>
+                <h3 class="text-[36px] font-bold text-gray-900">Aggressive Engineering Outputs</h3>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- KPI 1 -->
+                <div
+                    class="rounded-[16px] shadow-[0_4px_24px_rgba(0,0,0,0.02)] hover:shadow-[0_12px_40px_rgba(0,0,0,0.06)] border border-gray-100 bg-white hover:-translate-y-1 transition-all duration-300 p-8 flex flex-col items-center justify-center text-center relative overflow-hidden group">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-brand-orange/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                    </div>
+                    <i data-lucide="move-right" class="w-8 h-8 text-brand-orange mb-4"></i>
+                    <h4 class="text-[48px] font-bold text-gray-900 leading-none mb-2">-45%</h4>
+                    <span class="text-xs font-bold text-gray-600 uppercase tracking-widest">Time to Prototype</span>
+                </div>
+                <!-- KPI 2 -->
+                <div
+                    class="rounded-[16px] shadow-[0_4px_24px_rgba(0,0,0,0.02)] hover:shadow-[0_12px_40px_rgba(0,0,0,0.06)] border border-gray-100 bg-white hover:-translate-y-1 transition-all duration-300 p-8 flex flex-col items-center justify-center text-center relative overflow-hidden group">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-brand-orange/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                    </div>
+                    <i data-lucide="feather" class="w-8 h-8 text-brand-orange mb-4"></i>
+                    <h4 class="text-[48px] font-bold text-gray-900 leading-none mb-2">Up To 20%</h4>
+                    <span class="text-xs font-bold text-gray-600 uppercase tracking-widest">Mass Reduction
+                        Achieved</span>
+                </div>
+                <!-- KPI 3 -->
+                <div
+                    class="rounded-[16px] shadow-[0_4px_24px_rgba(0,0,0,0.02)] hover:shadow-[0_12px_40px_rgba(0,0,0,0.06)] border border-gray-100 bg-white hover:-translate-y-1 transition-all duration-300 p-8 flex flex-col items-center justify-center text-center relative overflow-hidden group">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-brand-orange/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                    </div>
+                    <i data-lucide="layers" class="w-8 h-8 text-brand-orange mb-4"></i>
+                    <h4 class="text-[48px] font-bold text-gray-900 leading-none mb-2">&gt;15</h4>
+                    <span class="text-xs font-bold text-gray-600 uppercase tracking-widest">Major OEM
+                        Integrations</span>
+                </div>
+                <!-- KPI 4 -->
+                <div
+                    class="rounded-[16px] shadow-[0_4px_24px_rgba(0,0,0,0.02)] hover:shadow-[0_12px_40px_rgba(0,0,0,0.06)] border border-gray-100 bg-white hover:-translate-y-1 transition-all duration-300 p-8 flex flex-col items-center justify-center text-center relative overflow-hidden group">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-brand-orange/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                    </div>
+                    <i data-lucide="shield-check" class="w-8 h-8 text-brand-orange mb-4"></i>
+                    <h4 class="text-[48px] font-bold text-gray-900 leading-none mb-2">99%</h4>
+                    <span class="text-xs font-bold text-gray-600 uppercase tracking-widest">Simulation Accuracy</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Process Workflow Redesign (Vertical Operational Workflow) -->
+    <section class="py-[60px] md:py-[80px] lg:py-[100px] px-6 bg-white overflow-hidden">
+        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-16 px-6">
+            <div class="lg:w-1/3">
+                <div class="sticky top-32">
+                    <h2
+                        class="font-bold uppercase tracking-tight text-xs font-bold text-brand-orange tracking-[0.3em] mb-4">
+                        Development Cycle
+                    </h2>
+                    <h3 class="text-[36px] font-bold text-gray-900 mb-6 leading-tight">Advanced R&amp;D Workstream</h3>
+                    <div class="w-12 h-1 bg-brand-orange rounded-full mb-8"></div>
+                    <p class="text-[15px] md:text-[17px] leading-[1.8] text-gray-600 leading-relaxed">
+                        Our engineering workflow integrates client structural requirements immediately into aggressive
+                        finite volume computation. This unyielding process secures baseline safety parameters while
+                        simultaneously destroying excess raw material consumption.
+                    </p>
+                </div>
+            </div>
+
+            <div class="lg:w-2/3">
+                <div class="relative">
+                    <div class="absolute left-[24px] top-6 bottom-6 w-px bg-gray-200 hidden md:block"></div>
+
+                    <div class="space-y-6 relative z-10">
+                        <!-- Step 1 -->
+                        <div
+                            class="rounded-[16px] shadow-[0_4px_24px_rgba(0,0,0,0.02)] hover:shadow-[0_12px_40px_rgba(0,0,0,0.06)] border border-gray-100 bg-white hover:-translate-y-1 transition-all duration-300 text-left p-6 hover:shadow-[0_8px_30px_rgba(238,111,36,0.1)] transition-shadow relative md:ml-12 group">
+                            <div
+                                class="hidden md:flex absolute -left-[54px] top-6 w-8 h-8 bg-white text-brand-orange rounded-full items-center justify-center font-bold text-xs shadow-md border-[3px] border-white">
+                                1</div>
+                            <h4 class="font-bold text-gray-900 text-lg mb-2">Requirement &amp; Stress Envelope
+                                Definition
+                            </h4>
+                            <p class="text-[15px] md:text-[17px] leading-[1.8] text-gray-600 leading-relaxed">
+                                Collaborating precisely with OEM teams to
+                                lock down dynamic loading boundaries and safety-critical yield requirements.</p>
+                        </div>
+
+                        <!-- Step 2 -->
+                        <div
+                            class="rounded-[16px] shadow-[0_4px_24px_rgba(0,0,0,0.02)] hover:shadow-[0_12px_40px_rgba(0,0,0,0.06)] border border-gray-100 bg-white hover:-translate-y-1 transition-all duration-300 text-left p-6 hover:shadow-[0_8px_30px_rgba(238,111,36,0.1)] transition-shadow relative md:ml-12 group">
+                            <div
+                                class="hidden md:flex absolute -left-[54px] top-6 w-8 h-8 bg-gray-100 text-gray-900 rounded-full items-center justify-center font-bold text-xs shadow-sm border-[3px] border-white group-hover:bg-brand-orange group- transition-colors">
+                                2</div>
+                            <h4 class="font-bold text-gray-900 text-lg mb-2">Iterative Generative Architecture</h4>
+                            <p class="text-[15px] md:text-[17px] leading-[1.8] text-gray-600 leading-relaxed">Letting
+                                computational algorithms iterate
+                                hundreds of organic shapes to find the optimum force-transfer pathway.</p>
+                        </div>
+
+                        <!-- Step 3 -->
+                        <div
+                            class="rounded-[16px] shadow-[0_4px_24px_rgba(0,0,0,0.02)] hover:shadow-[0_12px_40px_rgba(0,0,0,0.06)] border border-gray-100 bg-white hover:-translate-y-1 transition-all duration-300 text-left p-6 hover:shadow-[0_8px_30px_rgba(238,111,36,0.1)] transition-shadow relative md:ml-12 group">
+                            <div
+                                class="hidden md:flex absolute -left-[54px] top-6 w-8 h-8 bg-gray-100 text-gray-900 rounded-full items-center justify-center font-bold text-xs shadow-sm border-[3px] border-white group-hover:bg-brand-orange group- transition-colors">
+                                3</div>
+                            <h4 class="font-bold text-gray-900 text-lg mb-2">FEA Node Collision &amp; Virtual Testing
+                            </h4>
+                            <p class="text-[15px] md:text-[17px] leading-[1.8] text-gray-600 leading-relaxed">Pushing
+                                the generated CAD through severe
+                                simulated crash tests, tracking shear forces against theoretical metallurgical grades.
+                            </p>
+                        </div>
+
+                        <!-- Step 4 -->
+                        <div
+                            class="rounded-[16px] shadow-[0_4px_24px_rgba(0,0,0,0.02)] hover:shadow-[0_12px_40px_rgba(0,0,0,0.06)] border border-gray-100 bg-white hover:-translate-y-1 transition-all duration-300 text-left p-6 hover:shadow-[0_8px_30px_rgba(238,111,36,0.1)] transition-shadow relative md:ml-12 group">
+                            <div
+                                class="hidden md:flex absolute -left-[54px] top-6 w-8 h-8 bg-gray-100 text-gray-900 rounded-full items-center justify-center font-bold text-xs shadow-sm border-[3px] border-white group-hover:bg-brand-orange group- transition-colors">
+                                4</div>
+                            <h4 class="font-bold text-gray-900 text-lg mb-2">Manufacturability Filtering (DFM)</h4>
+                            <p class="text-[15px] md:text-[17px] leading-[1.8] text-gray-600 leading-relaxed">
+                                Translating algorithmic perfect shapes back
+                                into stamp-able, formable trajectories suited to high-speed progressive dies.</p>
+                        </div>
+
+                        <!-- Step 5 -->
+                        <div
+                            class="rounded-[16px] shadow-[0_4px_24px_rgba(0,0,0,0.02)] hover:shadow-[0_12px_40px_rgba(0,0,0,0.06)] border border-gray-100 bg-white hover:-translate-y-1 transition-all duration-300 text-left p-6 hover:shadow-[0_8px_30px_rgba(238,111,36,0.1)] transition-shadow relative md:ml-12 group">
+                            <div
+                                class="hidden md:flex absolute -left-[54px] top-6 w-8 h-8 bg-brand-orange text-white rounded-full items-center justify-center font-bold text-xs shadow-md border-[3px] border-white">
+                                5</div>
+                            <h4 class="font-bold text-gray-900 text-lg mb-2">Physical Prototype Execution</h4>
+                            <p class="text-[15px] md:text-[17px] leading-[1.8] text-gray-600 leading-relaxed">Direct
+                                5-axis cutting and hydro-forming of
+                                initial pilot assets. Correlating physical test-bench yield data directly back to the
+                                simulation.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. Strong Footer CTA Section -->
+    <section class="py-[60px] md:py-[80px] lg:py-[100px] px-6 bg-brand-orange relative overflow-hidden">
+        <div class="absolute inset-0  opacity-10 mix-blend-multiply"></div>
+        <div class="max-w-4xl mx-auto text-center relative z-10 px-6">
+            <h2
+                class="text-[22px] md:text-[30px] lg:text-[36px] font-black text-gray-900 uppercase tracking-tight font-bold leading-tight mb-8">
+                Co-Develop Tomorrow's Advanced Structural Assets
+            </h2>
+            <p class="text-gray-900/90 text-[18px] mb-10 max-w-2xl mx-auto">
+                Secure your mass-reduction and safety requirements with our computational design division today.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+                <a href="contact.html"
+                    class="inline-flex items-center gap-2 bg-white hover:bg-black text-gray-900 px-8 py-4 rounded font-bold uppercase tracking-widest text-sm transition-all shadow-xl">
+                    Submit Development Inquiry <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                </a>
+                <div class="flex items-center gap-4 text-gray-900 font-medium">
+                    <span class="flex items-center gap-2"><i data-lucide="phone"></i> <a href="tel:+919884426111"
+                            class=" transition-colors">+91 98844 26111</a></span>
+                    <span class="flex items-center gap-2"><i data-lucide="phone"></i> <a href="tel:+918428283013"
+                            class=" transition-colors">+91 84282 83013</a></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Original Footer Details -->
+
+    <!-- Bottom Footer -->
+    
+    <footer class="bg-white pt-24 pb-12 px-6 border-t border-gray-100 relative overflow-hidden">
+        <!-- Decorative subtle element -->
+        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-brand-orange/20 to-transparent"></div>
+        
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-16 mb-20">
+                
+                <!-- Column 1: Logo & Branding -->
+                <div class="lg:col-span-4 space-y-8">
+                    <a href="index.html" class="inline-block transition-transform hover:scale-105 duration-300">
+                        <img width="343" height="96" src="uploads/logo.png" alt="Sivam Itech Logo"
+                            class="h-20 md:h-28 w-auto object-contain">
+                    </a>
+                    <p class="text-zinc-700 text-[16px] leading-[1.8] font-medium max-w-sm">
+                        Redefining precision and synergy in the industrial sector. From concept to complex component
+                        manufacturing with unmatched excellence and technical leadership.
+                    </p>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="lg:col-span-2">
+                    <h5 class="text-[12px] font-black uppercase tracking-[0.3em] mb-8 text-brand-orange">Company</h5>
+                    <ul class="space-y-4">
+                        <li><a href="about.html" class="text-gray-600 hover:text-brand-orange text-[15px] font-semibold transition-colors">About Us</a></li>
+                        <li><a href="infrastructure.html" class="text-gray-600 hover:text-brand-orange text-[15px] font-semibold transition-colors">Infrastructure</a></li>
+                        <li><a href="products.html" class="text-gray-600 hover:text-brand-orange text-[15px] font-semibold transition-colors">Products</a></li>
+                        <li><a href="careers.html" class="text-gray-600 hover:text-brand-orange text-[15px] font-semibold transition-colors">Careers</a></li>
+                        <li><a href="contact.html" class="text-gray-600 hover:text-brand-orange text-[15px] font-semibold transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Connect -->
+                <div class="lg:col-span-3">
+                    <h5 class="text-[12px] font-black uppercase tracking-[0.3em] mb-8 text-brand-orange">Connect</h5>
+                    <ul class="space-y-6">
+                        <li class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-orange-50 flex items-center justify-center shrink-0 border border-orange-100">
+                                <i data-lucide="map-pin" class="w-5 h-5 text-brand-orange"></i>
+                            </div>
+                            <span class="text-gray-600 font-medium text-[14px] leading-relaxed">
+                                No. 115 / 2A, Mahalakshmi Nagar Extension, Noombal, Chennai – 600 077, India.
+                            </span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-orange-50 flex items-center justify-center shrink-0 border border-orange-100">
+                                <i data-lucide="phone" class="w-5 h-5 text-brand-orange"></i>
+                            </div>
+                            <div class="flex flex-col text-[14px] font-bold">
+                                <a href="tel:+919884426111" class="text-gray-700 hover:text-brand-orange transition-colors">+91 98844 26111</a>
+                                <a href="tel:+918428283013" class="text-gray-700 hover:text-brand-orange transition-colors">+91 84282 83013</a>
+                            </div>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-orange-50 flex items-center justify-center shrink-0 border border-orange-100">
+                                <i data-lucide="mail" class="w-5 h-5 text-brand-orange"></i>
+                            </div>
+                            <div class="flex flex-col text-[14px] font-bold overflow-hidden">
+                                <a href="mailto:Vijayakumar.k@sivamitech.com" class="text-gray-700 hover:text-brand-orange transition-colors truncate">Vijayakumar.k@sivamitech.com</a>
+                                <a href="mailto:Nagendran.P@sivamitech.com" class="text-gray-700 hover:text-brand-orange transition-colors truncate">Nagendran.P@sivamitech.com</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Stay Updated & Social -->
+                <div class="lg:col-span-3 space-y-12">
+                    <div>
+                        <h5 class="text-[12px] font-black uppercase tracking-[0.3em] mb-6 text-brand-orange">Follow Us</h5>
+                        <div class="flex flex-col gap-3">
+                            <a href="https://www.linkedin.com/company/sivam-itech-metal-forming-industries/" target="_blank" rel="noopener noreferrer" 
+                               class="flex items-center gap-3 group bg-gray-50 p-2 rounded-2xl border border-gray-100 hover:border-[#0077b5]/30 hover:bg-white transition-all duration-300 hover:-translate-y-1">
+                                <div class="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-[#0077b5] shadow-sm group-hover:bg-[#0077b5] group-hover:text-white transition-all duration-300">
+                                    <i class="fa-brands fa-linkedin text-[18px]"></i>
+                                </div>
+                                <span class="text-[14px] font-bold text-gray-700 group-hover:text-brand-orange transition-colors px-1">LinkedIn</span>
+                            </a>
+                            <a href="https://wa.me/919884426111?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20your%20products%20and%20services%20at%20Sivam%20Itech%20Metal%20Forming%20Industries." target="_blank" rel="noopener noreferrer" 
+                               class="flex items-center gap-3 group bg-gray-50 p-2 rounded-2xl border border-gray-100 hover:border-[#25d366]/30 hover:bg-white transition-all duration-300">
+                                <div class="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-[#25d366] shadow-sm group-hover:bg-[#25d366] group-hover:text-white transition-all duration-300">
+                                    <i class="fa-brands fa-whatsapp text-[20px]"></i>
+                                </div>
+                                <span class="text-[14px] font-bold text-gray-700 group-hover:text-brand-orange transition-colors px-1">WhatsApp</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div>
+                        <h5 class="text-[12px] font-black uppercase tracking-[0.3em] mb-6 text-brand-orange">Newsletter</h5>
+                        <div class="relative group">
+                            <input type="email" placeholder="Corporate email" 
+                                   class="w-full bg-gray-50 border border-gray-200 rounded-2xl px-5 py-4 text-[14px] font-medium outline-none focus:border-brand-orange focus:bg-white transition-all pr-14">
+                            <button class="absolute right-2 top-2 bottom-2 w-10 bg-brand-orange text-white rounded-xl flex items-center justify-center hover:brightness-110 transition-all shadow-lg shadow-brand-orange/20" title="Subscribe">
+                                <i data-lucide="send" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Copyright Bar -->
+            <div class="pt-12 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-8">
+                <p class="text-[11px] font-black text-gray-400 uppercase tracking-[0.2em]">
+                    © 2024 SIVAM ITECH Limited. Precision Engineering Redefined.
+                </p>
+                <div class="flex gap-8 items-center">
+                    <a href="#" class="text-gray-400 hover:text-brand-orange text-[11px] font-black uppercase tracking-widest transition-colors">Privacy</a>
+                    <a href="#" class="text-gray-400 hover:text-brand-orange text-[11px] font-black uppercase tracking-widest transition-colors">Terms</a>
+                    </div>
+        </div>
+        </div>
+    </footer>
+
+
+    <!-- Custom JS and Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest" defer></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      lucide.createIcons();
+    });
+  </script>
+    <script src="assets/js/main.min.js" defer></script>
+</body>
+
+
+
+

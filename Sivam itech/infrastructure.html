@@ -1,0 +1,840 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="public, max-age=31536000">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infrastructure | SIVAM ITECH</title>
+
+    <!-- Preconnect to critical domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://unpkg.com">
+
+    <!-- Defer non-critical scripts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.min.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="uploads/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body class="bg-white text-gray-600 font-sans antialiased overflow-x-hidden selection:bg-brand-orange pb-10 md:pb-0">
+
+
+
+    
+
+    <a href="https://wa.me/919884426111?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20your%20products%20and%20services%20at%20Sivam%20Itech%20Metal%20Forming%20Industries." target="_blank" rel="noopener noreferrer" title="Contact us on WhatsApp"
+        class="whatsapp-float flex items-center justify-center w-14 h-14 bg-[#25D366] rounded-full shadow-2xl">
+        <div class="whatsapp-pulse"></div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="white" stroke="none">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.414 0 .006 5.408 0 12.045c0 2.121.554 4.189 1.605 6.006L0 24l6.115-1.605a11.83 11.83 0 005.932 1.577h.005c6.635 0 12.041-5.408 12.046-12.047a11.82 11.82 0 00-3.483-8.43">
+            </path>
+        </svg>
+    </a>
+
+    <!-- Top Bar Removed -->
+
+    <nav class="sticky top-0 w-full z-50 glass-nav shadow-md">
+        <div class="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3">
+                <img width="343" height="96" loading="eager" src="uploads/logo.png" alt="Sivam Itech Metal Forming Industries Official Logo"
+                    class="h-28 md:h-36 lg:h-40 w-auto object-contain relative z-10">
+            </a>
+
+            <div class="hidden lg:flex space-x-8 font-bold text-xs uppercase tracking-widest text-gray-700">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="infrastructure.html" class="nav-link text-brand-orange">Infrastructure</a>
+                <a href="products.html" class="nav-link">Products</a>
+                <a href="careers.html" class="nav-link">Careers</a>
+                <a href="contact.html" class="nav-link">Contact Us</a>
+            </div>
+
+            <a href="inquire.html"
+                class="hidden md:block btn-orange px-6 py-2.5 text-xs font-bold uppercase tracking-widest rounded-full shadow-md hover:shadow-lg">
+                Inquire Now
+            </a>
+
+            <!-- Changed onclick to use JS event listener via ID if possible, but keeping simplistic onclick for now as per extraction, 
+                 removed inline onclick to rely on main.js event binding -->
+            <button type="button" class="lg:hidden" onclick="toggleMenu()" title="Toggle mobile menu">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+        <div id="mobile-menu" class="lg:hidden bg-white shadow-lg">
+            <div class="px-6 py-4 flex flex-col space-y-4 font-bold text-xs uppercase">
+                <a href="index.html" class=" transition-colors">Home</a>
+                <a href="about.html" class=" transition-colors">About Us</a>
+                <a href="infrastructure.html"
+                    class=" transition-colors text-brand-orange">Infrastructure</a>
+                <a href="products.html" class=" transition-colors">Products</a>
+                <a href="careers.html" class=" transition-colors">Careers</a>
+                <a href="contact.html" class=" transition-colors">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section
+        class="py-[60px] md:py-[80px] lg:py-[100px] relative pt-32 pb-20 md:pt-40 md:pb-28 flex flex-col items-center justify-center overflow-hidden bg-white text-center border-b border-gray-100">
+        <div class="absolute inset-0 z-0 bg-gray-50/50"></div>
+        <div class="relative z-10 max-w-7xl mx-auto px-6 w-full flex flex-col items-center">
+            <h2 class="text-[12px] font-bold text-brand-orange tracking-[0.3em] uppercase mb-4">Infrastructure</h2>
+            <h1
+                class="text-[28px] sm:text-[32px] md:text-[40px] lg:text-[52px] font-black text-gray-900 uppercase tracking-tight mb-6">
+                Built
+                for Precision<br>at Scale</h1>
+            <p
+                class="text-[15px] md:text-[17px] leading-[1.8] text-gray-600 font-medium max-w-3xl mx-auto leading-relaxed mb-12">
+                An integrated manufacturing ecosystem designed for high-precision engineering and large-scale industrial
+                production.
+            </p>
+
+            <div class="flex flex-wrap justify-center gap-6">
+                <!-- KPI 1 -->
+                <div class="bg-white border border-gray-200 shadow-sm px-6 py-4 rounded-[12px] flex items-center gap-4">
+                    <div class="p-2 bg-brand-orange/10 text-brand-orange rounded-full"><i data-lucide="layers"
+                            class="w-5 h-5"></i></div>
+                    <div class="text-left">
+                        <p class="text-[18px] font-black text-gray-900">25+</p>
+                        <p class="text-[11px] font-bold text-gray-600 uppercase tracking-widest">Stamping Presses</p>
+                    </div>
+                </div>
+                <!-- KPI 2 -->
+                <div class="bg-white border border-gray-200 shadow-sm px-6 py-4 rounded-[12px] flex items-center gap-4">
+                    <div class="p-2 bg-brand-orange/10 text-brand-orange rounded-full"><i data-lucide="clock"
+                            class="w-5 h-5"></i></div>
+                    <div class="text-left">
+                        <p class="text-[18px] font-black text-gray-900">24/7</p>
+                        <p class="text-[11px] font-bold text-gray-600 uppercase tracking-widest">Production</p>
+                    </div>
+                </div>
+                <!-- KPI 3 -->
+                <div class="bg-white border border-gray-200 shadow-sm px-6 py-4 rounded-[12px] flex items-center gap-4">
+                    <div class="p-2 bg-brand-orange/10 text-brand-orange rounded-full"><i data-lucide="shield-check"
+                            class="w-5 h-5"></i></div>
+                    <div class="text-left">
+                        <p class="text-[18px] font-black text-gray-900">ISO</p>
+                        <p class="text-[11px] font-bold text-gray-600 uppercase tracking-widest">Compliant</p>
+                    </div>
+                </div>
+                <!-- KPI 4 -->
+                <div class="bg-white border border-gray-200 shadow-sm px-6 py-4 rounded-[12px] flex items-center gap-4">
+                    <div class="p-2 bg-brand-orange/10 text-brand-orange rounded-full"><i data-lucide="wrench"
+                            class="w-5 h-5"></i></div>
+                    <div class="text-left">
+                        <p class="text-[18px] font-black text-gray-900">Advanced</p>
+                        <p class="text-[11px] font-bold text-gray-600 uppercase tracking-widest">Tool Room</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Manufacturing Facilities -->
+    <section class="py-[60px] md:py-[80px] lg:py-[100px] px-6 bg-gray-50 text-gray-900 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-16 text-center">
+                <h2 class="text-[12px] font-bold text-brand-orange tracking-[0.3em] uppercase mb-4">Manufacturing
+                    Infrastructure</h2>
+                <h3 class="text-[32px] md:text-[40px] font-black text-gray-900 uppercase tracking-tight">The SIVAM ITECH
+                    Factory</h3>
+                <div class="w-16 h-1 bg-brand-orange mx-auto mt-6 mb-8"></div>
+
+                <div
+                    class="max-w-4xl mx-auto text-gray-600 text-[16px] leading-[1.8] space-y-6 text-left md:text-center">
+                    <p class="text-[15px] md:text-[17px] leading-[1.8]">Our expansive manufacturing footprint is
+                        meticulously engineered to support seamless high-volume
+                        production operations. From rapid prototyping and tool concept to full-scale automated stamping,
+                        our facility acts as a fully integrated ecosystem designed for unparalleled reliability and
+                        industrial scale.</p>
+                    <p class="text-[15px] md:text-[17px] leading-[1.8]">We implement stringent Lean Manufacturing
+                        principles and deep automation integration across our
+                        production floors. This cohesive environment minimizes workflow bottlenecks, ensures flawless
+                        quality control via continuous monitoring, and enables highly scalable output adapting precisely
+                        to Tier-1 automotive and industrial demands.</p>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12 max-w-5xl mx-auto">
+                    <div class="bg-gray-50 rounded-[12px] p-6 text-center border border-gray-100 shadow-sm">
+                        <p class="text-[28px] font-black text-brand-orange mb-1">50,000</p>
+                        <p class="text-[11px] font-bold text-gray-600 uppercase tracking-widest">Production Area (Sq.Ft)
+                        </p>
+                    </div>
+                    <div class="bg-gray-50 rounded-[12px] p-6 text-center border border-gray-100 shadow-sm">
+                        <p class="text-[28px] font-black text-brand-orange mb-1">1.4M+</p>
+                        <p class="text-[11px] font-bold text-gray-600 uppercase tracking-widest">Monthly Capacity</p>
+                    </div>
+                    <div class="bg-gray-50 rounded-[12px] p-6 text-center border border-gray-100 shadow-sm">
+                        <p class="text-[28px] font-black text-brand-orange mb-1">15+</p>
+                        <p class="text-[11px] font-bold text-gray-600 uppercase tracking-widest">Tool Engineers</p>
+                    </div>
+                    <div class="bg-gray-50 rounded-[12px] p-6 text-center border border-gray-100 shadow-sm">
+                        <p class="text-[28px] font-black text-brand-orange mb-1">High</p>
+                        <p class="text-[11px] font-bold text-gray-600 uppercase tracking-widest">Automation Level</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Facility Card 1 - Stamping Panel -->
+                <a href="automated-press-shop.html"
+                    class="bg-white border border-gray-100 rounded-[24px] overflow-hidden shadow-sm hover:shadow-[0_20px_60px_rgba(0,0,0,0.10)] hover:-translate-y-2 transition-all duration-500 group flex flex-col h-full">
+                    <!-- Large Image Panel -->
+                    <div class="relative h-[240px] overflow-hidden bg-gray-100 shrink-0">
+                        <img loading="lazy" decoding="async" src="uploads/collection-1.avif"
+                            alt="Advanced Stamping Facility"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 relative z-10"
+                            width="400" height="240">
+                        <!-- Gradient Overlay -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                        <!-- Status Badge + Name -->
+                        <div class="absolute top-5 left-5">
+                            <span
+                                class="inline-block px-3 py-1 bg-brand-orange text-white text-[10px] font-black uppercase tracking-widest rounded-full">Fully
+                                Active</span>
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 px-7 pb-6">
+                            <h4 class="text-[22px] font-black text-white leading-tight uppercase tracking-tight">
+                                Stamping Facility</h4>
+                        </div>
+                    </div>
+                    <!-- Content -->
+                    <div class="px-7 py-7 flex flex-col flex-grow">
+                        <p class="text-gray-600 leading-[1.75] text-[15px] mb-6 flex-grow">
+                            Comprehensive facility with over 25 stamping presses ranging from 50 to 200 tons. Capable of
+                            handling high-volume automotive components with precision.
+                        </p>
+                        <div
+                            class="flex items-center gap-2 text-[11px] font-black text-brand-orange uppercase tracking-widest pt-4 border-t border-gray-50">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                                <line x1="3" y1="9" x2="21" y2="9" />
+                                <line x1="9" y1="21" x2="9" y2="9" />
+                            </svg>
+                            50T - 200T High Precision Range
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Facility Card 2 - Tool Room Panel -->
+                <a href="tooling-npd.html"
+                    class="bg-white border border-gray-100 rounded-[24px] overflow-hidden shadow-sm hover:shadow-[0_20px_60px_rgba(0,0,0,0.10)] hover:-translate-y-2 transition-all duration-500 group flex flex-col h-full">
+                    <!-- Large Image Panel -->
+                    <div class="relative h-[240px] overflow-hidden bg-gray-100 shrink-0">
+                        <img loading="lazy" decoding="async" src="uploads/collection-2.avif"
+                            alt="In-house Tool Room & NPD"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 relative z-10"
+                            width="400" height="240">
+                        <!-- Gradient Overlay -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                        <!-- Status Badge + Name -->
+                        <div class="absolute top-5 left-5">
+                            <span
+                                class="inline-block px-3 py-1 bg-gray-900 border border-white/20 text-white text-[10px] font-black uppercase tracking-widest rounded-full">Secure
+                                Access</span>
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 px-7 pb-6">
+                            <h4 class="text-[22px] font-black text-white leading-tight uppercase tracking-tight">Tool
+                                Room &amp; NPD</h4>
+                        </div>
+                    </div>
+                    <!-- Content -->
+                    <div class="px-7 py-7 flex flex-col flex-grow">
+                        <p class="text-gray-600 leading-[1.75] text-[15px] mb-6 flex-grow">
+                            Dedicated in-house tool room for design and development of progressive, compound, and
+                            single-stage dies with CAD/CAM centers.
+                        </p>
+                        <div
+                            class="flex items-center gap-2 text-[11px] font-black text-brand-orange uppercase tracking-widest pt-4 border-t border-gray-50">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+                            </svg>
+                            Integrated Tooling Intelligence
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Facility Card 3 - Wire Forming Panel -->
+                <div
+                    class="bg-white border border-gray-100 rounded-[24px] overflow-hidden shadow-sm hover:shadow-[0_20px_60px_rgba(0,0,0,0.10)] hover:-translate-y-2 transition-all duration-500 group flex flex-col h-full">
+                    <!-- Large Image Panel -->
+                    <div class="relative h-[240px] overflow-hidden bg-gray-100 shrink-0">
+                        <img loading="lazy" decoding="async" src="uploads/collection-3.avif"
+                            alt="High Capacity Wire Forming"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 relative z-10"
+                            width="400" height="240">
+                        <!-- Gradient Overlay -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                        <!-- Status Badge + Name -->
+                        <div class="absolute bottom-0 left-0 right-0 px-7 pb-6">
+                            <h4 class="text-[22px] font-black text-white leading-tight uppercase tracking-tight">Wire
+                                Forming</h4>
+                        </div>
+                    </div>
+                    <!-- Content -->
+                    <div class="px-7 py-7 flex flex-col flex-grow">
+                        <p class="text-gray-600 leading-[1.75] text-[15px] mb-6 flex-grow">
+                            Specialized facility for manufacturing industrial handles with a massive monthly capacity of
+                            9,50,000 pieces per month (9.5 Lakhs) and automated lines.
+                        </p>
+                        <div
+                            class="flex items-center gap-2 text-[11px] font-black text-brand-orange uppercase tracking-widest pt-4 border-t border-gray-50">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+                            </svg>
+                            High Volume Output : 9,50,000 pieces per month (9.5 Lakhs)
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Facility Capabilities Overview -->
+    <section class="py-[60px] md:py-[80px] lg:py-[100px] px-6 bg-[#F8FAFC] text-gray-900 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-[12px] font-bold text-brand-orange tracking-[0.3em] uppercase mb-4">Core Strengths</h2>
+                <h3 class="text-[32px] md:text-[40px] font-black text-gray-900 uppercase tracking-tight">Integrated
+                    Manufacturing Capabilities</h3>
+                <div class="w-16 h-1 bg-brand-orange mx-auto mt-6 mb-8"></div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Strength 1: High-Tonnage Stamping -->
+                <div
+                    class="bg-white border border-gray-100 rounded-[28px] p-8 shadow-sm hover:shadow-[0_24px_50px_rgba(0,0,0,0.06)] hover:-translate-y-2 transition-all duration-500 group relative overflow-hidden">
+                    <div
+                        class="w-16 h-16 rounded-2xl bg-orange-50 flex items-center justify-center text-brand-orange mb-8 group-hover:scale-110 transition-transform duration-500 relative z-10">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-br from-brand-orange/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl">
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 relative z-20" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M4 2v20" />
+                            <path d="M20 2v20" />
+                            <path d="M4 12h16" />
+                            <path d="M12 2v20" />
+                        </svg>
+                    </div>
+                    <h4 class="text-[18px] font-black text-gray-900 mb-4 uppercase tracking-tight">High-Tonnage Stamping
+                    </h4>
+                    <p class="text-[14px] text-gray-600 leading-relaxed font-medium">
+                        Executing robust blanking, piercing, and deep drawing operations at high capacities with
+                        precision calibration.
+                    </p>
+                </div>
+
+                <!-- Strength 2: Tool Design -->
+                <div
+                    class="bg-white border border-gray-100 rounded-[28px] p-8 shadow-sm hover:shadow-[0_24px_50px_rgba(0,0,0,0.06)] hover:-translate-y-2 transition-all duration-500 group relative overflow-hidden">
+                    <div
+                        class="w-16 h-16 rounded-2xl bg-orange-50 flex items-center justify-center text-brand-orange mb-8 group-hover:scale-110 transition-transform duration-500 relative z-10">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-br from-brand-orange/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl">
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 relative z-20" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                            <path d="m9 12 2 2 4-4" />
+                        </svg>
+                    </div>
+                    <h4 class="text-[18px] font-black text-gray-900 mb-4 uppercase tracking-tight">In-House Tool Design
+                    </h4>
+                    <p class="text-[14px] text-gray-600 leading-relaxed font-medium">
+                        End-to-end tooling conceptualization, CAD/CAM proving, and precision CNC execution for complex
+                        progressive dies.
+                    </p>
+                </div>
+
+                <!-- Strength 3: Wire Forming -->
+                <div
+                    class="bg-white border border-gray-100 rounded-[28px] p-8 shadow-sm hover:shadow-[0_24px_50px_rgba(0,0,0,0.06)] hover:-translate-y-2 transition-all duration-500 group relative overflow-hidden">
+                    <div
+                        class="w-16 h-16 rounded-2xl bg-orange-50 flex items-center justify-center text-brand-orange mb-8 group-hover:scale-110 transition-transform duration-500 relative z-10">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-br from-brand-orange/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl">
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 relative z-20" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M12 3v19" />
+                            <path d="M5 8h14" />
+                            <path d="M15 13H9" />
+                            <path d="M7 18h10" />
+                        </svg>
+                    </div>
+                    <h4 class="text-[18px] font-black text-gray-900 mb-4 uppercase tracking-tight">Precision Wire
+                        Forming</h4>
+                    <p class="text-[14px] text-gray-600 leading-relaxed font-medium">
+                        Integrated CNC wire bending operations maintaining stringent cyclic tolerances for high-volume
+                        component production.
+                    </p>
+                </div>
+
+                <!-- Strength 4: Surface Finishing -->
+                <div
+                    class="bg-white border border-gray-100 rounded-[28px] p-8 shadow-sm hover:shadow-[0_24px_50px_rgba(0,0,0,0.06)] hover:-translate-y-2 transition-all duration-500 group relative overflow-hidden">
+                    <div
+                        class="w-16 h-16 rounded-2xl bg-orange-50 flex items-center justify-center text-brand-orange mb-8 group-hover:scale-110 transition-transform duration-500 relative z-10">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-br from-brand-orange/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl">
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 relative z-20" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="m19 11-8-8-8 8" />
+                            <path d="m19 19-8-8-8 8" />
+                        </svg>
+                    </div>
+                    <h4 class="text-[18px] font-black text-gray-900 mb-4 uppercase tracking-tight">Surface Finishing
+                    </h4>
+                    <p class="text-[14px] text-gray-600 leading-relaxed font-medium">
+                        Specialized ED painting, powder coating, and premium passivation treatments for maximum
+                        corrosion protection.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology & Equipment -->
+    <section class="py-[60px] md:py-[80px] lg:py-[100px] px-6 bg-white text-gray-900 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center px-6">
+            <div>
+                <h2 class="text-[12px] font-bold text-brand-orange tracking-[0.3em] uppercase mb-4">Hardware Ecosystem
+                </h2>
+                <h3 class="text-[32px] md:text-[40px] font-black text-gray-900 uppercase tracking-tight mb-8">Technology
+                    &amp; Equipment</h3>
+                <p class="text-gray-600 font-medium leading-[1.8] text-[16px] mb-8">
+                    Our machine floor boasts a versatile lineup of advanced industrial equipment engineered for
+                    high-stress manufacturing. We continually deploy modern technological upgrades to maximize line
+                    availability and process stability.
+                </p>
+
+                <ul class="space-y-5">
+                    <li class="flex items-start gap-4">
+                        <div class="w-2 h-2 rounded-full bg-brand-orange mt-2 shrink-0"></div>
+                        <div>
+                            <p class="font-bold text-gray-900 uppercase text-[15px] tracking-tight">Progressive &amp;
+                                Transfer Press Systems</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-4">
+                        <div class="w-2 h-2 rounded-full bg-brand-orange mt-2 shrink-0"></div>
+                        <div>
+                            <p class="font-bold text-gray-900 uppercase text-[15px] tracking-tight">CNC Machining
+                                Centers</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-4">
+                        <div class="w-2 h-2 rounded-full bg-brand-orange mt-2 shrink-0"></div>
+                        <div>
+                            <p class="font-bold text-gray-900 uppercase text-[15px] tracking-tight">Wire EDM Machines
+                            </p>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-4">
+                        <div class="w-2 h-2 rounded-full bg-brand-orange mt-2 shrink-0"></div>
+                        <div>
+                            <p class="font-bold text-gray-900 uppercase text-[15px] tracking-tight">Automated Inspection
+                                Equipment</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-4">
+                        <div class="w-2 h-2 rounded-full bg-brand-orange mt-2 shrink-0"></div>
+                        <div>
+                            <p class="font-bold text-gray-900 uppercase text-[15px] tracking-tight">Powder Coating &amp;
+                                Surface Treatment Lines</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+                <img loading="lazy" decoding="async" src="uploads/collection-1.avif"
+                    alt="Advanced Stamping Equipment"
+                    class="w-full h-[300px] object-cover rounded-[16px] shadow-[0_4px_24px_rgba(0,0,0,0.06)] hover:scale-[1.02] transition-transform duration-500"
+                    width="400" height="300">
+                <img loading="lazy" decoding="async" src="uploads/collection-2.avif" alt="High precision machinery"
+                    class="w-full h-[300px] object-cover rounded-[16px] shadow-[0_4px_24px_rgba(0,0,0,0.06)] hover:scale-[1.02] mt-10 transition-transform duration-500"
+                    width="400" height="300">
+            </div>
+        </div>
+    </section>
+
+    <!-- Inspection & Surface Treatment Block (Quality Infrastructure) -->
+    <section class="py-[60px] md:py-[80px] lg:py-[100px] px-6 bg-[#F8FAFC] text-gray-900 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-[12px] font-bold text-brand-orange tracking-[0.3em] uppercase mb-4">Quality
+                    Infrastructure</h2>
+                <h3 class="text-[32px] md:text-[40px] font-black text-gray-900 uppercase tracking-tight">Built for
+                    Precision &amp; Compliance</h3>
+                <div class="w-16 h-1 bg-brand-orange mx-auto mt-6 mb-8"></div>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-4 mb-16">
+                <span
+                    class="inline-flex items-center px-4 py-2 rounded-[8px] sm:rounded-full bg-white border border-gray-200 text-[12px] font-bold text-gray-800 uppercase tracking-widest shadow-[0_2px_8px_rgba(0,0,0,0.02)]"><i
+                        data-lucide="award" class="w-4 h-4 mr-2 text-brand-orange"></i> ISO Compliant</span>
+                <span
+                    class="inline-flex items-center px-4 py-2 rounded-[8px] sm:rounded-full bg-white border border-gray-200 text-[12px] font-bold text-gray-800 uppercase tracking-widest shadow-[0_2px_8px_rgba(0,0,0,0.02)]"><i
+                        data-lucide="check-square" class="w-4 h-4 mr-2 text-brand-orange"></i> Lean Manufacturing</span>
+                <span
+                    class="inline-flex items-center px-4 py-2 rounded-[8px] sm:rounded-full bg-white border border-gray-200 text-[12px] font-bold text-gray-800 uppercase tracking-widest shadow-[0_2px_8px_rgba(0,0,0,0.02)]"><i
+                        data-lucide="target" class="w-4 h-4 mr-2 text-brand-orange"></i> Zero-Defect Policy</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+                <!-- Inspection Card -->
+                <div
+                    class="bg-white p-8 md:p-10 rounded-[20px] shadow-sm border border-gray-100 hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.06)] transition-all flex flex-col h-full">
+                    <div
+                        class="w-14 h-14 bg-brand-orange/10 rounded-full flex items-center justify-center text-brand-orange mb-6">
+                        <i data-lucide="microscope" class="w-6 h-6"></i>
+                    </div>
+                    <h4 class="text-[20px] font-black uppercase text-gray-900 mb-6 tracking-tight">Advanced Inspection
+                        Facilities</h4>
+                    <ul class="space-y-4 mb-8 flex-grow">
+                        <li class="flex items-center gap-3 text-gray-600 text-[15px] font-medium">
+                            <i data-lucide="check" class="w-5 h-5 text-brand-orange"></i> Profile Projectors
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-600 text-[15px] font-medium">
+                            <i data-lucide="check" class="w-5 h-5 text-brand-orange"></i> Surface Roughness Testers
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-600 text-[15px] font-medium">
+                            <i data-lucide="check" class="w-5 h-5 text-brand-orange"></i> Digital Height Gauges
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-600 text-[15px] font-medium">
+                            <i data-lucide="check" class="w-5 h-5 text-brand-orange"></i> Routine In-Process &amp; Final
+                            Quality Validation
+                        </li>
+                    </ul>
+                    <div class="bg-gray-50 p-4 rounded-[12px] border border-gray-200 flex items-center gap-4 mt-auto">
+                        <div class="w-2 h-8 bg-brand-orange rounded-full shrink-0"></div>
+                        <p class="text-[13px] font-bold text-gray-800 uppercase tracking-widest leading-snug">
+                            Micron-level tolerance validation</p>
+                    </div>
+                </div>
+
+                <!-- Surface Treatment Card -->
+                <div
+                    class="bg-white p-8 md:p-10 rounded-[20px] shadow-sm border border-gray-100 hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.06)] transition-all flex flex-col h-full">
+                    <div
+                        class="w-14 h-14 bg-brand-orange/10 rounded-full flex items-center justify-center text-brand-orange mb-6">
+                        <i data-lucide="droplets" class="w-6 h-6"></i>
+                    </div>
+                    <h4 class="text-[20px] font-black uppercase text-gray-900 mb-6 tracking-tight">Coating &amp; Surface
+                        Treatment</h4>
+                    <ul class="space-y-4 mb-8 flex-grow">
+                        <li class="flex items-center gap-3 text-gray-600 text-[15px] font-medium">
+                            <i data-lucide="check" class="w-5 h-5 text-brand-orange"></i> Manual Copper Plating
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-600 text-[15px] font-medium">
+                            <i data-lucide="check" class="w-5 h-5 text-brand-orange"></i> ED Painting
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-600 text-[15px] font-medium">
+                            <i data-lucide="check" class="w-5 h-5 text-brand-orange"></i> Powder Coating Lines
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-600 text-[15px] font-medium">
+                            <i data-lucide="check" class="w-5 h-5 text-brand-orange"></i> Detailed Post-Treatment
+                            Inspections
+                        </li>
+                    </ul>
+                    <div class="bg-gray-50 p-4 rounded-[12px] border border-gray-200 flex items-center gap-4 mt-auto">
+                        <div class="w-2 h-8 bg-brand-orange rounded-full shrink-0"></div>
+                        <p class="text-[13px] font-bold text-gray-800 uppercase tracking-widest leading-snug">
+                            Corrosion-resistant coating durability</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Workflow Architecture -->
+    <section
+        class="py-[60px] md:py-[80px] lg:py-[100px] px-6 bg-white text-gray-900 border-b border-gray-100 overflow-hidden">
+        <div class="max-w-7xl mx-auto text-center px-6">
+            <h2 class="text-[12px] font-bold text-brand-orange tracking-[0.3em] uppercase mb-4">Process Consistency</h2>
+            <h3 class="text-[32px] md:text-[40px] font-black text-gray-900 uppercase tracking-tight">Workflow
+                Architecture</h3>
+            <div class="w-16 h-1 bg-brand-orange mx-auto mt-6 mb-16"></div>
+
+            <div
+                class="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-0 relative max-w-5xl mx-auto">
+                <!-- Connector Line Desktop -->
+                <div class="hidden md:block absolute top-[40px] left-[8%] right-[8%] h-[2px] bg-gray-200 -z-10"></div>
+                <!-- Connector Line Mobile -->
+                <div
+                    class="md:hidden absolute left-1/2 top-[5%] bottom-[5%] w-[2px] bg-gray-200 -z-10 -translate-x-1/2">
+                </div>
+
+                <!-- Steps -->
+                <div class="flex flex-col items-center bg-white p-2">
+                    <div
+                        class="w-16 h-16 rounded-full bg-white border border-gray-200 shadow-sm flex items-center justify-center text-gray-500 mb-4 z-10 transition-colors">
+                        <i data-lucide="box" class="w-6 h-6"></i>
+                    </div>
+                    <span class="text-[12px] font-bold uppercase tracking-widest text-gray-900">Raw Material</span>
+                </div>
+
+                <div class="flex flex-col items-center bg-white p-2">
+                    <div
+                        class="w-16 h-16 rounded-full bg-white border border-gray-200 shadow-sm flex items-center justify-center text-gray-500 mb-4 z-10 transition-colors">
+                        <i data-lucide="cpu" class="w-6 h-6"></i>
+                    </div>
+                    <span class="text-[12px] font-bold uppercase tracking-widest text-gray-900">Tooling</span>
+                </div>
+
+                <div class="flex flex-col items-center bg-white p-2 relative">
+                    <div
+                        class="w-20 h-20 rounded-full bg-brand-orange shadow-[0_8px_24px_rgba(243,112,33,0.3)] flex items-center justify-center text-white mb-4 z-10 -mt-2">
+                        <i data-lucide="zap" class="w-8 h-8"></i>
+                    </div>
+                    <span class="text-[13px] font-black uppercase tracking-widest text-brand-orange">Stamping</span>
+                </div>
+
+                <div class="flex flex-col items-center bg-white p-2">
+                    <div
+                        class="w-16 h-16 rounded-full bg-white border border-gray-200 shadow-sm flex items-center justify-center text-gray-500 mb-4 z-10 transition-colors">
+                        <i data-lucide="paint-bucket" class="w-6 h-6"></i>
+                    </div>
+                    <span class="text-[12px] font-bold uppercase tracking-widest text-gray-900">Finishing</span>
+                </div>
+
+                <div class="flex flex-col items-center bg-white p-2">
+                    <div
+                        class="w-16 h-16 rounded-full bg-white border border-gray-200 shadow-sm flex items-center justify-center text-gray-500 mb-4 z-10 transition-colors">
+                        <i data-lucide="microscope" class="w-6 h-6"></i>
+                    </div>
+                    <span class="text-[12px] font-bold uppercase tracking-widest text-gray-900">Inspection</span>
+                </div>
+
+                <div class="flex flex-col items-center bg-white p-2">
+                    <div
+                        class="w-16 h-16 rounded-full bg-white border border-gray-200 shadow-sm flex items-center justify-center text-gray-500 mb-4 z-10 transition-colors">
+                        <i data-lucide="truck" class="w-6 h-6"></i>
+                    </div>
+                    <span class="text-[12px] font-bold uppercase tracking-widest text-gray-900">Dispatch</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Safety & Sustainability -->
+    <section class="py-[60px] md:py-[80px] lg:py-[100px] px-6 bg-[#F8FAFC] text-gray-900 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-[12px] font-bold text-brand-orange tracking-[0.3em] uppercase mb-4">Corporate
+                    Responsibility</h2>
+                <h3 class="text-[32px] md:text-[40px] font-black text-gray-900 uppercase tracking-tight">Safety &amp;
+                    Sustainability</h3>
+                <div class="w-16 h-1 bg-brand-orange mx-auto mt-6 mb-8"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+                <div
+                    class="bg-white p-8 md:p-10 rounded-[16px] border border-gray-100 flex flex-col items-center text-center shadow-[0_4px_24px_rgba(0,0,0,0.02)] h-full hover:shadow-[0_12px_40px_rgba(0,0,0,0.06)] transition-shadow">
+                    <div
+                        class="w-14 h-14 rounded-full bg-gray-50 border border-gray-200 flex items-center justify-center text-gray-900 mb-6">
+                        <i data-lucide="hard-hat" class="w-6 h-6"></i>
+                    </div>
+                    <h4 class="text-[16px] font-bold uppercase tracking-tight text-gray-900 mb-3">Employee Safety</h4>
+                    <p class="text-[14px] text-gray-600 font-medium leading-relaxed">Stringent operator safety protocols
+                        and comprehensive machine guarding systems deployed across all automated areas.</p>
+                </div>
+
+                <div
+                    class="bg-white p-8 md:p-10 rounded-[16px] border border-gray-100 flex flex-col items-center text-center shadow-[0_4px_24px_rgba(0,0,0,0.02)] h-full hover:shadow-[0_12px_40px_rgba(0,0,0,0.06)] transition-shadow">
+                    <div
+                        class="w-14 h-14 rounded-full bg-gray-50 border border-gray-200 flex items-center justify-center text-gray-900 mb-6">
+                        <i data-lucide="leaf" class="w-6 h-6"></i>
+                    </div>
+                    <h4 class="text-[16px] font-bold uppercase tracking-tight text-gray-900 mb-3">Energy Efficiency</h4>
+                    <p class="text-[14px] text-gray-600 font-medium leading-relaxed">Lean manufacturing methodologies
+                        integrated to drastically minimize operational power consumption and carbon footprint.</p>
+                </div>
+
+                <div
+                    class="bg-white p-8 md:p-10 rounded-[16px] border border-gray-100 flex flex-col items-center text-center shadow-[0_4px_24px_rgba(0,0,0,0.02)] h-full hover:shadow-[0_12px_40px_rgba(0,0,0,0.06)] transition-shadow">
+                    <div
+                        class="w-14 h-14 rounded-full bg-gray-50 border border-gray-200 flex items-center justify-center text-gray-900 mb-6">
+                        <i data-lucide="recycle" class="w-6 h-6"></i>
+                    </div>
+                    <h4 class="text-[16px] font-bold uppercase tracking-tight text-gray-900 mb-3">Waste Management</h4>
+                    <p class="text-[14px] text-gray-600 font-medium leading-relaxed">Responsible metal scrap recycling
+                        programs coupled with a continuous improvement culture for sustainable growth.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Strong CTA Section -->
+    <section
+        class="py-[60px] md:py-[80px] lg:py-[100px] md:py-[120px] px-6 bg-white border-b border-gray-100 relative overflow-hidden">
+        <div
+            class="max-w-4xl mx-auto relative z-10 bg-white border border-gray-200 rounded-[24px] shadow-sm p-10 md:p-16 text-center px-6">
+            <h2
+                class="text-[22px] md:text-[30px] lg:text-[36px] font-black text-gray-900 uppercase tracking-tight text-[28px] md:text-[36px] mb-4">
+                Engineering
+                Infrastructure That Powers Precision</h2>
+            <p class="text-gray-600 text-[16px] font-medium leading-[1.8] mb-10 max-w-2xl mx-auto">
+                Join elite automotive OEMs and industrial partners collaborating with our advanced manufacturing
+                facility. Discover how Sivam Itech can scale your next high-volume project.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <a href="contact.html"
+                    class="w-full sm:w-auto inline-flex justify-center items-center px-8 py-3.5 bg-brand-orange text-white text-[13px] font-bold uppercase tracking-widest rounded-[8px] hover:bg-[#d95d1a] transition-colors shadow-sm">
+                    Request Facility Visit
+                </a>
+                <a href="#"
+                    class="w-full sm:w-auto inline-flex justify-center items-center px-8 py-3.5 bg-white border border-gray-300 text-gray-800 text-[13px] font-bold uppercase tracking-widest rounded-[8px] hover:border-brand-orange  transition-colors shadow-sm">
+                    Download Profile
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+
+    
+    <footer class="bg-white pt-24 pb-12 px-6 border-t border-gray-100 relative overflow-hidden">
+        <!-- Decorative subtle element -->
+        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-brand-orange/20 to-transparent"></div>
+        
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-16 mb-20">
+                
+                <!-- Column 1: Logo & Branding -->
+                <div class="lg:col-span-4 space-y-8">
+                    <a href="index.html" class="inline-block transition-transform hover:scale-105 duration-300">
+                        <img width="343" height="96" src="uploads/logo.png" alt="Sivam Itech Logo"
+                            class="h-20 md:h-28 w-auto object-contain">
+                    </a>
+                    <p class="text-zinc-700 text-[16px] leading-[1.8] font-medium max-w-sm">
+                        Redefining precision and synergy in the industrial sector. From concept to complex component
+                        manufacturing with unmatched excellence and technical leadership.
+                    </p>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="lg:col-span-2">
+                    <h5 class="text-[12px] font-black uppercase tracking-[0.3em] mb-8 text-brand-orange">Company</h5>
+                    <ul class="space-y-4">
+                        <li><a href="about.html" class="text-gray-600 hover:text-brand-orange text-[15px] font-semibold transition-colors">About Us</a></li>
+                        <li><a href="infrastructure.html" class="text-gray-600 hover:text-brand-orange text-[15px] font-semibold transition-colors">Infrastructure</a></li>
+                        <li><a href="products.html" class="text-gray-600 hover:text-brand-orange text-[15px] font-semibold transition-colors">Products</a></li>
+                        <li><a href="careers.html" class="text-gray-600 hover:text-brand-orange text-[15px] font-semibold transition-colors">Careers</a></li>
+                        <li><a href="contact.html" class="text-gray-600 hover:text-brand-orange text-[15px] font-semibold transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Connect -->
+                <div class="lg:col-span-3">
+                    <h5 class="text-[12px] font-black uppercase tracking-[0.3em] mb-8 text-brand-orange">Connect</h5>
+                    <ul class="space-y-6">
+                        <li class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-orange-50 flex items-center justify-center shrink-0 border border-orange-100">
+                                <i data-lucide="map-pin" class="w-5 h-5 text-brand-orange"></i>
+                            </div>
+                            <span class="text-gray-600 font-medium text-[14px] leading-relaxed">
+                                No. 115 / 2A, Mahalakshmi Nagar Extension, Noombal, Chennai – 600 077, India.
+                            </span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-orange-50 flex items-center justify-center shrink-0 border border-orange-100">
+                                <i data-lucide="phone" class="w-5 h-5 text-brand-orange"></i>
+                            </div>
+                            <div class="flex flex-col text-[14px] font-bold">
+                                <a href="tel:+919884426111" class="text-gray-700 hover:text-brand-orange transition-colors">+91 98844 26111</a>
+                                <a href="tel:+918428283013" class="text-gray-700 hover:text-brand-orange transition-colors">+91 84282 83013</a>
+                            </div>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-orange-50 flex items-center justify-center shrink-0 border border-orange-100">
+                                <i data-lucide="mail" class="w-5 h-5 text-brand-orange"></i>
+                            </div>
+                            <div class="flex flex-col text-[14px] font-bold overflow-hidden">
+                                <a href="mailto:Vijayakumar.k@sivamitech.com" class="text-gray-700 hover:text-brand-orange transition-colors truncate">Vijayakumar.k@sivamitech.com</a>
+                                <a href="mailto:Nagendran.P@sivamitech.com" class="text-gray-700 hover:text-brand-orange transition-colors truncate">Nagendran.P@sivamitech.com</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Stay Updated & Social -->
+                <div class="lg:col-span-3 space-y-12">
+                    <div>
+                        <h5 class="text-[12px] font-black uppercase tracking-[0.3em] mb-6 text-brand-orange">Follow Us</h5>
+                        <div class="flex flex-col gap-3">
+                            <a href="https://www.linkedin.com/company/sivam-itech-metal-forming-industries/" target="_blank" rel="noopener noreferrer" 
+                               class="flex items-center gap-3 group bg-gray-50 p-2 rounded-2xl border border-gray-100 hover:border-[#0077b5]/30 hover:bg-white transition-all duration-300 hover:-translate-y-1">
+                                <div class="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-[#0077b5] shadow-sm group-hover:bg-[#0077b5] group-hover:text-white transition-all duration-300">
+                                    <i class="fa-brands fa-linkedin text-[18px]"></i>
+                                </div>
+                                <span class="text-[14px] font-bold text-gray-700 group-hover:text-brand-orange transition-colors px-1">LinkedIn</span>
+                            </a>
+                            <a href="https://wa.me/919884426111?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20your%20products%20and%20services%20at%20Sivam%20Itech%20Metal%20Forming%20Industries." target="_blank" rel="noopener noreferrer" 
+                               class="flex items-center gap-3 group bg-gray-50 p-2 rounded-2xl border border-gray-100 hover:border-[#25d366]/30 hover:bg-white transition-all duration-300">
+                                <div class="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-[#25d366] shadow-sm group-hover:bg-[#25d366] group-hover:text-white transition-all duration-300">
+                                    <i class="fa-brands fa-whatsapp text-[20px]"></i>
+                                </div>
+                                <span class="text-[14px] font-bold text-gray-700 group-hover:text-brand-orange transition-colors px-1">WhatsApp</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div>
+                        <h5 class="text-[12px] font-black uppercase tracking-[0.3em] mb-6 text-brand-orange">Newsletter</h5>
+                        <div class="relative group">
+                            <input type="email" placeholder="Corporate email" 
+                                   class="w-full bg-gray-50 border border-gray-200 rounded-2xl px-5 py-4 text-[14px] font-medium outline-none focus:border-brand-orange focus:bg-white transition-all pr-14">
+                            <button class="absolute right-2 top-2 bottom-2 w-10 bg-brand-orange text-white rounded-xl flex items-center justify-center hover:brightness-110 transition-all shadow-lg shadow-brand-orange/20" title="Subscribe">
+                                <i data-lucide="send" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Copyright Bar -->
+            <div class="pt-12 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-8">
+                <p class="text-[11px] font-black text-gray-400 uppercase tracking-[0.2em]">
+                    © 2024 SIVAM ITECH Limited. Precision Engineering Redefined.
+                </p>
+                <div class="flex gap-8 items-center">
+                    <a href="#" class="text-gray-400 hover:text-brand-orange text-[11px] font-black uppercase tracking-widest transition-colors">Privacy</a>
+                    <a href="#" class="text-gray-400 hover:text-brand-orange text-[11px] font-black uppercase tracking-widest transition-colors">Terms</a>
+                    </div>
+        </div>
+        </div>
+    </footer>
+
+
+    <!-- Custom JS and Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest" defer></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      lucide.createIcons();
+    });
+  </script>
+    <script src="assets/js/main.min.js" defer></script>
+</body>
+
+</html>
+
+
+

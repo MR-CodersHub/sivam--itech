@@ -1,0 +1,751 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="public, max-age=31536000">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lean Manufacturing Systems | SIVAM ITECH</title>
+    <meta name="description"
+        content="Discover Sivam iTech's Lean Manufacturing Systems designed to eliminate waste, improve OEE, and accelerate cycle times for precision OEM component manufacturing.">
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://unpkg.com">
+
+    <!-- Defer non-critical scripts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.min.css">
+
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="uploads/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body class="bg-white text-gray-600 font-sans antialiased overflow-x-hidden selection:bg-brand-orange pb-10 md:pb-0">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "Service",
+      "name": "Lean Manufacturing Systems & Operational Excellence",
+      "provider": {
+        "@type": "Organization",
+        "name": "Sivam iTech Metal Forming Industries"
+      },
+      "serviceType": "Manufacturing Service",
+      "description": "Implementation of 5S, Kanban, SMED, and TPM to optimize production workflow, boost First Pass Yield, and reduce component manufacturing cost for OEMs.",
+      "areaServed": "Global"
+    }
+    </script>
+    <style>
+        .scroll-indicator {
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateY(0);
+            }
+
+            40% {
+                transform: translateY(-10px);
+            }
+
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .timeline-scroll-container::-webkit-scrollbar {
+            display: none;
+        }
+
+        .timeline-scroll-container {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+
+
+
+    <!-- Navbar -->
+    <nav class="sticky top-0 w-full z-50 glass-nav shadow-md">
+        <div class="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3">
+                <img width="343" height="96" loading="eager" src="uploads/logo.png" alt="Sivam Itech Metal Forming Industries Official Logo"
+                    class="h-28 md:h-36 lg:h-40 w-auto object-contain relative z-10">
+            </a>
+
+            <div class="hidden lg:flex space-x-8 font-bold text-xs uppercase tracking-widest text-gray-700">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="infrastructure.html" class="nav-link">Infrastructure</a>
+                <a href="products.html" class="nav-link">Products</a>
+                <a href="careers.html" class="nav-link">Careers</a>
+                <a href="contact.html" class="nav-link">Contact Us</a>
+            </div>
+
+            <a href="inquire.html"
+                class="hidden md:block btn-orange px-6 py-2.5 text-xs font-bold uppercase tracking-widest rounded-full shadow-md hover:shadow-lg">
+                Inquire Now
+            </a>
+
+            <!-- Changed onclick to use JS event listener via ID if possible, but keeping simplistic onclick for now as per extraction, 
+                 removed inline onclick to rely on main.js event binding -->
+            <button type="button" class="lg:hidden" onclick="toggleMenu()" title="Toggle mobile menu">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+        <div id="mobile-menu" class="lg:hidden bg-white shadow-lg">
+            <div class="px-6 py-4 flex flex-col space-y-4 font-bold text-xs uppercase">
+                <a href="index.html" class=" transition-colors">Home</a>
+                <a href="about.html" class=" transition-colors">About Us</a>
+                <a href="infrastructure.html" class=" transition-colors">Infrastructure</a>
+                <a href="products.html" class=" transition-colors">Products</a>
+                <a href="careers.html" class=" transition-colors">Careers</a>
+                <a href="contact.html" class=" transition-colors">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Floating Inquiry Button -->
+    <a href="contact.html"
+        class="fixed bottom-6 right-6 z-50 bg-brand-orange text-white p-4 rounded-full shadow-2xl hover:bg-orange-600 hover:scale-105 transition-all flex items-center justify-center group">
+        <i data-lucide="message-square" class="w-6 h-6"></i>
+        <span
+            class="max-w-0 overflow-hidden whitespace-nowrap group-hover:max-w-xs group-hover:ml-3 transition-all duration-300 ease-in-out font-bold text-sm uppercase tracking-wider">Quick
+            Inquiry</span>
+    </a>
+
+    <!-- 1. HERO SECTION -->
+    <section
+        class="py-[60px] md:py-[80px] lg:py-[100px] relative min-h-[85vh] flex flex-col justify-center bg-white pb-16 pt-24 border-b-8 border-brand-orange">
+        <div class="absolute inset-0 z-0">
+            <div class="w-full h-full bg-[url('uploads/hero-factory.avif')] bg-cover bg-center opacity-30">
+            </div>
+            <!-- Subtle Grid Overlay Texture -->
+            <div class="absolute inset-0 z-0 opacity-20"
+                style="background-image: linear-gradient(#ffffff20 1px, transparent 1px), linear-gradient(90deg, #ffffff20 1px, transparent 1px); background-size: 40px 40px;">
+            </div>
+            <div class="absolute inset-0 bg-white/80 backdrop-blur-[2px]"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-6 w-full mt-10">
+            <h1
+                class="text-[28px] sm:text-[32px] md:text-[40px] lg:text-[52px] font-black text-gray-900 uppercase tracking-tight leading-[1.05] mb-6 max-w-5xl">
+                Lean-Driven Precision <br> Manufacturing
+            </h1>
+            <p
+                class="text-[15px] md:text-[17px] leading-[1.8] text-gray-600 font-medium max-w-3xl leading-relaxed mb-10 border-l-4 border-brand-orange pl-4">
+                Eliminating operational waste through synchronized production systems, controlled TAKT alignment, and
+                real-time variance management.
+            </p>
+
+            <!-- Metrics Strip -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12 max-w-5xl border-t border-b border-gray-200 py-6">
+                <div class="flex items-center gap-3">
+                    <i data-lucide="bar-chart-2" class="text-brand-orange w-5 h-5 shrink-0"></i>
+                    <span class="text-sm font-bold text-gray-900 uppercase tracking-widest">85%+ OEE Stability</span>
+                </div>
+                <div class="flex items-center gap-3">
+                    <i data-lucide="check-circle" class="text-brand-orange w-5 h-5 shrink-0"></i>
+                    <span class="text-sm font-bold text-gray-900 uppercase tracking-widest">99.8% First Pass
+                        Yield</span>
+                </div>
+                <div class="flex items-center gap-3">
+                    <i data-lucide="clock" class="text-brand-orange w-5 h-5 shrink-0"></i>
+                    <span class="text-sm font-bold text-gray-900 uppercase tracking-widest">-40% Changeover Red.</span>
+                </div>
+                <div class="flex items-center gap-3">
+                    <i data-lucide="trending-down" class="text-brand-orange w-5 h-5 shrink-0"></i>
+                    <span class="text-sm font-bold text-gray-900 uppercase tracking-widest">-22% Scrap Elimin.</span>
+                </div>
+            </div>
+
+            <!-- CTAs -->
+            <div class="flex flex-wrap items-center gap-4">
+                <a href="contact.html"
+                    class="inline-flex items-center gap-2 bg-brand-orange hover:bg-orange-600 text-white font-black tracking-widest uppercase text-sm px-8 py-4 rounded-sm transition-colors shadow-none">
+                    Request Lean Consultation <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                </a>
+                <a href="#overview"
+                    class="inline-flex items-center gap-2 bg-transparent border-2 border-slate-700 hover:border-slate-500 text-gray-900 font-bold tracking-widest uppercase text-sm px-8 py-4 rounded-sm transition-colors shadow-none">
+                    Download Process Brochure <i data-lucide="download" class="w-5 h-5"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. CORE PHILOSOPHY SECTION -->
+    <section id="overview" class="py-[60px] md:py-[80px] lg:py-[100px] px-6 bg-white relative overflow-hidden">
+        <!-- Subtle engineering Grid Background -->
+        <div class="absolute inset-0 opacity-5"
+            style="background-image: linear-gradient(#e5e7eb 1px, transparent 1px), linear-gradient(to right, #e5e7eb 1px, transparent 1px); background-size: 40px 40px;">
+        </div>
+
+        <div class="max-w-7xl mx-auto relative z-10 px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+
+                <!-- Left: Texts -->
+                <div class="space-y-8">
+                    <div>
+                        <span class="text-brand-orange font-black text-xs uppercase tracking-[0.2em]">Operational
+                            Strategy</span>
+                        <h2
+                            class="text-[22px] md:text-[30px] lg:text-[36px] font-black text-gray-900 uppercase tracking-tight text-slate-950 mt-2 mb-6">
+                            Data-Centric
+                            Waste Eradication</h2>
+                        <div class="w-16 h-1.5 bg-brand-orange mb-8 rounded-none"></div>
+                    </div>
+
+                    <div class="space-y-6 text-slate-800 text-base font-medium leading-relaxed">
+                        <p class="text-[15px] md:text-[17px] leading-[1.8]">
+                            <strong class="text-slate-900 block font-bold mb-1">Muda Elimination (Waste):</strong>
+                            We systematically identify and strip out non-value-adding activities from every production
+                            cell, from excess motion to overproduction.
+                        </p>
+                        <p class="text-[15px] md:text-[17px] leading-[1.8]">
+                            <strong class="text-slate-900 block font-bold mb-1">Mura Stabilization
+                                (Unevenness):</strong>
+                            By smoothing the production flow and tightly controlling batch staging, we prevent volatile
+                            peaks and troughs in the supply chain.
+                        </p>
+                        <p class="text-[15px] md:text-[17px] leading-[1.8]">
+                            <strong class="text-slate-900 block font-bold mb-1">Muri Prevention (Overburden):</strong>
+                            Machine capability limits and human ergonomic thresholds are respected, avoiding burnout and
+                            catastrophic machine failure.
+                        </p>
+                        <p class="text-[15px] md:text-[17px] leading-[1.8]">
+                            <strong class="text-slate-900 block font-bold mb-1">SPC &amp; JIT Alignment:</strong>
+                            Statistical Process Control combined with Just-In-Time replenishment creates a perfectly
+                            balanced inventory ecosystem minimizing holding costs.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Right: Visual Framework -->
+                <div class="bg-slate-50 border border-slate-200 p-10 rounded-sm">
+                    <h3
+                        class="text-[20px] md:text-[24px] font-bold text-gray-900 font-black text-slate-900 uppercase tracking-widest mb-8 border-b border-slate-200 pb-4">
+                        Applied Lean Framework</h3>
+                    <ul class="space-y-8">
+                        <li class="flex items-center gap-4 border-l-4 border-brand-orange pl-4">
+                            <i data-lucide="package" class="w-8 h-8 text-gray-300 shrink-0"></i>
+                            <div>
+                                <h4 class="font-bold text-slate-900 leading-tight uppercase tracking-wider text-sm">
+                                    Just-in-Time (JIT)</h4>
+                                <p
+                                    class="text-[15px] md:text-[17px] leading-[1.8] text-xs text-gray-600 mt-1 uppercase font-semibold">
+                                    Pull-based consumption
+                                    driven by exact OEM demands.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-center gap-4 border-l-4 border-slate-300 pl-4">
+                            <i data-lucide="trending-up" class="w-8 h-8 text-gray-300 shrink-0"></i>
+                            <div>
+                                <h4 class="font-bold text-slate-900 leading-tight uppercase tracking-wider text-sm">
+                                    Kaizen Improvement</h4>
+                                <p
+                                    class="text-[15px] md:text-[17px] leading-[1.8] text-xs text-gray-600 mt-1 uppercase font-semibold">
+                                    Iterative daily
+                                    micro-optimizations from the shop floor.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-center gap-4 border-l-4 border-brand-orange pl-4">
+                            <i data-lucide="watch" class="w-8 h-8 text-gray-300 shrink-0"></i>
+                            <div>
+                                <h4 class="font-bold text-slate-900 leading-tight uppercase tracking-wider text-sm">
+                                    Takt-Time Synchronization</h4>
+                                <p
+                                    class="text-[15px] md:text-[17px] leading-[1.8] text-xs text-gray-600 mt-1 uppercase font-semibold">
+                                    Balancing line speeds to
+                                    precise customer consumption rates.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-center gap-4 border-l-4 border-slate-300 pl-4">
+                            <i data-lucide="crosshair" class="w-8 h-8 text-gray-300 shrink-0"></i>
+                            <div>
+                                <h4 class="font-bold text-slate-900 leading-tight uppercase tracking-wider text-sm">Root
+                                    Cause Analysis</h4>
+                                <p
+                                    class="text-[15px] md:text-[17px] leading-[1.8] text-xs text-gray-600 mt-1 uppercase font-semibold">
+                                    8D problem solving
+                                    preventing defect recurrence.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. LEAN TOOLS IMPLEMENTED -->
+    <section class="py-[60px] md:py-[80px] lg:py-[100px] px-6 bg-slate-50 border-t border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-12 border-b border-slate-200 pb-4">
+                <span class="text-brand-orange font-black text-xs uppercase tracking-[0.2em]">Methodology</span>
+                <h3
+                    class="text-[20px] md:text-[24px] font-bold text-gray-900 font-black text-slate-900 uppercase tracking-tight mt-2">
+                    Core Tools Implemented</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Tool 1 -->
+                <div class="p-8 bg-white border border-slate-200 rounded-sm">
+                    <h4 class="font-black text-slate-900 text-lg uppercase tracking-wider mb-2">5S Organization</h4>
+                    <p
+                        class="text-[15px] md:text-[17px] leading-[1.8] text-gray-600 font-medium leading-relaxed border-t border-slate-100 pt-2 mt-2">
+                        Sort, Set in order, Shine, Standardize, and Sustain ensuring extreme workplace efficiency.</p>
+                </div>
+                <!-- Tool 2 -->
+                <div class="p-8 bg-white border border-slate-200 rounded-sm">
+                    <h4 class="font-black text-slate-900 text-lg uppercase tracking-wider mb-2">Kaizen Execution</h4>
+                    <p
+                        class="text-[15px] md:text-[17px] leading-[1.8] text-gray-600 font-medium leading-relaxed border-t border-slate-100 pt-2 mt-2">
+                        Continuous, incremental improvements spearheaded by frontline operators and line supervisors.
+                    </p>
+                </div>
+                <!-- Tool 3 -->
+                <div class="p-8 bg-white border border-slate-200 rounded-sm">
+                    <h4 class="font-black text-slate-900 text-lg uppercase tracking-wider mb-2">SMED Changeover</h4>
+                    <p
+                        class="text-[15px] md:text-[17px] leading-[1.8] text-gray-600 font-medium leading-relaxed border-t border-slate-100 pt-2 mt-2">
+                        Single-Minute Exchange of Dies reducing equipment downtime between diverse production batches.
+                    </p>
+                </div>
+                <!-- Tool 4 -->
+                <div class="p-8 bg-white border border-slate-200 rounded-sm">
+                    <h4 class="font-black text-slate-900 text-lg uppercase tracking-wider mb-2">Kanban Replenishment
+                    </h4>
+                    <p
+                        class="text-[15px] md:text-[17px] leading-[1.8] text-gray-600 font-medium leading-relaxed border-t border-slate-100 pt-2 mt-2">
+                        Visual inventory signals directing material flows to prevent stockouts and overproduction.</p>
+                </div>
+                <!-- Tool 5 -->
+                <div class="p-8 bg-white border border-slate-200 rounded-sm">
+                    <h4 class="font-black text-slate-900 text-lg uppercase tracking-wider mb-2">Poka-Yoke</h4>
+                    <p
+                        class="text-[15px] md:text-[17px] leading-[1.8] text-gray-600 font-medium leading-relaxed border-t border-slate-100 pt-2 mt-2">
+                        Error-proofing mechanisms integrated directly into the manufacturing process preventing human
+                        mistakes.</p>
+                </div>
+                <!-- Tool 6 -->
+                <div class="p-8 bg-white border border-slate-200 rounded-sm">
+                    <h4 class="font-black text-slate-900 text-lg uppercase tracking-wider mb-2">Total Productive
+                        Maintenance</h4>
+                    <p
+                        class="text-[15px] md:text-[17px] leading-[1.8] text-gray-600 font-medium leading-relaxed border-t border-slate-100 pt-2 mt-2">
+                        Proactive servicing maximizing equipment lifespan and eliminating unplanned catastrophic
+                        breakdowns.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. PERFORMANCE OUTPUT SECTION -->
+    <section class="py-[60px] md:py-[80px] lg:py-[100px] px-6 bg-[#F8FAFC] border-b-4 border-brand-orange">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12">
+                <!-- Metric 1 -->
+                <div class="border-l-4 border-brand-orange pl-6">
+                    <h4 class="text-5xl lg:text-6xl font-black text-gray-900 leading-none mb-3 tracking-tighter">85%+
+                    </h4>
+                    <span class="block text-sm font-bold text-gray-600 uppercase tracking-widest mb-2">OEE Target
+                        Kept</span>
+                    <p
+                        class="text-[15px] md:text-[17px] leading-[1.8] text-gray-600 text-xs font-semibold uppercase tracking-wider">
+                        Via constant autonomous
+                        maintenance loops.</p>
+                </div>
+                <!-- Metric 2 -->
+                <div class="border-l-4 border-brand-orange pl-6">
+                    <h4 class="text-5xl lg:text-6xl font-black text-gray-900 leading-none mb-3 tracking-tighter">99.8%
+                    </h4>
+                    <span class="block text-sm font-bold text-gray-600 uppercase tracking-widest mb-2">First Pass
+                        Yield</span>
+                    <p
+                        class="text-[15px] md:text-[17px] leading-[1.8] text-gray-600 text-xs font-semibold uppercase tracking-wider">
+                        Driven by robust in-line
+                        Poka-Yoke systems.</p>
+                </div>
+                <!-- Metric 3 -->
+                <div class="border-l-4 border-brand-orange pl-6">
+                    <h4 class="text-5xl lg:text-6xl font-black text-gray-900 leading-none mb-3 tracking-tighter">40%
+                    </h4>
+                    <span class="block text-sm font-bold text-gray-600 uppercase tracking-widest mb-2">Changeover Time
+                        Reduced</span>
+                    <p
+                        class="text-[15px] md:text-[17px] leading-[1.8] text-gray-600 text-xs font-semibold uppercase tracking-wider">
+                        Direct result of aggressive
+                        SMED optimization.</p>
+                </div>
+                <!-- Metric 4 -->
+                <div class="border-l-4 border-brand-orange pl-6">
+                    <h4 class="text-5xl lg:text-6xl font-black text-gray-900 leading-none mb-3 tracking-tighter">22%
+                    </h4>
+                    <span class="block text-sm font-bold text-gray-600 uppercase tracking-widest mb-2">Scrap
+                        Reduction</span>
+                    <p
+                        class="text-[15px] md:text-[17px] leading-[1.8] text-gray-600 text-xs font-semibold uppercase tracking-wider">
+                        Enabled by SPC and critical
+                        defect tracking.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. OPERATIONAL WORKFLOW TIMELINE -->
+    <section class="py-[60px] md:py-[80px] lg:py-[100px] px-6 bg-white border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-16">
+                <span class="text-brand-orange font-black text-xs uppercase tracking-[0.2em]">Execution Protocol</span>
+                <h2
+                    class="text-[22px] md:text-[30px] lg:text-[36px] font-black text-gray-900 uppercase tracking-tight text-slate-900 mt-2">
+                    Operational Workflow
+                    Integration</h2>
+            </div>
+
+            <!-- Industrial Horizontal Timeline -->
+            <div class="relative">
+                <!-- Connecting Line -->
+                <div class="hidden md:block absolute top-8 left-0 w-full h-[2px] bg-slate-300 z-0"></div>
+
+                <div class="grid grid-cols-1 md:grid-cols-5 gap-y-10 md:gap-x-4 relative z-10">
+
+                    <!-- Step 1 -->
+                    <div class="flex flex-col items-start md:items-center relative group">
+                        <div
+                            class="w-16 h-16 bg-[#F8FAFC] text-brand-orange font-black text-xl flex items-center justify-center rounded-sm shrink-0 border-4 border-white mb-6 z-10 shadow-none">
+                            01</div>
+                        <div class="md:text-center text-left">
+                            <h4 class="font-bold text-slate-900 text-sm uppercase tracking-wider mb-2">Value Stream
+                                Mapping</h4>
+                            <p class="text-[15px] md:text-[17px] leading-[1.8] text-xs text-gray-600 font-medium px-2">
+                                Visualizing end-to-end information and
+                                material flows.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="flex flex-col items-start md:items-center relative group">
+                        <div
+                            class="w-16 h-16 bg-[#F8FAFC] text-brand-orange font-black text-xl flex items-center justify-center rounded-sm shrink-0 border-4 border-white mb-6 z-10 shadow-none">
+                            02</div>
+                        <div class="md:text-center text-left">
+                            <h4 class="font-bold text-slate-900 text-sm uppercase tracking-wider mb-2">Waste
+                                Identification</h4>
+                            <p class="text-[15px] md:text-[17px] leading-[1.8] text-xs text-gray-600 font-medium px-2">
+                                Isolating non-value bottlenecks within
+                                mapped streams.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="flex flex-col items-start md:items-center relative group">
+                        <div
+                            class="w-16 h-16 bg-[#F8FAFC] text-brand-orange font-black text-xl flex items-center justify-center rounded-sm shrink-0 border-4 border-white mb-6 z-10 shadow-none">
+                            03</div>
+                        <div class="md:text-center text-left">
+                            <h4 class="font-bold text-slate-900 text-sm uppercase tracking-wider mb-2">Cycle Time Study
+                            </h4>
+                            <p class="text-[15px] md:text-[17px] leading-[1.8] text-xs text-gray-600 font-medium px-2">
+                                Benchmarking processing time against TAKT
+                                constraints.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="flex flex-col items-start md:items-center relative group">
+                        <div
+                            class="w-16 h-16 bg-[#F8FAFC] text-brand-orange font-black text-xl flex items-center justify-center rounded-sm shrink-0 border-4 border-white mb-6 z-10 shadow-none">
+                            04</div>
+                        <div class="md:text-center text-left">
+                            <h4 class="font-bold text-slate-900 text-sm uppercase tracking-wider mb-2">Line Balancing
+                            </h4>
+                            <p class="text-[15px] md:text-[17px] leading-[1.8] text-xs text-gray-600 font-medium px-2">
+                                Redistributing operator loads preventing
+                                system lag.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 5 -->
+                    <div class="flex flex-col items-start md:items-center relative group">
+                        <div
+                            class="w-16 h-16 bg-brand-orange text-slate-900 font-black text-xl flex items-center justify-center rounded-sm shrink-0 border-4 border-white mb-6 z-10 shadow-none">
+                            05</div>
+                        <div class="md:text-center text-left">
+                            <h4 class="font-bold text-slate-900 text-sm uppercase tracking-wider mb-2">
+                                Institutionalization</h4>
+                            <p class="text-[15px] md:text-[17px] leading-[1.8] text-xs text-gray-600 font-medium px-2">
+                                Creating rigid standard operating
+                                procedures (SOP).</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. NEW: CONTROL SYSTEMS -->
+    <section class="py-[60px] md:py-[80px] lg:py-[100px] px-6 bg-slate-50 border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col lg:flex-row gap-16 items-center">
+                <div class="lg:w-1/2">
+                    <span class="text-brand-orange font-black text-xs uppercase tracking-[0.2em]">Monitoring</span>
+                    <h2
+                        class="text-[22px] md:text-[30px] lg:text-[36px] font-black text-gray-900 uppercase tracking-tight text-slate-900 mt-2 mb-6">
+                        Operational
+                        Monitoring &amp;<br> Control Systems</h2>
+                    <p class="text-[15px] md:text-[17px] leading-[1.8] text-gray-600 font-medium leading-relaxed mb-8">
+                        Precision lean manufacturing is meaningless without rigorous, real-time oversight. We utilize
+                        systematic architectures to measure, interpret, and act upon floor data instantaneously.
+                    </p>
+                </div>
+
+                <div class="lg:w-1/2 w-full">
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-4 bg-white p-5 border border-slate-200 rounded-sm">
+                            <i data-lucide="crosshair" class="w-6 h-6 text-brand-orange shrink-0"></i>
+                            <span class="font-bold text-slate-900 uppercase tracking-wider text-sm">Real-time Production
+                                Tracking</span>
+                        </li>
+                        <li class="flex items-center gap-4 bg-white p-5 border border-slate-200 rounded-sm">
+                            <i data-lucide="bar-chart" class="w-6 h-6 text-brand-orange shrink-0"></i>
+                            <span class="font-bold text-slate-900 uppercase tracking-wider text-sm">Statistical Process
+                                Control (SPC) Monitoring</span>
+                        </li>
+                        <li class="flex items-center gap-4 bg-white p-5 border border-slate-200 rounded-sm">
+                            <i data-lucide="trello" class="w-6 h-6 text-brand-orange shrink-0"></i>
+                            <span class="font-bold text-slate-900 uppercase tracking-wider text-sm">TAKT Time Alignment
+                                Dashboards</span>
+                        </li>
+                        <li class="flex items-center gap-4 bg-white p-5 border border-slate-200 rounded-sm">
+                            <i data-lucide="scissors" class="w-6 h-6 text-brand-orange shrink-0"></i>
+                            <span class="font-bold text-slate-900 uppercase tracking-wider text-sm">Machine Downtime
+                                Correlation Analysis</span>
+                        </li>
+                        <li class="flex items-center gap-4 bg-white p-5 border border-slate-200 rounded-sm">
+                            <i data-lucide="folder" class="w-6 h-6 text-brand-orange shrink-0"></i>
+                            <span class="font-bold text-slate-900 uppercase tracking-wider text-sm">Automated Root Cause
+                                Documentation</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. NEW: LEAN IMPACT ON CUSTOMERS -->
+    <section class="py-[60px] md:py-[80px] lg:py-[100px] px-6 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-16 text-center">
+                <h2
+                    class="text-[22px] md:text-[30px] lg:text-[36px] font-black text-gray-900 uppercase tracking-tight text-slate-900 mt-2">
+                    Lean Manufacturing
+                    Advantage for OEM Clients</h2>
+                <div class="w-16 h-1 bg-brand-orange mt-6 mx-auto rounded-none"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div
+                    class="border-l-4 border-slate-900 pl-6 border-b border-t border-r border-slate-100 p-8 rounded-sm hover:-translate-y-1 transition-transform">
+                    <i data-lucide="shield" class="w-10 h-10 text-slate-900 mb-6"></i>
+                    <h3
+                        class="text-[20px] md:text-[24px] font-bold text-gray-900 font-black text-slate-900 text-lg uppercase tracking-wider mb-3">
+                        Stable Supply Chain
+                        Predictability</h3>
+                    <p class="text-[15px] md:text-[17px] leading-[1.8] text-gray-600 font-medium">JIT integration
+                        ensures that deliveries arrive exactly
+                        when required, minimizing OEM warehousing overheads.</p>
+                </div>
+                <div
+                    class="border-l-4 border-brand-orange pl-6 border-b border-t border-r border-slate-100 p-8 rounded-sm hover:-translate-y-1 transition-transform">
+                    <i data-lucide="wallet" class="w-10 h-10 text-brand-orange mb-6"></i>
+                    <h3
+                        class="text-[20px] md:text-[24px] font-bold text-gray-900 font-black text-slate-900 text-lg uppercase tracking-wider mb-3">
+                        Reduced Cost Variance
+                    </h3>
+                    <p class="text-[15px] md:text-[17px] leading-[1.8] text-gray-600 font-medium">Lowering internal
+                        waste translates directly into
+                        competitive unit pricing without sacrificing tolerance stability.</p>
+                </div>
+                <div
+                    class="border-l-4 border-slate-900 pl-6 border-b border-t border-r border-slate-100 p-8 rounded-sm hover:-translate-y-1 transition-transform">
+                    <i data-lucide="zap" class="w-10 h-10 text-slate-900 mb-6"></i>
+                    <h3
+                        class="text-[20px] md:text-[24px] font-bold text-gray-900 font-black text-slate-900 text-lg uppercase tracking-wider mb-3">
+                        Accelerated Production
+                        Ramp-Up</h3>
+                    <p class="text-[15px] md:text-[17px] leading-[1.8] text-gray-600 font-medium">Highly standardized
+                        SMED setups allow incredibly fast
+                        changeovers, enabling rapid transitions across component runs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. FINAL CTA -->
+    <section
+        class="py-[60px] md:py-[80px] lg:py-[100px] px-6 bg-white border-t-8 border-brand-orange relative overflow-hidden">
+        <div class="max-w-5xl mx-auto text-center relative z-10 px-6">
+            <h2
+                class="text-[22px] md:text-[30px] lg:text-[36px] font-black text-gray-900 uppercase tracking-tight lg:text-6xl mb-8">
+                Operational Excellence Built for OEM Reliability
+            </h2>
+            <p
+                class="text-[15px] md:text-[17px] leading-[1.8] text-gray-600 font-medium mb-12 max-w-3xl mx-auto border-l-4 border-r-4 border-brand-orange px-6 py-2">
+                Secure your supply chain through disciplined lean manufacturing systems engineered for zero-defect
+                continuity.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-6 mt-8">
+                <a href="contact.html"
+                    class="inline-flex items-center justify-center gap-3 bg-brand-orange hover:bg-orange-600 text-white px-10 py-5 rounded-sm font-black uppercase tracking-widest text-sm transition-colors w-full sm:w-auto">
+                    Submit Engineering Inquiry <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                </a>
+                <a href="contact.html"
+                    class="inline-flex items-center justify-center gap-3 bg-transparent border-2 border-slate-700 hover:border-slate-500 text-gray-900 px-10 py-5 rounded-sm font-black uppercase tracking-widest text-sm transition-colors w-full sm:w-auto">
+                    Connect with Lean Team
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- Original Footer Details -->
+
+    <!-- Bottom Footer -->
+    
+    <footer class="bg-white pt-24 pb-12 px-6 border-t border-gray-100 relative overflow-hidden">
+        <!-- Decorative subtle element -->
+        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-brand-orange/20 to-transparent"></div>
+        
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-16 mb-20">
+                
+                <!-- Column 1: Logo & Branding -->
+                <div class="lg:col-span-4 space-y-8">
+                    <a href="index.html" class="inline-block transition-transform hover:scale-105 duration-300">
+                        <img width="343" height="96" src="uploads/logo.png" alt="Sivam Itech Logo"
+                            class="h-20 md:h-28 w-auto object-contain">
+                    </a>
+                    <p class="text-zinc-700 text-[16px] leading-[1.8] font-medium max-w-sm">
+                        Redefining precision and synergy in the industrial sector. From concept to complex component
+                        manufacturing with unmatched excellence and technical leadership.
+                    </p>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="lg:col-span-2">
+                    <h5 class="text-[12px] font-black uppercase tracking-[0.3em] mb-8 text-brand-orange">Company</h5>
+                    <ul class="space-y-4">
+                        <li><a href="about.html" class="text-gray-600 hover:text-brand-orange text-[15px] font-semibold transition-colors">About Us</a></li>
+                        <li><a href="infrastructure.html" class="text-gray-600 hover:text-brand-orange text-[15px] font-semibold transition-colors">Infrastructure</a></li>
+                        <li><a href="products.html" class="text-gray-600 hover:text-brand-orange text-[15px] font-semibold transition-colors">Products</a></li>
+                        <li><a href="careers.html" class="text-gray-600 hover:text-brand-orange text-[15px] font-semibold transition-colors">Careers</a></li>
+                        <li><a href="contact.html" class="text-gray-600 hover:text-brand-orange text-[15px] font-semibold transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Connect -->
+                <div class="lg:col-span-3">
+                    <h5 class="text-[12px] font-black uppercase tracking-[0.3em] mb-8 text-brand-orange">Connect</h5>
+                    <ul class="space-y-6">
+                        <li class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-orange-50 flex items-center justify-center shrink-0 border border-orange-100">
+                                <i data-lucide="map-pin" class="w-5 h-5 text-brand-orange"></i>
+                            </div>
+                            <span class="text-gray-600 font-medium text-[14px] leading-relaxed">
+                                No. 115 / 2A, Mahalakshmi Nagar Extension, Noombal, Chennai – 600 077, India.
+                            </span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-orange-50 flex items-center justify-center shrink-0 border border-orange-100">
+                                <i data-lucide="phone" class="w-5 h-5 text-brand-orange"></i>
+                            </div>
+                            <div class="flex flex-col text-[14px] font-bold">
+                                <a href="tel:+919884426111" class="text-gray-700 hover:text-brand-orange transition-colors">+91 98844 26111</a>
+                                <a href="tel:+918428283013" class="text-gray-700 hover:text-brand-orange transition-colors">+91 84282 83013</a>
+                            </div>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-orange-50 flex items-center justify-center shrink-0 border border-orange-100">
+                                <i data-lucide="mail" class="w-5 h-5 text-brand-orange"></i>
+                            </div>
+                            <div class="flex flex-col text-[14px] font-bold overflow-hidden">
+                                <a href="mailto:Vijayakumar.k@sivamitech.com" class="text-gray-700 hover:text-brand-orange transition-colors truncate">Vijayakumar.k@sivamitech.com</a>
+                                <a href="mailto:Nagendran.P@sivamitech.com" class="text-gray-700 hover:text-brand-orange transition-colors truncate">Nagendran.P@sivamitech.com</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Stay Updated & Social -->
+                <div class="lg:col-span-3 space-y-12">
+                    <div>
+                        <h5 class="text-[12px] font-black uppercase tracking-[0.3em] mb-6 text-brand-orange">Follow Us</h5>
+                        <div class="flex flex-col gap-3">
+                            <a href="https://www.linkedin.com/company/sivam-itech-metal-forming-industries/" target="_blank" rel="noopener noreferrer" 
+                               class="flex items-center gap-3 group bg-gray-50 p-2 rounded-2xl border border-gray-100 hover:border-[#0077b5]/30 hover:bg-white transition-all duration-300 hover:-translate-y-1">
+                                <div class="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-[#0077b5] shadow-sm group-hover:bg-[#0077b5] group-hover:text-white transition-all duration-300">
+                                    <i class="fa-brands fa-linkedin text-[18px]"></i>
+                                </div>
+                                <span class="text-[14px] font-bold text-gray-700 group-hover:text-brand-orange transition-colors px-1">LinkedIn</span>
+                            </a>
+                            <a href="https://wa.me/919884426111?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20your%20products%20and%20services%20at%20Sivam%20Itech%20Metal%20Forming%20Industries." target="_blank" rel="noopener noreferrer" 
+                               class="flex items-center gap-3 group bg-gray-50 p-2 rounded-2xl border border-gray-100 hover:border-[#25d366]/30 hover:bg-white transition-all duration-300">
+                                <div class="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-[#25d366] shadow-sm group-hover:bg-[#25d366] group-hover:text-white transition-all duration-300">
+                                    <i class="fa-brands fa-whatsapp text-[20px]"></i>
+                                </div>
+                                <span class="text-[14px] font-bold text-gray-700 group-hover:text-brand-orange transition-colors px-1">WhatsApp</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div>
+                        <h5 class="text-[12px] font-black uppercase tracking-[0.3em] mb-6 text-brand-orange">Newsletter</h5>
+                        <div class="relative group">
+                            <input type="email" placeholder="Corporate email" 
+                                   class="w-full bg-gray-50 border border-gray-200 rounded-2xl px-5 py-4 text-[14px] font-medium outline-none focus:border-brand-orange focus:bg-white transition-all pr-14">
+                            <button class="absolute right-2 top-2 bottom-2 w-10 bg-brand-orange text-white rounded-xl flex items-center justify-center hover:brightness-110 transition-all shadow-lg shadow-brand-orange/20" title="Subscribe">
+                                <i data-lucide="send" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Copyright Bar -->
+            <div class="pt-12 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-8">
+                <p class="text-[11px] font-black text-gray-400 uppercase tracking-[0.2em]">
+                    © 2024 SIVAM ITECH Limited. Precision Engineering Redefined.
+                </p>
+                <div class="flex gap-8 items-center">
+                    <a href="#" class="text-gray-400 hover:text-brand-orange text-[11px] font-black uppercase tracking-widest transition-colors">Privacy</a>
+                    <a href="#" class="text-gray-400 hover:text-brand-orange text-[11px] font-black uppercase tracking-widest transition-colors">Terms</a>
+                    </div>
+        </div>
+        </div>
+    </footer>
+
+
+    <!-- Custom JS and Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest" defer></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      lucide.createIcons();
+    });
+  </script>
+    <script src="assets/js/main.min.js" defer></script>
+</body>
+
+
+
+

@@ -1,0 +1,1031 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="public, max-age=31536000">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIVAM ITECH | Engineering &amp; Manufacturing Excellence</title>
+
+    <!-- Preconnect to critical domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://unpkg.com">
+
+    <!-- Tailwind CSS - Using defer for non-blocking load -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.min.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="uploads/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body class="bg-white text-gray-600 font-sans antialiased overflow-x-hidden selection:bg-brand-orange pb-10 md:pb-0">
+
+
+
+
+
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/919884426111?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20your%20products%20and%20services%20at%20Sivam%20Itech%20Metal%20Forming%20Industries."
+        target="_blank" rel="noopener noreferrer" title="Contact us on WhatsApp"
+        class="whatsapp-float flex items-center justify-center w-14 h-14 bg-[#25D366] rounded-full shadow-2xl">
+        <div class="whatsapp-pulse"></div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="white" stroke="none">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.414 0 .006 5.408 0 12.045c0 2.121.554 4.189 1.605 6.006L0 24l6.115-1.605a11.83 11.83 0 005.932 1.577h.005c6.635 0 12.041-5.408 12.046-12.047a11.82 11.82 0 00-3.483-8.43">
+            </path>
+        </svg>
+    </a>
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 w-full z-50 glass-nav shadow-md">
+        <div class="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3">
+                <img width="343" height="96" loading="eager" src="uploads/logo.png"
+                    alt="Sivam Itech Metal Forming Industries Official Logo"
+                    class="h-28 md:h-36 lg:h-40 w-auto object-contain relative z-10 transition-transform hover:scale-105">
+            </a>
+
+            <div class="hidden lg:flex space-x-8 font-bold text-xs uppercase tracking-widest text-gray-700">
+                <a href="index.html" class="nav-link text-brand-orange">Home</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="infrastructure.html" class="nav-link">Infrastructure</a>
+                <a href="products.html" class="nav-link">Products</a>
+                <a href="careers.html" class="nav-link">Careers</a>
+                <a href="contact.html" class="nav-link">Contact Us</a>
+            </div>
+
+            <a href="inquire.html"
+                class="hidden md:block btn-orange px-6 py-2.5 text-xs font-bold uppercase tracking-widest rounded-full shadow-md hover:shadow-lg">
+                Inquire Now
+            </a>
+
+            <!-- Changed onclick to use JS event listener via ID if possible, but keeping simplistic onclick for now as per extraction, 
+                 removed inline onclick to rely on main.js event binding -->
+            <button type="button" class="lg:hidden" onclick="toggleMenu()" title="Toggle mobile menu">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+        <div id="mobile-menu" class="lg:hidden bg-white shadow-lg">
+            <div class="px-6 py-4 flex flex-col space-y-4 font-bold text-xs uppercase">
+                <a href="index.html" class=" transition-colors text-brand-orange">Home</a>
+                <a href="about.html" class=" transition-colors">About Us</a>
+                <a href="infrastructure.html" class=" transition-colors">Infrastructure</a>
+                <a href="products.html" class=" transition-colors">Products</a>
+                <a href="careers.html" class=" transition-colors">Careers</a>
+                <a href="contact.html" class=" transition-colors">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home"
+        class="py-[60px] md:py-[80px] lg:py-[100px] relative h-[85vh] flex items-center overflow-hidden bg-[#F8FAFC] ">
+        <!-- Slideshow Background -->
+        <div class="absolute inset-0 z-0">
+            <div class="hero-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out"
+                style="background-image: url('uploads/hero-factory.avif'); opacity: 1;" fetchpriority="high"></div>
+            <div class="hero-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out"
+                style="background-image: url('uploads/sivam-bg-2_converted.avif'); opacity: 0;">
+            </div>
+            <div class="hero-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out"
+                style="background-image: url('uploads/sivam-bg-3_converted.avif'); opacity: 0;">
+            </div>
+            <div class="hero-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out"
+                style="background-image: url('uploads/sivam-bg-4_converted.avif'); opacity: 0;">
+            </div>
+            <div class="hero-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out"
+                style="background-image: url('uploads/sivam-bg-5_converted.avif'); opacity: 0;">
+            </div>
+        </div>
+
+        <!-- Full-section dark overlay for text readability -->
+        <div class="absolute inset-0 z-[1] bg-black/50"></div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-6 w-full">
+            <div class="max-w-2xl space-y-6 text-white">
+                <div class="w-16 h-1 bg-brand-orange mb-8"></div>
+                <h1 id="hero-title"
+                    class="text-[28px] sm:text-[32px] md:text-[40px] lg:text-[52px] font-black text-white uppercase tracking-tight font-bold leading-none transition-opacity duration-500 ease-in-out">
+                    SIVAM <span class="text-brand-orange">ITECH.</span>
+                </h1>
+                <p id="hero-desc"
+                    class="text-[15px] md:text-[17px] leading-[1.8] font-bold text-white font-light leading-relaxed transition-opacity duration-500 ease-in-out">
+                    Redefining engineering excellence through world-class precision and advanced manufacturing. We
+                    deliver
+                    high-performance components for global automotive and industrial leaders.
+                </p>
+                <div class="flex flex-wrap gap-4 pt-6">
+                    <button onclick="window.location.href='about.html'"
+                        class="btn-orange px-10 py-4 font-bold uppercase tracking-widest text-sm rounded-full shadow-md hover:shadow-lg">Experience
+                        Synergy</button>
+                    <button onclick="window.location.href='infrastructure.html'"
+                        class="bg-white/10 hover:bg-white/20 backdrop-blur-md px-10 py-4 font-bold uppercase tracking-widest text-sm border border-white/30 rounded-full">View
+                        Infrastructure</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overview Stats -->
+    <section class="py-[60px] md:py-[80px] lg:py-[100px] bg-white border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left">
+                <div class="stat-border pr-8 group cursor-default">
+                    <div
+                        class="mb-3 text-brand-orange transition-transform group-hover:scale-110 duration-300 inline-block">
+                        <i data-lucide="calendar-check" class="w-8 h-8"></i>
+                    </div>
+                    <p class="text-[15px] md:text-[17px] leading-[1.8] text-4xl font-bold text-brand-orange">
+                        2018</p>
+                    <p
+                        class="text-[15px] md:text-[17px] leading-[1.8] text-xs uppercase font-bold text-gray-600 tracking-tighter">
+                        Established</p>
+                </div>
+                <div class="stat-border pr-8 group cursor-default">
+                    <div
+                        class="mb-3 text-brand-orange transition-transform group-hover:scale-110 duration-300 inline-block">
+                        <i data-lucide="users" class="w-8 h-8"></i>
+                    </div>
+                    <p class="text-[15px] md:text-[17px] leading-[1.8] text-4xl font-bold text-brand-orange">
+                        25M+</p>
+                    <p
+                        class="text-[15px] md:text-[17px] leading-[1.8] text-xs uppercase font-bold text-gray-600 tracking-tighter">
+                        Components Delivered</p>
+                </div>
+                <div class="stat-border pr-8 group cursor-default">
+                    <div
+                        class="mb-3 text-brand-orange transition-transform group-hover:scale-110 duration-300 inline-block">
+                        <i data-lucide="factory" class="w-8 h-8"></i>
+                    </div>
+                    <p class="text-[15px] md:text-[17px] leading-[1.8] text-4xl font-bold text-brand-orange">
+                        1.4M+
+                    </p>
+                    <p
+                        class="text-[15px] md:text-[17px] leading-[1.8] text-xs uppercase font-bold text-gray-600 tracking-tighter">
+                        Parts/Month Capacity</p>
+                </div>
+                <div class="group cursor-default">
+                    <div
+                        class="mb-3 text-brand-orange transition-transform group-hover:scale-110 duration-300 inline-block">
+                        <i data-lucide="crosshair" class="w-8 h-8"></i>
+                    </div>
+                    <p class="text-[15px] md:text-[17px] leading-[1.8] text-4xl font-bold text-brand-orange">
+                        Zero PPM
+                    </p>
+                    <p
+                        class="text-[15px] md:text-[17px] leading-[1.8] text-xs uppercase font-bold text-gray-600 tracking-tighter">
+                        Quality Standard</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process-Driven Manufacturing - Redesigned -->
+    <section id="engineering" class="bg-white py-[80px] lg:py-[120px] px-6">
+        <div class="max-w-7xl mx-auto">
+
+            <!-- Header Area -->
+            <div class="max-w-3xl mb-16">
+                <p class="text-sm font-bold tracking-[0.3em] text-brand-orange uppercase mb-4">
+                    Core DNA
+                </p>
+
+                <h2
+                    class="text-3xl md:text-4xl lg:text-5xl font-black text-gray-900 uppercase tracking-tight leading-tight mb-6">
+                    Process-Driven Manufacturing
+                </h2>
+
+                <p class="text-[16px] md:text-[18px] text-gray-600 leading-relaxed">
+                    Sivam iTech follows a process-driven manufacturing philosophy centered on consistency,
+                    prevention, and continuous improvement. We operate with a well-planned production layout
+                    designed around the 4M framework (Man, Machine, Material, Method).
+                </p>
+            </div>
+
+            <!-- Content Grid -->
+            <div class="grid lg:grid-cols-2 gap-16 items-start">
+
+                <!-- Left: Feature Cards -->
+                <div class="grid sm:grid-cols-2 gap-8">
+
+                    <!-- Card 1 -->
+                    <a href="tooling-npd.html"
+                        class="group border border-gray-200 rounded-2xl p-8 transition duration-300 bg-gray-50 hover:bg-white hover-lift">
+
+                        <div class="text-brand-orange text-4xl font-black mb-4">
+                            01
+                        </div>
+
+                        <h3 class="text-lg font-bold uppercase mb-3 text-gray-900">
+                            Tooling & NPD
+                        </h3>
+
+                        <p class="text-gray-600 leading-relaxed">
+                            In-house tool design and development to control product quality
+                            from the earliest stages.
+                        </p>
+                    </a>
+
+                    <!-- Card 2 -->
+                    <a href="lean-manufacturing.html"
+                        class="group border border-gray-200 rounded-2xl p-8 transition duration-300 bg-gray-50 hover:bg-white hover-lift">
+
+                        <div class="text-brand-orange text-4xl font-black mb-4">
+                            02
+                        </div>
+
+                        <h3 class="text-lg font-bold uppercase mb-3 text-gray-900">
+                            Lean Manufacturing
+                        </h3>
+
+                        <p class="text-gray-600 leading-relaxed">
+                            Adoption of lean practices to minimize waste and improve productivity.
+                        </p>
+                    </a>
+
+                    <!-- Card 3 -->
+                    <a href="error-proofing.html"
+                        class="group border border-gray-200 rounded-2xl p-8 transition duration-300 bg-gray-50 hover:bg-white hover-lift">
+
+                        <div class="text-brand-orange text-4xl font-black mb-4">
+                            03
+                        </div>
+
+                        <h3 class="text-lg font-bold uppercase mb-3 text-gray-900">
+                            Error Proofing
+                        </h3>
+
+                        <p class="text-gray-600 leading-relaxed">
+                            Focus on error-proofing and process standardization to prevent defects.
+                        </p>
+                    </a>
+
+                    <!-- Card 4 -->
+                    <a href="continuous-improvement.html"
+                        class="group border border-gray-200 rounded-2xl p-8 transition duration-300 bg-gray-50 hover:bg-white hover-lift">
+
+                        <div class="text-brand-orange text-4xl font-black mb-4">
+                            04
+                        </div>
+
+                        <h3 class="text-lg font-bold uppercase mb-3 text-gray-900">
+                            Continuous Improvement
+                        </h3>
+
+                        <p class="text-gray-600 leading-relaxed">
+                            Zero-defect initiatives embedded across operations.
+                        </p>
+                    </a>
+
+                </div>
+
+                <!-- Right: Industrial Image -->
+                <div class="w-full">
+                    <div class="rounded-3xl overflow-hidden shadow-2xl">
+                        <img loading="lazy" src="uploads/tech-tool_converted.avif" alt="Manufacturing Process"
+                            class="w-full h-full object-cover relative z-10" loading="lazy" width="600" height="400">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Manufacturing Facilities -->
+    <section id="facilities" class="py-[60px] md:py-[80px] lg:py-[100px] px-6 bg-[#F8FAFC] text-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-16">
+                <h2
+                    class="text-[22px] md:text-[30px] lg:text-[36px] font-black text-gray-900 uppercase tracking-tight text-sm font-bold text-brand-orange tracking-[0.3em] mb-4">
+                    Manufacturing
+                    Infrastructure</h2>
+                <h3 class="text-3xl md:text-4xl lg:text-5xl font-black text-gray-900 uppercase tracking-tight">The SIVAM
+                    ITECH Factory</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <a href="automated-press-shop.html"
+                    class="space-y-6 group bg-gray-50 p-6 rounded-2xl h-full flex flex-col border border-zinc-200 hover-lift">
+                    <div class="h-64 bg-gray-50 rounded-xl overflow-hidden relative shrink-0">
+                        <div
+                            class="absolute inset-0 bg-brand-orange/20 mix-blend-overlay opacity-0 group-hover:opacity-100 transition-opacity z-10">
+                        </div>
+                        <img loading="lazy" decoding="async" src="uploads/automate.avif" alt="Press Shop"
+                            class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700 relative z-10"
+                            width="400" height="300">
+                    </div>
+                    <div class="flex-grow">
+                        <h4 class="text-2xl font-bold text-gray-900 uppercase group- transition-colors mb-3">
+                            Automated
+                            Press Shop</h4>
+                        <p class="text-[15px] md:text-[17px] leading-[1.8] text-gray-600 leading-relaxed">High-tonnage
+                            automatic press lines for
+                            heavy-duty
+                            component manufacturing.</p>
+                    </div>
+                </a>
+                <a href="tech-tool-room.html"
+                    class="space-y-6 group bg-gray-50 p-6 rounded-2xl h-full flex flex-col border border-zinc-200 hover-lift">
+                    <div class="h-64 bg-gray-50 rounded-xl overflow-hidden relative shrink-0">
+                        <div
+                            class="absolute inset-0 bg-brand-orange/20 mix-blend-overlay opacity-0 group-hover:opacity-100 transition-opacity z-10">
+                        </div>
+                        <img loading="lazy" decoding="async" src="uploads/rd-team.avif" alt="Tool Room"
+                            class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700 relative z-10"
+                            width="400" height="300">
+                    </div>
+                    <div class="flex-grow">
+                        <h4 class="text-2xl font-bold text-gray-900 uppercase group- transition-colors mb-3">
+                            Tech Tool
+                            Room</h4>
+                        <p class="text-[15px] md:text-[17px] leading-[1.8] text-gray-600 leading-relaxed">Precision die
+                            development using high-tech VMC
+                            and
+                            wire EDM machinery.</p>
+                    </div>
+                </a>
+                <a href="machine-assembly.html"
+                    class="space-y-6 group bg-gray-50 p-6 rounded-2xl h-full flex flex-col border border-zinc-200 hover-lift">
+                    <div class="h-64 bg-gray-50 rounded-xl overflow-hidden relative shrink-0">
+                        <div
+                            class="absolute inset-0 bg-brand-orange/20 mix-blend-overlay opacity-0 group-hover:opacity-100 transition-opacity z-10">
+                        </div>
+                        <img loading="lazy" decoding="async" src="uploads/machine-assembly_converted.avif"
+                            alt="Assembly"
+                            class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700 relative z-10"
+                            width="400" height="300">
+                    </div>
+                    <div class="flex-grow">
+                        <h4 class="text-2xl font-bold text-gray-900 uppercase group- transition-colors mb-3">
+                            Sub-Assembly &
+                            Welding</h4>
+                        <p class="text-[15px] md:text-[17px] leading-[1.8] text-gray-600 leading-relaxed">Efficient
+                            sub-assembly and welding operations carried out by skilled technicians using advanced press
+                            machines and precision tools to ensure strong, accurate, and high-quality component
+                            manufacturing.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tier 1 Customers -->
+    <section id="tier1" class="py-[60px] md:py-[80px] lg:py-[100px] px-6 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2
+                    class="text-[22px] md:text-[30px] lg:text-[36px] font-black text-gray-900 uppercase tracking-tight text-sm font-bold text-brand-orange tracking-[0.3em] mb-4">
+                    Trusted Partners</h2>
+                <h3 class="text-3xl md:text-4xl lg:text-5xl font-black text-gray-900 uppercase tracking-tight">Tier 1
+                    Customers</h3>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 md:gap-8">
+                <!-- Rane -->
+                <div
+                    class="flex items-center justify-center p-6 bg-white rounded-3xl border border-zinc-100 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 group h-40">
+                    <img src="uploads/rane_logo.png" alt="Rane Logo" class="max-h-28 w-auto object-contain transition-transform duration-500 group-hover:scale-110">
+                </div>
+
+                <!-- First Engineering -->
+                <div
+                    class="flex items-center justify-center p-6 bg-white rounded-3xl border border-zinc-100 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 group h-40">
+                    <img src="uploads/first_engineering_logo.png" alt="First Engineering Logo" class="max-h-28 scale-150 w-auto object-contain transition-transform duration-500 group-hover:scale-[1.6]">
+                </div>
+
+                <!-- JCBL Marrel -->
+                <div
+                    class="flex items-center justify-center p-6 bg-white rounded-3xl border border-zinc-100 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 group h-40">
+                    <img src="uploads/jcbl_marrel_logo.png" alt="JCBL Marrel Logo" class="max-h-28 scale-125 w-auto object-contain transition-transform duration-500 group-hover:scale-[1.35]">
+                </div>
+
+                <!-- Brakes India -->
+                <div
+                    class="flex items-center justify-center p-6 bg-white rounded-3xl border border-zinc-100 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 group h-40">
+                    <img src="uploads/brakes_india_logo.png" alt="Brakes India Logo" class="max-h-28 w-auto object-contain transition-transform duration-500 group-hover:scale-110">
+                </div>
+
+                <!-- UCAL Fuel Systems -->
+                <div
+                    class="flex items-center justify-center p-6 bg-white rounded-3xl border border-zinc-100 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 group h-40">
+                    <img src="uploads/ucal_logo.png" alt="UCAL Logo" class="max-h-28 w-auto object-contain transition-transform duration-500 group-hover:scale-110">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- End Customers -->
+    <section id="end-customers" class="py-[60px] md:py-[80px] lg:py-[100px] px-6 bg-[#F8FAFC]">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2
+                    class="text-[22px] md:text-[30px] lg:text-[36px] font-black text-gray-900 uppercase tracking-tight text-sm font-bold text-brand-orange tracking-[0.3em] mb-4">
+                    Strategic Reach</h2>
+                <h3 class="text-3xl md:text-4xl lg:text-5xl font-black text-gray-900 uppercase tracking-tight">End
+                    Customers</h3>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 md:gap-8 auto-rows-fr">
+                <!-- TVS -->
+                <div
+                    class="flex flex-col items-center justify-center p-6 bg-white rounded-3xl border border-zinc-100 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 group h-36">
+                    <div class="text-[28px] font-black italic tracking-tighter text-[#1A237E] flex items-center gap-1">
+                        TVS <span class="bg-red-600 w-6 h-4 rounded-sm"></span>
+                    </div>
+                </div>
+
+                <!-- Bajaj -->
+                <div
+                    class="flex flex-col items-center justify-center p-6 bg-white rounded-3xl border border-zinc-100 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 group h-36">
+                    <img src="uploads/bajaj_logo.png" alt="Bajaj Logo" class="max-h-20 w-auto object-contain transition-transform duration-500 group-hover:scale-105">
+                </div>
+
+                <!-- Tata Motors -->
+                <div
+                    class="flex flex-col items-center justify-center p-6 bg-white rounded-3xl border border-zinc-100 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 group h-36">
+                    <img src="uploads/tata_motors_logo.png" alt="Tata Motors Logo" class="max-h-20 w-auto object-contain transition-transform duration-500 group-hover:scale-105">
+                </div>
+
+                <!-- Maruti Suzuki -->
+                <div
+                    class="flex flex-col items-center justify-center p-6 bg-white rounded-3xl border border-zinc-100 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 group h-36">
+                    <img src="uploads/maruti_suzuki_logo.png" alt="Maruti Suzuki Logo" class="max-h-20 w-auto object-contain transition-transform duration-500 group-hover:scale-105">
+                </div>
+
+                <!-- Royal Enfield -->
+                <div
+                    class="flex flex-col items-center justify-center p-6 bg-white rounded-3xl border border-zinc-100 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 group h-36">
+                    <img src="uploads/royal_enfield_logo.png" alt="Royal Enfield Logo" class="max-h-20 w-auto object-contain transition-transform duration-500 group-hover:scale-105">
+                </div>
+
+                <!-- Suzuki -->
+                <div
+                    class="flex flex-col items-center justify-center p-6 bg-white rounded-3xl border border-zinc-100 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 group h-36">
+                    <img src="uploads/suzuki_logo.png" alt="Suzuki Logo" class="max-h-20 w-auto object-contain transition-transform duration-500 group-hover:scale-105">
+                </div>
+
+                <!-- Vespa -->
+                <div
+                    class="flex flex-col items-center justify-center p-6 bg-white rounded-3xl border border-zinc-100 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 group h-36">
+                    <img src="uploads/vespa_logo.png" alt="Vespa Logo" class="max-h-20 w-auto object-contain transition-transform duration-500 group-hover:scale-105">
+                </div>
+
+                <!-- ISK -->
+                <div
+                    class="flex flex-col items-center justify-center p-6 bg-white rounded-3xl border border-zinc-100 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 group h-36">
+                   <div class="w-14 h-14 rounded-full bg-red-600 flex items-center justify-center text-white font-black italic text-xl border-4 border-white shadow-md">ISK</div>
+                </div>
+
+                <!-- Piaggio -->
+                <div
+                    class="flex flex-col items-center justify-center p-6 bg-white rounded-3xl border border-zinc-100 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 group h-36">
+                    <div class="bg-[#00529B] p-2 rounded-lg flex flex-col items-center shadow-lg">
+                        <span class="text-white font-black text-2xl leading-none">P</span>
+                        <span class="text-white font-black text-[10px] tracking-widest uppercase border-t border-white/20 mt-1 pt-1">PIAGGIO</span>
+                    </div>
+                </div>
+
+                <!-- JCB -->
+                <div
+                    class="flex flex-col items-center justify-center p-6 bg-white rounded-3xl border border-zinc-100 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 group h-36">
+                    <div class="bg-black px-4 py-2 rounded-md">
+                        <span class="text-yellow-500 font-black text-2xl tracking-tight">JCB</span>
+                    </div>
+                </div>
+
+                <!-- Tata Nexon -->
+                <div
+                    class="flex flex-col items-center justify-center p-6 bg-white rounded-3xl border border-zinc-100 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 group h-36">
+                    <div class="text-2xl font-black text-zinc-950 tracking-tighter uppercase leading-none text-center">TATA<br>NEXON</div>
+                </div>
+
+                <!-- Hyundai -->
+                <div
+                    class="flex flex-col items-center justify-center p-6 bg-white rounded-3xl border border-zinc-100 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 group h-36">
+                    <img src="uploads/hyundai_logo.png" alt="Hyundai Logo" class="max-h-20 w-auto object-contain transition-transform duration-500 group-hover:scale-105">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Showcase -->
+    <section id="products" class="py-[60px] md:py-[80px] lg:py-[100px] px-6 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2
+                    class="text-[22px] md:text-[30px] lg:text-[36px] font-black text-gray-900 uppercase tracking-tight text-sm font-bold text-brand-orange tracking-[0.3em] mb-4">
+                    Precision Components
+                </h2>
+                <h3 class="text-3xl md:text-4xl lg:text-5xl font-black text-gray-900 uppercase tracking-tight">The ITECH
+                    Collection
+                </h3>
+            </div>
+
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="group relative aspect-square bg-gray-100 overflow-hidden rounded-2xl cursor-pointer">
+                    <div
+                        class="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-center p-4 z-20">
+                        <div>
+                            <i data-lucide="cog" class="w-8 h-8 mx-auto mb-2 text-brand-orange"></i>
+                            <p class="text-[15px] md:text-[17px] leading-[1.8] font-bold uppercase tracking-wider">
+                                Transmission Gears</p>
+                        </div>
+                    </div>
+                    <img loading="lazy" decoding="async" src="uploads/collection-1.avif"
+                        alt="Quality assurance testing at Sivam Itech"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 relative z-10"
+                        width="300" height="300">
+                </div>
+                <div class="group relative aspect-square bg-gray-100 overflow-hidden rounded-2xl cursor-pointer">
+                    <div
+                        class="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-center p-4 z-20">
+                        <div>
+                            <i data-lucide="cylinder" class="w-8 h-8 mx-auto mb-2 text-brand-orange"></i>
+                            <p class="text-[15px] md:text-[17px] leading-[1.8] font-bold uppercase tracking-wider">
+                                Engine Valves</p>
+                        </div>
+                    </div>
+                    <img loading="lazy" decoding="async" src="uploads/collection-2.avif"
+                        alt="Industrial automation and CNC machinery"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 relative z-10"
+                        width="300" height="300">
+                </div>
+                <div class="group relative aspect-square bg-gray-100 overflow-hidden rounded-2xl cursor-pointer">
+                    <div
+                        class="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-center p-4 z-20">
+                        <div>
+                            <i data-lucide="component" class="w-8 h-8 mx-auto mb-2 text-brand-orange"></i>
+                            <p class="text-[15px] md:text-[17px] leading-[1.8] font-bold uppercase tracking-wider">
+                                Structural Chassis</p>
+                        </div>
+                    </div>
+                    <img loading="lazy" decoding="async" src="uploads/collection-3.avif"
+                        alt="Automotive parts manufacturing"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 relative z-10"
+                        width="300" height="300">
+                </div>
+                <div class="group relative aspect-square bg-gray-100 overflow-hidden rounded-2xl cursor-pointer">
+                    <div
+                        class="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-center p-4 z-20">
+                        <div>
+                            <i data-lucide="wrench" class="w-8 h-8 mx-auto mb-2 text-brand-orange"></i>
+                            <p class="text-[15px] md:text-[17px] leading-[1.8] font-bold uppercase tracking-wider">
+                                Precision Tooling</p>
+                        </div>
+                    </div>
+                    <img loading="lazy" decoding="async" src="uploads/collection-4.avif"
+                        alt="Production line efficiency at manufacturing facility"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 relative z-10"
+                        width="300" height="300">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ITECH NextGen Expansion (Redesigned) -->
+    <section id="nextgen" class="py-[60px] md:py-[80px] lg:py-[100px] px-6 bg-[#fcfcfc] overflow-hidden relative">
+        <!-- Subtle Background Decoration -->
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-brand-orange/5 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-96 h-96 bg-gray-200 rounded-full blur-3xl opacity-50">
+        </div>
+
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center relative z-10 px-6">
+
+            <!-- Left: Premium Visual Side -->
+            <div
+                class="relative group h-[500px] lg:h-[700px] rounded-[2.5rem] overflow-hidden shadow-[0_32px_64px_-16px_rgba(0,0,0,0.2)]">
+                <!-- Large Factory Image with Zoom Effect -->
+                <img loading="lazy" decoding="async" src="uploads/global-reach_converted.avif"
+                    alt="ITECH Global Factory"
+                    class="w-full h-full object-cover transition-transform duration-[2000ms] ease-out group-hover:scale-110"
+                    width="800" height="600">
+
+                <!-- Subtle Dark Gradient Overlay -->
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+
+                <!-- Text Overlay at Bottom-Left -->
+                <div class="absolute bottom-12 left-12 right-12 space-y-6">
+                    <div
+                        class="inline-flex items-center gap-2 px-5 py-2.5 bg-brand-orange text-white rounded-full text-xs font-black uppercase tracking-[0.2em] shadow-xl">
+                        <i data-lucide="globe" class="w-4 h-4"></i>
+                        Global Reach
+                    </div>
+                    <div>
+                        <h4 class="text-4xl md:text-5xl font-black text-white leading-[1.1] mb-2">
+                            Exporting to <br>
+                            <span class="text-brand-orange">15+ Countries</span>
+                        </h4>
+                        <p
+                            class="text-[15px] md:text-[17px] leading-[1.8] text-white font-medium opacity-80 max-w-md border-l-2 border-brand-orange pl-6 mt-6">
+                            Ensuring precision and reliability across global automotive supply chains with world-class
+                            manufacturing standards.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Content & Feature Side -->
+            <div class="space-y-12">
+                <div>
+                    <h2
+                        class="text-[22px] md:text-[30px] lg:text-[36px] font-black text-gray-900 uppercase tracking-tight text-sm font-bold text-brand-orange tracking-[0.4em] mb-6 flex items-center gap-4">
+                        <span class="w-8 h-px bg-brand-orange"></span> Innovation Roadmap
+                    </h2>
+                    <h3
+                        class="text-3xl md:text-4xl lg:text-5xl font-black text-gray-900 uppercase tracking-tight leading-[1.1]">
+                        ITECH NEXTGEN <br>
+                        <span class="text-brand-orange">EXPANSION</span>
+                    </h3>
+                    <p
+                        class="text-[15px] md:text-[17px] leading-[1.8] mt-8 text-gray-600 leading-relaxed max-w-xl font-medium">
+                        SIVAM ITECH is transitioning towards Industry 4.0. Our NextGen roadmap focuses on high-precision
+                        modular automation, real-time data telemetry, and AI-enabled quality oversight.
+                    </p>
+                </div>
+
+                <!-- Small Horizontal Stat Row -->
+                <div class="flex flex-wrap gap-x-16 gap-y-8 py-8 border-y border-gray-100">
+                    <div class="group cursor-default">
+                        <p
+                            class="text-[15px] md:text-[17px] leading-[1.8] text-4xl font-black text-brand-orange transition-colors">
+                            15+
+                        </p>
+                        <p
+                            class="text-[15px] md:text-[17px] leading-[1.8] text-xs font-bold text-gray-600 uppercase tracking-[0.2em] mt-2">
+                            Countries</p>
+                    </div>
+                    <div class="group cursor-default">
+                        <p
+                            class="text-[15px] md:text-[17px] leading-[1.8] text-4xl font-black text-brand-orange transition-colors">
+                            3
+                        </p>
+                        <p
+                            class="text-[15px] md:text-[17px] leading-[1.8] text-xs font-bold text-gray-600 uppercase tracking-[0.2em] mt-2">
+                            Smart Units</p>
+                    </div>
+                    <div class="group cursor-default">
+                        <p
+                            class="text-[15px] md:text-[17px] leading-[1.8] text-4xl font-black text-brand-orange transition-colors">
+                            80%
+                        </p>
+                        <p
+                            class="text-[15px] md:text-[17px] leading-[1.8] text-xs font-bold text-gray-600 uppercase tracking-[0.2em] mt-2">
+                            Automation</p>
+                    </div>
+                </div>
+
+                <!-- Feature Cards Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                    <!-- Card 1: Unit Alpha -->
+                    <div
+                        class="border border-gray-100 bg-white p-8 rounded-[2rem] shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_24px_48px_rgba(0,0,0,0.08)] hover:-translate-y-2 transition-all duration-500 group flex flex-col h-full">
+                        <div class="flex justify-between items-start mb-8">
+                            <!-- Industrial Press + IoT Icon -->
+                            <div
+                                class="w-16 h-16 rounded-2xl flex items-center justify-center bg-gradient-to-br from-orange-50 to-orange-100 group-hover:from-orange-500 group-hover:to-orange-700 transition-all duration-500 shadow-sm border border-orange-100 group-hover:border-orange-500">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    class="w-8 h-8 text-orange-600 group- transition-colors duration-500"
+                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <!-- Press ram / cylinder body -->
+                                    <rect x="8" y="2" width="8" height="5" rx="1" />
+                                    <!-- Ram shaft -->
+                                    <line x1="12" y1="7" x2="12" y2="11" />
+                                    <!-- Press platen -->
+                                    <rect x="6" y="11" width="12" height="3" rx="1" />
+                                    <!-- Workpiece -->
+                                    <rect x="5" y="17" width="14" height="3" rx="1" />
+                                    <!-- Base frame -->
+                                    <line x1="3" y1="20" x2="21" y2="20" />
+                                    <!-- IoT signal arcs (right side) -->
+                                    <path d="M18 9 a2 2 0 0 1 0 4" opacity="0.6" />
+                                    <path d="M20 7 a4 4 0 0 1 0 8" opacity="0.35" />
+                                </svg>
+                            </div>
+                            <span
+                                class="px-4 py-1.5 bg-orange-50 text-orange-600 border border-orange-200 rounded-full text-[10px] font-black uppercase tracking-widest">Active</span>
+                        </div>
+                        <h4 class="text-2xl font-bold text-gray-900 mb-3">Unit Alpha</h4>
+                        <p
+                            class="text-[15px] md:text-[17px] leading-[1.8] text-gray-600 leading-relaxed mb-8 flex-grow">
+                            Heavy press operations integrated with IoT telemetry for real-time efficiency monitoring.
+                        </p>
+
+                        <div class="space-y-3 mb-8">
+                            <div
+                                class="flex justify-between text-[11px] font-black uppercase tracking-[0.1em] text-gray-400">
+                                <span>Deployment</span>
+                                <span class="text-brand-orange">85%</span>
+                            </div>
+                            <div class="w-full bg-gray-100 h-2 rounded-full overflow-hidden">
+                                <div
+                                    class="bg-gradient-to-r from-orange-400 to-orange-600 h-full rounded-full transition-all duration-1000 w-[85%]">
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="automated-press-shop.html"
+                            class="flex items-center justify-center gap-3 w-full py-4 bg-gray-900 text-white rounded-2xl text-xs font-black uppercase tracking-widest hover:bg-brand-orange transition-all duration-300 shadow-lg shadow-gray-200 hover:shadow-brand-orange/30">
+                            Explore Unit
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12" />
+                                <polyline points="12 5 19 12 12 19" />
+                            </svg>
+                        </a>
+                    </div>
+
+                    <!-- Card 2: Digital R&D -->
+                    <div
+                        class="border border-gray-100 bg-white p-8 rounded-[2rem] shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_24px_48px_rgba(0,0,0,0.08)] hover:-translate-y-2 transition-all duration-500 group flex flex-col h-full">
+                        <div class="flex justify-between items-start mb-8">
+                            <!-- Digital Twin / Circuit + Data Icon -->
+                            <div
+                                class="w-16 h-16 rounded-2xl flex items-center justify-center bg-gradient-to-br from-blue-50 to-blue-100 group-hover:from-blue-500 group-hover:to-blue-700 transition-all duration-500 shadow-sm border border-blue-100 group-hover:border-blue-500">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    class="w-8 h-8 text-blue-600 group- transition-colors duration-500"
+                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <!-- Outer chip body -->
+                                    <rect x="7" y="7" width="10" height="10" rx="1.5" />
+                                    <!-- Inner core dot -->
+                                    <rect x="10" y="10" width="4" height="4" rx="0.5" fill="currentColor" stroke="none"
+                                        opacity="0.4" />
+                                    <!-- Left pins -->
+                                    <line x1="4" y1="9" x2="7" y2="9" />
+                                    <line x1="4" y1="12" x2="7" y2="12" />
+                                    <line x1="4" y1="15" x2="7" y2="15" />
+                                    <!-- Right pins -->
+                                    <line x1="17" y1="9" x2="20" y2="9" />
+                                    <line x1="17" y1="12" x2="20" y2="12" />
+                                    <line x1="17" y1="15" x2="20" y2="15" />
+                                    <!-- Top pins -->
+                                    <line x1="10" y1="4" x2="10" y2="7" />
+                                    <line x1="14" y1="4" x2="14" y2="7" />
+                                    <!-- Bottom pins -->
+                                    <line x1="10" y1="17" x2="10" y2="20" />
+                                    <line x1="14" y1="17" x2="14" y2="20" />
+                                </svg>
+                            </div>
+                            <span
+                                class="px-4 py-1.5 bg-blue-50 text-blue-600 border border-blue-200 rounded-full text-[10px] font-black uppercase tracking-widest">Live</span>
+                        </div>
+                        <h4 class="text-2xl font-bold text-gray-900 mb-3">ITECH R&amp;D</h4>
+                        <p
+                            class="text-[15px] md:text-[17px] leading-[1.8] text-gray-600 leading-relaxed mb-8 flex-grow">
+                            Digital twinning and rapid prototyping for customized component engineering.</p>
+
+                        <div class="space-y-3 mb-8">
+                            <div
+                                class="flex justify-between text-[11px] font-black uppercase tracking-[0.1em] text-gray-400">
+                                <span>Capability</span>
+                                <span class="text-blue-600">65%</span>
+                            </div>
+                            <div class="w-full bg-gray-100 h-2 rounded-full overflow-hidden">
+                                <div
+                                    class="bg-gradient-to-r from-blue-400 to-blue-600 h-full rounded-full transition-all duration-1000 w-[65%]">
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="rd-engineering.html"
+                            class="flex items-center justify-center gap-3 w-full py-4 bg-gray-900 text-white rounded-2xl text-xs font-black uppercase tracking-widest hover:bg-blue-600 transition-all duration-300 shadow-lg shadow-gray-200 hover:shadow-blue-600/30">
+                            View R&amp;D
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12" />
+                                <polyline points="12 5 19 12 12 19" />
+                            </svg>
+                        </a>
+                    </div>
+
+                    <!-- Card 3: AI Smart Unit (Coming Soon) - Spanning 2 columns on tablet/desktop -->
+                    <div
+                        class="rounded-[16px] shadow-[0_4px_24px_rgba(0,0,0,0.02)] hover:shadow-[0_12px_40px_rgba(0,0,0,0.06)] border border-gray-100 bg-white hover:-translate-y-1 transition-all duration-300 p-8 md:p-10 rounded-[2.5rem] shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_24px_48px_rgba(0,0,0,0.08)] hover:-translate-y-2 duration-500 group md:col-span-2 relative overflow-hidden">
+                        <!-- Decorative Brain Watermark -->
+                        <div
+                            class="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 group-hover:rotate-6 transition-all duration-700">
+                            <i data-lucide="brain" class="w-32 h-32"></i>
+                        </div>
+
+                        <div class="flex flex-col md:flex-row md:items-center gap-10">
+                            <div class="flex-1 space-y-4">
+                                <div class="flex justify-between items-start mb-2">
+                                    <!-- Brain Icon -->
+                                    <div
+                                        class="w-16 h-16 rounded-2xl flex items-center justify-center bg-gradient-to-br from-purple-50 to-purple-100 group-hover:from-purple-500 group-hover:to-purple-700 transition-all duration-500 shadow-sm border border-purple-100 group-hover:border-purple-500">
+                                        <i data-lucide="brain"
+                                            class="w-8 h-8 text-purple-600 group- transition-colors duration-500"></i>
+                                    </div>
+                                    <span
+                                        class="px-4 py-1.5 bg-purple-100 text-purple-600 rounded-full text-[10px] font-black uppercase tracking-widest">Coming
+                                        2026</span>
+                                </div>
+                                <h4 class="text-2xl font-bold text-gray-900">AI-Smart Production Unit</h4>
+                                <p
+                                    class="text-[15px] md:text-[17px] leading-[1.8] text-gray-600 leading-relaxed max-w-sm">
+                                    Autonomous quality checks and
+                                    predictive maintenance powered by machine learning algorithms.</p>
+                            </div>
+                            <div class="flex-1 space-y-6">
+                                <div class="space-y-3">
+                                    <div
+                                        class="flex justify-between text-[11px] font-black uppercase tracking-[0.1em] text-purple-600">
+                                        <span>Readiness</span>
+                                        <span>40%</span>
+                                    </div>
+                                    <div
+                                        class="w-full bg-gray-100 h-2 rounded-full overflow-hidden border border-purple-50">
+                                        <div
+                                            class="bg-gradient-to-r from-purple-400 to-purple-600 h-full rounded-full transition-all duration-1000 w-[40%]">
+                                        </div>
+                                    </div>
+                                </div>
+                                <button disabled="
+                                    class=" flex items-center justify-center gap-3 w-full py-4 bg-gray-50 text-gray-400
+                                    rounded-2xl text-[10px] font-black uppercase tracking-widest cursor-not-allowed
+                                    border border-dashed border-gray-200">
+                                    Strategic Partnerships Closed
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-white pt-24 pb-12 px-6 border-t border-gray-100 relative overflow-hidden">
+        <!-- Decorative subtle element -->
+        <div
+            class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-brand-orange/20 to-transparent">
+        </div>
+
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-16 mb-20">
+
+                <!-- Column 1: Logo & Branding -->
+                <div class="lg:col-span-4 space-y-8">
+                    <a href="index.html" class="inline-block transition-transform hover:scale-105 duration-300">
+                        <img width="343" height="96" src="uploads/logo.png" alt="Sivam Itech Logo"
+                            class="h-20 md:h-28 w-auto object-contain">
+                    </a>
+                    <p class="text-zinc-700 text-[16px] leading-[1.8] font-medium max-w-sm">
+                        Redefining precision and synergy in the industrial sector. From concept to complex component
+                        manufacturing with unmatched excellence and technical leadership.
+                    </p>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="lg:col-span-2">
+                    <h5 class="text-[12px] font-black uppercase tracking-[0.3em] mb-8 text-brand-orange">Company</h5>
+                    <ul class="space-y-4">
+                        <li><a href="about.html"
+                                class="text-gray-600 hover:text-brand-orange text-[15px] font-semibold transition-colors">About
+                                Us</a></li>
+                        <li><a href="infrastructure.html"
+                                class="text-gray-600 hover:text-brand-orange text-[15px] font-semibold transition-colors">Infrastructure</a>
+                        </li>
+                        <li><a href="products.html"
+                                class="text-gray-600 hover:text-brand-orange text-[15px] font-semibold transition-colors">Products</a>
+                        </li>
+                        <li><a href="careers.html"
+                                class="text-gray-600 hover:text-brand-orange text-[15px] font-semibold transition-colors">Careers</a>
+                        </li>
+                        <li><a href="contact.html"
+                                class="text-gray-600 hover:text-brand-orange text-[15px] font-semibold transition-colors">Contact
+                                Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Connect -->
+                <div class="lg:col-span-3">
+                    <h5 class="text-[12px] font-black uppercase tracking-[0.3em] mb-8 text-brand-orange">Connect</h5>
+                    <ul class="space-y-6">
+                        <li class="flex items-start gap-4">
+                            <div
+                                class="w-10 h-10 rounded-xl bg-orange-50 flex items-center justify-center shrink-0 border border-orange-100">
+                                <i data-lucide="map-pin" class="w-5 h-5 text-brand-orange"></i>
+                            </div>
+                            <span class="text-gray-600 font-medium text-[14px] leading-relaxed">
+                                No. 115 / 2A, Mahalakshmi Nagar Extension, Noombal, Chennai – 600 077, India.
+                            </span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <div
+                                class="w-10 h-10 rounded-xl bg-orange-50 flex items-center justify-center shrink-0 border border-orange-100">
+                                <i data-lucide="phone" class="w-5 h-5 text-brand-orange"></i>
+                            </div>
+                            <div class="flex flex-col text-[14px] font-bold">
+                                <a href="tel:+919884426111"
+                                    class="text-gray-700 hover:text-brand-orange transition-colors">+91 98844 26111</a>
+                                <a href="tel:+918428283013"
+                                    class="text-gray-700 hover:text-brand-orange transition-colors">+91 84282 83013</a>
+                            </div>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <div
+                                class="w-10 h-10 rounded-xl bg-orange-50 flex items-center justify-center shrink-0 border border-orange-100">
+                                <i data-lucide="mail" class="w-5 h-5 text-brand-orange"></i>
+                            </div>
+                            <div class="flex flex-col text-[14px] font-bold overflow-hidden">
+                                <a href="mailto:Vijayakumar.k@sivamitech.com"
+                                    class="text-gray-700 hover:text-brand-orange transition-colors truncate">Vijayakumar.k@sivamitech.com</a>
+                                <a href="mailto:Nagendran.P@sivamitech.com"
+                                    class="text-gray-700 hover:text-brand-orange transition-colors truncate">Nagendran.P@sivamitech.com</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Stay Updated & Social -->
+                <div class="lg:col-span-3 space-y-12">
+                    <div>
+                        <h5 class="text-[12px] font-black uppercase tracking-[0.3em] mb-6 text-brand-orange">Follow Us
+                        </h5>
+                        <div class="flex flex-col gap-3">
+                            <a href="https://www.linkedin.com/company/sivam-itech-metal-forming-industries/"
+                                target="_blank" rel="noopener noreferrer"
+                                class="flex items-center gap-3 group bg-gray-50 p-2 rounded-2xl border border-gray-100 hover:border-[#0077b5]/30 hover:bg-white transition-all duration-300 hover:-translate-y-1">
+                                <div
+                                    class="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-[#0077b5] shadow-sm group-hover:bg-[#0077b5] group-hover:text-white transition-all duration-300">
+                                    <i class="fa-brands fa-linkedin text-[18px]"></i>
+                                </div>
+                                <span
+                                    class="text-[14px] font-bold text-gray-700 group-hover:text-brand-orange transition-colors px-1">LinkedIn</span>
+                            </a>
+                            <a href="https://wa.me/919884426111?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20your%20products%20and%20services%20at%20Sivam%20Itech%20Metal%20Forming%20Industries."
+                                target="_blank" rel="noopener noreferrer"
+                                class="flex items-center gap-3 group bg-gray-50 p-2 rounded-2xl border border-gray-100 hover:border-[#25d366]/30 hover:bg-white transition-all duration-300">
+                                <div
+                                    class="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-[#25d366] shadow-sm group-hover:bg-[#25d366] group-hover:text-white transition-all duration-300">
+                                    <i class="fa-brands fa-whatsapp text-[20px]"></i>
+                                </div>
+                                <span
+                                    class="text-[14px] font-bold text-gray-700 group-hover:text-brand-orange transition-colors px-1">WhatsApp</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div>
+                        <h5 class="text-[12px] font-black uppercase tracking-[0.3em] mb-6 text-brand-orange">Newsletter
+                        </h5>
+                        <div class="relative group">
+                            <input type="email" placeholder="Corporate email"
+                                class="w-full bg-gray-50 border border-gray-200 rounded-2xl px-5 py-4 text-[14px] font-medium outline-none focus:border-brand-orange focus:bg-white transition-all pr-14">
+                            <button
+                                class="absolute right-2 top-2 bottom-2 w-10 bg-brand-orange text-white rounded-xl flex items-center justify-center hover:brightness-110 transition-all shadow-lg shadow-brand-orange/20"
+                                title="Subscribe">
+                                <i data-lucide="send" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Copyright Bar -->
+            <div class="pt-12 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-8">
+                <p class="text-[11px] font-black text-gray-400 uppercase tracking-[0.2em]">
+                    © 2024 SIVAM ITECH Limited. Precision Engineering Redefined.
+                </p>
+                <div class="flex gap-8 items-center">
+                    <a href="#"
+                        class="text-gray-400 hover:text-brand-orange text-[11px] font-black uppercase tracking-widest transition-colors">Privacy</a>
+                    <a href="#"
+                        class="text-gray-400 hover:text-brand-orange text-[11px] font-black uppercase tracking-widest transition-colors">Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Custom JS and Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest" defer></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            lucide.createIcons();
+        });
+    </script>
+    <script src="assets/js/main.min.js" defer></script>
+
+    <!-- Hero Slideshow -->
+    <script>
+        (function () {
+            const slides = document.querySelectorAll('.hero-slide');
+            let current = 0;
+            if (slides.length < 2) return;
+            setInterval(function () {
+                slides[current].style.opacity = '0';
+                current = (current + 1) % slides.length;
+                slides[current].style.opacity = '1';
+            }, 4000);
+        })();
+    </script>
+
+
+</body>
+
+</html>

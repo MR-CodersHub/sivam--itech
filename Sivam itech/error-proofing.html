@@ -1,0 +1,811 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="public, max-age=31536000">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Proofing & Poka-Yoke Systems | SIVAM ITECH</title>
+    <meta name="description"
+        content="Sivam iTech integrates physical and digital Poka-Yoke error-proofing systems directly into manufacturing workflows to guarantee zero-defect precision component delivery.">
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://unpkg.com">
+
+    <!-- Defer non-critical scripts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.min.css">
+
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="uploads/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body class="bg-white text-gray-600 font-sans antialiased overflow-x-hidden selection:bg-brand-orange pb-10 md:pb-0">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "Service",
+      "name": "Error Proofing & Zero-Defect Manufacturing",
+      "provider": {
+        "@type": "Organization",
+        "name": "Sivam iTech Metal Forming Industries"
+      },
+      "serviceType": "Quality Assurance",
+      "description": "Integration of mechanical interlocks, optical validation, and digital limit switches to prevent variation in high-volume OEM manufacturing.",
+      "areaServed": "Global"
+    }
+    </script>
+    <style>
+        .scroll-indicator {
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateY(0);
+            }
+
+            40% {
+                transform: translateY(-10px);
+            }
+
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .timeline-scroll-container::-webkit-scrollbar {
+            display: none;
+        }
+
+        .timeline-scroll-container {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+
+
+
+    <!-- Navbar -->
+    <nav class="sticky top-0 w-full z-50 glass-nav shadow-md">
+        <div class="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3">
+                <img width="343" height="96" loading="eager" src="uploads/logo.png" alt="Sivam Itech Metal Forming Industries Official Logo"
+                    class="h-28 md:h-36 lg:h-40 w-auto object-contain relative z-10">
+            </a>
+
+            <div class="hidden lg:flex space-x-8 font-bold text-xs uppercase tracking-widest text-gray-700">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="infrastructure.html" class="nav-link">Infrastructure</a>
+                <a href="products.html" class="nav-link">Products</a>
+                <a href="careers.html" class="nav-link">Careers</a>
+                <a href="contact.html" class="nav-link">Contact Us</a>
+            </div>
+
+            <a href="inquire.html"
+                class="hidden md:block btn-orange px-6 py-2.5 text-xs font-bold uppercase tracking-widest rounded-full shadow-md hover:shadow-lg">
+                Inquire Now
+            </a>
+
+            <!-- Changed onclick to use JS event listener via ID if possible, but keeping simplistic onclick for now as per extraction, 
+                 removed inline onclick to rely on main.js event binding -->
+            <button type="button" class="lg:hidden" onclick="toggleMenu()" title="Toggle mobile menu">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+        <div id="mobile-menu" class="lg:hidden bg-white shadow-lg">
+            <div class="px-6 py-4 flex flex-col space-y-4 font-bold text-xs uppercase">
+                <a href="index.html" class=" transition-colors">Home</a>
+                <a href="about.html" class=" transition-colors">About Us</a>
+                <a href="infrastructure.html" class=" transition-colors">Infrastructure</a>
+                <a href="products.html" class=" transition-colors">Products</a>
+                <a href="careers.html" class=" transition-colors">Careers</a>
+                <a href="contact.html" class=" transition-colors">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Floating Inquiry Button -->
+    <a href="contact.html"
+        class="fixed bottom-6 right-6 z-50 bg-brand-orange text-white p-4 rounded-full shadow-2xl hover:bg-orange-600 hover:scale-105 transition-all flex items-center justify-center group">
+        <i data-lucide="message-square" class="w-6 h-6"></i>
+        <span
+            class="max-w-0 overflow-hidden whitespace-nowrap group-hover:max-w-xs group-hover:ml-3 transition-all duration-300 ease-in-out font-bold text-sm uppercase tracking-wider">Quick
+            Inquiry</span>
+    </a>
+
+    <!-- 1. HERO SECTION REBUILD -->
+    <section
+        class="py-[60px] md:py-[80px] lg:py-[100px] relative min-h-[85vh] flex flex-col justify-center bg-white pb-16 pt-24 border-b-8 border-brand-orange">
+        <div class="absolute inset-0 z-0">
+            <div class="w-full h-full bg-[url('uploads/tech-tool_converted.avif')] bg-cover bg-center opacity-30">
+            </div>
+            <!-- Subtle Grid Overlay Texture -->
+            <div class="absolute inset-0 z-0 opacity-20"
+                style="background-image: linear-gradient(#ffffff20 1px, transparent 1px), linear-gradient(90deg, #ffffff20 1px, transparent 1px); background-size: 40px 40px;">
+            </div>
+            <div class="absolute inset-0 bg-white/80 backdrop-blur-[2px]"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-6 w-full mt-10">
+            <h1
+                class="text-[28px] sm:text-[32px] md:text-[40px] lg:text-[52px] font-black text-gray-900 uppercase tracking-tight leading-[1.05] mb-6 max-w-5xl">
+                Structural Error Avoidance <br> &amp; Poka-Yoke Systems
+            </h1>
+            <p
+                class="text-[15px] md:text-[17px] leading-[1.8] text-gray-600 font-medium max-w-3xl leading-relaxed mb-10 border-l-4 border-brand-orange pl-4">
+                Hard-wired mechanical interlocks and PLC-driven validation frameworks engineered to eliminate defect
+                propagation at the source.
+            </p>
+
+            <!-- Metrics Strip -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12 max-w-5xl border-t border-b border-gray-200 py-6">
+                <div class="flex items-center gap-3">
+                    <i data-lucide="shield-check" class="text-brand-orange w-5 h-5 shrink-0"></i>
+                    <span class="text-sm font-bold text-gray-900 uppercase tracking-widest">0 Defects Downstream</span>
+                </div>
+                <div class="flex items-center gap-3">
+                    <i data-lucide="refresh-ccw" class="text-brand-orange w-5 h-5 shrink-0"></i>
+                    <span class="text-sm font-bold text-gray-900 uppercase tracking-widest">100% Insp. Redundancy</span>
+                </div>
+                <div class="flex items-center gap-3">
+                    <i data-lucide="trending-down" class="text-brand-orange w-5 h-5 shrink-0"></i>
+                    <span class="text-sm font-bold text-gray-900 uppercase tracking-widest">-95% Rework Cost</span>
+                </div>
+                <div class="flex items-center gap-3">
+                    <i data-lucide="power" class="text-brand-orange w-5 h-5 shrink-0"></i>
+                    <span class="text-sm font-bold text-gray-900 uppercase tracking-widest">Binary Go/No-Go</span>
+                </div>
+            </div>
+
+            <!-- CTAs -->
+            <div class="flex flex-wrap items-center gap-4">
+                <a href="contact.html"
+                    class="inline-flex items-center gap-2 bg-brand-orange hover:bg-orange-600 text-white font-black tracking-widest uppercase text-sm px-8 py-4 rounded-sm transition-colors shadow-none">
+                    Request Error-Proofing Consultation <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                </a>
+                <a href="#overview"
+                    class="inline-flex items-center gap-2 bg-transparent border-2 border-slate-700 hover:border-slate-500 text-gray-900 font-bold tracking-widest uppercase text-sm px-8 py-4 rounded-sm transition-colors shadow-none">
+                    Download Control Architecture <i data-lucide="download" class="w-5 h-5"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. CORE PARADIGM SECTION -->
+    <section id="overview" class="py-[60px] md:py-[80px] lg:py-[100px] px-6 bg-white relative overflow-hidden">
+        <!-- Subtle engineering Grid Background -->
+        <div class="absolute inset-0 opacity-5"
+            style="background-image: linear-gradient(#e5e7eb 1px, transparent 1px), linear-gradient(to right, #e5e7eb 1px, transparent 1px); background-size: 40px 40px;">
+        </div>
+
+        <div class="max-w-7xl mx-auto relative z-10 px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+
+                <!-- Left: Visual Engineering Block -->
+                <div
+                    class="bg-[#F8FAFC] border-4 border-gray-200 p-10 rounded-sm relative shadow-none flex flex-col justify-center min-h-[400px]">
+                    <div
+                        class="absolute inset-0 z-0 opacity-10  mix-blend-overlay">
+                    </div>
+                    <div class="relative z-10 text-center">
+                        <i data-lucide="git-merge" class="w-24 h-24 text-brand-orange mx-auto mb-6"></i>
+                        <h3
+                            class="text-[20px] md:text-[24px] font-bold text-gray-900 font-black uppercase tracking-widest mb-2 border-b-2 border-slate-700 pb-4 inline-block">
+                            Hard-Wired Interlocks</h3>
+                        <p
+                            class="text-[15px] md:text-[17px] leading-[1.8] text-gray-600 font-medium uppercase tracking-wider text-xs mt-4">
+                            Physical compliance
+                            constraints overriding human operators.</p>
+                    </div>
+                </div>
+
+                <!-- Right: Systematic Explanation -->
+                <div class="space-y-8">
+                    <div>
+                        <span class="text-brand-orange font-black text-xs uppercase tracking-[0.2em]">Engineering
+                            Paradigm</span>
+                        <h2
+                            class="text-[22px] md:text-[30px] lg:text-[36px] font-black text-gray-900 uppercase tracking-tight text-slate-950 mt-2 mb-6">
+                            Systematic
+                            Defect Eradication</h2>
+                        <div class="w-16 h-1.5 bg-brand-orange mb-8 rounded-none"></div>
+                    </div>
+
+                    <div class="space-y-6 text-slate-800 text-base font-medium leading-relaxed">
+                        <p class="text-[15px] md:text-[17px] leading-[1.8]">
+                            <strong
+                                class="text-slate-900 block font-bold mb-1 uppercase tracking-wider text-sm border-l-4 border-brand-orange pl-3">Binary
+                                Mechanical Prevention (Go/No-Go):</strong>
+                            Tooling modifications ensure parts can only physically fit into fixtures the completely
+                            correct way, eliminating orientation errors instantly.
+                        </p>
+                        <p class="text-[15px] md:text-[17px] leading-[1.8]">
+                            <strong
+                                class="text-slate-900 block font-bold mb-1 uppercase tracking-wider text-sm border-l-4 border-brand-orange pl-3">Direct
+                                PLC Cycle Interruption:</strong>
+                            If anomaly data is triggered, local programmable logic controllers disconnect the actuation
+                            circuit freezing the machine before impact.
+                        </p>
+                        <p class="text-[15px] md:text-[17px] leading-[1.8]">
+                            <strong
+                                class="text-slate-900 block font-bold mb-1 uppercase tracking-wider text-sm border-l-4 border-brand-orange pl-3">Root-Sequence
+                                Failure Isolation:</strong>
+                            Upstream detection arrays prevent processing cascading failures into high-value downstream
+                            assemblies.
+                        </p>
+                        <p class="text-[15px] md:text-[17px] leading-[1.8]">
+                            <strong
+                                class="text-slate-900 block font-bold mb-1 uppercase tracking-wider text-sm border-l-4 border-brand-orange pl-3">Sensor-Driven
+                                Validation Logic:</strong>
+                            Optical sweeps and proximity tracking verify critical geometries on every single stroke
+                            cycle identically.
+                        </p>
+                        <p class="text-[15px] md:text-[17px] leading-[1.8]">
+                            <strong
+                                class="text-slate-900 block font-bold mb-1 uppercase tracking-wider text-sm border-l-4 border-brand-orange pl-3">Constraint-Based
+                                Geometry Enforcement:</strong>
+                            Pins, channels, and blocks that physically reject incorrectly stamped or bent materials
+                            before clamping occurs.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. ADVANCED PROOFING TECHNOLOGY -->
+    <section class="py-[60px] md:py-[80px] lg:py-[100px] px-6 bg-slate-50 border-t border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-12 border-b border-slate-200 pb-4">
+                <span class="text-brand-orange font-black text-xs uppercase tracking-[0.2em]">Hardware</span>
+                <h3
+                    class="text-[20px] md:text-[24px] font-bold text-gray-900 font-black text-slate-900 uppercase tracking-tight mt-2">
+                    Advanced Proofing
+                    Technology</h3>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <!-- Tech 1 -->
+                <div class="p-6 bg-white border border-slate-200 rounded-[6px] shadow-sm">
+                    <i data-lucide="map-pin" class="w-8 h-8 text-brand-orange mb-4"></i>
+                    <h4
+                        class="font-black text-slate-900 text-sm uppercase tracking-wider mb-4 border-b border-slate-100 pb-2">
+                        Location Pins</h4>
+                    <div class="space-y-3">
+                        <div>
+                            <span
+                                class="text-[10px] font-bold text-gray-600 uppercase tracking-widest block mb-1">Purpose</span>
+                            <p
+                                class="text-[15px] md:text-[17px] leading-[1.8] text-xs text-slate-800 font-bold leading-tight">
+                                Physical alignment lock.</p>
+                        </div>
+                        <div>
+                            <span
+                                class="text-[10px] font-bold text-gray-600 uppercase tracking-widest block mb-1">Defect
+                                Blocked</span>
+                            <p
+                                class="text-[15px] md:text-[17px] leading-[1.8] text-xs text-slate-800 font-bold leading-tight">
+                                Reverse part orientation.</p>
+                        </div>
+                        <div>
+                            <span
+                                class="text-[10px] font-bold text-gray-600 uppercase tracking-widest block mb-1">Enforcement</span>
+                            <p
+                                class="text-[15px] md:text-[17px] leading-[1.8] text-xs text-slate-800 font-bold leading-tight">
+                                Mechanical interference preventing
+                                seating.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tech 2 -->
+                <div class="p-6 bg-white border border-slate-200 rounded-[6px] shadow-sm">
+                    <i data-lucide="eye" class="w-8 h-8 text-brand-orange mb-4"></i>
+                    <h4
+                        class="font-black text-slate-900 text-sm uppercase tracking-wider mb-4 border-b border-slate-100 pb-2">
+                        Optical Sensors</h4>
+                    <div class="space-y-3">
+                        <div>
+                            <span
+                                class="text-[10px] font-bold text-gray-600 uppercase tracking-widest block mb-1">Purpose</span>
+                            <p
+                                class="text-[15px] md:text-[17px] leading-[1.8] text-xs text-slate-800 font-bold leading-tight">
+                                High-speed scan validation.</p>
+                        </div>
+                        <div>
+                            <span
+                                class="text-[10px] font-bold text-gray-600 uppercase tracking-widest block mb-1">Defect
+                                Blocked</span>
+                            <p
+                                class="text-[15px] md:text-[17px] leading-[1.8] text-xs text-slate-800 font-bold leading-tight">
+                                Missing hole/Slot feature.</p>
+                        </div>
+                        <div>
+                            <span
+                                class="text-[10px] font-bold text-gray-600 uppercase tracking-widest block mb-1">Enforcement</span>
+                            <p
+                                class="text-[15px] md:text-[17px] leading-[1.8] text-xs text-slate-800 font-bold leading-tight">
+                                Digital trigger halts press
+                                activation.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tech 3 -->
+                <div class="p-6 bg-white border border-slate-200 rounded-[6px] shadow-sm">
+                    <i data-lucide="anchor" class="w-8 h-8 text-brand-orange mb-4"></i>
+                    <h4
+                        class="font-black text-slate-900 text-sm uppercase tracking-wider mb-4 border-b border-slate-100 pb-2">
+                        Load Cells</h4>
+                    <div class="space-y-3">
+                        <div>
+                            <span
+                                class="text-[10px] font-bold text-gray-600 uppercase tracking-widest block mb-1">Purpose</span>
+                            <p
+                                class="text-[15px] md:text-[17px] leading-[1.8] text-xs text-slate-800 font-bold leading-tight">
+                                Tonnage measurement.</p>
+                        </div>
+                        <div>
+                            <span
+                                class="text-[10px] font-bold text-gray-600 uppercase tracking-widest block mb-1">Defect
+                                Blocked</span>
+                            <p
+                                class="text-[15px] md:text-[17px] leading-[1.8] text-xs text-slate-800 font-bold leading-tight">
+                                Double-blanking &amp; crack.</p>
+                        </div>
+                        <div>
+                            <span
+                                class="text-[10px] font-bold text-gray-600 uppercase tracking-widest block mb-1">Enforcement</span>
+                            <p
+                                class="text-[15px] md:text-[17px] leading-[1.8] text-xs text-slate-800 font-bold leading-tight">
+                                Force threshold logic kills power
+                                feed.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tech 4 -->
+                <div class="p-6 bg-white border border-slate-200 rounded-[6px] shadow-sm">
+                    <i data-lucide="toggle-right" class="w-8 h-8 text-brand-orange mb-4"></i>
+                    <h4
+                        class="font-black text-slate-900 text-sm uppercase tracking-wider mb-4 border-b border-slate-100 pb-2">
+                        Limit Switches</h4>
+                    <div class="space-y-3">
+                        <div>
+                            <span
+                                class="text-[10px] font-bold text-gray-600 uppercase tracking-widest block mb-1">Purpose</span>
+                            <p
+                                class="text-[15px] md:text-[17px] leading-[1.8] text-xs text-slate-800 font-bold leading-tight">
+                                Actuation stroke boundary.</p>
+                        </div>
+                        <div>
+                            <span
+                                class="text-[10px] font-bold text-gray-600 uppercase tracking-widest block mb-1">Defect
+                                Blocked</span>
+                            <p
+                                class="text-[15px] md:text-[17px] leading-[1.8] text-xs text-slate-800 font-bold leading-tight">
+                                Incomplete form/bend depth.</p>
+                        </div>
+                        <div>
+                            <span
+                                class="text-[10px] font-bold text-gray-600 uppercase tracking-widest block mb-1">Enforcement</span>
+                            <p
+                                class="text-[15px] md:text-[17px] leading-[1.8] text-xs text-slate-800 font-bold leading-tight">
+                                Prevents tool extraction on
+                                micro-fail.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. STATISTICAL PROOFING EFFICIENCY -->
+    <section class="py-[60px] md:py-[80px] lg:py-[100px] px-6 bg-[#F8FAFC] border-b-4 border-brand-orange">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <!-- Metric 1 -->
+                <div class="border-l-4 border-brand-orange pl-6">
+                    <h4 class="text-5xl lg:text-7xl font-black text-gray-900 leading-none mb-3 tracking-tighter">0</h4>
+                    <span class="block text-sm font-bold text-gray-600 uppercase tracking-widest mb-2">Defects
+                        Passed</span>
+                    <p
+                        class="text-[15px] md:text-[17px] leading-[1.8] text-gray-600 text-xs font-semibold uppercase tracking-wider leading-relaxed">
+                        Absolute
+                        hard-wired prevention stops any compromised geometry moving to downstream cells or dispatch.</p>
+                </div>
+                <!-- Metric 2 -->
+                <div class="border-l-4 border-brand-orange pl-6">
+                    <h4 class="text-5xl lg:text-7xl font-black text-gray-900 leading-none mb-3 tracking-tighter">100%
+                    </h4>
+                    <span class="block text-sm font-bold text-gray-600 uppercase tracking-widest mb-2">Inspection
+                        Redundancy</span>
+                    <p
+                        class="text-[15px] md:text-[17px] leading-[1.8] text-gray-600 text-xs font-semibold uppercase tracking-wider leading-relaxed">
+                        Integrated
+                        Poka-Yoke logic verifies every stroke continuously without external sampling limits.</p>
+                </div>
+                <!-- Metric 3 -->
+                <div class="border-l-4 border-brand-orange pl-6">
+                    <h4 class="text-5xl lg:text-7xl font-black text-gray-900 leading-none mb-3 tracking-tighter">95%
+                    </h4>
+                    <span class="block text-sm font-bold text-gray-600 uppercase tracking-widest mb-2">Rework Cost
+                        Eliminated</span>
+                    <p
+                        class="text-[15px] md:text-[17px] leading-[1.8] text-gray-600 text-xs font-semibold uppercase tracking-wider leading-relaxed">
+                        By
+                        preventing errors at genesis, extensive sorting, quarantine overhead, and rework labor costs
+                        plunge to zeroes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. ZERO-DEFECT IMPLEMENTATION MATRIX -->
+    <section class="py-[60px] md:py-[80px] lg:py-[100px] px-6 bg-white border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-16">
+                <span class="text-brand-orange font-black text-xs uppercase tracking-[0.2em]">Strategy</span>
+                <h2
+                    class="text-[22px] md:text-[30px] lg:text-[36px] font-black text-gray-900 uppercase tracking-tight text-slate-900 mt-2">
+                    Zero-Defect Implementation
+                    Matrix</h2>
+            </div>
+
+            <!-- Industrial Horizontal Timeline -->
+            <div class="relative">
+                <!-- Connecting Line -->
+                <div class="hidden md:block absolute top-8 left-0 w-full h-[2px] bg-slate-300 z-0"></div>
+
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-y-10 md:gap-x-8 relative z-10">
+
+                    <!-- Step 1 -->
+                    <div class="flex flex-col items-start md:items-center relative group">
+                        <div
+                            class="w-16 h-16 bg-[#F8FAFC] text-brand-orange font-black text-xl flex items-center justify-center rounded-[4px] shrink-0 border-4 border-white mb-6 z-10 shadow-none">
+                            01</div>
+                        <div class="md:text-center text-left">
+                            <h4 class="font-black text-slate-900 text-sm uppercase tracking-wider mb-2">FMEA Analysis
+                            </h4>
+                            <p
+                                class="text-[15px] md:text-[17px] leading-[1.8] text-xs text-gray-600 font-bold leading-tight px-2">
+                                Mapping all theoretical
+                                failure modes within the initial part processing parameters.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="flex flex-col items-start md:items-center relative group">
+                        <div
+                            class="w-16 h-16 bg-[#F8FAFC] text-brand-orange font-black text-xl flex items-center justify-center rounded-[4px] shrink-0 border-4 border-white mb-6 z-10 shadow-none">
+                            02</div>
+                        <div class="md:text-center text-left">
+                            <h4 class="font-black text-slate-900 text-sm uppercase tracking-wider mb-2">Constraint-Based
+                                Design</h4>
+                            <p
+                                class="text-[15px] md:text-[17px] leading-[1.8] text-xs text-gray-600 font-bold leading-tight px-2">
+                                Formulating tooling offsets
+                                that make an incorrect loading procedure physically impossible.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="flex flex-col items-start md:items-center relative group">
+                        <div
+                            class="w-16 h-16 bg-[#F8FAFC] text-brand-orange font-black text-xl flex items-center justify-center rounded-[4px] shrink-0 border-4 border-white mb-6 z-10 shadow-none">
+                            03</div>
+                        <div class="md:text-center text-left">
+                            <h4 class="font-black text-slate-900 text-sm uppercase tracking-wider mb-2">Hardware Linkage
+                                Integration</h4>
+                            <p
+                                class="text-[15px] md:text-[17px] leading-[1.8] text-xs text-gray-600 font-bold leading-tight px-2">
+                                Installing rigid limit
+                                switches, arrays, and contact nodes onto forming equipment.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="flex flex-col items-start md:items-center relative group">
+                        <div
+                            class="w-16 h-16 bg-brand-orange text-slate-900 font-black text-xl flex items-center justify-center rounded-[4px] shrink-0 border-4 border-white mb-6 z-10 shadow-none">
+                            04</div>
+                        <div class="md:text-center text-left">
+                            <h4 class="font-black text-slate-900 text-sm uppercase tracking-wider mb-2">Immutable
+                                Compliance</h4>
+                            <p
+                                class="text-[15px] md:text-[17px] leading-[1.8] text-xs text-gray-600 font-bold leading-tight px-2">
+                                Freezing standard logic chains
+                                creating permanent go/no-go quality gates on the floor.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. NEW: CONTROL LOGIC ARCHITECTURE -->
+    <section class="py-[60px] md:py-[80px] lg:py-[100px] px-6 bg-slate-50 border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col lg:flex-row gap-16 items-start">
+                <div class="lg:w-1/3">
+                    <span class="text-brand-orange font-black text-xs uppercase tracking-[0.2em]">System Network</span>
+                    <h2
+                        class="text-[22px] md:text-[30px] lg:text-[36px] font-black text-gray-900 uppercase tracking-tight text-slate-900 mt-2 mb-6">
+                        Error-Proofing<br> Control Architecture</h2>
+                    <p
+                        class="text-[15px] md:text-[17px] leading-[1.8] text-gray-600 font-bold leading-relaxed border-l-4 border-slate-300 pl-4">
+                        Multi-layered validation nets creating an infallible sequence from physical placement to digital
+                        compliance recording.
+                    </p>
+                </div>
+
+                <div class="lg:w-2/3 w-full">
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-4 bg-white p-5 border border-slate-200 rounded-[4px]">
+                            <i data-lucide="layers" class="w-6 h-6 text-brand-orange shrink-0"></i>
+                            <div>
+                                <h4 class="font-bold text-slate-900 uppercase tracking-wider text-sm mb-1">Mechanical
+                                    Constraint Layer</h4>
+                                <p class="text-[15px] md:text-[17px] leading-[1.8] text-gray-600 font-medium text-xs">
+                                    Jigs and tool beds acting as the first line
+                                    of physical geometry rejection.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4 bg-white p-5 border border-slate-200 rounded-[4px]">
+                            <i data-lucide="scan-line" class="w-6 h-6 text-brand-orange shrink-0"></i>
+                            <div>
+                                <h4 class="font-bold text-slate-900 uppercase tracking-wider text-sm mb-1">Sensor
+                                    Validation Layer</h4>
+                                <p class="text-[15px] md:text-[17px] leading-[1.8] text-gray-600 font-medium text-xs">
+                                    Optics and force readings checking variable
+                                    data instantly against limits.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4 bg-white p-5 border border-slate-200 rounded-[4px]">
+                            <i data-lucide="cpu" class="w-6 h-6 text-brand-orange shrink-0"></i>
+                            <div>
+                                <h4 class="font-bold text-slate-900 uppercase tracking-wider text-sm mb-1">PLC Logic
+                                    Enforcement</h4>
+                                <p class="text-[15px] md:text-[17px] leading-[1.8] text-gray-600 font-medium text-xs">
+                                    Binary controller actively authorizing or
+                                    killing hydraulic/motor functions.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4 bg-white p-5 border border-slate-200 rounded-[4px]">
+                            <i data-lucide="user-x" class="w-6 h-6 text-brand-orange shrink-0"></i>
+                            <div>
+                                <h4 class="font-bold text-slate-900 uppercase tracking-wider text-sm mb-1">Human
+                                    Override Prevention</h4>
+                                <p class="text-[15px] md:text-[17px] leading-[1.8] text-gray-600 font-medium text-xs">
+                                    Lock-out software disabling manual bypass
+                                    commands during anomalies.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4 bg-white p-5 border border-slate-200 rounded-[4px]">
+                            <i data-lucide="radio-receiver" class="w-6 h-6 text-brand-orange shrink-0"></i>
+                            <div>
+                                <h4 class="font-bold text-slate-900 uppercase tracking-wider text-sm mb-1">Feedback Loop
+                                    Monitoring</h4>
+                                <p class="text-[15px] md:text-[17px] leading-[1.8] text-gray-600 font-medium text-xs">
+                                    Event histories logged direct to QA
+                                    databases detailing error intercepts.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. NEW: OEM BENEFITS -->
+    <section class="py-[60px] md:py-[80px] lg:py-[100px] px-6 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-16 text-center">
+                <h2
+                    class="text-[22px] md:text-[30px] lg:text-[36px] font-black text-gray-900 uppercase tracking-tight text-slate-900 mt-2">
+                    Zero-Defect Impact for OEM
+                    Clients</h2>
+                <div class="w-16 h-1 bg-brand-orange mt-6 mx-auto rounded-none"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div
+                    class="border border-slate-200 p-8 rounded-[4px] relative bg-slate-50 hover:bg-[#F8FAFC]  transition-colors group">
+                    <span class="absolute top-0 left-0 w-1 h-full bg-brand-orange"></span>
+                    <h3
+                        class="text-[20px] md:text-[24px] font-bold text-gray-900 font-black text-lg uppercase tracking-wider mb-4 group- transition-colors">
+                        Downstream Risk Elimination</h3>
+                    <p
+                        class="text-[15px] md:text-[17px] leading-[1.8] text-gray-600 font-bold group- transition-colors">
+                        Assurance
+                        that integrated sub-assemblies will not bind or fail at destination integration.</p>
+                </div>
+                <div
+                    class="border border-slate-200 p-8 rounded-[4px] relative bg-slate-50 hover:bg-[#F8FAFC]  transition-colors group">
+                    <span class="absolute top-0 left-0 w-1 h-full bg-brand-orange"></span>
+                    <h3
+                        class="text-[20px] md:text-[24px] font-bold text-gray-900 font-black text-lg uppercase tracking-wider mb-4 group- transition-colors">
+                        PPAP Stability</h3>
+                    <p
+                        class="text-[15px] md:text-[17px] leading-[1.8] text-gray-600 font-bold group- transition-colors">
+                        Mathematical
+                        lock-in of production part approval processes, averting deviation slip.</p>
+                </div>
+                <div
+                    class="border border-slate-200 p-8 rounded-[4px] relative bg-slate-50 hover:bg-[#F8FAFC]  transition-colors group">
+                    <span class="absolute top-0 left-0 w-1 h-full bg-brand-orange"></span>
+                    <h3
+                        class="text-[20px] md:text-[24px] font-bold text-gray-900 font-black text-lg uppercase tracking-wider mb-4 group- transition-colors">
+                        Warranty Claim Reduction</h3>
+                    <p
+                        class="text-[15px] md:text-[17px] leading-[1.8] text-gray-600 font-bold group- transition-colors">
+                        By severing
+                        defect escape roots, field service cost rates for end products approach zero.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. FINAL CTA -->
+    <section
+        class="py-[60px] md:py-[80px] lg:py-[100px] px-6 bg-white border-t-8 border-brand-orange relative overflow-hidden">
+        <div class="max-w-5xl mx-auto text-center relative z-10 px-6">
+            <h2
+                class="text-[22px] md:text-[30px] lg:text-[36px] font-black text-gray-900 uppercase tracking-tight mb-8">
+                Engineer Defect Prevention Into Your Production Line
+            </h2>
+            <p
+                class="text-[15px] md:text-[17px] leading-[1.8] text-gray-600 font-bold lg:text-base uppercase tracking-wider mb-12 max-w-3xl mx-auto border-l-4 border-r-4 border-brand-orange px-6 py-2">
+                Deploy structural Poka-Yoke systems that physically prevent deviation before cycle execution.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-6 mt-8">
+                <a href="contact.html"
+                    class="inline-flex items-center justify-center gap-3 bg-brand-orange hover:bg-orange-600 text-white px-10 py-5 rounded-sm font-black uppercase tracking-widest text-sm transition-colors w-full sm:w-auto">
+                    Submit Engineering Inquiry <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                </a>
+                <a href="contact.html"
+                    class="inline-flex items-center justify-center gap-3 bg-transparent border-2 border-slate-700 hover:border-slate-500 text-gray-900 px-10 py-5 rounded-sm font-black uppercase tracking-widest text-sm transition-colors w-full sm:w-auto">
+                    Schedule Technical Discussion
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bottom Footer -->
+    
+    <footer class="bg-white pt-24 pb-12 px-6 border-t border-gray-100 relative overflow-hidden">
+        <!-- Decorative subtle element -->
+        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-brand-orange/20 to-transparent"></div>
+        
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-16 mb-20">
+                
+                <!-- Column 1: Logo & Branding -->
+                <div class="lg:col-span-4 space-y-8">
+                    <a href="index.html" class="inline-block transition-transform hover:scale-105 duration-300">
+                        <img width="343" height="96" src="uploads/logo.png" alt="Sivam Itech Logo"
+                            class="h-20 md:h-28 w-auto object-contain">
+                    </a>
+                    <p class="text-zinc-700 text-[16px] leading-[1.8] font-medium max-w-sm">
+                        Redefining precision and synergy in the industrial sector. From concept to complex component
+                        manufacturing with unmatched excellence and technical leadership.
+                    </p>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="lg:col-span-2">
+                    <h5 class="text-[12px] font-black uppercase tracking-[0.3em] mb-8 text-brand-orange">Company</h5>
+                    <ul class="space-y-4">
+                        <li><a href="about.html" class="text-gray-600 hover:text-brand-orange text-[15px] font-semibold transition-colors">About Us</a></li>
+                        <li><a href="infrastructure.html" class="text-gray-600 hover:text-brand-orange text-[15px] font-semibold transition-colors">Infrastructure</a></li>
+                        <li><a href="products.html" class="text-gray-600 hover:text-brand-orange text-[15px] font-semibold transition-colors">Products</a></li>
+                        <li><a href="careers.html" class="text-gray-600 hover:text-brand-orange text-[15px] font-semibold transition-colors">Careers</a></li>
+                        <li><a href="contact.html" class="text-gray-600 hover:text-brand-orange text-[15px] font-semibold transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Connect -->
+                <div class="lg:col-span-3">
+                    <h5 class="text-[12px] font-black uppercase tracking-[0.3em] mb-8 text-brand-orange">Connect</h5>
+                    <ul class="space-y-6">
+                        <li class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-orange-50 flex items-center justify-center shrink-0 border border-orange-100">
+                                <i data-lucide="map-pin" class="w-5 h-5 text-brand-orange"></i>
+                            </div>
+                            <span class="text-gray-600 font-medium text-[14px] leading-relaxed">
+                                No. 115 / 2A, Mahalakshmi Nagar Extension, Noombal, Chennai – 600 077, India.
+                            </span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-orange-50 flex items-center justify-center shrink-0 border border-orange-100">
+                                <i data-lucide="phone" class="w-5 h-5 text-brand-orange"></i>
+                            </div>
+                            <div class="flex flex-col text-[14px] font-bold">
+                                <a href="tel:+919884426111" class="text-gray-700 hover:text-brand-orange transition-colors">+91 98844 26111</a>
+                                <a href="tel:+918428283013" class="text-gray-700 hover:text-brand-orange transition-colors">+91 84282 83013</a>
+                            </div>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-orange-50 flex items-center justify-center shrink-0 border border-orange-100">
+                                <i data-lucide="mail" class="w-5 h-5 text-brand-orange"></i>
+                            </div>
+                            <div class="flex flex-col text-[14px] font-bold overflow-hidden">
+                                <a href="mailto:Vijayakumar.k@sivamitech.com" class="text-gray-700 hover:text-brand-orange transition-colors truncate">Vijayakumar.k@sivamitech.com</a>
+                                <a href="mailto:Nagendran.P@sivamitech.com" class="text-gray-700 hover:text-brand-orange transition-colors truncate">Nagendran.P@sivamitech.com</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Stay Updated & Social -->
+                <div class="lg:col-span-3 space-y-12">
+                    <div>
+                        <h5 class="text-[12px] font-black uppercase tracking-[0.3em] mb-6 text-brand-orange">Follow Us</h5>
+                        <div class="flex flex-col gap-3">
+                            <a href="https://www.linkedin.com/company/sivam-itech-metal-forming-industries/" target="_blank" rel="noopener noreferrer" 
+                               class="flex items-center gap-3 group bg-gray-50 p-2 rounded-2xl border border-gray-100 hover:border-[#0077b5]/30 hover:bg-white transition-all duration-300 hover:-translate-y-1">
+                                <div class="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-[#0077b5] shadow-sm group-hover:bg-[#0077b5] group-hover:text-white transition-all duration-300">
+                                    <i class="fa-brands fa-linkedin text-[18px]"></i>
+                                </div>
+                                <span class="text-[14px] font-bold text-gray-700 group-hover:text-brand-orange transition-colors px-1">LinkedIn</span>
+                            </a>
+                            <a href="https://wa.me/919884426111?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20your%20products%20and%20services%20at%20Sivam%20Itech%20Metal%20Forming%20Industries." target="_blank" rel="noopener noreferrer" 
+                               class="flex items-center gap-3 group bg-gray-50 p-2 rounded-2xl border border-gray-100 hover:border-[#25d366]/30 hover:bg-white transition-all duration-300">
+                                <div class="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-[#25d366] shadow-sm group-hover:bg-[#25d366] group-hover:text-white transition-all duration-300">
+                                    <i class="fa-brands fa-whatsapp text-[20px]"></i>
+                                </div>
+                                <span class="text-[14px] font-bold text-gray-700 group-hover:text-brand-orange transition-colors px-1">WhatsApp</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div>
+                        <h5 class="text-[12px] font-black uppercase tracking-[0.3em] mb-6 text-brand-orange">Newsletter</h5>
+                        <div class="relative group">
+                            <input type="email" placeholder="Corporate email" 
+                                   class="w-full bg-gray-50 border border-gray-200 rounded-2xl px-5 py-4 text-[14px] font-medium outline-none focus:border-brand-orange focus:bg-white transition-all pr-14">
+                            <button class="absolute right-2 top-2 bottom-2 w-10 bg-brand-orange text-white rounded-xl flex items-center justify-center hover:brightness-110 transition-all shadow-lg shadow-brand-orange/20" title="Subscribe">
+                                <i data-lucide="send" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Copyright Bar -->
+            <div class="pt-12 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-8">
+                <p class="text-[11px] font-black text-gray-400 uppercase tracking-[0.2em]">
+                    © 2024 SIVAM ITECH Limited. Precision Engineering Redefined.
+                </p>
+                <div class="flex gap-8 items-center">
+                    <a href="#" class="text-gray-400 hover:text-brand-orange text-[11px] font-black uppercase tracking-widest transition-colors">Privacy</a>
+                    <a href="#" class="text-gray-400 hover:text-brand-orange text-[11px] font-black uppercase tracking-widest transition-colors">Terms</a>
+                    </div>
+        </div>
+        </div>
+    </footer>
+
+    <!-- Custom JS and Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest" defer></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      lucide.createIcons();
+    });
+  </script>
+    <script src="assets/js/main.min.js" defer></script>
+</body>
+
+
+
+
