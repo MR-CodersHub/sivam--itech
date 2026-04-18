@@ -32,7 +32,7 @@ NAVBAR_TEMPLATE = """    <nav class="sticky top-0 w-full z-50 glass-nav">
                 </a>
 
                 <!-- Mobile Menu Button -->
-                <button type="button"
+                <button type="button" id="mobile-menu-btn"
                     class="lg:hidden p-2 text-gray-700 hover:text-brand-orange transition-all duration-300"
                     title="Toggle mobile menu">
                     <i data-lucide="menu" class="w-7 h-7"></i>
@@ -42,7 +42,7 @@ NAVBAR_TEMPLATE = """    <nav class="sticky top-0 w-full z-50 glass-nav">
 
         <!-- Mobile Menu -->
         <div id="mobile-menu">
-            <div class="px-8 py-12 flex flex-col h-full bg-white/95">
+            <div class="px-8 py-6 flex flex-col h-full bg-white/95">
                 <a href="index.html" class="nav-link-mobile {index_active}">Home</a>
                 <a href="about.html" class="nav-link-mobile {about_active}">About Us</a>
                 <a href="infrastructure.html" class="nav-link-mobile {infrastructure_active}">Infrastructure</a>

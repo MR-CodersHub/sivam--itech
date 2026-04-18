@@ -30,9 +30,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Mobile Menu Toggle
-    const menuButton = document.querySelector('button[onclick="toggleMenu()"]') || document.querySelector('.lg\\:hidden');
+    const menuButton = document.getElementById('mobile-menu-btn');
     if (menuButton) {
-        menuButton.removeAttribute('onclick');
         menuButton.addEventListener('click', toggleMenu);
     }
 });
