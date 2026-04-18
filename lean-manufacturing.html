@@ -79,41 +79,53 @@
 
 
     <!-- Navbar -->
-    <nav class="sticky top-0 w-full z-50 glass-nav shadow-md">
-        <div class="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
-            <a href="index.html" class="flex items-center gap-3">
-                <img width="343" height="96" loading="eager" src="uploads/logo.png" alt="Sivam Itech Metal Forming Industries Official Logo"
-                    class="h-28 md:h-36 lg:h-40 w-auto object-contain relative z-10">
+                <nav class="sticky top-0 w-full z-50 glass-nav">
+        <div class="nav-container">
+            <!-- Logo Section -->
+            <a href="index.html" class="flex items-center group">
+                <img width="343" height="96" loading="eager" src="uploads/logo.png"
+                    alt="Sivam Itech Metal Forming Industries Official Logo"
+                    class="h-20 md:h-28 lg:h-32 w-auto object-contain transition-transform duration-500 group-hover:scale-105">
             </a>
 
-            <div class="hidden lg:flex space-x-8 font-bold text-xs uppercase tracking-widest text-gray-700">
-                <a href="index.html" class="nav-link">Home</a>
-                <a href="about.html" class="nav-link">About Us</a>
-                <a href="infrastructure.html" class="nav-link">Infrastructure</a>
-                <a href="products.html" class="nav-link">Products</a>
-                <a href="careers.html" class="nav-link">Careers</a>
-                <a href="contact.html" class="nav-link">Contact Us</a>
+            <!-- Navigation Links - Centered Pill -->
+            <div class="hidden lg:flex items-center justify-center flex-grow">
+                <div class="nav-pill-wrapper">
+                    <a href="index.html" class="nav-link ">Home</a>
+                    <a href="about.html" class="nav-link ">About Us</a>
+                    <a href="infrastructure.html" class="nav-link ">Infrastructure</a>
+                    <a href="products.html" class="nav-link ">Products</a>
+                    <a href="careers.html" class="nav-link ">Careers</a>
+                    <a href="contact.html" class="nav-link ">Contact Us</a>
+                </div>
             </div>
 
-            <a href="inquire.html"
-                class="hidden md:block btn-orange px-6 py-2.5 text-xs font-bold uppercase tracking-widest rounded-full shadow-md hover:shadow-lg">
-                Inquire Now
-            </a>
+            <!-- CTA Section -->
+            <div class="flex items-center gap-6">
+                <a href="inquire.html"
+                    class="hidden md:flex btn-orange-premium px-8 py-3 text-xs font-bold uppercase tracking-widest rounded-full">
+                    Inquire Now
+                </a>
 
-            <!-- Changed onclick to use JS event listener via ID if possible, but keeping simplistic onclick for now as per extraction, 
-                 removed inline onclick to rely on main.js event binding -->
-            <button type="button" class="lg:hidden" onclick="toggleMenu()" title="Toggle mobile menu">
-                <i data-lucide="menu"></i>
-            </button>
+                <!-- Mobile Menu Button -->
+                <button type="button"
+                    class="lg:hidden p-2 text-gray-700 hover:text-brand-orange transition-all duration-300"
+                    title="Toggle mobile menu">
+                    <i data-lucide="menu" class="w-7 h-7"></i>
+                </button>
+            </div>
         </div>
-        <div id="mobile-menu" class="lg:hidden bg-white shadow-lg">
-            <div class="px-6 py-4 flex flex-col space-y-4 font-bold text-xs uppercase">
-                <a href="index.html" class=" transition-colors">Home</a>
-                <a href="about.html" class=" transition-colors">About Us</a>
-                <a href="infrastructure.html" class=" transition-colors">Infrastructure</a>
-                <a href="products.html" class=" transition-colors">Products</a>
-                <a href="careers.html" class=" transition-colors">Careers</a>
-                <a href="contact.html" class=" transition-colors">Contact Us</a>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu">
+            <div class="px-8 py-12 flex flex-col h-full bg-white/95">
+                <a href="index.html" class="nav-link-mobile ">Home</a>
+                <a href="about.html" class="nav-link-mobile ">About Us</a>
+                <a href="infrastructure.html" class="nav-link-mobile ">Infrastructure</a>
+                <a href="products.html" class="nav-link-mobile ">Products</a>
+                <a href="careers.html" class="nav-link-mobile ">Careers</a>
+                <a href="contact.html" class="nav-link-mobile ">Contact Us</a>
+                <a href="inquire.html" class="btn-orange-premium px-8 py-4 text-center mt-8 rounded-xl shadow-xl">Inquire Now</a>
             </div>
         </div>
     </nav>
@@ -635,7 +647,7 @@
                 <div class="lg:col-span-4 space-y-8">
                     <a href="index.html" class="inline-block transition-transform hover:scale-105 duration-300">
                         <img width="343" height="96" src="uploads/logo.png" alt="Sivam Itech Logo"
-                            class="h-20 md:h-28 w-auto object-contain">
+                            class="h-24 md:h-32 lg:h-36 w-auto object-contain">
                     </a>
                     <p class="text-zinc-700 text-[16px] leading-[1.8] font-medium max-w-sm">
                         Redefining precision and synergy in the industrial sector. From concept to complex component
@@ -694,11 +706,11 @@
                         <h5 class="text-[12px] font-black uppercase tracking-[0.3em] mb-6 text-brand-orange">Follow Us</h5>
                         <div class="flex flex-col gap-3">
                             <a href="https://www.linkedin.com/company/sivam-itech-metal-forming-industries/" target="_blank" rel="noopener noreferrer" 
-                               class="flex items-center gap-3 group bg-gray-50 p-2 rounded-2xl border border-gray-100 hover:border-[#0077b5]/30 hover:bg-white transition-all duration-300 hover:-translate-y-1">
-                                <div class="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-[#0077b5] shadow-sm group-hover:bg-[#0077b5] group-hover:text-white transition-all duration-300">
+                               class="flex items-center gap-3 group bg-gray-50 p-2 rounded-2xl border border-gray-100 hover:border-[#0A66C2]/30 hover:bg-white transition-all duration-300 hover:-translate-y-1">
+                                <div class="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-[#0A66C2] shadow-sm group-hover:bg-[#0A66C2] group-hover:text-white transition-all duration-300">
                                     <i class="fa-brands fa-linkedin text-[18px]"></i>
                                 </div>
-                                <span class="text-[14px] font-bold text-gray-700 group-hover:text-brand-orange transition-colors px-1">LinkedIn</span>
+                                <span class="text-[14px] font-bold text-gray-700 group-hover:text-[#0A66C2] transition-colors px-1">LinkedIn</span>
                             </a>
                             <a href="https://wa.me/919884426111?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20your%20products%20and%20services%20at%20Sivam%20Itech%20Metal%20Forming%20Industries." target="_blank" rel="noopener noreferrer" 
                                class="flex items-center gap-3 group bg-gray-50 p-2 rounded-2xl border border-gray-100 hover:border-[#25d366]/30 hover:bg-white transition-all duration-300">
@@ -714,7 +726,7 @@
                         <div class="relative group">
                             <input type="email" placeholder="Corporate email" 
                                    class="w-full bg-gray-50 border border-gray-200 rounded-2xl px-5 py-4 text-[14px] font-medium outline-none focus:border-brand-orange focus:bg-white transition-all pr-14">
-                            <button class="absolute right-2 top-2 bottom-2 w-10 bg-brand-orange text-white rounded-xl flex items-center justify-center hover:brightness-110 transition-all shadow-lg shadow-brand-orange/20" title="Subscribe">
+                            <button class="absolute right-2 top-2 bottom-2 w-10 bg-brand-orange text-white rounded-xl flex items-center justify-center hover:bg-[#c2410c] transition-all shadow-lg shadow-brand-orange/20" title="Subscribe">
                                 <i data-lucide="send" class="w-4 h-4"></i>
                             </button>
                         </div>
@@ -724,9 +736,21 @@
 
             <!-- Bottom Copyright Bar -->
             <div class="pt-12 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-8">
-                <p class="text-[11px] font-black text-gray-400 uppercase tracking-[0.2em]">
-                    © 2024 SIVAM ITECH Limited. Precision Engineering Redefined.
-                </p>
+                <div class="flex flex-col gap-1.5 text-center md:text-left">
+
+                    <p class="text-[11px] font-black text-gray-400 uppercase tracking-[0.2em]">
+
+                        © 2024 SIVAM ITECH Limited. Precision Engineering Redefined.
+
+                    </p>
+
+                    <p class="text-[9px] font-bold text-gray-400/60 uppercase tracking-[0.1em]">
+
+                        Designed and Developed by <a href="#" class="hover:text-brand-orange transition-colors">MR Coders Hub</a>
+
+                    </p>
+
+                </div>
                 <div class="flex gap-8 items-center">
                     <a href="#" class="text-gray-400 hover:text-brand-orange text-[11px] font-black uppercase tracking-widest transition-colors">Privacy</a>
                     <a href="#" class="text-gray-400 hover:text-brand-orange text-[11px] font-black uppercase tracking-widest transition-colors">Terms</a>

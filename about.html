@@ -37,45 +37,56 @@
       </path>
     </svg>
   </a>
-  <nav class="sticky top-0 w-full z-50 glass-nav shadow-md">
-    <div class="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
-      <a href="index.html" class="flex items-center gap-3">
-        <img width="343" height="96" loading="eager" src="uploads/logo.png"
-          alt="Sivam Itech Metal Forming Industries Official Logo"
-          class="h-28 md:h-36 lg:h-40 w-auto object-contain relative z-10 transition-transform hover:scale-105">
-      </a>
+              <nav class="sticky top-0 w-full z-50 glass-nav">
+        <div class="nav-container">
+            <!-- Logo Section -->
+            <a href="index.html" class="flex items-center group">
+                <img width="343" height="96" loading="eager" src="uploads/logo.png"
+                    alt="Sivam Itech Metal Forming Industries Official Logo"
+                    class="h-20 md:h-28 lg:h-32 w-auto object-contain transition-transform duration-500 group-hover:scale-105">
+            </a>
 
-      <div class="hidden lg:flex space-x-8 font-bold text-xs uppercase tracking-widest text-gray-700">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="about.html" class="nav-link text-brand-orange">About Us</a>
-        <a href="infrastructure.html" class="nav-link">Infrastructure</a>
-        <a href="products.html" class="nav-link">Products</a>
-        <a href="careers.html" class="nav-link">Careers</a>
-        <a href="contact.html" class="nav-link">Contact Us</a>
-      </div>
+            <!-- Navigation Links - Centered Pill -->
+            <div class="hidden lg:flex items-center justify-center flex-grow">
+                <div class="nav-pill-wrapper">
+                    <a href="index.html" class="nav-link ">Home</a>
+                    <a href="about.html" class="nav-link active">About Us</a>
+                    <a href="infrastructure.html" class="nav-link ">Infrastructure</a>
+                    <a href="products.html" class="nav-link ">Products</a>
+                    <a href="careers.html" class="nav-link ">Careers</a>
+                    <a href="contact.html" class="nav-link ">Contact Us</a>
+                </div>
+            </div>
 
-      <a href="inquire.html"
-        class="hidden md:block btn-orange px-6 py-2.5 text-xs font-bold uppercase tracking-widest rounded-full shadow-md hover:shadow-lg">
-        Inquire Now
-      </a>
+            <!-- CTA Section -->
+            <div class="flex items-center gap-6">
+                <a href="inquire.html"
+                    class="hidden md:flex btn-orange-premium px-8 py-3 text-xs font-bold uppercase tracking-widest rounded-full">
+                    Inquire Now
+                </a>
 
-      <!-- Changed onclick to use JS event listener via ID if possible, but keeping simplistic onclick for now as per extraction, 
-                 removed inline onclick to rely on main.js event binding -->
-      <button type="button" class="lg:hidden" onclick="toggleMenu()" title="Toggle mobile menu">
-        <i data-lucide="menu"></i>
-      </button>
-    </div>
-    <div id="mobile-menu" class="lg:hidden bg-white shadow-lg">
-      <div class="px-6 py-4 flex flex-col space-y-4 font-bold text-xs uppercase">
-        <a href="index.html" class=" transition-colors">Home</a>
-        <a href="about.html" class=" transition-colors text-brand-orange">About Us</a>
-        <a href="infrastructure.html" class=" transition-colors">Infrastructure</a>
-        <a href="products.html" class=" transition-colors">Products</a>
-        <a href="careers.html" class=" transition-colors">Careers</a>
-        <a href="contact.html" class=" transition-colors">Contact Us</a>
-      </div>
-    </div>
-  </nav>
+                <!-- Mobile Menu Button -->
+                <button type="button"
+                    class="lg:hidden p-2 text-gray-700 hover:text-brand-orange transition-all duration-300"
+                    title="Toggle mobile menu">
+                    <i data-lucide="menu" class="w-7 h-7"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu">
+            <div class="px-8 py-12 flex flex-col h-full bg-white/95">
+                <a href="index.html" class="nav-link-mobile ">Home</a>
+                <a href="about.html" class="nav-link-mobile active">About Us</a>
+                <a href="infrastructure.html" class="nav-link-mobile ">Infrastructure</a>
+                <a href="products.html" class="nav-link-mobile ">Products</a>
+                <a href="careers.html" class="nav-link-mobile ">Careers</a>
+                <a href="contact.html" class="nav-link-mobile ">Contact Us</a>
+                <a href="inquire.html" class="btn-orange-premium px-8 py-4 text-center mt-8 rounded-xl shadow-xl">Inquire Now</a>
+            </div>
+        </div>
+    </nav>
 
   <!-- Page Hero -->
   <section class="py-[60px] md:py-[80px] lg:py-[100px] relative h-[60vh] flex items-center overflow-hidden">
@@ -192,7 +203,7 @@
             width="600" height="400">
           <a href="https://www.linkedin.com/company/sivam-itech-metal-forming-industries/" target="_blank"
             rel="noopener noreferrer"
-            class="absolute top-4 right-4 z-30 bg-white p-2.5 rounded-full text-brand-orange hover:text-white hover:bg-[#0077b5] shadow-lg transition-all duration-300 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0"
+            class="absolute top-4 right-4 z-30 bg-white p-2.5 rounded-full text-brand-orange hover:text-white hover:bg-[#0A66C2] shadow-lg transition-all duration-300 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0"
             title="LinkedIn Profile" onclick="event.stopPropagation()">
             <i class="fa-brands fa-linkedin w-5 h-5"></i>
           </a>
@@ -324,20 +335,20 @@
             </div>
             <a href="https://www.linkedin.com/company/tradelink-transmission-services-pvt-ltd/posts/?feedView=all"
               target="_blank" rel="noopener noreferrer"
-              class="w-12 h-12 rounded-full bg-white flex items-center justify-center border border-gray-100 shadow-[0_4px_12px_rgba(0,0,0,0.08)] transition-all duration-300 hover:bg-[#0077b5] hover:shadow-lg hover:scale-110 group/linkedin shrink-0 z-30"
+              class="w-12 h-12 rounded-full bg-white flex items-center justify-center border border-gray-100 shadow-[0_4px_12px_rgba(0,0,0,0.08)] transition-all duration-300 hover:bg-[#0A66C2] hover:shadow-lg hover:scale-110 group/linkedin shrink-0 z-30"
               title="LinkedIn Profile" onclick="event.stopPropagation()">
               <i
-                class="fa-brands fa-linkedin text-[#0077b5] text-[22px] group-hover/linkedin:text-white transition-colors duration-300"></i>
+                class="fa-brands fa-linkedin text-[#0A66C2] text-[22px] group-hover/linkedin:text-white transition-colors duration-300"></i>
             </a>
           </div>
 
-          <div class="mb-6">
+          <div class="mb-6 min-h-[130px] flex flex-col justify-end">
             <h4 class="text-[22px] md:text-[25px] font-black text-zinc-950 leading-[1.2] mb-3 tracking-tight">
               Tradelink Transmission Services Pvt. Ltd.
             </h4>
             <a href="https://www.google.com/maps/search/Tradelink+Transmission+Services+Pvt.+Ltd.+Ambattur+Industrial+Estate+Chennai"
               target="_blank" rel="noopener noreferrer"
-              class="flex items-center gap-2 text-zinc-800 text-[12px] font-black tracking-widest uppercase hover:text-brand-orange transition-colors"
+              class="flex items-center gap-2 text-zinc-800 text-[12px] font-black tracking-widest uppercase hover:text-brand-orange transition-colors mt-auto"
               onclick="event.stopPropagation()" title="View on Google Maps">
               <i data-lucide="map-pin" class="w-4 h-4 text-brand-orange"></i> Ambattur Industrial Estate, Chennai
             </a>
@@ -363,7 +374,7 @@
             <div class="mt-auto">
               <a href="https://www.tradelinkservices.in/" target="_blank" rel="noopener noreferrer"
                 onclick="event.stopPropagation()"
-                class="inline-flex items-center justify-center gap-2 w-full py-4 rounded-2xl bg-gray-50 text-gray-900 text-[13px] font-black uppercase tracking-widest hover:bg-brand-orange hover:text-white transition-all duration-300 group/btn">
+                class="inline-flex items-center justify-center gap-2 w-full py-4 rounded-2xl bg-gray-50 text-gray-900 text-[13px] font-black uppercase tracking-widest hover:bg-orange-50 hover:text-brand-orange border border-transparent hover:border-orange-100 transition-all duration-300 group/btn">
                 Visit Website
                 <i data-lucide="external-link"
                   class="w-4 h-4 transition-transform duration-300 group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1"></i>
@@ -381,28 +392,21 @@
               class="w-20 h-20 shrink-0 rounded-2xl bg-orange-50 border border-orange-100 flex items-center justify-center text-brand-orange shadow-[0_8px_16px_rgba(0,0,0,0.02)] transition-transform duration-500 group-hover:scale-105">
               <i data-lucide="package" class="w-10 h-10"></i>
             </div>
-            <a href="https://www.linkedin.com/company/bliss-polymers-india-private-limited/" target="_blank"
-              rel="noopener noreferrer"
-              class="w-12 h-12 rounded-full bg-white flex items-center justify-center border border-gray-100 shadow-[0_4px_12px_rgba(0,0,0,0.08)] transition-all duration-300 hover:bg-[#0077b5] hover:shadow-lg hover:scale-110 group/linkedin shrink-0 z-30"
-              title="LinkedIn Profile" onclick="event.stopPropagation()">
-              <i
-                class="fa-brands fa-linkedin text-[#0077b5] text-[22px] group-hover/linkedin:text-white transition-colors duration-300"></i>
-            </a>
           </div>
 
-          <div class="mb-6">
+          <div class="mb-6 min-h-[130px] flex flex-col justify-end">
             <h4 class="text-[22px] md:text-[25px] font-black text-zinc-950 leading-[1.2] mb-3 tracking-tight">
               Bliss Polymers
             </h4>
-            <div class="space-y-2">
+            <div class="space-y-2 mt-auto">
               <div class="flex items-center gap-2 text-brand-orange text-[11px] font-black tracking-widest uppercase">
                 <i data-lucide="award" class="w-3.5 h-3.5"></i> Premium Packaging
               </div>
-              <a href="https://www.google.com/maps/search/Bliss+Polymers+Korattur+Chennai" target="_blank"
+              <a href="https://maps.app.goo.gl/j9mAVcUfoYywbyGx6?g_st=aw" target="_blank"
                 rel="noopener noreferrer"
                 class="flex items-center gap-2 text-zinc-800 text-[12px] font-black tracking-widest uppercase hover:text-brand-orange transition-colors"
                 onclick="event.stopPropagation()" title="View on Google Maps">
-                <i data-lucide="map-pin" class="w-4 h-4 text-brand-orange"></i> Korattur, Chennai
+                <i data-lucide="map-pin" class="w-4 h-4 text-brand-orange"></i> TVS Nagar, Korattur, Chennai
               </a>
             </div>
           </div>
@@ -432,32 +436,24 @@
 
         <!-- Partner 3: Sivam Itech Unit 2 -->
         <div
-          onclick="window.open('https://www.linkedin.com/company/sivam-itech-metal-forming-industries/', '_blank', 'noopener,noreferrer')"
-          class="bg-white border border-gray-100 rounded-[32px] overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_24px_64px_rgba(0,0,0,0.08)] hover:-translate-y-2 transition-all duration-500 group flex flex-col p-8 md:p-10 cursor-pointer h-full">
+          class="bg-white border border-gray-100 rounded-[32px] overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_24px_64px_rgba(0,0,0,0.08)] hover:-translate-y-2 transition-all duration-500 group flex flex-col p-8 md:p-10 h-full">
 
           <div class="flex items-start justify-between mb-8">
             <div
               class="w-20 h-20 shrink-0 rounded-2xl bg-orange-50 border border-orange-100 flex items-center justify-center text-brand-orange shadow-[0_8px_16px_rgba(0,0,0,0.02)] transition-transform duration-500 group-hover:scale-105">
               <i data-lucide="factory" class="w-10 h-10"></i>
             </div>
-            <a href="https://www.linkedin.com/company/sivam-itech-metal-forming-industries/" target="_blank"
-              rel="noopener noreferrer"
-              class="w-12 h-12 rounded-full bg-white flex items-center justify-center border border-gray-100 shadow-[0_4px_12px_rgba(0,0,0,0.08)] transition-all duration-300 hover:bg-[#0077b5] hover:shadow-lg hover:scale-110 group/linkedin shrink-0 z-30"
-              title="LinkedIn Profile" onclick="event.stopPropagation()">
-              <i
-                class="fa-brands fa-linkedin text-[#0077b5] text-[22px] group-hover/linkedin:text-white transition-colors duration-300"></i>
-            </a>
           </div>
 
-          <div class="mb-6">
+          <div class="mb-6 min-h-[130px] flex flex-col justify-end">
             <h4 class="text-[22px] md:text-[25px] font-black text-zinc-950 leading-[1.2] mb-3 tracking-tight">
               Sivam Itech Unit 2
             </h4>
-            <a href="https://www.google.com/maps/search/?api=1&query=Sivam+Itech+Metal+Forming+Industries+Noombal+Chennai"
+            <a href="https://maps.app.goo.gl/gYwj3b7Uzi6jUgoJ9?g_st=aw"
               target="_blank" rel="noopener noreferrer"
-              class="flex items-center gap-2 text-zinc-800 text-[12px] font-black tracking-widest uppercase hover:text-brand-orange transition-colors"
+              class="flex items-center gap-2 text-zinc-800 text-[12px] font-black tracking-widest uppercase hover:text-brand-orange transition-colors mt-auto"
               onclick="event.stopPropagation()" title="View on Google Maps">
-              <i data-lucide="map-pin" class="w-4 h-4 text-brand-orange"></i> Noombal, Chennai
+              <i data-lucide="map-pin" class="w-4 h-4 text-brand-orange"></i> Sidco Industrial Estate, Ambattur, Chennai
             </a>
           </div>
 
@@ -493,45 +489,57 @@
     <div class="max-w-7xl mx-auto px-6">
       <div class="text-center mb-16 md:mb-20">
         <h2 class="text-[12px] font-bold text-brand-orange tracking-[0.3em] uppercase mb-4">Quality Assurance</h2>
-        <h3 class="text-[32px] md:text-[40px] lg:text-[48px] font-black text-gray-900 mb-6 tracking-tight leading-tight">
+        <h3
+          class="text-[32px] md:text-[40px] lg:text-[48px] font-black text-gray-900 mb-6 tracking-tight leading-tight">
           Global Standards & Compliance
         </h3>
         <p class="text-[16px] md:text-[18px] text-gray-600 font-light max-w-2xl mx-auto leading-[1.85]">
-          Committed to unyielding quality through internationally recognized certifications and strict regulatory adherence.
+          Committed to unyielding quality through internationally recognized certifications and strict regulatory
+          adherence.
         </p>
         <div class="w-20 h-1 bg-brand-orange mx-auto mt-8 rounded-full"></div>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto">
         <!-- ISO Certification Card -->
-        <div class="bg-white p-10 rounded-[32px] border border-gray-100 shadow-[0_4px_24px_rgba(0,0,0,0.02)] hover:shadow-[0_32px_64px_rgba(0,0,0,0.06)] hover:-translate-y-2 transition-all duration-500 group">
+        <div
+          class="bg-white p-10 rounded-[32px] border border-gray-100 shadow-[0_4px_24px_rgba(0,0,0,0.02)] hover:shadow-[0_32px_64px_rgba(0,0,0,0.06)] hover:-translate-y-2 transition-all duration-500 group">
           <div class="flex flex-col items-center text-center">
-            <div class="w-24 h-24 rounded-2xl bg-orange-50 flex items-center justify-center mb-8 border border-orange-100 group-hover:bg-brand-orange group-hover:border-brand-orange transition-colors duration-500">
-              <i data-lucide="shield-check" class="w-12 h-12 text-brand-orange group-hover:text-white transition-colors duration-500"></i>
+            <div
+              class="w-24 h-24 rounded-2xl bg-orange-50 flex items-center justify-center mb-8 border border-orange-100 group-hover:bg-brand-orange group-hover:border-brand-orange transition-colors duration-500">
+              <i data-lucide="shield-check"
+                class="w-12 h-12 text-brand-orange group-hover:text-white transition-colors duration-500"></i>
             </div>
             <h4 class="text-[24px] font-black text-gray-900 mb-4 tracking-tight uppercase">ISO 9001:2015</h4>
             <div class="w-12 h-1 bg-gray-100 mb-6 group-hover:bg-brand-orange/30 transition-colors"></div>
             <p class="text-gray-600 text-[16px] leading-[1.8] font-medium">
-              Internationally recognized Quality Management System (QMS) standard that ensures our processes consistently meet customer and regulatory requirements while driving continuous improvement.
+              Internationally recognized Quality Management System (QMS) standard that ensures our processes
+              consistently meet customer and regulatory requirements while driving continuous improvement.
             </p>
-            <div class="mt-8 flex items-center gap-2 text-brand-orange text-[11px] font-black uppercase tracking-widest">
+            <div
+              class="mt-8 flex items-center gap-2 text-brand-orange text-[11px] font-black uppercase tracking-widest">
               <i data-lucide="check-circle" class="w-4 h-4"></i> Certified Compliance
             </div>
           </div>
         </div>
 
         <!-- IATF Certification Card -->
-        <div class="bg-white p-10 rounded-[32px] border border-gray-100 shadow-[0_4px_24px_rgba(0,0,0,0.02)] hover:shadow-[0_32px_64px_rgba(0,0,0,0.06)] hover:-translate-y-2 transition-all duration-500 group">
+        <div
+          class="bg-white p-10 rounded-[32px] border border-gray-100 shadow-[0_4px_24px_rgba(0,0,0,0.02)] hover:shadow-[0_32px_64px_rgba(0,0,0,0.06)] hover:-translate-y-2 transition-all duration-500 group">
           <div class="flex flex-col items-center text-center">
-            <div class="w-24 h-24 rounded-2xl bg-orange-50 flex items-center justify-center mb-8 border border-orange-100 group-hover:bg-brand-orange group-hover:border-brand-orange transition-colors duration-500">
-              <i data-lucide="award" class="w-12 h-12 text-brand-orange group-hover:text-white transition-colors duration-500"></i>
+            <div
+              class="w-24 h-24 rounded-2xl bg-orange-50 flex items-center justify-center mb-8 border border-orange-100 group-hover:bg-brand-orange group-hover:border-brand-orange transition-colors duration-500">
+              <i data-lucide="award"
+                class="w-12 h-12 text-brand-orange group-hover:text-white transition-colors duration-500"></i>
             </div>
             <h4 class="text-[24px] font-black text-gray-900 mb-4 tracking-tight uppercase">IATF 16949:2016</h4>
             <div class="w-12 h-1 bg-gray-100 mb-6 group-hover:bg-brand-orange/30 transition-colors"></div>
             <p class="text-gray-600 text-[16px] leading-[1.8] font-medium">
-              The premier global technical specification and quality management standard specifically for the automotive industry, mandating zero-defect and waste reduction throughout the supply chain.
+              The premier global technical specification and quality management standard specifically for the automotive
+              industry, mandating zero-defect and waste reduction throughout the supply chain.
             </p>
-            <div class="mt-8 flex items-center gap-2 text-brand-orange text-[11px] font-black uppercase tracking-widest">
+            <div
+              class="mt-8 flex items-center gap-2 text-brand-orange text-[11px] font-black uppercase tracking-widest">
               <i data-lucide="check-circle" class="w-4 h-4"></i> Automotive Standard
             </div>
           </div>
@@ -561,254 +569,152 @@
 
       <div class="grid grid-cols-1 gap-12 lg:gap-16 max-w-6xl mx-auto">
 
-        <!-- Promoter 1 -->
-        <div
-          onclick="window.open('https://www.linkedin.com/in/vijaya-kumar-kuppan-3453a113/', '_blank', 'noopener,noreferrer')"
-          class="bg-white border border-gray-100 rounded-[32px] overflow-hidden shadow-[0_4px_24px_rgba(0,0,0,0.04)] hover:shadow-[0_40px_80px_rgba(0,0,0,0.1)] hover:-translate-y-1 transition-all duration-500 group flex flex-col lg:flex-row cursor-pointer">
-
-          <!-- Image Section -->
-          <div class="relative w-full lg:w-[500px] bg-zinc-50/50 flex items-center justify-center shrink-0">
-            <img loading="lazy" decoding="async" src="uploads/Mr-K-Vijaya-Kumar.png.avif" alt="Mr. K. Vijaya Kumar"
-              class="w-full h-auto object-contain object-center group-hover:scale-105 transition-transform duration-700 relative z-10"
-              width="400" height="450">
-
-            <!-- Floating Badge -->
-            <div class="absolute top-6 left-6 z-30">
-              <span
-                class="inline-block px-4 py-1.5 bg-brand-orange text-white text-[10px] font-black uppercase tracking-[0.2em] rounded-full shadow-lg">
-                Operations &amp; Strategy
-              </span>
+        <!-- Promoter 1: Mr. K. Vijaya Kumar (Text Left, Image Right as per reference top) -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center mb-24 lg:mb-40">
+          
+          <!-- Content Block -->
+          <div class="order-last lg:order-first space-y-12">
+            <div class="space-y-6">
+              <div class="flex items-center gap-3">
+                <div class="w-12 h-1 bg-brand-orange rounded-full"></div>
+                <span class="text-[11px] font-black text-brand-orange uppercase tracking-[.4em]">Leadership Profile</span>
+              </div>
+              <h4 class="text-[42px] lg:text-[48px] font-black text-gray-900 leading-[1.05] tracking-tighter whitespace-nowrap">Mr. K. Vijaya Kumar</h4>
+              <p class="text-[16px] font-bold text-gray-400 uppercase tracking-[0.3em]">Operations and Strategy</p>
             </div>
 
-            <!-- Header Info (Bottom-Aligned for Mobile/Tablet) -->
-            <div class="absolute bottom-0 left-0 right-0 px-8 pb-8 z-30 lg:hidden">
-              <div class="flex items-end justify-between gap-4">
-                <div>
-                  <p class="text-[11px] font-bold text-brand-orange uppercase tracking-[0.3em] mb-1">Director</p>
-                  <h4 class="text-[28px] font-black text-white leading-tight">Mr. K. Vijaya Kumar</h4>
+            <div class="space-y-10">
+              <p class="text-zinc-600 leading-relaxed text-[20px] font-medium max-w-xl">
+                With over two decades of technical leadership in the automotive sector, Mr. Vijaya Kumar spearheads the operational excellence and long-term strategic growth at Sivam Itech.
+              </p>
+
+              <div class="space-y-6">
+                <h5 class="text-[11px] font-black text-gray-400 uppercase tracking-[.4em]">Academic Background</h5>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-5 gap-x-8">
+                  <div class="flex items-center gap-3 group/item">
+                    <div class="w-8 h-8 rounded-lg bg-orange-50 flex items-center justify-center border border-orange-100 transition-colors group-hover/item:bg-brand-orange">
+                      <i data-lucide="graduation-cap" class="w-4 h-4 text-brand-orange group-hover/item:text-white"></i>
+                    </div>
+                    <div>
+                      <h6 class="text-[14px] font-bold text-gray-900 leading-tight">IIM Calcutta</h6>
+                      <p class="text-[11px] text-gray-500 font-medium">PGPEX VLM (2011–2012)</p>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-3 group/item">
+                    <div class="w-8 h-8 rounded-lg bg-orange-50 flex items-center justify-center border border-orange-100 transition-colors group-hover/item:bg-brand-orange">
+                      <i data-lucide="award" class="w-4 h-4 text-brand-orange group-hover/item:text-white"></i>
+                    </div>
+                    <div>
+                      <h6 class="text-[14px] font-bold text-gray-900 leading-tight">ISI Chennai</h6>
+                      <p class="text-[11px] text-gray-500 font-medium">Six Sigma Green Belt (2010)</p>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-3 group/item">
+                    <div class="w-8 h-8 rounded-lg bg-orange-50 flex items-center justify-center border border-orange-100 transition-colors group-hover/item:bg-brand-orange">
+                      <i data-lucide="book" class="w-4 h-4 text-brand-orange group-hover/item:text-white"></i>
+                    </div>
+                    <div>
+                      <h6 class="text-[14px] font-bold text-gray-900 leading-tight">Pondicherry Uni</h6>
+                      <p class="text-[11px] text-gray-500 font-medium">M.H.R.M (2003–2005)</p>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-3 group/item">
+                    <div class="w-8 h-8 rounded-lg bg-orange-50 flex items-center justify-center border border-orange-100 transition-colors group-hover/item:bg-brand-orange">
+                      <i data-lucide="file-text" class="w-4 h-4 text-brand-orange group-hover/item:text-white"></i>
+                    </div>
+                    <div>
+                      <h6 class="text-[14px] font-bold text-gray-900 leading-tight">University of Madras</h6>
+                      <p class="text-[11px] text-gray-500 font-medium">B.Tech (1998–2002)</p>
+                    </div>
+                  </div>
                 </div>
-                <a href="https://www.linkedin.com/in/vijaya-kumar-kuppan-3453a113/" target="_blank"
-                  rel="noopener noreferrer"
-                  class="w-12 h-12 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center transition-all duration-300 hover:bg-[#0077b5] hover:border-[#0077b5] hover:scale-110 group/linkedin shrink-0 z-30"
-                  title="LinkedIn Profile" onclick="event.stopPropagation()">
-                  <i class="fa-brands fa-linkedin text-white text-[22px]"></i>
-                </a>
+              </div>
+
+              <div class="pt-10 flex items-center gap-6">
+                <div class="flex items-center gap-2 group/link cursor-pointer" 
+                     onclick="window.open('https://www.linkedin.com/in/vijaya-kumar-kuppan-3453a113/', '_blank', 'noopener,noreferrer')">
+                  <span class="text-[12px] font-black text-[#0A66C2] uppercase tracking-[0.2em]">Contact on LinkedIn</span>
+                  <i data-lucide="external-link" class="w-4 h-4 text-[#0A66C2] transition-transform group-hover/link:translate-x-1"></i>
+                </div>
               </div>
             </div>
           </div>
 
-          <!-- Content Section -->
-          <div class="px-8 py-10 md:p-12 lg:p-16 flex flex-col flex-grow bg-white">
-            <!-- Desktop Header -->
-            <div class="hidden lg:flex items-start justify-between mb-10">
-              <div>
-                <p class="text-[12px] font-bold text-brand-orange uppercase tracking-[0.3em] mb-2">Director</p>
-                <h4 class="text-[38px] font-black text-gray-900 leading-tight">Mr. K. Vijaya Kumar</h4>
-              </div>
-              <a href="https://www.linkedin.com/in/vijaya-kumar-kuppan-3453a113/" target="_blank"
-                rel="noopener noreferrer"
-                class="w-14 h-14 rounded-2xl bg-gray-50 border border-gray-100 flex items-center justify-center transition-all duration-300 hover:bg-[#0077b5] hover:border-[#0077b5] hover:scale-110 group/linkedin shrink-0"
-                title="LinkedIn Profile" onclick="event.stopPropagation()">
-                <i class="fa-brands fa-linkedin text-[#0077b5] group-hover/linkedin:text-white text-[26px] transition-colors"></i>
-              </a>
-            </div>
-
-            <!-- Bio -->
-            <div class="mb-10 max-w-4xl">
-              <p class="text-zinc-700 leading-[1.8] text-[17px] font-medium border-l-4 border-brand-orange pl-8">
-                Over two decades of experience in automotive manufacturing, operations, and supply chain management.
-                Expertise in Value Stream Mapping (VSM) and lean transformation, with training from Japanese experts.
-              </p>
-            </div>
-
-            <!-- Expertise Chips -->
-            <div class="flex flex-wrap gap-2.5 mb-12">
-              <span
-                class="inline-flex items-center px-5 py-2.5 rounded-xl bg-gray-50 text-[11px] font-bold text-gray-700 border border-gray-100 uppercase tracking-wider">
-                <span class="w-2 h-2 rounded-full bg-brand-orange mr-3"></span> Operations Excellence
-              </span>
-              <span
-                class="inline-flex items-center px-5 py-2.5 rounded-xl bg-gray-50 text-[11px] font-bold text-gray-700 border border-gray-100 uppercase tracking-wider">
-                <span class="w-2 h-2 rounded-full bg-brand-orange mr-3"></span> Lean Mfg / VSM
-              </span>
-              <span
-                class="inline-flex items-center px-5 py-2.5 rounded-xl bg-gray-50 text-[11px] font-bold text-gray-700 border border-gray-100 uppercase tracking-wider">
-                <span class="w-2 h-2 rounded-full bg-brand-orange mr-3"></span> Supply Chain
-              </span>
-            </div>
-
-            <!-- Education -->
-            <div class="border-t border-gray-100 pt-10">
-              <h5 class="text-[12px] font-bold text-brand-orange uppercase tracking-[0.3em] mb-8 flex items-center">
-                Academic Background
-              </h5>
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
-                <!-- Education Item 1 -->
-                <div class="flex gap-5 group/edu">
-                  <div
-                    class="w-10 h-10 rounded-xl bg-gray-50 flex items-center justify-center shrink-0 border border-gray-100 group-hover/edu:bg-brand-orange transition-colors duration-300">
-                    <i data-lucide="graduation-cap"
-                      class="w-5 h-5 text-gray-400 group-hover/edu:text-white transition-colors"></i>
-                  </div>
-                  <div>
-                    <h6 class="text-[15px] font-extrabold text-gray-900 leading-tight mb-1">IIM Calcutta</h6>
-                    <p class="text-[14px] text-gray-600 font-medium leading-snug">PGPEX VLM, Manufacturing</p>
-                    <p class="text-[11px] text-gray-400 font-bold uppercase tracking-wider mt-1.5">2011 - 2012</p>
-                  </div>
-                </div>
-
-                <!-- Education Item 2 -->
-                <div class="flex gap-5 group/edu">
-                   <div
-                    class="w-10 h-10 rounded-xl bg-gray-50 flex items-center justify-center shrink-0 border border-gray-100 group-hover/edu:bg-brand-orange transition-colors duration-300">
-                    <i data-lucide="award"
-                      class="w-5 h-5 text-gray-400 group-hover/edu:text-white transition-colors"></i>
-                  </div>
-                  <div>
-                    <h6 class="text-[15px] font-extrabold text-gray-900 leading-tight mb-1">ISI Chennai</h6>
-                    <p class="text-[14px] text-gray-600 font-medium leading-snug">Six Sigma Green Belt Program</p>
-                    <p class="text-[11px] text-gray-400 font-bold uppercase tracking-wider mt-1.5">2010</p>
-                  </div>
-                </div>
-
-                <!-- Education Item 3 -->
-                <div class="flex gap-5 group/edu">
-                   <div
-                    class="w-10 h-10 rounded-xl bg-gray-50 flex items-center justify-center shrink-0 border border-gray-100 group-hover/edu:bg-brand-orange transition-colors duration-300">
-                    <i data-lucide="book-open"
-                      class="w-5 h-5 text-gray-400 group-hover/edu:text-white transition-colors"></i>
-                  </div>
-                  <div>
-                    <h6 class="text-[15px] font-extrabold text-gray-900 leading-tight mb-1">Pondicherry University</h6>
-                    <p class="text-[14px] text-gray-600 font-medium leading-snug">M.H.R.M, Human Resources</p>
-                    <p class="text-[11px] text-gray-400 font-bold uppercase tracking-wider mt-1.5">2003 - 2005</p>
-                  </div>
-                </div>
-
-                <!-- Education Item 4 -->
-                <div class="flex gap-5 group/edu">
-                   <div
-                    class="w-10 h-10 rounded-xl bg-gray-50 flex items-center justify-center shrink-0 border border-gray-100 group-hover/edu:bg-brand-orange transition-colors duration-300">
-                    <i data-lucide="binary"
-                      class="w-5 h-5 text-gray-400 group-hover/edu:text-white transition-colors"></i>
-                  </div>
-                  <div>
-                    <h6 class="text-[15px] font-extrabold text-gray-900 leading-tight mb-1">University of Madras</h6>
-                    <p class="text-[14px] text-gray-600 font-medium leading-snug">B.Tech, Chemical Engineering</p>
-                    <p class="text-[11px] text-gray-400 font-bold uppercase tracking-wider mt-1.5">1998 - 2002</p>
-                  </div>
-                </div>
+          <!-- Image Block (Standalone Card) -->
+          <div class="order-first lg:order-last">
+            <div class="relative aspect-[4/5] lg:aspect-square group cursor-pointer"
+                 onclick="window.open('https://www.linkedin.com/in/vijaya-kumar-kuppan-3453a113/', '_blank', 'noopener,noreferrer')">
+              <div class="absolute inset-0 bg-gray-100 rounded-[48px] lg:rounded-[64px] transition-transform duration-500 group-hover:scale-[0.98]"></div>
+              <img loading="lazy" decoding="async" src="uploads/Mr-K-Vijaya-Kumar.png.avif" alt="Mr. K. Vijaya Kumar"
+                class="absolute inset-0 w-full h-full object-cover object-top rounded-[48px] lg:rounded-[64px] shadow-2xl transition-transform duration-700 group-hover:scale-110 z-20">
+              <div class="absolute -bottom-6 -right-6 w-24 h-24 bg-[#0A66C2] rounded-3xl z-30 flex items-center justify-center shadow-xl lg:flex hidden">
+                <i class="fa-brands fa-linkedin text-white text-[32px]"></i>
               </div>
             </div>
           </div>
         </div>
-        <!-- Promoter 2 -->
-        <div
-          onclick="window.open('https://www.linkedin.com/in/ravi-kumar-k-501b7069/', '_blank', 'noopener,noreferrer')"
-          class="bg-white border border-gray-100 rounded-[32px] overflow-hidden shadow-[0_4px_24px_rgba(0,0,0,0.04)] hover:shadow-[0_40px_80px_rgba(0,0,0,0.1)] hover:-translate-y-1 transition-all duration-500 group flex flex-col lg:flex-row cursor-pointer">
 
-          <!-- Image Section -->
-          <div class="relative w-full lg:w-[500px] bg-zinc-50/50 flex items-center justify-center shrink-0">
-            <img loading="lazy" decoding="async" src="uploads/Mr-K-Ravi-Kumar.png.avif" alt="Mr. K. Ravi Kumar"
-              class="w-full h-auto object-contain object-center group-hover:scale-105 transition-transform duration-700 relative z-10"
-              width="400" height="450">
-
-            <!-- Floating Badge -->
-            <div class="absolute top-6 left-6 z-30">
-              <span
-                class="inline-block px-4 py-1.5 bg-brand-orange text-white text-[10px] font-black uppercase tracking-[0.2em] rounded-full shadow-lg">
-                Finance &amp; Governance
-              </span>
-            </div>
-
-            <!-- Header Info (Bottom-Aligned for Mobile/Tablet) -->
-            <div class="absolute bottom-0 left-0 right-0 px-8 pb-8 z-30 lg:hidden">
-              <div class="flex items-end justify-between gap-4">
-                <div>
-                  <p class="text-[11px] font-bold text-brand-orange uppercase tracking-[0.3em] mb-1">Director</p>
-                  <h4 class="text-[26px] font-black text-white leading-tight">Mr. K. Ravi Kumar</h4>
-                </div>
-                <a href="https://www.linkedin.com/in/ravi-kumar-k-501b7069/" target="_blank"
-                  rel="noopener noreferrer"
-                  class="w-12 h-12 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center transition-all duration-300 hover:bg-[#0077b5] hover:border-[#0077b5] hover:scale-110 group/linkedin shrink-0 z-30"
-                  title="LinkedIn Profile" onclick="event.stopPropagation()">
-                  <i class="fa-brands fa-linkedin text-white text-[22px]"></i>
-                </a>
+        <!-- Promoter 2: Mr. K. Ravi Kumar (Image Left, Text Right as per reference bottom) -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
+          
+          <!-- Image Block (Standalone Card) -->
+          <div class="order-first">
+            <div class="relative aspect-[4/5] lg:aspect-square group cursor-pointer"
+                 onclick="window.open('https://www.linkedin.com/in/ravi-kumar-k-501b7069/', '_blank', 'noopener,noreferrer')">
+              <div class="absolute inset-0 bg-gray-100 rounded-[48px] lg:rounded-[64px] transition-transform duration-500 group-hover:scale-[0.98]"></div>
+              <img loading="lazy" decoding="async" src="uploads/Mr-K-Ravi-Kumar.png.avif" alt="Mr. K. Ravi Kumar"
+                class="absolute inset-0 w-full h-full object-cover object-top rounded-[48px] lg:rounded-[64px] shadow-2xl transition-transform duration-700 group-hover:scale-110 z-20">
+              <div class="absolute -bottom-6 -left-6 w-24 h-24 bg-[#0A66C2] rounded-3xl z-30 flex items-center justify-center shadow-xl lg:flex hidden">
+                <i class="fa-brands fa-linkedin text-white text-[32px]"></i>
               </div>
             </div>
           </div>
 
-          <!-- Content Section -->
-          <div class="px-8 py-10 md:p-12 lg:p-16 flex flex-col flex-grow bg-white">
-            <!-- Desktop Header -->
-            <div class="hidden lg:flex items-start justify-between mb-10">
-              <div>
-                <p class="text-[12px] font-bold text-brand-orange uppercase tracking-[0.3em] mb-2">Director</p>
-                <h4 class="text-[38px] font-black text-gray-900 leading-tight">Mr. K. Ravi Kumar</h4>
+          <!-- Content Block -->
+          <div class="order-last space-y-12">
+            <div class="space-y-6">
+              <div class="flex items-center gap-3">
+                <div class="w-12 h-1 bg-brand-orange rounded-full"></div>
+                <span class="text-[11px] font-black text-brand-orange uppercase tracking-[.4em]">Leadership Profile</span>
               </div>
-              <a href="https://www.linkedin.com/in/ravi-kumar-k-501b7069/" target="_blank" rel="noopener noreferrer"
-                class="w-14 h-14 rounded-2xl bg-gray-50 border border-gray-100 flex items-center justify-center transition-all duration-300 hover:bg-[#0077b5] hover:border-[#0077b5] hover:scale-110 group/linkedin shrink-0"
-                title="LinkedIn Profile" onclick="event.stopPropagation()">
-                <i class="fa-brands fa-linkedin text-[#0077b5] group-hover/linkedin:text-white text-[26px] transition-colors"></i>
-              </a>
+              <h4 class="text-[42px] lg:text-[48px] font-black text-gray-900 leading-[1.05] tracking-tighter whitespace-nowrap">Mr. K. Ravi Kumar</h4>
+              <p class="text-[16px] font-bold text-gray-400 uppercase tracking-[0.3em]">Finance and Governance</p>
             </div>
 
-            <!-- Bio -->
-            <div class="mb-10 max-w-4xl">
-              <p class="text-zinc-700 leading-[1.8] text-[17px] font-medium border-l-4 border-brand-orange pl-8">
-                Chartered Accountant with over 25 years of experience in finance and corporate governance. Has worked
-                with multinationals like Ford and Michelin. Oversees financial management and long-term strategy.
+            <div class="space-y-10">
+              <p class="text-zinc-600 leading-relaxed text-[20px] font-medium max-w-xl">
+                A veteran Chartered Accountant with over 25 years of cross-functional excellence, driving the financial governance and precision-led growth of Sivam Itech.
               </p>
-            </div>
 
-            <!-- Expertise Chips -->
-            <div class="flex flex-wrap gap-2.5 mb-12">
-              <span
-                class="inline-flex items-center px-5 py-2.5 rounded-xl bg-gray-50 text-[11px] font-bold text-gray-700 border border-gray-100 uppercase tracking-wider">
-                <span class="w-2 h-2 rounded-full bg-brand-orange mr-3"></span> Finance Governance
-              </span>
-              <span
-                class="inline-flex items-center px-5 py-2.5 rounded-xl bg-gray-50 text-[11px] font-bold text-gray-700 border border-gray-100 uppercase tracking-wider">
-                <span class="w-2 h-2 rounded-full bg-brand-orange mr-3"></span> Risk Management
-              </span>
-              <span
-                class="inline-flex items-center px-5 py-2.5 rounded-xl bg-gray-50 text-[11px] font-bold text-gray-700 border border-gray-100 uppercase tracking-wider">
-                <span class="w-2 h-2 rounded-full bg-brand-orange mr-3"></span> Corporate Strategy
-              </span>
-            </div>
-
-            <!-- Education -->
-            <div class="border-t border-gray-100 pt-10">
-              <h5 class="text-[12px] font-bold text-brand-orange uppercase tracking-[0.3em] mb-8 flex items-center">
-                Academic Background
-              </h5>
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
-                <!-- Education Item 1 -->
-                <div class="flex gap-5 group/edu">
-                  <div
-                    class="w-10 h-10 rounded-xl bg-gray-50 flex items-center justify-center shrink-0 border border-gray-100 group-hover/edu:bg-brand-orange transition-colors duration-300">
-                    <i data-lucide="graduation-cap"
-                      class="w-5 h-5 text-gray-400 group-hover/edu:text-white transition-colors"></i>
+              <div class="space-y-6">
+                <h5 class="text-[11px] font-black text-gray-400 uppercase tracking-[.4em]">Academic Background</h5>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-5 gap-x-8">
+                  <div class="flex items-center gap-3 group/item">
+                    <div class="w-8 h-8 rounded-lg bg-orange-50 flex items-center justify-center border border-orange-100 transition-colors group-hover/item:bg-brand-orange">
+                      <i data-lucide="landmark" class="w-4 h-4 text-brand-orange group-hover/item:text-white"></i>
+                    </div>
+                    <div>
+                      <h6 class="text-[14px] font-bold text-gray-900">ICAI (FCA)</h6>
+                      <p class="text-[11px] text-gray-500 font-medium">Fellow Chartered Accountant</p>
+                    </div>
                   </div>
-                  <div>
-                    <h6 class="text-[15px] font-extrabold text-gray-900 leading-tight mb-1">ICAI</h6>
-                    <p class="text-[14px] text-gray-600 font-medium leading-snug">FCA, Finance</p>
-                    <p class="text-[11px] text-gray-400 font-bold uppercase tracking-wider mt-1.5">2000 - 2004</p>
+                  <div class="flex items-center gap-3 group/item">
+                    <div class="w-8 h-8 rounded-lg bg-orange-50 flex items-center justify-center border border-orange-100 transition-colors group-hover/item:bg-brand-orange">
+                      <i data-lucide="graduation-cap" class="w-4 h-4 text-brand-orange group-hover/item:text-white"></i>
+                    </div>
+                    <div>
+                      <h6 class="text-[14px] font-bold text-gray-900">University of Madras</h6>
+                      <p class="text-[11px] text-gray-500 font-medium">B.Com (Commerce)</p>
+                    </div>
                   </div>
                 </div>
+              </div>
 
-                <!-- Education Item 2 -->
-                <div class="flex gap-5 group/edu">
-                  <div
-                    class="w-10 h-10 rounded-xl bg-gray-50 flex items-center justify-center shrink-0 border border-gray-100 group-hover/edu:bg-brand-orange transition-colors duration-300">
-                    <i data-lucide="landmark"
-                      class="w-5 h-5 text-gray-400 group-hover/edu:text-white transition-colors"></i>
-                  </div>
-                  <div>
-                    <h6 class="text-[15px] font-extrabold text-gray-900 leading-tight mb-1">University of Madras</h6>
-                    <p class="text-[14px] text-gray-600 font-medium leading-snug">Bachelor of Commerce (B.Com.)</p>
-                    <p class="text-[11px] text-gray-400 font-bold uppercase tracking-wider mt-1.5">1998 - 2001</p>
-                  </div>
+              <div class="pt-10 flex items-center gap-6">
+                <div class="flex items-center gap-2 group/link cursor-pointer" 
+                     onclick="window.open('https://www.linkedin.com/in/ravi-kumar-k-501b7069/', '_blank', 'noopener,noreferrer')">
+                  <span class="text-[12px] font-black text-[#0A66C2] uppercase tracking-[0.2em]">Contact on LinkedIn</span>
+                  <i data-lucide="external-link" class="w-4 h-4 text-[#0A66C2] transition-transform group-hover/link:translate-x-1"></i>
                 </div>
               </div>
             </div>
@@ -832,7 +738,7 @@
         <div class="lg:col-span-4 space-y-8">
           <a href="index.html" class="inline-block transition-transform hover:scale-105 duration-300">
             <img width="343" height="96" src="uploads/logo.png" alt="Sivam Itech Logo"
-              class="h-20 md:h-28 w-auto object-contain">
+              class="h-24 md:h-32 lg:h-36 w-auto object-contain">
           </a>
           <p class="text-zinc-700 text-[16px] leading-[1.8] font-medium max-w-sm">
             Redefining precision and synergy in the industrial sector. From concept to complex component manufacturing
@@ -872,7 +778,7 @@
                 <i data-lucide="map-pin" class="w-5 h-5 text-brand-orange"></i>
               </div>
               <span class="text-gray-600 font-medium text-[14px] leading-relaxed">
-                No. 115 / 2A, Mahalakshmi Nagar Extension, Noombal, Chennai â€“ 600 077, India.
+                No. 115 / 2A, Mahalakshmi Nagar Extension, Noombal, Chennai – 600 077, India.
               </span>
             </li>
             <li class="flex items-center gap-4">
@@ -881,10 +787,9 @@
                 <i data-lucide="phone" class="w-5 h-5 text-brand-orange"></i>
               </div>
               <div class="flex flex-col text-[14px] font-bold">
-                <a href="tel:+919884426111" class="text-gray-700 hover:text-brand-orange transition-colors">+91 98844
-                  26111</a>
-                <a href="tel:+918428283013" class="text-gray-700 hover:text-brand-orange transition-colors">+91 84282
-                  83013</a>
+                <a href="tel:+919884426111" class="text-gray-700 hover:text-brand-orange transition-colors">+91 98844 26111</a>
+                <a href="tel:+918428283013" class="text-gray-700 hover:text-brand-orange transition-colors">+91 84282 83013</a>
+                <a href="tel:+919000012345" class="text-gray-700 hover:text-brand-orange transition-colors">+91 90000 12345</a>
               </div>
             </li>
             <li class="flex items-center gap-4">
@@ -893,10 +798,9 @@
                 <i data-lucide="mail" class="w-5 h-5 text-brand-orange"></i>
               </div>
               <div class="flex flex-col text-[14px] font-bold overflow-hidden">
-                <a href="mailto:Vijayakumar.k@sivamitech.com"
-                  class="text-gray-700 hover:text-brand-orange transition-colors truncate">Vijayakumar.k@sivamitech.com</a>
-                <a href="mailto:Nagendran.P@sivamitech.com"
-                  class="text-gray-700 hover:text-brand-orange transition-colors truncate">Nagendran.P@sivamitech.com</a>
+                <a href="mailto:Vijayakumar.k@sivamitech.com" class="text-gray-700 hover:text-brand-orange transition-colors truncate">Vijayakumar.k@sivamitech.com</a>
+                <a href="mailto:Nagendran.P@sivamitech.com" class="text-gray-700 hover:text-brand-orange transition-colors truncate">Nagendran.P@sivamitech.com</a>
+                <a href="mailto:info@sivamitech.com" class="text-gray-700 hover:text-brand-orange transition-colors truncate">info@sivamitech.com</a>
               </div>
             </li>
           </ul>
@@ -909,13 +813,13 @@
             <div class="flex flex-col gap-3">
               <a href="https://www.linkedin.com/company/sivam-itech-metal-forming-industries/" target="_blank"
                 rel="noopener noreferrer"
-                class="flex items-center gap-3 group bg-gray-50 p-2 rounded-2xl border border-gray-100 hover:border-[#0077b5]/30 hover:bg-white transition-all duration-300 hover:-translate-y-1">
+                class="flex items-center gap-3 group bg-gray-50 p-2 rounded-2xl border border-gray-100 hover:border-[#0A66C2]/30 hover:bg-white transition-all duration-300 hover:-translate-y-1">
                 <div
-                  class="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-[#0077b5] shadow-sm group-hover:bg-[#0077b5] group-hover:text-white transition-all duration-300">
+                  class="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-[#0A66C2] shadow-sm group-hover:bg-[#0A66C2] group-hover:text-white transition-all duration-300">
                   <i class="fa-brands fa-linkedin text-[18px]"></i>
                 </div>
                 <span
-                  class="text-[14px] font-bold text-gray-700 group-hover:text-brand-orange transition-colors px-1">LinkedIn</span>
+                  class="text-[14px] font-bold text-gray-700 group-hover:text-[#0A66C2] transition-colors px-1">LinkedIn</span>
               </a>
               <a href="https://wa.me/919884426111?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20your%20products%20and%20services%20at%20Sivam%20Itech%20Metal%20Forming%20Industries."
                 target="_blank" rel="noopener noreferrer"
@@ -935,7 +839,7 @@
               <input type="email" placeholder="Corporate email"
                 class="w-full bg-gray-50 border border-gray-200 rounded-2xl px-5 py-4 text-[14px] font-medium outline-none focus:border-brand-orange focus:bg-white transition-all pr-14">
               <button
-                class="absolute right-2 top-2 bottom-2 w-10 bg-brand-orange text-white rounded-xl flex items-center justify-center hover:brightness-110 transition-all shadow-lg shadow-brand-orange/20"
+                class="absolute right-2 top-2 bottom-2 w-10 bg-brand-orange text-white rounded-xl flex items-center justify-center hover:bg-[#c2410c] transition-all shadow-lg shadow-brand-orange/20"
                 title="Subscribe">
                 <i data-lucide="send" class="w-4 h-4"></i>
               </button>
@@ -946,9 +850,21 @@
 
       <!-- Bottom Copyright Bar -->
       <div class="pt-12 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-8">
-        <p class="text-[11px] font-black text-gray-400 uppercase tracking-[0.2em]">
-          © 2024 SIVAM ITECH Limited. Precision Engineering Redefined.
-        </p>
+        <div class="flex flex-col gap-1.5 text-center md:text-left">
+
+            <p class="text-[11px] font-black text-gray-400 uppercase tracking-[0.2em]">
+
+                © 2024 SIVAM ITECH Limited. Precision Engineering Redefined.
+
+            </p>
+
+            <p class="text-[9px] font-bold text-gray-400/60 uppercase tracking-[0.1em]">
+
+                Designed and Developed by <a href="#" class="hover:text-brand-orange transition-colors">MR Coders Hub</a>
+
+            </p>
+
+        </div>
         <div class="flex gap-8 items-center">
           <a href="#"
             class="text-gray-400 hover:text-brand-orange text-[11px] font-black uppercase tracking-widest transition-colors">Privacy</a>

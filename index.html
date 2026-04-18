@@ -40,42 +40,54 @@
     </a>
 
     <!-- Navigation -->
-    <nav class="sticky top-0 w-full z-50 glass-nav shadow-md">
-        <div class="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
-            <a href="index.html" class="flex items-center gap-3">
+    <nav class="sticky top-0 w-full z-50 glass-nav">
+        <div class="nav-container">
+            <!-- Logo Section -->
+            <a href="index.html" class="flex items-center group">
                 <img width="343" height="96" loading="eager" src="uploads/logo.png"
                     alt="Sivam Itech Metal Forming Industries Official Logo"
-                    class="h-28 md:h-36 lg:h-40 w-auto object-contain relative z-10 transition-transform hover:scale-105">
+                    class="h-20 md:h-28 lg:h-32 w-auto object-contain transition-transform duration-500 group-hover:scale-105">
             </a>
 
-            <div class="hidden lg:flex space-x-8 font-bold text-xs uppercase tracking-widest text-gray-700">
-                <a href="index.html" class="nav-link text-brand-orange">Home</a>
-                <a href="about.html" class="nav-link">About Us</a>
-                <a href="infrastructure.html" class="nav-link">Infrastructure</a>
-                <a href="products.html" class="nav-link">Products</a>
-                <a href="careers.html" class="nav-link">Careers</a>
-                <a href="contact.html" class="nav-link">Contact Us</a>
+            <!-- Navigation Links - Centered Pill -->
+            <div class="hidden lg:flex items-center justify-center flex-grow">
+                <div class="nav-pill-wrapper">
+                    <a href="index.html" class="nav-link active">Home</a>
+                    <a href="about.html" class="nav-link ">About Us</a>
+                    <a href="infrastructure.html" class="nav-link ">Infrastructure</a>
+                    <a href="products.html" class="nav-link ">Products</a>
+                    <a href="careers.html" class="nav-link ">Careers</a>
+                    <a href="contact.html" class="nav-link ">Contact Us</a>
+                </div>
             </div>
 
-            <a href="inquire.html"
-                class="hidden md:block btn-orange px-6 py-2.5 text-xs font-bold uppercase tracking-widest rounded-full shadow-md hover:shadow-lg">
-                Inquire Now
-            </a>
+            <!-- CTA Section -->
+            <div class="flex items-center gap-6">
+                <a href="inquire.html"
+                    class="hidden md:flex btn-orange-premium px-8 py-3 text-xs font-bold uppercase tracking-widest rounded-full">
+                    Inquire Now
+                </a>
 
-            <!-- Changed onclick to use JS event listener via ID if possible, but keeping simplistic onclick for now as per extraction, 
-                 removed inline onclick to rely on main.js event binding -->
-            <button type="button" class="lg:hidden" onclick="toggleMenu()" title="Toggle mobile menu">
-                <i data-lucide="menu"></i>
-            </button>
+                <!-- Mobile Menu Button -->
+                <button type="button"
+                    class="lg:hidden p-2 text-gray-700 hover:text-brand-orange transition-all duration-300"
+                    title="Toggle mobile menu">
+                    <i data-lucide="menu" class="w-7 h-7"></i>
+                </button>
+            </div>
         </div>
-        <div id="mobile-menu" class="lg:hidden bg-white shadow-lg">
-            <div class="px-6 py-4 flex flex-col space-y-4 font-bold text-xs uppercase">
-                <a href="index.html" class=" transition-colors text-brand-orange">Home</a>
-                <a href="about.html" class=" transition-colors">About Us</a>
-                <a href="infrastructure.html" class=" transition-colors">Infrastructure</a>
-                <a href="products.html" class=" transition-colors">Products</a>
-                <a href="careers.html" class=" transition-colors">Careers</a>
-                <a href="contact.html" class=" transition-colors">Contact Us</a>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu">
+            <div class="px-8 py-12 flex flex-col h-full bg-white/95">
+                <a href="index.html" class="nav-link-mobile active">Home</a>
+                <a href="about.html" class="nav-link-mobile ">About Us</a>
+                <a href="infrastructure.html" class="nav-link-mobile ">Infrastructure</a>
+                <a href="products.html" class="nav-link-mobile ">Products</a>
+                <a href="careers.html" class="nav-link-mobile ">Careers</a>
+                <a href="contact.html" class="nav-link-mobile ">Contact Us</a>
+                <a href="inquire.html"
+                    class="btn-orange-premium px-8 py-4 text-center mt-8 rounded-xl shadow-xl">Inquire Now</a>
             </div>
         </div>
     </nav>
@@ -382,35 +394,32 @@
                     Customers</h3>
             </div>
 
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 md:gap-8">
+            <div class="logo-grid tier1">
                 <!-- Rane -->
-                <div
-                    class="flex items-center justify-center p-6 bg-white rounded-3xl border border-zinc-100 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 group h-40">
-                    <img src="uploads/rane_logo.png" alt="Rane Logo" class="max-h-28 w-auto object-contain transition-transform duration-500 group-hover:scale-110">
+                <div class="logo-card">
+                    <img src="uploads/rane_logo.png" alt="Rane Logo" loading="lazy">
                 </div>
 
                 <!-- First Engineering -->
-                <div
-                    class="flex items-center justify-center p-6 bg-white rounded-3xl border border-zinc-100 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 group h-40">
-                    <img src="uploads/first_engineering_logo.png" alt="First Engineering Logo" class="max-h-28 scale-150 w-auto object-contain transition-transform duration-500 group-hover:scale-[1.6]">
+                <div class="logo-card">
+                    <img src="uploads/first_engineering_logo.png" alt="First Engineering Logo" loading="lazy"
+                        class="logo-boost-extra">
                 </div>
 
                 <!-- JCBL Marrel -->
-                <div
-                    class="flex items-center justify-center p-6 bg-white rounded-3xl border border-zinc-100 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 group h-40">
-                    <img src="uploads/jcbl_marrel_logo.png" alt="JCBL Marrel Logo" class="max-h-28 scale-125 w-auto object-contain transition-transform duration-500 group-hover:scale-[1.35]">
+                <div class="logo-card">
+                    <img src="uploads/jcbl_marrel_logo.png" alt="JCBL Marrel Logo" loading="lazy" class="logo-premium">
                 </div>
 
                 <!-- Brakes India -->
-                <div
-                    class="flex items-center justify-center p-6 bg-white rounded-3xl border border-zinc-100 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 group h-40">
-                    <img src="uploads/brakes_india_logo.png" alt="Brakes India Logo" class="max-h-28 w-auto object-contain transition-transform duration-500 group-hover:scale-110">
+                <div class="logo-card">
+                    <img src="uploads/brakes_india_logo.png" alt="Brakes India Logo" loading="lazy"
+                        class="logo-premium">
                 </div>
 
                 <!-- UCAL Fuel Systems -->
-                <div
-                    class="flex items-center justify-center p-6 bg-white rounded-3xl border border-zinc-100 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 group h-40">
-                    <img src="uploads/ucal_logo.png" alt="UCAL Logo" class="max-h-28 w-auto object-contain transition-transform duration-500 group-hover:scale-110">
+                <div class="logo-card">
+                    <img src="uploads/ucal_logo.png" alt="UCAL Logo" loading="lazy">
                 </div>
             </div>
         </div>
@@ -427,84 +436,81 @@
                     Customers</h3>
             </div>
 
-            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 md:gap-8 auto-rows-fr">
+            <div class="logo-grid end-customers">
                 <!-- TVS -->
-                <div
-                    class="flex flex-col items-center justify-center p-6 bg-white rounded-3xl border border-zinc-100 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 group h-36">
-                    <div class="text-[28px] font-black italic tracking-tighter text-[#1A237E] flex items-center gap-1">
-                        TVS <span class="bg-red-600 w-6 h-4 rounded-sm"></span>
+                <div class="logo-card">
+                    <div class="text-3xl font-black italic tracking-tighter text-[#1A237E] flex items-center gap-1">
+                        TVS <span class="bg-red-600 w-8 h-5 rounded-sm"></span>
                     </div>
                 </div>
 
                 <!-- Bajaj -->
-                <div
-                    class="flex flex-col items-center justify-center p-6 bg-white rounded-3xl border border-zinc-100 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 group h-36">
-                    <img src="uploads/bajaj_logo.png" alt="Bajaj Logo" class="max-h-20 w-auto object-contain transition-transform duration-500 group-hover:scale-105">
+                <div class="logo-card">
+                    <img src="uploads/bajaj_logo.png" alt="Bajaj Logo" loading="lazy">
                 </div>
 
                 <!-- Tata Motors -->
-                <div
-                    class="flex flex-col items-center justify-center p-6 bg-white rounded-3xl border border-zinc-100 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 group h-36">
-                    <img src="uploads/tata_motors_logo.png" alt="Tata Motors Logo" class="max-h-20 w-auto object-contain transition-transform duration-500 group-hover:scale-105">
+                <div class="logo-card">
+                    <img src="uploads/tata_motors_logo.png" alt="Tata Motors Logo" loading="lazy">
                 </div>
 
                 <!-- Maruti Suzuki -->
-                <div
-                    class="flex flex-col items-center justify-center p-6 bg-white rounded-3xl border border-zinc-100 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 group h-36">
-                    <img src="uploads/maruti_suzuki_logo.png" alt="Maruti Suzuki Logo" class="max-h-20 w-auto object-contain transition-transform duration-500 group-hover:scale-105">
+                <div class="logo-card">
+                    <img src="uploads/maruti_suzuki_logo.png" alt="Maruti Suzuki Logo" loading="lazy">
                 </div>
 
                 <!-- Royal Enfield -->
-                <div
-                    class="flex flex-col items-center justify-center p-6 bg-white rounded-3xl border border-zinc-100 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 group h-36">
-                    <img src="uploads/royal_enfield_logo.png" alt="Royal Enfield Logo" class="max-h-20 w-auto object-contain transition-transform duration-500 group-hover:scale-105">
+                <div class="logo-card">
+                    <img src="uploads/royal_enfield_logo.png" alt="Royal Enfield Logo" loading="lazy">
                 </div>
 
                 <!-- Suzuki -->
-                <div
-                    class="flex flex-col items-center justify-center p-6 bg-white rounded-3xl border border-zinc-100 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 group h-36">
-                    <img src="uploads/suzuki_logo.png" alt="Suzuki Logo" class="max-h-20 w-auto object-contain transition-transform duration-500 group-hover:scale-105">
+                <div class="logo-card">
+                    <img src="uploads/suzuki_logo.png" alt="Suzuki Logo" loading="lazy">
                 </div>
 
                 <!-- Vespa -->
-                <div
-                    class="flex flex-col items-center justify-center p-6 bg-white rounded-3xl border border-zinc-100 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 group h-36">
-                    <img src="uploads/vespa_logo.png" alt="Vespa Logo" class="max-h-20 w-auto object-contain transition-transform duration-500 group-hover:scale-105">
+                <div class="logo-card">
+                    <img src="uploads/vespa_logo.png" alt="Vespa Logo" loading="lazy">
                 </div>
 
                 <!-- ISK -->
-                <div
-                    class="flex flex-col items-center justify-center p-6 bg-white rounded-3xl border border-zinc-100 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 group h-36">
-                   <div class="w-14 h-14 rounded-full bg-red-600 flex items-center justify-center text-white font-black italic text-xl border-4 border-white shadow-md">ISK</div>
+                <div class="logo-card">
+                    <div
+                        class="w-28 h-28 rounded-full bg-red-600 flex items-center justify-center text-white font-black italic text-4xl border-4 border-white shadow-xl">
+                        ISK
+                    </div>
                 </div>
 
                 <!-- Piaggio -->
-                <div
-                    class="flex flex-col items-center justify-center p-6 bg-white rounded-3xl border border-zinc-100 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 group h-36">
-                    <div class="bg-[#00529B] p-2 rounded-lg flex flex-col items-center shadow-lg">
-                        <span class="text-white font-black text-2xl leading-none">P</span>
-                        <span class="text-white font-black text-[10px] tracking-widest uppercase border-t border-white/20 mt-1 pt-1">PIAGGIO</span>
+                <div class="logo-card">
+                    <div class="bg-[#00529B] p-5 rounded-2xl flex flex-col items-center shadow-2xl">
+                        <span class="text-white font-black text-6xl leading-none">P</span>
+                        <span
+                            class="text-white font-black text-[14px] tracking-[0.2em] uppercase border-t border-white/20 mt-2 pt-2">
+                            PIAGGIO
+                        </span>
                     </div>
                 </div>
 
                 <!-- JCB -->
-                <div
-                    class="flex flex-col items-center justify-center p-6 bg-white rounded-3xl border border-zinc-100 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 group h-36">
-                    <div class="bg-black px-4 py-2 rounded-md">
-                        <span class="text-yellow-500 font-black text-2xl tracking-tight">JCB</span>
+                <div class="logo-card">
+                    <div class="bg-black px-10 py-5 rounded-xl shadow-xl">
+                        <span class="text-yellow-500 font-black text-5xl tracking-tighter">JCB</span>
                     </div>
                 </div>
 
                 <!-- Tata Nexon -->
-                <div
-                    class="flex flex-col items-center justify-center p-6 bg-white rounded-3xl border border-zinc-100 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 group h-36">
-                    <div class="text-2xl font-black text-zinc-950 tracking-tighter uppercase leading-none text-center">TATA<br>NEXON</div>
+                <div class="logo-card">
+                    <div
+                        class="text-5xl font-black text-zinc-950 tracking-tighter uppercase leading-[0.8] text-center drop-shadow-sm">
+                        TATA<br>NEXON
+                    </div>
                 </div>
 
                 <!-- Hyundai -->
-                <div
-                    class="flex flex-col items-center justify-center p-6 bg-white rounded-3xl border border-zinc-100 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 group h-36">
-                    <img src="uploads/hyundai_logo.png" alt="Hyundai Logo" class="max-h-20 w-auto object-contain transition-transform duration-500 group-hover:scale-105">
+                <div class="logo-card">
+                    <img src="uploads/hyundai_logo.png" alt="Hyundai Logo" loading="lazy">
                 </div>
             </div>
         </div>
@@ -685,11 +691,11 @@
                         <div class="flex justify-between items-start mb-8">
                             <!-- Industrial Press + IoT Icon -->
                             <div
-                                class="w-16 h-16 rounded-2xl flex items-center justify-center bg-gradient-to-br from-orange-50 to-orange-100 group-hover:from-orange-500 group-hover:to-orange-700 transition-all duration-500 shadow-sm border border-orange-100 group-hover:border-orange-500">
+                                class="w-16 h-16 rounded-2xl flex items-center justify-center bg-gradient-to-br from-orange-50 to-orange-100 group-hover:from-orange-100 group-hover:to-orange-200 transition-all duration-500 shadow-sm border border-orange-100 group-hover:border-orange-300">
                                 <svg xmlns="http://www.w3.org/2000/svg"
-                                    class="w-8 h-8 text-orange-600 group- transition-colors duration-500"
-                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
-                                    stroke-linecap="round" stroke-linejoin="round">
+                                    class="w-8 h-8 text-orange-600 transition-colors duration-500" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                                    stroke-linejoin="round">
                                     <!-- Press ram / cylinder body -->
                                     <rect x="8" y="2" width="8" height="5" rx="1" />
                                     <!-- Ram shaft -->
@@ -744,11 +750,11 @@
                         <div class="flex justify-between items-start mb-8">
                             <!-- Digital Twin / Circuit + Data Icon -->
                             <div
-                                class="w-16 h-16 rounded-2xl flex items-center justify-center bg-gradient-to-br from-blue-50 to-blue-100 group-hover:from-blue-500 group-hover:to-blue-700 transition-all duration-500 shadow-sm border border-blue-100 group-hover:border-blue-500">
+                                class="w-16 h-16 rounded-2xl flex items-center justify-center bg-gradient-to-br from-blue-50 to-blue-100 group-hover:from-blue-100 group-hover:to-blue-200 transition-all duration-500 shadow-sm border border-blue-100 group-hover:border-blue-300">
                                 <svg xmlns="http://www.w3.org/2000/svg"
-                                    class="w-8 h-8 text-blue-600 group- transition-colors duration-500"
-                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
-                                    stroke-linecap="round" stroke-linejoin="round">
+                                    class="w-8 h-8 text-blue-600 transition-colors duration-500" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                                    stroke-linejoin="round">
                                     <!-- Outer chip body -->
                                     <rect x="7" y="7" width="10" height="10" rx="1.5" />
                                     <!-- Inner core dot -->
@@ -816,9 +822,9 @@
                                 <div class="flex justify-between items-start mb-2">
                                     <!-- Brain Icon -->
                                     <div
-                                        class="w-16 h-16 rounded-2xl flex items-center justify-center bg-gradient-to-br from-purple-50 to-purple-100 group-hover:from-purple-500 group-hover:to-purple-700 transition-all duration-500 shadow-sm border border-purple-100 group-hover:border-purple-500">
+                                        class="w-16 h-16 rounded-2xl flex items-center justify-center bg-gradient-to-br from-purple-50 to-purple-100 group-hover:from-purple-100 group-hover:to-purple-200 transition-all duration-500 shadow-sm border border-purple-100 group-hover:border-purple-300">
                                         <i data-lucide="brain"
-                                            class="w-8 h-8 text-purple-600 group- transition-colors duration-500"></i>
+                                            class="w-8 h-8 text-purple-600 transition-colors duration-500"></i>
                                     </div>
                                     <span
                                         class="px-4 py-1.5 bg-purple-100 text-purple-600 rounded-full text-[10px] font-black uppercase tracking-widest">Coming
@@ -872,7 +878,7 @@
                 <div class="lg:col-span-4 space-y-8">
                     <a href="index.html" class="inline-block transition-transform hover:scale-105 duration-300">
                         <img width="343" height="96" src="uploads/logo.png" alt="Sivam Itech Logo"
-                            class="h-20 md:h-28 w-auto object-contain">
+                            class="h-24 md:h-32 lg:h-36 w-auto object-contain">
                     </a>
                     <p class="text-zinc-700 text-[16px] leading-[1.8] font-medium max-w-sm">
                         Redefining precision and synergy in the industrial sector. From concept to complex component
@@ -925,6 +931,8 @@
                                     class="text-gray-700 hover:text-brand-orange transition-colors">+91 98844 26111</a>
                                 <a href="tel:+918428283013"
                                     class="text-gray-700 hover:text-brand-orange transition-colors">+91 84282 83013</a>
+                                <a href="tel:+919000012345"
+                                    class="text-gray-700 hover:text-brand-orange transition-colors">+91 90000 12345</a>
                             </div>
                         </li>
                         <li class="flex items-center gap-4">
@@ -937,6 +945,8 @@
                                     class="text-gray-700 hover:text-brand-orange transition-colors truncate">Vijayakumar.k@sivamitech.com</a>
                                 <a href="mailto:Nagendran.P@sivamitech.com"
                                     class="text-gray-700 hover:text-brand-orange transition-colors truncate">Nagendran.P@sivamitech.com</a>
+                                <a href="mailto:info@sivamitech.com"
+                                    class="text-gray-700 hover:text-brand-orange transition-colors truncate">info@sivamitech.com</a>
                             </div>
                         </li>
                     </ul>
@@ -950,13 +960,13 @@
                         <div class="flex flex-col gap-3">
                             <a href="https://www.linkedin.com/company/sivam-itech-metal-forming-industries/"
                                 target="_blank" rel="noopener noreferrer"
-                                class="flex items-center gap-3 group bg-gray-50 p-2 rounded-2xl border border-gray-100 hover:border-[#0077b5]/30 hover:bg-white transition-all duration-300 hover:-translate-y-1">
+                                class="flex items-center gap-3 group bg-gray-50 p-2 rounded-2xl border border-gray-100 hover:border-[#0A66C2]/30 hover:bg-white transition-all duration-300 hover:-translate-y-1">
                                 <div
-                                    class="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-[#0077b5] shadow-sm group-hover:bg-[#0077b5] group-hover:text-white transition-all duration-300">
+                                    class="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-[#0A66C2] shadow-sm group-hover:bg-[#0A66C2] group-hover:text-white transition-all duration-300">
                                     <i class="fa-brands fa-linkedin text-[18px]"></i>
                                 </div>
                                 <span
-                                    class="text-[14px] font-bold text-gray-700 group-hover:text-brand-orange transition-colors px-1">LinkedIn</span>
+                                    class="text-[14px] font-bold text-gray-700 group-hover:text-[#0A66C2] transition-colors px-1">LinkedIn</span>
                             </a>
                             <a href="https://wa.me/919884426111?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20your%20products%20and%20services%20at%20Sivam%20Itech%20Metal%20Forming%20Industries."
                                 target="_blank" rel="noopener noreferrer"
@@ -977,7 +987,7 @@
                             <input type="email" placeholder="Corporate email"
                                 class="w-full bg-gray-50 border border-gray-200 rounded-2xl px-5 py-4 text-[14px] font-medium outline-none focus:border-brand-orange focus:bg-white transition-all pr-14">
                             <button
-                                class="absolute right-2 top-2 bottom-2 w-10 bg-brand-orange text-white rounded-xl flex items-center justify-center hover:brightness-110 transition-all shadow-lg shadow-brand-orange/20"
+                                class="absolute right-2 top-2 bottom-2 w-10 bg-brand-orange text-white rounded-xl flex items-center justify-center hover:bg-orange-700 transition-all shadow-lg shadow-brand-orange/20"
                                 title="Subscribe">
                                 <i data-lucide="send" class="w-4 h-4"></i>
                             </button>
@@ -988,9 +998,22 @@
 
             <!-- Bottom Copyright Bar -->
             <div class="pt-12 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-8">
-                <p class="text-[11px] font-black text-gray-400 uppercase tracking-[0.2em]">
-                    © 2024 SIVAM ITECH Limited. Precision Engineering Redefined.
-                </p>
+                <div class="flex flex-col gap-1.5 text-center md:text-left">
+
+                    <p class="text-[11px] font-black text-gray-400 uppercase tracking-[0.2em]">
+
+                        © 2024 SIVAM ITECH Limited. Precision Engineering Redefined.
+
+                    </p>
+
+                    <p class="text-[9px] font-bold text-gray-400/60 uppercase tracking-[0.1em]">
+
+                        Designed and Developed by <a href="#" class="hover:text-brand-orange transition-colors">MR
+                            Coders Hub</a>
+
+                    </p>
+
+                </div>
                 <div class="flex gap-8 items-center">
                     <a href="#"
                         class="text-gray-400 hover:text-brand-orange text-[11px] font-black uppercase tracking-widest transition-colors">Privacy</a>

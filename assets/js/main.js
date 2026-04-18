@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Initialize Lucide icons only if the library is loaded
+    // Initialize Lucide icons
     if (window.lucide) {
         lucide.createIcons();
     }
@@ -13,23 +13,27 @@ document.addEventListener('DOMContentLoaded', () => {
                 setTimeout(() => {
                     loader.style.display = 'none';
                 }, 500);
-            }, 500); // Reduced delay for faster UX
+            }, 500);
         }
     });
 
-    // Mobile Menu Toggle
-    const menuButton = document.querySelector('button[onclick="toggleMenu()"]');
-    if (menuButton) {
-        menuButton.removeAttribute('onclick'); // Performance: avoid inline handlers
-        menuButton.addEventListener('click', toggleMenu);
+    // Navbar Scroll Effect
+    const nav = document.querySelector('nav');
+    if (nav) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
     }
 
-
-    // Optimization: Defer non-critical tasks
-    if ('requestIdleCallback' in window) {
-        requestIdleCallback(() => {
-            console.log('Non-critical optimizations applied');
-        });
+    // Mobile Menu Toggle
+    const menuButton = document.querySelector('button[onclick="toggleMenu()"]') || document.querySelector('.lg\\:hidden');
+    if (menuButton) {
+        menuButton.removeAttribute('onclick');
+        menuButton.addEventListener('click', toggleMenu);
     }
 });
 
@@ -39,5 +43,3 @@ function toggleMenu() {
         menu.classList.toggle('active');
     }
 }
-
-// Hero slider logic is now handled by the optimized inline script in index.html for zero-delay start
