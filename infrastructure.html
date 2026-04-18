@@ -765,130 +765,134 @@
 
 
     
-    <footer class="bg-white pt-24 pb-12 px-6 border-t border-gray-100 relative overflow-hidden">
-        <!-- Decorative subtle element -->
-        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-brand-orange/20 to-transparent"></div>
-        
-        <div class="max-w-7xl mx-auto">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-16 mb-20">
-                
-                <!-- Column 1: Logo & Branding -->
+                    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8">
+
+                <!-- Column 1: Logo & About -->
                 <div class="lg:col-span-4 space-y-8">
-                    <a href="index.html" class="inline-block transition-transform hover:scale-105 duration-300">
+                    <a href="index.html" class="inline-block">
                         <img width="343" height="96" src="uploads/logo.png" alt="Sivam Itech Logo"
-                            class="h-24 md:h-32 lg:h-36 w-auto object-contain">
+                            class="h-20 md:h-28 lg:h-32 w-auto object-contain">
                     </a>
-                    <p class="text-zinc-700 text-[16px] leading-[1.8] font-medium max-w-sm">
+                    <p class="text-zinc-600 text-[14px] leading-relaxed max-w-sm font-medium">
                         Redefining precision and synergy in the industrial sector. From concept to complex component
                         manufacturing with unmatched excellence and technical leadership.
                     </p>
                 </div>
 
-                <!-- Column 2: Quick Links -->
+                <!-- Column 2: Company -->
                 <div class="lg:col-span-2">
-                    <h5 class="text-[12px] font-black uppercase tracking-[0.3em] mb-8 text-brand-orange">Company</h5>
-                    <ul class="space-y-4">
-                        <li><a href="about.html" class="text-gray-600 hover:text-brand-orange text-[15px] font-semibold transition-colors">About Us</a></li>
-                        <li><a href="infrastructure.html" class="text-gray-600 hover:text-brand-orange text-[15px] font-semibold transition-colors">Infrastructure</a></li>
-                        <li><a href="products.html" class="text-gray-600 hover:text-brand-orange text-[15px] font-semibold transition-colors">Products</a></li>
-                        <li><a href="careers.html" class="text-gray-600 hover:text-brand-orange text-[15px] font-semibold transition-colors">Careers</a></li>
-                        <li><a href="contact.html" class="text-gray-600 hover:text-brand-orange text-[15px] font-semibold transition-colors">Contact Us</a></li>
+                    <h5 class="footer-section-title">COMPANY</h5>
+                    <ul class="space-y-4 text-[14px] font-semibold text-gray-500">
+                        <li><a href="about.html" class="hover:text-brand-orange transition-colors">About Us</a></li>
+                        <li><a href="infrastructure.html" class="hover:text-brand-orange transition-colors">Infrastructure</a></li>
+                        <li><a href="products.html" class="hover:text-brand-orange transition-colors">Products</a></li>
+                        <li><a href="careers.html" class="hover:text-brand-orange transition-colors">Careers</a></li>
+                        <li><a href="contact.html" class="hover:text-brand-orange transition-colors">Contact Us</a></li>
                     </ul>
                 </div>
 
                 <!-- Column 3: Connect -->
                 <div class="lg:col-span-3">
-                    <h5 class="text-[12px] font-black uppercase tracking-[0.3em] mb-8 text-brand-orange">Connect</h5>
-                    <ul class="space-y-6">
-                        <li class="flex items-start gap-4">
-                            <div class="w-10 h-10 rounded-xl bg-orange-50 flex items-center justify-center shrink-0 border border-orange-100">
-                                <i data-lucide="map-pin" class="w-5 h-5 text-brand-orange"></i>
+                    <h5 class="footer-section-title">CONNECT</h5>
+                    <div class="space-y-6">
+                        <!-- Address -->
+                        <div class="flex gap-4">
+                            <div class="footer-icon-circle">
+                                <i data-lucide="map-pin" class="w-5 h-5"></i>
                             </div>
-                            <span class="text-gray-600 font-medium text-[14px] leading-relaxed">
+                            <p class="text-[13px] font-bold text-gray-600 leading-relaxed">
                                 No. 115 / 2A, Mahalakshmi Nagar Extension, Noombal, Chennai – 600 077, India.
-                            </span>
-                        </li>
-                        <li class="flex items-center gap-4">
-                            <div class="w-10 h-10 rounded-xl bg-orange-50 flex items-center justify-center shrink-0 border border-orange-100">
-                                <i data-lucide="phone" class="w-5 h-5 text-brand-orange"></i>
+                            </p>
+                        </div>
+
+                        <!-- Phone -->
+                        <div class="flex gap-4">
+                            <div class="footer-icon-circle">
+                                <i data-lucide="phone" class="w-5 h-5"></i>
                             </div>
-                            <div class="flex flex-col text-[14px] font-bold">
-                                <a href="tel:+919884426111" class="text-gray-700 hover:text-brand-orange transition-colors">+91 98844 26111</a>
-                                <a href="tel:+918428283013" class="text-gray-700 hover:text-brand-orange transition-colors">+91 84282 83013</a>
-                                <a href="tel:+919000012345" class="text-gray-700 hover:text-brand-orange transition-colors">+91 90000 12345</a>
+                            <div class="flex flex-col text-[13px] font-bold text-gray-600 space-y-1">
+                                <a href="tel:+919884426111" class="hover:text-brand-orange transition-colors">+91 98844 26111</a>
+                                <a href="tel:+918428283013" class="hover:text-brand-orange transition-colors">+91 84282 83013</a>
+                                <a href="tel:+919000012345" class="hover:text-brand-orange transition-colors">+91 90000 12345</a>
                             </div>
-                        </li>
-                        <li class="flex items-center gap-4">
-                            <div class="w-10 h-10 rounded-xl bg-orange-50 flex items-center justify-center shrink-0 border border-orange-100">
-                                <i data-lucide="mail" class="w-5 h-5 text-brand-orange"></i>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="flex gap-4">
+                            <div class="footer-icon-circle">
+                                <i data-lucide="mail" class="w-5 h-5"></i>
                             </div>
-                            <div class="flex flex-col text-[14px] font-bold overflow-hidden">
-                                <a href="mailto:Vijayakumar.k@sivamitech.com" class="text-gray-700 hover:text-brand-orange transition-colors truncate">Vijayakumar.k@sivamitech.com</a>
-                                <a href="mailto:Nagendran.P@sivamitech.com" class="text-gray-700 hover:text-brand-orange transition-colors truncate">Nagendran.P@sivamitech.com</a>
-                                <a href="mailto:info@sivamitech.com" class="text-gray-700 hover:text-brand-orange transition-colors truncate">info@sivamitech.com</a>
+                            <div class="flex flex-col text-[13px] font-bold text-gray-600 space-y-1">
+                                <a href="mailto:Vijayakumar.k@sivamitech.com" class="hover:text-brand-orange transition-colors">Vijayakumar.k@sivamitech.com</a>
+                                <a href="mailto:Nagendran.P@sivamitech.com" class="hover:text-brand-orange transition-colors">Nagendran.P@sivamitech.com</a>
+                                <a href="mailto:info@sivamitech.com" class="hover:text-brand-orange transition-colors">info@sivamitech.com</a>
                             </div>
-                        </li>
-                    </ul>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Column 4: Stay Updated & Social -->
-                <div class="lg:col-span-3 space-y-12">
+                <!-- Column 4: Follow & Newsletter -->
+                <div class="lg:col-span-3 space-y-10">
                     <div>
-                        <h5 class="text-[12px] font-black uppercase tracking-[0.3em] mb-6 text-brand-orange">Follow Us</h5>
-                        <div class="flex flex-col gap-3">
-                            <a href="https://www.linkedin.com/company/sivam-itech-metal-forming-industries/" target="_blank" rel="noopener noreferrer" 
-                               class="flex items-center gap-3 group bg-gray-50 p-2 rounded-2xl border border-gray-100 hover:border-[#0A66C2]/30 hover:bg-white transition-all duration-300 hover:-translate-y-1">
-                                <div class="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-[#0A66C2] shadow-sm group-hover:bg-[#0A66C2] group-hover:text-white transition-all duration-300">
-                                    <i class="fa-brands fa-linkedin text-[18px]"></i>
+                        <h5 class="footer-section-title">FOLLOW US</h5>
+                        <div class="space-y-3">
+                            <a href="https://www.linkedin.com/company/sivam-itech-metal-forming-industries/" target="_blank" class="footer-social-block">
+                                <div class="footer-social-icon">
+                                    <i class="fa-brands fa-linkedin-in text-[1.2rem] text-[#0A66C2]"></i>
                                 </div>
-                                <span class="text-[14px] font-bold text-gray-700 group-hover:text-[#0A66C2] transition-colors px-1">LinkedIn</span>
+                                <span class="text-[13px] font-bold text-gray-700">LinkedIn</span>
                             </a>
-                            <a href="https://wa.me/919884426111?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20your%20products%20and%20services%20at%20Sivam%20Itech%20Metal%20Forming%20Industries." target="_blank" rel="noopener noreferrer" 
-                               class="flex items-center gap-3 group bg-gray-50 p-2 rounded-2xl border border-gray-100 hover:border-[#25d366]/30 hover:bg-white transition-all duration-300">
-                                <div class="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-[#25d366] shadow-sm group-hover:bg-[#25d366] group-hover:text-white transition-all duration-300">
-                                    <i class="fa-brands fa-whatsapp text-[20px]"></i>
+                            <a href="https://wa.me/919884426111" target="_blank" class="footer-social-block">
+                                <div class="footer-social-icon">
+                                    <i class="fa-brands fa-whatsapp text-[1.2rem] text-[#25D366]"></i>
                                 </div>
-                                <span class="text-[14px] font-bold text-gray-700 group-hover:text-brand-orange transition-colors px-1">WhatsApp</span>
+                                <span class="text-[13px] font-bold text-gray-700">WhatsApp</span>
                             </a>
                         </div>
                     </div>
+
                     <div>
-                        <h5 class="text-[12px] font-black uppercase tracking-[0.3em] mb-6 text-brand-orange">Newsletter</h5>
-                        <div class="relative group">
-                            <input type="email" placeholder="Corporate email" 
-                                   class="w-full bg-gray-50 border border-gray-200 rounded-2xl px-5 py-4 text-[14px] font-medium outline-none focus:border-brand-orange focus:bg-white transition-all pr-14">
-                            <button class="absolute right-2 top-2 bottom-2 w-10 bg-brand-orange text-white rounded-xl flex items-center justify-center hover:bg-[#c2410c] transition-all shadow-lg shadow-brand-orange/20" title="Subscribe">
+                        <h5 class="footer-section-title">NEWSLETTER</h5>
+                        <div class="footer-newsletter-box">
+                            <input type="email" placeholder="Corporate email" class="footer-newsletter-input">
+                            <button class="w-10 h-10 bg-brand-orange text-white rounded-xl flex items-center justify-center hover:bg-orange-700 transition-all">
                                 <i data-lucide="send" class="w-4 h-4"></i>
                             </button>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <!-- Bottom Copyright Bar -->
-            <div class="pt-12 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-8">
-                <div class="flex flex-col gap-1.5 text-center md:text-left">
-
-                    <p class="text-[11px] font-black text-gray-400 uppercase tracking-[0.2em]">
-
-                        © 2024 SIVAM ITECH Limited. Precision Engineering Redefined.
-
-                    </p>
-
-                    <p class="text-[9px] font-bold text-gray-400/60 uppercase tracking-[0.1em]">
-
-                        Designed and Developed by <a href="#" class="hover:text-brand-orange transition-colors">MR Coders Hub</a>
-
-                    </p>
-
-                </div>
-                <div class="flex gap-8 items-center">
-                    <a href="#" class="text-gray-400 hover:text-brand-orange text-[11px] font-black uppercase tracking-widest transition-colors">Privacy</a>
-                    <a href="#" class="text-gray-400 hover:text-brand-orange text-[11px] font-black uppercase tracking-widest transition-colors">Terms</a>
-                    </div>
-        </div>
         </div>
     </footer>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom-dark px-6">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center gap-6">
+                <a href="about.html" class="footer-bottom-link">Our History</a>
+                <span class="opacity-10 text-gray-300">|</span>
+                <a href="infrastructure.html" class="footer-bottom-link">What We Do</a>
+                <span class="opacity-10 text-gray-300">|</span>
+                <a href="contact.html" class="footer-bottom-link">Support Centre</a>
+            </div>
+            <div class="text-right">
+                <p class="text-[11px] font-semibold text-gray-400 uppercase tracking-widest">
+                    © 2024 Sivam Itech Metal Forming Industries. Precision Simplified.
+                </p>
+                <p class="text-[10px] text-gray-400 mt-1 font-medium italic">
+                    Designed and Developed by <a href="https://mrcodershub.in/" target="_blank" class="text-brand-orange hover:underline transition-all">MR Coders Hub</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    </div>
+er>
+            <p class="mt-4 md:mt-0 opacity-80">© 2025 Sivam Itech. All images are for demo purposes only.</p>
+        </div>
+    </div>
 
 
     <!-- Custom JS and Lucide Icons -->

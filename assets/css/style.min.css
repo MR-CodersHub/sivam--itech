@@ -578,139 +578,195 @@ iframe {
     transform: scale(1.8) !important;
 }
 
-/* Mobile Footer Refinements (Breakpoint: 768px) */
+/* High-Fidelity Refined Footer Design */
+footer {
+    background-color: #ffffff;
+    border-top: 1px solid #f3f4f6;
+    padding: 100px 0 60px;
+}
+
+.footer-section-title {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 800;
+    color: var(--brand-orange);
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    display: block;
+}
+
+.footer-icon-circle {
+    width: 42px;
+    height: 42px;
+    background: #fff8f3;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--brand-orange);
+    flex-shrink: 0;
+}
+
+.footer-social-block {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    background: #f8fafc;
+    border-radius: 12px;
+    padding: 1rem 1.5rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    width: 100%;
+    margin-bottom: 0.75rem;
+}
+
+.footer-social-block:hover {
+    background: #f1f5f9;
+    transform: translateX(4px);
+}
+
+.footer-social-icon {
+    width: 32px;
+    height: 32px;
+    background: #ffffff;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.footer-newsletter-box {
+    background: #f8fafc;
+    border: 1px solid #f1f5f9;
+    border-radius: 16px;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.footer-newsletter-box:focus-within {
+    background: #ffffff;
+    border-color: var(--brand-orange);
+    box-shadow: 0 10px 25px -5px rgba(235, 105, 10, 0.1);
+}
+
+.footer-newsletter-input {
+    background: transparent;
+    border: none;
+    padding: 0.75rem 1rem;
+    font-size: 14px;
+    font-weight: 500;
+    width: 100%;
+    outline: none;
+}
+
+.footer-bottom-dark {
+    background: #ffffff;
+    padding: 2.5rem 0;
+    border-top: 1px solid #f3f4f6;
+}
+
+/* Mobile-Specific Refinements for 360px targeted views */
 @media (max-width: 768px) {
     footer {
-        padding-top: 3.5rem !important;
-        padding-bottom: 2.5rem !important;
-        text-align: left !important;
-        px: 4 !important;
+        padding: 60px 0 40px !important;
+        text-align: center !important;
     }
 
-    footer .max-w-7xl > .grid {
-        gap: 2.5rem !important; /* Reduced for a tighter, cleaner stack */
-    }
-
-    /* Uniform Left Alignment for All Columns */
-    footer .lg:col-span-4,
-    footer .lg:col-span-2,
-    footer .lg:col-span-3,
-    footer .lg:col-span-12 {
+    footer .grid {
         display: flex !important;
         flex-direction: column !important;
-        align-items: flex-start !important;
-        text-align: left !important;
-        width: 100% !important;
+        gap: 3.5rem !important;
+        text-align: center !important;
     }
 
-    footer h5 {
-        margin-bottom: 1rem !important;
-        font-size: 10px !important;
-        letter-spacing: 0.2em !important;
-        font-weight: 900 !important;
+    /* Force all columns to be full-width and center-aligned */
+    footer div[class*="lg:col-span-"] {
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+    }
+
+    footer h5.footer-section-title {
+        text-align: center !important;
+        margin-bottom: 2rem !important;
+        position: relative !important;
+        display: inline-block !important; /* Required for the accent line centering */
+    }
+
+    /* Centered accent line under headings */
+    footer h5.footer-section-title::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        width: 24px;
+        height: 3px;
+        background: var(--brand-orange);
+        border-radius: 99px;
     }
 
     footer img {
-        margin-left: 0 !important;
-        margin-right: auto !important;
-        max-width: 150px !important; /* Controlled size for 360px */
-        height: auto !important;
-        display: block !important;
-        margin-bottom: 1.5rem !important;
+        margin: 0 auto 2rem !important;
+        max-width: 180px !important;
     }
 
     footer p {
-        font-size: 13px !important;
-        line-height: 1.7 !important;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-        max-width: 100% !important;
-        text-align: left !important;
-        color: #4b5563 !important;
+        text-align: center !important;
+        max-width: 320px !important;
+        margin: 0 auto !important;
+        font-size: 14px !important;
     }
 
-    /* List Items & Links Alignment */
     footer ul {
         width: 100% !important;
-        padding: 0 !important;
-        margin: 0 !important;
-        text-align: left !important;
+        text-align: center !important;
     }
 
     footer ul li {
-        flex-direction: row !important; /* Keep icons next to text on left-aligned mobile */
-        align-items: flex-start !important;
-        justify-content: flex-start !important;
-        gap: 0.75rem !important;
-        width: 100% !important;
-        margin-bottom: 0.75rem !important;
+        text-align: center !important;
+        justify-content: center !important;
     }
 
-    footer ul li span,
-    footer ul li a {
-        font-size: 13px !important;
-        text-align: left !important;
-        word-break: break-word !important;
-        max-width: 100% !important;
+    /* Connect Section Icons & Text - Horizontal stack centering */
+    footer .flex.gap-4 {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 1rem !important;
     }
 
-    footer ul li div.flex-col {
-        align-items: flex-start !important;
-        text-align: left !important;
+    footer .footer-icon-circle {
+        margin: 0 auto !important;
     }
 
-    /* Social Links Alignment */
-    footer .flex-col.gap-3 {
-        width: 100% !important;
-        max-width: 100% !important;
-        margin: 0 !important;
-        align-items: flex-start !important;
+    /* Follow Us Section - Centered social blocks */
+    footer .footer-social-block {
+        max-width: 260px !important;
+        justify-content: center !important;
+        margin: 0 auto 0.75rem !important;
     }
 
-    footer .flex-col.gap-3 a {
-        justify-content: flex-start !important;
-        width: auto !important;
-        background: transparent !important;
-        padding-left: 0 !important;
-        border: none !important;
+    /* Bottom Bar - Vertical stack centered on mobile */
+    .footer-bottom-dark .max-w-7xl {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 2rem !important;
+        text-align: center !important;
     }
 
-    /* Newsletter Alignment */
-    footer input {
-        text-align: left !important;
-        padding-right: 3.5rem !important;
-        font-size: 13px !important;
-        border-radius: 12px !important;
+    .footer-bottom-dark .flex.items-center {
+        flex-direction: column !important;
+        gap: 1.25rem !important;
+        justify-content: center !important;
     }
 
-    footer .relative.group button {
-        position: absolute !important;
-        right: 6px !important;
-        top: 6px !important;
-        bottom: 6px !important;
-        width: 40px !important;
-        height: auto !important;
-        margin-top: 0 !important;
-    }
-
-    /* Copyright Bar */
-    footer .pt-12 {
-        gap: 1.5rem !important;
-        padding-top: 2rem !important;
-        align-items: flex-start !important;
-        text-align: left !important;
-    }
-
-    footer .pt-12 p {
-        font-size: 9px !important;
-        text-align: left !important;
-        line-height: 1.5 !important;
-    }
-
-    footer .flex.gap-8.items-center {
-        justify-content: flex-start !important;
-        width: 100% !important;
-        gap: 1.5rem !important;
+    .footer-bottom-dark .text-right {
+        text-align: center !important;
     }
 }
 
