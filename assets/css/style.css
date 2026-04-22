@@ -145,7 +145,7 @@ html, body {
 
 @media (max-width: 480px) {
     .glass-nav img {
-        height: 80px;
+        height: 96px;
     }
     .glass-nav.scrolled img {
         height: 60px;
@@ -778,7 +778,8 @@ footer {
 
     footer img {
         margin: 0 auto 2rem !important;
-        max-width: 180px !important;
+        max-width: 260px !important;
+        height: auto !important;
     }
 
     footer p {
