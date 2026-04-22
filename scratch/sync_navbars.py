@@ -9,10 +9,10 @@ NAVBAR_TEMPLATE = """    <nav class="sticky top-0 w-full z-50 glass-nav">
             <a href="index.html" class="flex items-center group">
                 <img width="343" height="96" loading="eager" src="uploads/logo.png"
                     alt="Sivam Itech Metal Forming Industries Official Logo"
-                    class="h-20 md:h-28 lg:h-32 w-auto object-contain transition-transform duration-500 group-hover:scale-105">
+                    class="h-20 md:h-24 lg:h-28 w-auto object-contain transition-transform duration-500 group-hover:scale-105">
             </a>
 
-            <!-- Navigation Links - Centered Pill -->
+            <!-- Navigation Links - Centered Menu -->
             <div class="hidden lg:flex items-center justify-center flex-grow">
                 <div class="nav-pill-wrapper">
                     <a href="index.html" class="nav-link {index_active}">Home</a>
@@ -26,8 +26,7 @@ NAVBAR_TEMPLATE = """    <nav class="sticky top-0 w-full z-50 glass-nav">
 
             <!-- CTA Section -->
             <div class="flex items-center gap-6">
-                <a href="inquire.html"
-                    class="hidden md:flex btn-orange-premium px-8 py-3 text-xs font-bold uppercase tracking-widest rounded-full">
+                <a href="inquire.html" class="hidden md:flex btn-orange-premium">
                     Inquire Now
                 </a>
 

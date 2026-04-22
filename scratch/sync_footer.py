@@ -10,8 +10,8 @@ FOOTER_TEMPLATE = """
                 <!-- Column 1: Logo & About -->
                 <div class="lg:col-span-4 space-y-8">
                     <a href="index.html" class="inline-block">
-                        <img width="343" height="96" src="uploads/logo.png" alt="Sivam Itech Logo"
-                            class="h-20 md:h-28 lg:h-32 w-auto object-contain">
+                        <img width="300" height="84" src="uploads/logo.png" alt="Sivam Itech Logo"
+                            class="h-20 md:h-24 lg:h-32 w-auto object-contain">
                     </a>
                     <p class="text-zinc-600 text-[14px] leading-relaxed max-w-sm font-medium">
                         Redefining precision and synergy in the industrial sector. From concept to complex component
@@ -53,7 +53,6 @@ FOOTER_TEMPLATE = """
                             <div class="flex flex-col text-[13px] font-bold text-gray-600 space-y-1">
                                 <a href="tel:+919884426111" class="hover:text-brand-orange transition-colors">+91 98844 26111</a>
                                 <a href="tel:+918428283013" class="hover:text-brand-orange transition-colors">+91 84282 83013</a>
-                                <a href="tel:+919000012345" class="hover:text-brand-orange transition-colors">+91 90000 12345</a>
                             </div>
                         </div>
 
@@ -65,7 +64,6 @@ FOOTER_TEMPLATE = """
                             <div class="flex flex-col text-[13px] font-bold text-gray-600 space-y-1">
                                 <a href="mailto:Vijayakumar.k@sivamitech.com" class="hover:text-brand-orange transition-colors">Vijayakumar.k@sivamitech.com</a>
                                 <a href="mailto:Nagendran.P@sivamitech.com" class="hover:text-brand-orange transition-colors">Nagendran.P@sivamitech.com</a>
-                                <a href="mailto:info@sivamitech.com" class="hover:text-brand-orange transition-colors">info@sivamitech.com</a>
                             </div>
                         </div>
                     </div>
