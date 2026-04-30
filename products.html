@@ -633,23 +633,23 @@
                     Pipeline</h3>
             </div>
 
-            <div class="flex flex-col md:flex-row justify-between relative max-w-5xl mx-auto px-4 lg:px-10">
+            <div class="flex flex-col md:flex-row justify-center gap-12 md:gap-16 lg:gap-24 relative max-w-6xl mx-auto px-4">
                 <!-- Line connecting nodes -->
-                <div class="hidden md:block absolute top-[44px] left-[6%] right-[6%] h-[2px] bg-gray-200 z-0"></div>
+                <div class="hidden md:block absolute top-[44px] left-[10%] right-[10%] h-[2px] bg-gray-200 z-0"></div>
                 <div
-                    class="hidden md:block absolute top-[44px] left-[6%] w-[20%] h-[2px] bg-brand-orange z-0 relative overflow-hidden group">
+                    class="hidden md:block absolute top-[44px] left-[10%] right-[10%] h-[2px] bg-brand-orange/30 z-0 overflow-hidden">
                     <div
-                        class="absolute inset-0 bg-white w-full h-full skew-x-12 translate-x-[-100%] animate-[slide_3s_infinite]">
+                        class="absolute inset-0 bg-gradient-to-r from-transparent via-brand-orange to-transparent w-full h-full translate-x-[-100%] animate-[flow_3s_infinite_linear]">
                     </div>
                 </div>
 
                 <style>
-                    @keyframes slide {
+                    @keyframes flow {
                         0% {
-                            transform: translateX(-100%) skewX(12deg);
+                            transform: translateX(-100%);
                         }
                         100% {
-                            transform: translateX(300%) skewX(12deg);
+                            transform: translateX(100%);
                         }
                     }
                 </style>
