@@ -655,12 +655,15 @@ iframe {
     transform: scale(1.8) !important;
 }
 
-/* High-Fidelity Refined Footer Design */
+/* High-Fidelity Refined Footer Design with Sharp Highlighter Effect */
 footer {
-    background-color: #ffffff;
-    border-top: 1px solid #f3f4f6;
+    background-color: #9AA7B3;
+    border-top: 1px solid #f1f5f9;
     padding: 100px 0 60px;
+    position: relative;
 }
+
+
 
 .footer-section-title {
     font-family: 'Roboto Condensed', sans-serif;
@@ -671,6 +674,33 @@ footer {
     text-transform: uppercase;
     letter-spacing: 0.15em;
     display: block;
+}
+
+.footer-nav-link {
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.footer-nav-link:hover, .footer-nav-link-active {
+    color: var(--brand-orange) !important;
+    transform: translateX(4px);
+}
+
+.footer-nav-link-active {
+    font-weight: 800 !important;
+    position: relative;
+}
+
+.footer-nav-link-active::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 15px;
+    height: 2px;
+    background: var(--brand-orange);
+    border-radius: 2px;
+    box-shadow: 0 2px 4px rgba(235, 105, 10, 0.3);
 }
 
 .footer-icon-circle {
@@ -689,32 +719,34 @@ footer {
     display: flex;
     align-items: center;
     gap: 1.25rem;
-    background: #f8fafc;
+    background: #ffffff;
     border-radius: 12px;
     padding: 1rem 1.5rem;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     width: 100%;
     margin-bottom: 0.75rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
 }
 
 .footer-social-block:hover {
-    background: #f1f5f9;
+    background: #f8fafc;
     transform: translateX(4px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
 }
 
 .footer-social-icon {
     width: 32px;
     height: 32px;
-    background: #ffffff;
+    background: #f8fafc;
     border-radius: 6px;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
 }
 
 .footer-newsletter-box {
-    background: #f8fafc;
+    background: #ffffff;
     border: 1px solid #f1f5f9;
     border-radius: 16px;
     padding: 0.5rem;
@@ -740,9 +772,9 @@ footer {
 }
 
 .footer-bottom-dark {
-    background: #ffffff;
+    background: #f9fafb;
     padding: 2.5rem 0;
-    border-top: 1px solid #f3f4f6;
+    border-top: 1px solid #f1f5f9;
 }
 
 /* Mobile-Specific Refinements for 360px targeted views */
@@ -847,4 +879,4 @@ footer {
     }
 }
 
-
+

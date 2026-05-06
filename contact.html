@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
-<body class="bg-white text-gray-600 font-sans antialiased overflow-x-hidden selection:bg-brand-orange pb-10 md:pb-0">
+<body class="bg-transparent text-gray-600 font-sans antialiased overflow-x-hidden selection:bg-brand-orange pb-10 md:pb-0">
 
 
 
@@ -116,67 +116,75 @@
     </section>
 
     <!-- Contact Form & Info -->
-    <section class="py-[60px] md:py-[80px] lg:py-[100px] px-6 bg-white">
+    <section class="py-[60px] md:py-[80px] lg:py-[100px] px-6 section-premium-gray">
         <div class="max-w-7xl mx-auto px-6 space-y-16">
 
             <!-- Row 1: Location & Access (Headquarters & Map) -->
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
                 <div class="space-y-8">
-                    <!-- Headquarters Box -->
+                    <!-- Unified Contact Card -->
                     <div
-                        class="bg-gray-50 text-gray-900 p-10 rounded-2xl relative overflow-hidden shadow-sm hover:shadow-md transition-shadow border-t-4 border-brand-orange">
+                        class="bg-gray-50 text-gray-900 p-8 rounded-2xl relative overflow-hidden shadow-sm hover:shadow-md transition-shadow border-t-4 border-brand-orange">
                         <div class="relative z-10 space-y-8">
-                            <div>
-                                <span
-                                    class="text-xs font-bold uppercase tracking-[0.3em] text-brand-orange mb-2 block">Our
-                                    Base</span>
-                                <h4 class="text-2xl font-black uppercase tracking-tight text-gray-900">Headquarters</h4>
-                            </div>
-                            <div class="space-y-6">
-                                <p class="text-[15px] md:text-[17px] leading-relaxed flex items-start gap-4">
-                                    <i data-lucide="map-pin" class="w-6 h-6 text-brand-orange shrink-0"></i>
+                            
+                            <!-- Section 1: Headquarters -->
+                            <div class="space-y-4">
+                                <div>
+                                    <span class="text-xs font-bold uppercase tracking-[0.3em] text-brand-orange mb-2 block">Our Base</span>
+                                    <h4 class="text-xl font-black uppercase tracking-tight text-gray-900">Headquarters</h4>
+                                </div>
+                                <p class="text-[14px] md:text-[15px] leading-relaxed flex items-start gap-4">
+                                    <i data-lucide="map-pin" class="w-5 h-5 text-brand-orange shrink-0"></i>
                                     <span class="text-gray-600">No. 115 / 2A, Mahalakshmi Nagar Extension, <br> Noombal,
                                         Chennai – 600 077 <br> Tamil Nadu, India</span>
                                 </p>
-                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4 border-t border-gray-100">
-                                    <p class="text-[14px] leading-relaxed flex items-center gap-4">
-                                        <i data-lucide="phone" class="w-5 h-5 text-brand-orange shrink-0"></i>
-                                        <span class="text-gray-900 font-bold flex flex-col gap-1">
-                                            <a href="tel:+919884426111" class=" transition-colors">+91 98844 26111</a>
-                                            <a href="tel:+919000012345" class=" transition-colors">+91 90000 12345</a>
-                                        </span>
-                                    </p>
-                                    <p class="text-[14px] leading-relaxed flex items-center gap-4">
-                                        <i data-lucide="mail" class="w-5 h-5 text-brand-orange shrink-0"></i>
-                                        <span class="text-gray-900 font-bold flex flex-col gap-1">
-                                            <a href="mailto:Vijayakumar.k@sivamitech.com"
-                                                class=" transition-colors">Vijayakumar.k@sivamitech.com</a>
-                                            <a href="mailto:info@sivamitech.com"
-                                                class=" transition-colors">info@sivamitech.com</a>
-                                        </span>
-                                    </p>
-                                </div>
                             </div>
-                        </div>
-                    </div>
 
-                    <!-- Unit 2 Box -->
-                    <div
-                        class="bg-gray-50 text-gray-900 p-10 rounded-2xl relative overflow-hidden shadow-sm hover:shadow-md transition-shadow border-t-4 border-brand-orange">
-                        <div class="relative z-10 space-y-8">
-                            <div>
-                                <span
-                                    class="text-xs font-bold uppercase tracking-[0.3em] text-brand-orange mb-2 block">Sivam
-                                    Itech Unit 2</span>
-                                <h4 class="text-2xl font-black uppercase tracking-tight text-gray-900">UNIT 2</h4>
-                            </div>
-                            <div class="space-y-6">
-                                <p class="text-[15px] md:text-[17px] leading-relaxed flex items-start gap-4">
-                                    <i data-lucide="map-pin" class="w-6 h-6 text-brand-orange shrink-0"></i>
+                            <!-- Divider -->
+                            <div class="h-px bg-gray-200/60 w-full"></div>
+
+                            <!-- Section 2: Unit 2 -->
+                            <div class="space-y-4">
+                                <div>
+                                    <span class="text-xs font-bold uppercase tracking-[0.3em] text-brand-orange mb-2 block">Sivam Itech Unit 2</span>
+                                    <h4 class="text-xl font-black uppercase tracking-tight text-gray-900">UNIT 2</h4>
+                                </div>
+                                <p class="text-[14px] md:text-[15px] leading-relaxed flex items-start gap-4">
+                                    <i data-lucide="map-pin" class="w-5 h-5 text-brand-orange shrink-0"></i>
                                     <span class="text-gray-600">SIDCO Industrial Estate, <br> Ambattur, Chennai <br>
                                         Tamil Nadu, India</span>
                                 </p>
                             </div>
+
+                            <!-- Divider -->
+                            <div class="h-px bg-gray-200/60 w-full"></div>
+
+                            <!-- Section 3: General Contact -->
+                            <div class="space-y-4">
+                                <div>
+                                    <span class="text-xs font-bold uppercase tracking-[0.3em] text-brand-orange mb-2 block">Direct Support</span>
+                                    <h4 class="text-xl font-black uppercase tracking-tight text-gray-900">CONTACT DETAILS</h4>
+                                </div>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-1">
+                                    <p class="text-[13px] leading-relaxed flex items-center gap-4">
+                                        <i data-lucide="phone" class="w-5 h-5 text-brand-orange shrink-0"></i>
+                                        <span class="text-gray-900 font-bold flex flex-col gap-1">
+                                            <a href="tel:+919884426111" class="transition-colors">+91 98844 26111</a>
+                                            <a href="tel:+919000012345" class="transition-colors">+91 90000 12345</a>
+                                        </span>
+                                    </p>
+                                    <p class="text-[13px] leading-relaxed flex items-center gap-4">
+                                        <i data-lucide="mail" class="w-5 h-5 text-brand-orange shrink-0"></i>
+                                        <span class="text-gray-900 font-bold flex flex-col gap-1">
+                                            <a href="mailto:info@sivamitech.com"
+                                                class="transition-colors">info@sivamitech.com</a>
+                                            <a href="mailto:Vijayakumar.k@sivamitech.com"
+                                                class="transition-colors">Vijayakumar.k@sivamitech.com</a>
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -364,7 +372,7 @@
 
 
     <!-- Footer -->
-    <footer class="bg-white border-t border-gray-100">
+    <footer class="border-t border-gray-100">
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8">
 
@@ -384,12 +392,13 @@
                 <div class="lg:col-span-2">
                     <h5 class="footer-section-title">COMPANY</h5>
                     <ul class="space-y-4 text-[14px] font-semibold text-gray-500">
-                        <li><a href="about.html" class="hover:text-brand-orange transition-colors">About Us</a></li>
+                        <li><a href="index.html" class="footer-nav-link">Home</a></li>
+                        <li><a href="about.html" class="footer-nav-link">About Us</a></li>
                         <li><a href="infrastructure.html"
-                                class="hover:text-brand-orange transition-colors">Infrastructure</a></li>
-                        <li><a href="products.html" class="hover:text-brand-orange transition-colors">Products</a></li>
-                        <li><a href="careers.html" class="hover:text-brand-orange transition-colors">Careers</a></li>
-                        <li><a href="contact.html" class="hover:text-brand-orange transition-colors">Contact Us</a></li>
+                                class="footer-nav-link">Infrastructure</a></li>
+                        <li><a href="products.html" class="footer-nav-link">Products</a></li>
+                        <li><a href="careers.html" class="footer-nav-link">Careers</a></li>
+                        <li><a href="contact.html" class="footer-nav-link footer-nav-link-active">Contact Us</a></li>
                     </ul>
                 </div>
 
@@ -484,7 +493,7 @@
                 <p class="text-[11px] font-semibold text-gray-400 uppercase tracking-widest">
                     © 2024 Sivam Itech Metal Forming Industries. Precision Simplified.
                 </p>
-                <p class="text-[10px] text-gray-400 mt-1 font-medium italic">
+                <p class="text-[13px] text-gray-400 mt-1 font-medium italic">
                     Designed and Developed by <a href="https://mrcodershub.in/" target="_blank"
                         class="text-brand-orange hover:underline transition-all">MR Coders Hub</a>
                 </p>
