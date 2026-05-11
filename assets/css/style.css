@@ -7,7 +7,7 @@
 }
 
 html {
-    background-color: #F1F1F0;
+    background-color: #ffffff;
     
     
 }
@@ -661,7 +661,7 @@ iframe {
 
 /* High-Fidelity Refined Footer Design with Sharp Highlighter Effect */
 footer {
-    background: linear-gradient(to bottom, #E1E9F0, #A1B0C0);
+    background: #ffffff;
     border-top: 1px solid #E2E8F0;
     padding: 100px 0 60px;
     position: relative;
@@ -774,7 +774,7 @@ footer {
 }
 
 .footer-bottom-dark {
-    background: #f9fafb;
+    background: #ffffff;
     padding: 2.5rem 0;
     border-top: 1px solid #f1f5f9;
 }
@@ -884,7 +884,7 @@ footer {
 
 
 .section-premium-gray {
-    background: rgba(248, 250, 252, 0.75) !important;
+    background: #ffffff !important;
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(226, 232, 240, 0.5);

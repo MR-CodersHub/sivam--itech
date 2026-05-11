@@ -6,9 +6,16 @@
     --whatsapp-green: #25D366;
 }
 
+html {
+    background-color: #ffffff;
+    
+    
+}
+
 body {
     font-family: 'Inter', sans-serif;
     scroll-behavior: smooth;
+    background: transparent;
 }
 
 h1,
@@ -145,7 +152,7 @@ html, body {
 
 @media (max-width: 480px) {
     .glass-nav img {
-        height: 80px;
+        height: 96px;
     }
     .glass-nav.scrolled img {
         height: 60px;
@@ -423,10 +430,7 @@ a, button, .group, .nextgen-card, .industrial-card, .portfolio-item, .hover-trig
 
 /* Global Focus Ring for Links/Buttons */
 a:focus-visible, 
-button:focus-visible, 
-input:focus-visible, 
-textarea:focus-visible, 
-select:focus-visible {
+button:focus-visible {
     outline: 2px solid var(--brand-orange);
     outline-offset: 4px;
 }
@@ -657,13 +661,11 @@ iframe {
 
 /* High-Fidelity Refined Footer Design with Sharp Highlighter Effect */
 footer {
-    background-color: #9AA7B3;
-    border-top: 1px solid #f1f5f9;
+    background: #ffffff;
+    border-top: 1px solid #E2E8F0;
     padding: 100px 0 60px;
     position: relative;
 }
-
-
 
 .footer-section-title {
     font-family: 'Roboto Condensed', sans-serif;
@@ -772,7 +774,7 @@ footer {
 }
 
 .footer-bottom-dark {
-    background: #f9fafb;
+    background: #ffffff;
     padding: 2.5rem 0;
     border-top: 1px solid #f1f5f9;
 }
@@ -822,7 +824,8 @@ footer {
 
     footer img {
         margin: 0 auto 2rem !important;
-        max-width: 180px !important;
+        max-width: 260px !important;
+        height: auto !important;
     }
 
     footer p {
@@ -880,3 +883,9 @@ footer {
 }
 
 
+.section-premium-gray {
+    background: #ffffff !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(226, 232, 240, 0.5);
+}
